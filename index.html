@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRE Project: Web Aesthetics Ontology</title>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #fdfdfd; }
+        .project-wrapper { display: flex; flex-direction: row; }
+        .sidebar { width: 300px; height: 100vh; position: fixed; top: 0; left: 0; background-color: #f7f7f7; border-right: 1px solid #e0e0e0; padding: 25px; overflow-y: auto; box-sizing: border-box; }
+        .sidebar h2 { margin-top: 0; font-size: 1.2rem; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        .sidebar ul { list-style: none; padding-left: 0; }
+        .sidebar ul ul { padding-left: 20px; font-size: 0.95rem; }
+        .sidebar li { margin-bottom: 5px; }
+        .sidebar a { text-decoration: none; color: #333; display: block; padding: 4px 8px; border-radius: 4px; transition: background-color 0.2s ease; }
+        .sidebar a:hover { background-color: #e9e9e9; }
+        .sidebar a.active { background-color: #e0e7ff; color: #0044cc; font-weight: 600; }
+        .content { margin-left: 300px; padding: 40px 50px; width: 100%; max-width: 900px; box-sizing: border-box; }
+        .content section { margin-bottom: 60px; padding-top: 20px; }
+        h1 { font-size: 2.5rem; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
+        h2 { font-size: 2rem; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        h3 { font-size: 1.5rem; margin-top: 30px; }
+        blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0; font-style: italic; color: #555; }
+        
+        @media (max-width: 900px) {
+            .project-wrapper { flex-direction: column; }
+            .sidebar { position: static; width: 100%; height: auto; border-right: none; border-bottom: 1px solid #e0e0e0; }
+            .content { margin-left: 0; padding: 20px 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="project-wrapper">
+        
+        <nav class="sidebar" id="sidebarNav">
+            <h2>Chapters</h2>
+            <ul>
+                <li><a href="homepage.html" class="nav-link active">Home</a></li>
+                <li><a href="overview.html" class="nav-link">1. Overview</a>
+                    <ul>
+                        <li><a href="#kre-project" class="sub-link">1.1 KRE Project</a></li>
+                        <li><a href="#aesthetics" class="sub-link">1.2 Aesthetics</a></li>
+                    </ul>
+                </li>
+                <li><a href="framework.html" class="nav-link">2. Theoretical framework</a></li>
+                <li><a href="methodology.html" class="nav-link">3. Methodology</a></li>
+                <li>
+                    <a href="knowledge-representation.html" class="nav-link">4. Knowledge representation</a>
+                    <ul>
+                        <li><a href="#ontology-intro" class="sub-link">4.1 The Ontology</a></li>
+                        <li><a href="#modeling" class="sub-link">4.2 Modeling</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="knowledge-extraction.html" class="nav-link">5. Knowledge Extraction</a>
+                    <ul>
+                        <li><a href="#dataset" class="sub-link">5.1 Dataset</a></li>
+                        <li><a href="#knowledge-graph" class="sub-link">5.2 Knowledge Graph</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="epilogue.html" class="nav-link">6. Epilogue</a>
+                    <ul>
+                        <li><a href="#conclusion" class="sub-link">6.1 Conclusion</a></li>
+                        <li><a href="#bibliography" class="sub-link">6.2 Bibliography</a></li>
+                    </ul>
+                </li>
+                </ul>
+        </nav>
+
+        <main class="content" id="content-area">
+            </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const contentArea = document.getElementById('content-area');
+            const sidebarLinks = document.querySelectorAll('#sidebarNav a.nav-link');
+            const subLinks = document.querySelectorAll('#sidebarNav a.sub-link');
+            
+            // --- Function to load content ---
+            async function loadContent(url) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const html = await response.text();
+                    contentArea.innerHTML = html;
+                    
+                    attachSubLinkListeners();
+
+                    // ================== WIJZIGING 2 ==================
+                    // 2. VOEG EEN LISTENER TOE VOOR DE "GET STARTED" KNOP
+                    // Dit moet *binnen* loadContent draaien,
+                    // zodat het de knop kan vinden *nadat* homepage.html is geladen.
+                    
+                    const startLink = document.getElementById('start-exploring-link');
+                    if (startLink) {
+                        startLink.addEventListener('click', (e) => {
+                            e.preventDefault(); // Stop de standaard link-actie
+                            
+                            // Zoek de "Overview" link in de sidebar
+                            const overviewLink = document.querySelector('#sidebarNav a[href="overview.html"]');
+                            if (overviewLink) {
+                                // Simuleer een klik op de "Overview" link
+                                overviewLink.click();
+                            }
+                        });
+                    }
+                    // ===============================================
+
+                } catch (error) {
+                    console.error('Error loading page: ', error);
+                    contentArea.innerHTML = `<p>Could not load content. Check the filename and make sure you are running a local server.</p>`;
+                }
+            }
+            
+            // --- Function to manage the "active" class ---
+            function setActiveLink(clickedLink) {
+                sidebarLinks.forEach(link => link.classList.remove('active'));
+                clickedLink.classList.add('active');
+            }
+
+            // --- Event Listeners for Main navigation links ---
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); 
+                    const url = link.getAttribute('href');
+                    loadContent(url);
+                    setActiveLink(link);
+                    contentArea.scrollTop = 0; 
+                });
+            });
+            
+            // --- Event Listeners for Sub-links (anchors) ---
+            function attachSubLinkListeners() {
+                document.querySelectorAll('#sidebarNav a.sub-link').forEach(subLink => {
+                    subLink.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const targetId = subLink.getAttribute('href').substring(1); 
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    });
+                });
+            }
+
+            // ================== WIJZIGING 3 ==================
+            // 3. LAAD 'homepage.html' ALS STANDAARD
+            loadContent('homepage.html');
+            // ===============================================
+
+            attachSubLinkListeners(); // Roep dit de eerste keer ook aan
+        });
+    </script>
+
+</body>
+</html>

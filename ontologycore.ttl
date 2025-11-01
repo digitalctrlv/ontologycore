@@ -4,8 +4,8 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ontologies: <ontologycore#> .
-@base <urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da> .
+@prefix ontologies: <file:/Users/anoukflinkert/Desktop/DHDK_2425_S2/KRE/ontologycore/ontologycore#> .
+@base <urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#> .
 
 <urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da> rdf:type owl:Ontology .
 
@@ -60,9 +60,9 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 
 
 ###  http://webprotege.stanford.edu/characterizedBy
-<http://webprotege.stanford.edu/characterizedBy> rdf:type owl:ObjectProperty ;    # ADDED as requested
-                                                        owl:inverseOf <http://webprotege.stanford.edu/embodiesAesthetic> ;
-                                                        rdfs:label "characterizedBy"@en .
+<http://webprotege.stanford.edu/characterizedBy> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <http://webprotege.stanford.edu/embodiesAesthetic> ;
+                                                 rdfs:label "characterizedBy"@en .
 
 
 ###  http://webprotege.stanford.edu/combinesFoundObjects
@@ -88,7 +88,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/derivedFrom
 <http://webprotege.stanford.edu/derivedFrom> rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf owl:topObjectProperty ;
-                                             rdfs:comment "Indicates a product is derived from another product"^^xsd:string ;
+                                             rdfs:comment "Indicates a product is derived from another product" ;
                                              rdfs:label "derivedFrom"@en .
 
 
@@ -96,14 +96,9 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 <http://webprotege.stanford.edu/didNotLiveDuring> rdf:type owl:ObjectProperty ;
                                                   rdfs:subPropertyOf owl:topObjectProperty ;
                                                   rdfs:domain <http://webprotege.stanford.edu/AgeCommunity> ,
-                                                              <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> ;
+                                                              <http://webprotege.stanford.edu/Person> ;
                                                   rdfs:range <http://webprotege.stanford.edu/TemporalContext> ;
                                                   rdfs:label "didNotLiveDuring"@en .
-
-
-###  http://webprotege.stanford.edu/embodiesAesthetic
-<http://webprotege.stanford.edu/embodiesAesthetic> rdf:type owl:ObjectProperty ;    # ADDED as requested
-                                                         rdfs:label "embodiesAesthetic"@en .
 
 
 ###  http://webprotege.stanford.edu/embodies
@@ -111,12 +106,17 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                           rdfs:label "embodies"@en .
 
 
+###  http://webprotege.stanford.edu/embodiesAesthetic
+<http://webprotege.stanford.edu/embodiesAesthetic> rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "embodiesAesthetic"@en .
+
+
 ###  http://webprotege.stanford.edu/emergesFrom
 <http://webprotege.stanford.edu/emergesFrom> rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf owl:topObjectProperty ;
                                              rdfs:domain <http://webprotege.stanford.edu/Belonging> ;
-                                             rdfs:range <http://webprotege.stanford.edu/Nostalgia> ,
-                                                        <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                             rdfs:range <http://webprotege.stanford.edu/Aesthetic> ,
+                                                        <http://webprotege.stanford.edu/Nostalgia> ;
                                              rdfs:label "emergesFrom"@en .
 
 
@@ -154,7 +154,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 <http://webprotege.stanford.edu/expressesAesthetic> rdf:type owl:ObjectProperty ;
                                                     rdfs:subPropertyOf owl:topObjectProperty ;
                                                     rdfs:domain <http://webprotege.stanford.edu/CreativeProduct> ;
-                                                    rdfs:range <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                                    rdfs:range <http://webprotege.stanford.edu/Aesthetic> ;
                                                     rdfs:label "expresses aesthetic"@en .
 
 
@@ -176,7 +176,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/hasContext
 <http://webprotege.stanford.edu/hasContext> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                            rdfs:domain <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                            rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
                                             rdfs:range <http://webprotege.stanford.edu/Context> ;
                                             rdfs:label "hasContext"@en .
 
@@ -189,7 +189,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/hasEmotion
 <http://webprotege.stanford.edu/hasEmotion> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                            rdfs:domain <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                            rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
                                             rdfs:range <http://webprotege.stanford.edu/Emotion> ;
                                             rdfs:label "hasEmotion"@en .
 
@@ -202,8 +202,8 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/hasGenre
 <http://webprotege.stanford.edu/hasGenre> rdf:type owl:ObjectProperty ;
                                           rdfs:subPropertyOf owl:topObjectProperty ;
-                                          rdfs:domain <http://webprotege.stanford.edu/CreativeProduct> ,
-                                                      <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                          rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ,
+                                                      <http://webprotege.stanford.edu/CreativeProduct> ;
                                           rdfs:label "hasGenre"@en .
 
 
@@ -237,8 +237,8 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/hasVisualElement
 <http://webprotege.stanford.edu/hasVisualElement> rdf:type owl:ObjectProperty ;
                                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                                  rdfs:domain <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                                  rdfs:range <http://webprotege.stanford.edu/RB44xNwShQ5syJgpRkD0iSc> ;
+                                                  rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
+                                                  rdfs:range <http://webprotege.stanford.edu/VisualElement> ;
                                                   rdfs:label "hasVisualElement"@en .
 
 
@@ -263,7 +263,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/influencedBy
 <http://webprotege.stanford.edu/influencedBy> rdf:type owl:ObjectProperty ;
                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                              rdfs:domain <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                              rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
                                               rdfs:range <http://webprotege.stanford.edu/R7ytKyiKV3sV1xGqeKbV8xu> ;
                                               rdfs:label "influencedBy"@en .
 
@@ -271,11 +271,11 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/inspiredBy
 <http://webprotege.stanford.edu/inspiredBy> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                            rdfs:domain <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                            rdfs:range <http://webprotege.stanford.edu/Community> ,
+                                            rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
+                                            rdfs:range <http://webprotege.stanford.edu/Aesthetic> ,
+                                                       <http://webprotege.stanford.edu/Community> ,
                                                        <http://webprotege.stanford.edu/Context> ,
-                                                       <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> ,
-                                                       <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                                       <http://webprotege.stanford.edu/Person> ;
                                             rdfs:label "inspiredBy"@en .
 
 
@@ -304,8 +304,8 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/involvesProcess
 <http://webprotege.stanford.edu/involvesProcess> rdf:type owl:ObjectProperty ;
                                                  rdfs:subPropertyOf owl:topObjectProperty ;
-                                                 rdfs:domain <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                                 rdfs:range <http://webprotege.stanford.edu/R8bwtXWMGNJT87AhEflIEO1> ;
+                                                 rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
+                                                 rdfs:range <http://webprotege.stanford.edu/Process> ;
                                                  rdfs:label "involvesProcess"@en .
 
 
@@ -317,14 +317,9 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/ironicallyAdopts
 <http://webprotege.stanford.edu/ironicallyAdopts> rdf:type owl:ObjectProperty ;
                                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                                  rdfs:domain <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> ;
+                                                  rdfs:domain <http://webprotege.stanford.edu/Person> ;
                                                   rdfs:range <http://webprotege.stanford.edu/AestheticElement> ;
                                                   rdfs:label "ironicallyAdopts"@en .
-
-
-###  http://webprotege.stanford.edu/isAestheticElementOf
-<http://webprotege.stanford.edu/isAestheticElementOf> rdf:type owl:ObjectProperty ;
-                                                      rdfs:label "isAestheticElementOf"@en .
 
 
 ###  http://webprotege.stanford.edu/isAudioElementof
@@ -372,9 +367,9 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/isPracticedBy
 <http://webprotege.stanford.edu/isPracticedBy> rdf:type owl:ObjectProperty ;
                                                rdfs:subPropertyOf owl:topObjectProperty ;
-                                               rdfs:domain <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                               rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
                                                rdfs:range <http://webprotege.stanford.edu/Community> ,
-                                                          <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> ;
+                                                          <http://webprotege.stanford.edu/Person> ;
                                                rdfs:label "isPracticedBy"@en .
 
 
@@ -412,9 +407,9 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 <http://webprotege.stanford.edu/livedDuring> rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf owl:topObjectProperty ;
                                              rdfs:domain <http://webprotege.stanford.edu/AgeCommunity> ,
-                                                         <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> ;
+                                                         <http://webprotege.stanford.edu/Person> ;
                                              rdfs:range <http://webprotege.stanford.edu/TemporalContext> ;
-                                             rdfs:comment "Temporal period a person actually experienced firsthand"^^xsd:string ;
+                                             rdfs:comment "Temporal period a person actually experienced firsthand" ;
                                              rdfs:label "livedDuring"@en .
 
 
@@ -482,7 +477,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 
 ###  http://webprotege.stanford.edu/reactsTo
 <http://webprotege.stanford.edu/reactsTo> rdf:type owl:ObjectProperty ;
-                                          rdfs:comment "Indicates that an aesthetic emerges as a direct cultural response or opposition to another aesthetic. This relationship captures dialectical tension between movements where one style consciously positions itself against the values, principles, or visual language of its predecessor."^^xsd:string ;
+                                          rdfs:comment "Indicates that an aesthetic emerges as a direct cultural response or opposition to another aesthetic. This relationship captures dialectical tension between movements where one style consciously positions itself against the values, principles, or visual language of its predecessor." ;
                                           rdfs:label "reactsTo"@en .
 
 
@@ -491,7 +486,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                   rdfs:subPropertyOf owl:topObjectProperty ;
                                                   rdfs:domain <http://webprotege.stanford.edu/Divergence> ;
                                                   rdfs:range <http://webprotege.stanford.edu/AestheticElement> ;
-                                                  rdfs:comment "Divergent process of reclaiming previously rejected aesthetics through irony"^^xsd:string ;
+                                                  rdfs:comment "Divergent process of reclaiming previously rejected aesthetics through irony" ;
                                                   rdfs:label "reclaimsAsIronic"@en .
 
 
@@ -519,7 +514,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 
 ###  http://webprotege.stanford.edu/reinforcesBelonging
 <http://webprotege.stanford.edu/reinforcesBelonging> rdf:type owl:ObjectProperty ;
-                                                     rdfs:comment "Convergent processes that strengthen group cohesion and belonging through shared aesthetic conventions"^^xsd:string ;
+                                                     rdfs:comment "Convergent processes that strengthen group cohesion and belonging through shared aesthetic conventions" ;
                                                      rdfs:label "reinforcesBelonging"@en .
 
 
@@ -547,7 +542,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 
 ###  http://webprotege.stanford.edu/signalsMembership
 <http://webprotege.stanford.edu/signalsMembership> rdf:type owl:ObjectProperty ;
-                                                   rdfs:comment "Products that act as identity markers signaling subcultural membership"^^xsd:string ;
+                                                   rdfs:comment "Products that act as identity markers signaling subcultural membership" ;
                                                    rdfs:label "signalsMembership"@en .
 
 
@@ -559,13 +554,13 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/spreadThrough
 <http://webprotege.stanford.edu/spreadThrough> rdf:type owl:ObjectProperty ;
                                                rdfs:subPropertyOf owl:topObjectProperty ;
-                                               rdfs:domain <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                               rdfs:range <http://webprotege.stanford.edu/R9QlQMHm5hVXDUkuw3tcWGj> .
+                                               rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
+                                               rdfs:range <http://webprotege.stanford.edu/Press> .
 
 
 ###  http://webprotege.stanford.edu/subvertsExpectation
 <http://webprotege.stanford.edu/subvertsExpectation> rdf:type owl:ObjectProperty ;
-                                                     rdfs:comment "How irony subverts conventional expectations of aesthetic element"^^xsd:string ;
+                                                     rdfs:comment "How irony subverts conventional expectations of aesthetic element" ;
                                                      rdfs:label "subvertsExpectation"@en .
 
 
@@ -595,21 +590,6 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 #    Data properties
 #################################################################
 
-###  http://webprotege.stanford.edu/hasDescription
-<http://webprotege.stanford.edu/hasDescription> rdf:type owl:DatatypeProperty ;
-                                                rdfs:subPropertyOf owl:topDataProperty ;
-                                                rdfs:range xsd:string ;
-                                                rdfs:label "hasDescription"@en .
-
-
-###  http://webprotege.stanford.edu/hasDuration
-<http://webprotege.stanford.edu/hasDuration> rdf:type owl:DatatypeProperty ;
-                                             rdfs:subPropertyOf owl:topDataProperty ;
-                                             rdfs:domain <http://webprotege.stanford.edu/TemporalContext> ;
-                                             rdfs:range xsd:dateTime ;
-                                             rdfs:label "hasDuration"@en .
-
-
 ###  http://webprotege.stanford.edu/hasName
 <http://webprotege.stanford.edu/hasName> rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf owl:topDataProperty ;
@@ -617,23 +597,70 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                          rdfs:label "hasName"@en .
 
 
-###  http://webprotege.stanford.edu/relatesTo
-<http://webprotege.stanford.edu/relatesTo> rdf:type owl:DatatypeProperty .
-
-
-###  http://webprotege.stanford.edu/vintage
-<http://webprotege.stanford.edu/vintage> rdf:type owl:DatatypeProperty ;
-                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                         rdfs:label "vintage"@en .
-
-
 #################################################################
 #    Classes
 #################################################################
 
+###  http://webprotege.stanford.edu/Aesthetic
+<http://webprotege.stanford.edu/Aesthetic> rdf:type owl:Class ;
+                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/connectsTo> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/ConceptualIdeas>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/expressedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Product>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/hasContext> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Context>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/influencedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/R7ytKyiKV3sV1xGqeKbV8xu>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Emotion>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Process>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/isCreatedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Person>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/isExecutedOnPlatform> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Media>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/isPracticedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Community>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/isPracticedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Person>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/mediatesBelonging> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Belonging>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Press>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/hasName> ;
+                                                             owl:someValuesFrom xsd:string
+                                                           ] ;
+                                           rdfs:label "Aesthetic"@en .
+
+
 ###  http://webprotege.stanford.edu/AestheticElement
 <http://webprotege.stanford.edu/AestheticElement> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                                  rdfs:subClassOf <http://webprotege.stanford.edu/Aesthetic> ;
                                                   rdfs:label "AestheticElement"@en .
 
 
@@ -644,7 +671,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                                        owl:onProperty <http://webprotege.stanford.edu/pushesToLimit> ;
                                                                        owl:someValuesFrom <http://webprotege.stanford.edu/AestheticElement>
                                                                      ] ;
-                                                     rdfs:comment "The intentional, excessive application of an aesthetic's tropes to the point of absurdity, often leading to its ironic consumption or \"death.\""^^xsd:string ;
+                                                     rdfs:comment "The intentional, excessive application of an aesthetic's tropes to the point of absurdity, often leading to its ironic consumption or \"death.\"" ;
                                                      rdfs:label "Aesthetic Saturation"@en .
 
 
@@ -662,19 +689,6 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                               owl:someValuesFrom <http://webprotege.stanford.edu/R7ytKyiKV3sV1xGqeKbV8xu>
                                                             ] ;
                                             rdfs:label "Aspiration"@en .
-
-
-###  http://webprotege.stanford.edu/AudioElement
-<http://webprotege.stanford.edu/AudioElement> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://webprotege.stanford.edu/AestheticElement> ,
-                                                              <http://webprotege.stanford.edu/AuditoryProduct> ;
-                                              rdfs:label "AudioElement"@en .
-
-
-###  http://webprotege.stanford.edu/AuditoryProduct
-<http://webprotege.stanford.edu/AuditoryProduct> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> ;
-                                                 rdfs:label "AuditoryProduct"@en .
 
 
 ###  http://webprotege.stanford.edu/BehaviourPattern
@@ -718,13 +732,13 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                            rdfs:subClassOf <http://webprotege.stanford.edu/Divergence> ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/combinesFoundObjects> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE>
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/usesTool> ;
                                                              owl:someValuesFrom <http://webprotege.stanford.edu/Tool>
                                                            ] ;
-                                           rdfs:comment "The practice of creating something new from a diverse range of existing or \"found\" materials at hand. Manifests in various forms, including visual collage, audio sampling, and stylistic remixing."^^xsd:string ;
+                                           rdfs:comment "The practice of creating something new from a diverse range of existing or \"found\" materials at hand. Manifests in various forms, including visual collage, audio sampling, and stylistic remixing." ;
                                            rdfs:label "Bricolage"@en .
 
 
@@ -749,6 +763,12 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                       rdfs:label "City"@en .
 
 
+###  http://webprotege.stanford.edu/Color
+<http://webprotege.stanford.edu/Color> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/VisualElement> ;
+                                       rdfs:label "Color"@en .
+
+
 ###  http://webprotege.stanford.edu/Community
 <http://webprotege.stanford.edu/Community> rdf:type owl:Class ;
                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -757,7 +777,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/includes> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/livesDuring> ;
@@ -792,7 +812,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/recontextualizedBy> ;
-                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/recontextualizedThrough> ;
@@ -807,7 +827,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                                owl:onProperty <http://webprotege.stanford.edu/reinforcesEmotion> ;
                                                                owl:someValuesFrom <http://webprotege.stanford.edu/Belonging>
                                                              ] ;
-                                             rdfs:comment "Convergence represents a process within the creative domain that seeks coherence and unity of meaning or form. In the context of aesthetics, convergent processes involve the deliberate organization of aesthetic elements toward a recognizable expression, guided by stylistic, cultural, or formal principles rather than by purely logical reasoning. While aesthetic creation allows open exploration, convergence emphasizes the synthesis and application of shared conventions or elements that lead to a specific, communicable outcome."^^xsd:string ;
+                                             rdfs:comment "Convergence represents a process within the creative domain that seeks coherence and unity of meaning or form. In the context of aesthetics, convergent processes involve the deliberate organization of aesthetic elements toward a recognizable expression, guided by stylistic, cultural, or formal principles rather than by purely logical reasoning. While aesthetic creation allows open exploration, convergence emphasizes the synthesis and application of shared conventions or elements that lead to a specific, communicable outcome." ;
                                              rdfs:label "Convergence"@en .
 
 
@@ -819,16 +839,16 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 
 ###  http://webprotege.stanford.edu/CreativeProcess
 <http://webprotege.stanford.edu/CreativeProcess> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://webprotege.stanford.edu/R8bwtXWMGNJT87AhEflIEO1> ;
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/Process> ;
                                                  rdfs:label "CreativeProcess"@en .
 
 
 ###  http://webprotege.stanford.edu/CreativeProduct
 <http://webprotege.stanford.edu/CreativeProduct> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://webprotege.stanford.edu/RO5VdYl1sf93JmRLxz5HN7> ,
+                                                 rdfs:subClassOf <http://webprotege.stanford.edu/Product> ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://webprotege.stanford.edu/embodies> ;
-                                                                   owl:someValuesFrom <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE>
+                                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://webprotege.stanford.edu/signalsMembership> ;
@@ -849,16 +869,22 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                         rdfs:label "Decade"@en .
 
 
-###  http://webprotege.stanford.edu/DigitalProduct
-<http://webprotege.stanford.edu/DigitalProduct> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> ;
-                                                rdfs:label "DigitalProduct"@en .
+###  http://webprotege.stanford.edu/DigitalImage
+<http://webprotege.stanford.edu/DigitalImage> rdf:type owl:Class ;
+                                              rdfs:subClassOf :DigitalElement ;
+                                              rdfs:label "DigitalImage"@en .
 
 
 ###  http://webprotege.stanford.edu/DigitalSpace
 <http://webprotege.stanford.edu/DigitalSpace> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://webprotege.stanford.edu/SpatialContext> ;
                                               rdfs:label "DigitalSpace"@en .
+
+
+###  http://webprotege.stanford.edu/DigitalVideo
+<http://webprotege.stanford.edu/DigitalVideo> rdf:type owl:Class ;
+                                              rdfs:subClassOf :DigitalElement ;
+                                              rdfs:label "DigitalVideo"@en .
 
 
 ###  http://webprotege.stanford.edu/Divergence
@@ -868,8 +894,8 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                               owl:onProperty <http://webprotege.stanford.edu/precedesProcess> ;
                                                               owl:someValuesFrom <http://webprotege.stanford.edu/Convergence>
                                                             ] ;
-                                            rdfs:comment "Divergence represents a creative and cultural process oriented toward differentiation, experimentation, and the expansion of aesthetic or social boundaries. In the context of aesthetics, divergent processes enable the formation of subcultures by expressing alternatives to dominant cultural values through distinct styles, symbols, or practices. Divergence can manifest socially (as rejection of norms or expectations), materially (through product or design variation), or personally (through self-expression that redefines identity). While divergence promotes originality and the evolution of aesthetic forms, it remains balanced by the need for recognizability—too much divergence may obscure shared symbols and weaken the sense of belonging within the aesthetic community."^^xsd:string ,
-                                                         "Expanding ideas and gathering inspiration"^^xsd:string ;
+                                            rdfs:comment "Divergence represents a creative and cultural process oriented toward differentiation, experimentation, and the expansion of aesthetic or social boundaries. In the context of aesthetics, divergent processes enable the formation of subcultures by expressing alternatives to dominant cultural values through distinct styles, symbols, or practices. Divergence can manifest socially (as rejection of norms or expectations), materially (through product or design variation), or personally (through self-expression that redefines identity). While divergence promotes originality and the evolution of aesthetic forms, it remains balanced by the need for recognizability—too much divergence may obscure shared symbols and weaken the sense of belonging within the aesthetic community." ,
+                                                         "Expanding ideas and gathering inspiration" ;
                                             rdfs:label "Divergence"@en .
 
 
@@ -885,15 +911,15 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
-                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE>
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/experiencedBy> ;
-                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/expressedBy> ;
-                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE>
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
                                                          ] ;
                                          rdfs:label "Emotion"@en .
 
@@ -908,12 +934,6 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                           rdfs:label "Escapism"@en .
 
 
-###  http://webprotege.stanford.edu/FashionProduct
-<http://webprotege.stanford.edu/FashionProduct> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> ;
-                                                rdfs:label "FashionProduct"@en .
-
-
 ###  http://webprotege.stanford.edu/FeedbackLoop
 <http://webprotege.stanford.edu/FeedbackLoop> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ,
@@ -925,7 +945,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                                 owl:onProperty <http://webprotege.stanford.edu/isExecutedOnPlatform> ;
                                                                 owl:hasValue <http://webprotege.stanford.edu/TikTok>
                                                               ] ;
-                                              rdfs:comment "The process where creator and community reception (likes, comments, trends) directly influences and alters the ongoing creative process."^^xsd:string ;
+                                              rdfs:comment "The process where creator and community reception (likes, comments, trends) directly influences and alters the ongoing creative process." ;
                                               rdfs:label "Feedback Loop"@en .
 
 
@@ -952,27 +972,15 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 ###  http://webprotege.stanford.edu/Ideation
 <http://webprotege.stanford.edu/Ideation> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://webprotege.stanford.edu/Divergence> ;
-                                          rdfs:comment "The generation of multiple concepts, moods, or directions without immediate pressure to select a final one."^^xsd:string ;
+                                          rdfs:comment "The generation of multiple concepts, moods, or directions without immediate pressure to select a final one." ;
                                           rdfs:label "Ideation"@en .
-
-
-###  http://webprotege.stanford.edu/ImageProduct
-<http://webprotege.stanford.edu/ImageProduct> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://webprotege.stanford.edu/VisualProduct> ;
-                                              rdfs:label "ImageProduct"@en .
 
 
 ###  http://webprotege.stanford.edu/Inspiration
 <http://webprotege.stanford.edu/Inspiration> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://webprotege.stanford.edu/Divergence> ;
-                                             rdfs:comment "The active or passive act of seeking and collecting references, motifs, and content that fuel the aesthetic."^^xsd:string ;
+                                             rdfs:comment "The active or passive act of seeking and collecting references, motifs, and content that fuel the aesthetic." ;
                                              rdfs:label "Inspiration"@en .
-
-
-###  http://webprotege.stanford.edu/InteractiveProduct
-<http://webprotege.stanford.edu/InteractiveProduct> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://webprotege.stanford.edu/DigitalProduct> ;
-                                                    rdfs:label "InteractiveProduct"@en .
 
 
 ###  http://webprotege.stanford.edu/Irony
@@ -991,7 +999,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
 
 ###  http://webprotege.stanford.edu/LifeStyle
 <http://webprotege.stanford.edu/LifeStyle> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/Aesthetic> ;
                                            rdfs:label "LifeStyle"@en .
 
 
@@ -1001,9 +1009,15 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                           rdfs:label "Magazine"@en .
 
 
+###  http://webprotege.stanford.edu/Material
+<http://webprotege.stanford.edu/Material> rdf:type owl:Class ;
+                                          rdfs:subClassOf :FashionElement ;
+                                          rdfs:label "Material"@en .
+
+
 ###  http://webprotege.stanford.edu/Media
 <http://webprotege.stanford.edu/Media> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://webprotege.stanford.edu/R9QlQMHm5hVXDUkuw3tcWGj> ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/Press> ;
                                        rdfs:label "Media"@en .
 
 
@@ -1028,7 +1042,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                                  owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Irony>
                                                                ] ;
-                                               rdfs:comment "The transformation of an aesthetic element into a meme through simplification, templatization, and viral replication."^^xsd:string ;
+                                               rdfs:comment "The transformation of an aesthetic element into a meme through simplification, templatization, and viral replication." ;
                                                rdfs:label "Memeification"@en .
 
 
@@ -1037,7 +1051,7 @@ rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
                                                  rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProcess> ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://webprotege.stanford.edu/syntesizesInto> ;
-                                                                   owl:someValuesFrom <http://webprotege.stanford.edu/RO5VdYl1sf93JmRLxz5HN7>
+                                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Product>
                                                                  ] ;
                                                  rdfs:comment """Metaconvergence is the elaboration process that refines divergent aesthetic expressions into culturally recognizable and functionally effective creative products. It represents the critical phase where experimental aesthetic elements are optimized for both coherence and impact within their cultural context.
 
@@ -1045,7 +1059,7 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
 - Memeification: transforming aesthetic elements into viral, templated formats
 - Aesthetic Saturation: pushing aesthetic tropes to their absurd limits until they become self-aware or ironic
 - Recontextualization: adapting and transforming aesthetic elements or creative products by placing them into fundamentally different contexts—whether spatial, cultural, temporal, or platform-specific.
-- Reproduction: deliberately reviving and recycling aesthetic elements, styles, or cultural artifacts from past eras or different contexts into present-day creative production."""^^xsd:string ;
+- Reproduction: deliberately reviving and recycling aesthetic elements, styles, or cultural artifacts from past eras or different contexts into present-day creative production.""" ;
                                                  rdfs:label "Metaconvergence"@en .
 
 
@@ -1068,7 +1082,7 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://webprotege.stanford.edu/isCreatedBy> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
+                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://webprotege.stanford.edu/hasGenre> ;
@@ -1090,7 +1104,7 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                            rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE>
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
@@ -1098,7 +1112,7 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/experiencedBy> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/nostalgicFor> ;
@@ -1109,6 +1123,18 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
 ###  http://webprotege.stanford.edu/OnlineCommunity
 <http://webprotege.stanford.edu/OnlineCommunity> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://webprotege.stanford.edu/Community> .
+
+
+###  http://webprotege.stanford.edu/Pattern
+<http://webprotege.stanford.edu/Pattern> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/VisualElement> ;
+                                         rdfs:label "Pattern"@en .
+
+
+###  http://webprotege.stanford.edu/Person
+<http://webprotege.stanford.edu/Person> rdf:type owl:Class ;
+                                        rdfs:subClassOf owl:Thing ;
+                                        rdfs:label "Person"@en .
 
 
 ###  http://webprotege.stanford.edu/Phone
@@ -1140,8 +1166,21 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                                                owl:onProperty <http://webprotege.stanford.edu/adaptsFormat> ;
                                                                                owl:hasValue <http://webprotege.stanford.edu/ShortVideos>
                                                                              ] ;
-                                                             rdfs:comment "The process of tailoring the final product to meet the technical and cultural norms of a specific platform (e.g., formatting for TikTok vs. Instagram)."^^xsd:string ;
+                                                             rdfs:comment "The process of tailoring the final product to meet the technical and cultural norms of a specific platform (e.g., formatting for TikTok vs. Instagram)." ;
                                                              rdfs:label "Platform-Specific Adaptation"@en .
+
+
+###  http://webprotege.stanford.edu/Press
+<http://webprotege.stanford.edu/Press> rdf:type owl:Class ;
+                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://webprotege.stanford.edu/amplifiesProcess> ;
+                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Metaconvergence>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://webprotege.stanford.edu/hasUser> ;
+                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Person>
+                                                       ] ;
+                                       rdfs:label "Press" .
 
 
 ###  http://webprotege.stanford.edu/Pride
@@ -1160,21 +1199,37 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                        rdfs:label "Print"@en .
 
 
-###  http://webprotege.stanford.edu/R3nXKHhiFnbNflrKSkjlpJ
-<http://webprotege.stanford.edu/R3nXKHhiFnbNflrKSkjlpJ> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://webprotege.stanford.edu/RB44xNwShQ5syJgpRkD0iSc> ;
-                                                        rdfs:label "Color"@en .
+###  http://webprotege.stanford.edu/Process
+<http://webprotege.stanford.edu/Process> rdf:type owl:Class ;
+                                         rdfs:subClassOf owl:Thing ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Emotion>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://webprotege.stanford.edu/isExecutedOnPlatform> ;
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Press>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://webprotege.stanford.edu/usesTool> ;
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Tool>
+                                                         ] ;
+                                         rdfs:label "Process"@en .
 
 
-###  http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm
-<http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> rdf:type owl:Class ;
-                                                         rdfs:subClassOf owl:Thing ;
-                                                         rdfs:label "Person"@en .
+###  http://webprotege.stanford.edu/Product
+<http://webprotege.stanford.edu/Product> rdf:type owl:Class ;
+                                         rdfs:subClassOf owl:Thing ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://webprotege.stanford.edu/hasFormat> ;
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Technology>
+                                                         ] ;
+                                         rdfs:label "Product"@en .
 
 
 ###  http://webprotege.stanford.edu/R7ytKyiKV3sV1xGqeKbV8xu
 <http://webprotege.stanford.edu/R7ytKyiKV3sV1xGqeKbV8xu> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> ,
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/Person> ,
                                                                          [ rdf:type owl:Restriction ;
                                                                            owl:onProperty <http://webprotege.stanford.edu/creates> ;
                                                                            owl:hasValue <http://webprotege.stanford.edu/Y2K>
@@ -1182,137 +1237,20 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                          rdfs:label "Influencer"@en .
 
 
-###  http://webprotege.stanford.edu/R8bwtXWMGNJT87AhEflIEO1
-<http://webprotege.stanford.edu/R8bwtXWMGNJT87AhEflIEO1> rdf:type owl:Class ;
-                                                         rdfs:subClassOf owl:Thing ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Emotion>
-                                                                         ] ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/isExecutedOnPlatform> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R9QlQMHm5hVXDUkuw3tcWGj>
-                                                                         ] ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/usesTool> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Tool>
-                                                                         ] ;
-                                                         rdfs:label "Process"@en .
-
-
-###  http://webprotege.stanford.edu/R9QlQMHm5hVXDUkuw3tcWGj
-<http://webprotege.stanford.edu/R9QlQMHm5hVXDUkuw3tcWGj> rdf:type owl:Class ;
-                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/amplifiesProcess> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Metaconvergence>
-                                                                         ] ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/hasUser> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
-                                                                         ] ;
-                                                         rdfs:label "Press"^^xsd:string .
-
-
-###  http://webprotege.stanford.edu/RB44xNwShQ5syJgpRkD0iSc
-<http://webprotege.stanford.edu/RB44xNwShQ5syJgpRkD0iSc> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://webprotege.stanford.edu/AestheticElement> ,
-                                                                         <http://webprotege.stanford.edu/VisualProduct> ;
-                                                         rdfs:label "VisualElement"@en .
-
-
-###  http://webprotege.stanford.edu/RBetNJjP0Zc59z2rfha83gs
-<http://webprotege.stanford.edu/RBetNJjP0Zc59z2rfha83gs> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RB44xNwShQ5syJgpRkD0iSc> ;
-                                                         rdfs:label "Material"@en .
-
-
 ###  http://webprotege.stanford.edu/RCIJNI9x5PBopbNn0OQFTXs
 <http://webprotege.stanford.edu/RCIJNI9x5PBopbNn0OQFTXs> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/Person> ;
                                                          rdfs:label "Consumer"@en .
-
-
-###  http://webprotege.stanford.edu/RDjU63s8m2zCEsDPjpKV1LC
-<http://webprotege.stanford.edu/RDjU63s8m2zCEsDPjpKV1LC> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RB44xNwShQ5syJgpRkD0iSc> ;
-                                                         rdfs:label "Pattern"@en .
-
-
-###  http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE
-<http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> rdf:type owl:Class ;
-                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/connectsTo> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/ConceptualIdeas>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/expressedBy> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/RO5VdYl1sf93JmRLxz5HN7>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/hasContext> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Context>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/influencedBy> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/R7ytKyiKV3sV1xGqeKbV8xu>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Emotion>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/R8bwtXWMGNJT87AhEflIEO1>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/isCreatedBy> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/isExecutedOnPlatform> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Media>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/isPracticedBy> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Community>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/isPracticedBy> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/mediatesBelonging> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Belonging>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/R9QlQMHm5hVXDUkuw3tcWGj>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/hasName> ;
-                                                                          owl:someValuesFrom xsd:string
-                                                                        ] ;
-                                                        rdfs:label "Aesthetic"@en .
 
 
 ###  http://webprotege.stanford.edu/RL9Tkf1w0k0DbhUODuykTW
 <http://webprotege.stanford.edu/RL9Tkf1w0k0DbhUODuykTW> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm> ,
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/Person> ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <http://webprotege.stanford.edu/creates> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/RO5VdYl1sf93JmRLxz5HN7>
+                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Product>
                                                                         ] ;
                                                         rdfs:label "Creator"@en .
-
-
-###  http://webprotege.stanford.edu/RO5VdYl1sf93JmRLxz5HN7
-<http://webprotege.stanford.edu/RO5VdYl1sf93JmRLxz5HN7> rdf:type owl:Class ;
-                                                        rdfs:subClassOf owl:Thing ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://webprotege.stanford.edu/hasFormat> ;
-                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Technology>
-                                                                        ] ;
-                                                        rdfs:label "Product"@en .
 
 
 ###  http://webprotege.stanford.edu/Radio
@@ -1332,7 +1270,7 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                      rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://webprotege.stanford.edu/establishes> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE>
+                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://webprotege.stanford.edu/involvesElement> ;
@@ -1340,7 +1278,7 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://webprotege.stanford.edu/performedBy> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
+                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://webprotege.stanford.edu/performedThrough> ;
@@ -1354,7 +1292,7 @@ Unlike reproduction, which emphasizes temporal recycling from past to present, r
 - Shifting aesthetic meanings through new cultural or social frameworks
 - Repurposing aesthetic elements for different communities with distinct interpretative codes
 
-Recontextualization often involves strategic modification to ensure legibility in the new context while potentially transforming the original meaning, function, or emotional resonance. A meme template recontextualized across different subcultures, or a fashion aesthetic adapted from streetwear to high fashion, exemplifies this process."""^^xsd:string ;
+Recontextualization often involves strategic modification to ensure legibility in the new context while potentially transforming the original meaning, function, or emotional resonance. A meme template recontextualized across different subcultures, or a fashion aesthetic adapted from streetwear to high fashion, exemplifies this process.""" ;
                                                      rdfs:label "Recontextualization"@en .
 
 
@@ -1365,7 +1303,7 @@ Recontextualization often involves strategic modification to ensure legibility i
                                                               owl:onProperty <http://webprotege.stanford.edu/usesTool> ;
                                                               owl:someValuesFrom <http://webprotege.stanford.edu/Tool>
                                                             ] ;
-                                            rdfs:comment "The final polishing stage, involving adjustments like color grading, applying specific filters, and fine-tuning details to align with the aesthetic."^^xsd:string ;
+                                            rdfs:comment "The final polishing stage, involving adjustments like color grading, applying specific filters, and fine-tuning details to align with the aesthetic." ;
                                             rdfs:label "Refinement"@en .
 
 
@@ -1384,7 +1322,7 @@ Recontextualization often involves strategic modification to ensure legibility i
 
 This process involves more than simple imitation—it requires selecting, extracting, and standardizing historical or cross-cultural aesthetic features to make them functional and relevant within contemporary contexts. Reproduction often drives nostalgia-based aesthetics and retro movements, where past visual languages, color palettes, materials, or design principles are systematically reintroduced and adapted to current media platforms and cultural expectations.
 
-Examples include Y2K aesthetics recycling early 2000s digital culture, or cottagecore reproducing romanticized pastoral imagery. The process transforms historical references into legible, shareable formats that resonate with contemporary audiences while maintaining recognizable connections to their original temporal or cultural context."""^^xsd:string ;
+Examples include Y2K aesthetics recycling early 2000s digital culture, or cottagecore reproducing romanticized pastoral imagery. The process transforms historical references into legible, shareable formats that resonate with contemporary audiences while maintaining recognizable connections to their original temporal or cultural context.""" ;
                                               rdfs:label "Reproduction"@en .
 
 
@@ -1409,7 +1347,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/Serendipity
 <http://webprotege.stanford.edu/Serendipity> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://webprotege.stanford.edu/Divergence> ;
-                                             rdfs:comment "The process of stumbling upon valuable ideas or materials by chance, often a happy accident during research."^^xsd:string ;
+                                             rdfs:comment "The process of stumbling upon valuable ideas or materials by chance, often a happy accident during research." ;
                                              rdfs:label "Serendipity"@en .
 
 
@@ -1482,7 +1420,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Technology
 <http://webprotege.stanford.edu/Technology> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://webprotege.stanford.edu/R9QlQMHm5hVXDUkuw3tcWGj> ,
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/Press> ,
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty <http://webprotege.stanford.edu/hasTool> ;
                                                               owl:someValuesFrom <http://webprotege.stanford.edu/Tool>
@@ -1499,12 +1437,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/TemporalContext
 <http://webprotege.stanford.edu/TemporalContext> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://webprotege.stanford.edu/Context> .
-
-
-###  http://webprotege.stanford.edu/TextualProduct
-<http://webprotege.stanford.edu/TextualProduct> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> ;
-                                                rdfs:label "TextualProduct"@en .
 
 
 ###  http://webprotege.stanford.edu/Tool
@@ -1526,16 +1458,78 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                         rdfs:label "TvShow"@en .
 
 
-###  http://webprotege.stanford.edu/VideoProduct
-<http://webprotege.stanford.edu/VideoProduct> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://webprotege.stanford.edu/VisualProduct> ;
-                                              rdfs:label "VideoProduct"@en .
+###  http://webprotege.stanford.edu/VisualElement
+<http://webprotege.stanford.edu/VisualElement> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/AestheticElement> ;
+                                               rdfs:label "VisualElement"@en .
 
 
-###  http://webprotege.stanford.edu/VisualProduct
-<http://webprotege.stanford.edu/VisualProduct> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> ;
-                                               rdfs:label "VisualProduct"@en .
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#CleanGirlAesthetic
+:CleanGirlAesthetic rdf:type owl:Class ;
+                    rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#CottageCoreAesthetic
+:CottageCoreAesthetic rdf:type owl:Class ;
+                      rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#DarkAcademiaAesthetic
+:DarkAcademiaAesthetic rdf:type owl:Class ;
+                       rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#DigitalElement
+:DigitalElement rdf:type owl:Class ;
+                rdfs:subClassOf <http://webprotege.stanford.edu/AestheticElement> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#FashionElement
+:FashionElement rdf:type owl:Class ;
+                rdfs:subClassOf <http://webprotege.stanford.edu/AestheticElement> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#GrungeAesthetic
+:GrungeAesthetic rdf:type owl:Class ;
+                 rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#OldMoneyAesthetic
+:OldMoneyAesthetic rdf:type owl:Class ;
+                   rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#TextualElement
+:TextualElement rdf:type owl:Class ;
+                rdfs:subClassOf <http://webprotege.stanford.edu/AestheticElement> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Y2KAesthetic
+:Y2KAesthetic rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( <http://webprotege.stanford.edu/CreativeProduct>
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://webprotege.stanford.edu/hasTemporalContext> ;
+                                                           owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                owl:oneOf ( <http://webprotege.stanford.edu/Present-day>
+                                                                                            <http://webprotege.stanford.edu/2000s>
+                                                                                          )
+                                                                              ]
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://webprotege.stanford.edu/hasVisualElement> ;
+                                                           owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                owl:oneOf ( <http://webprotege.stanford.edu/BrightColors>
+                                                                                            <http://webprotege.stanford.edu/Glitter>
+                                                                                            <http://webprotege.stanford.edu/Holographic>
+                                                                                            <http://webprotege.stanford.edu/Low-resolutionGraphics>
+                                                                                          )
+                                                                              ]
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> ;
+              rdfs:label "Y2K Aesthetic Product"@en .
 
 
 #################################################################
@@ -1551,24 +1545,20 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/Baking
 <http://webprotege.stanford.edu/Baking> rdf:type owl:NamedIndividual ,
                                                  <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                        <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                         rdfs:label "Baking"@en .
 
 
 ###  http://webprotege.stanford.edu/Bratz
 <http://webprotege.stanford.edu/Bratz> rdf:type owl:NamedIndividual ,
                                                 <http://webprotege.stanford.edu/TvShow> ;
-                                       <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                       <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+                                       <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                        rdfs:label "Bratz"@en .
 
 
 ###  http://webprotege.stanford.edu/BrightColors
 <http://webprotege.stanford.edu/BrightColors> rdf:type owl:NamedIndividual ,
-                                                       <http://webprotege.stanford.edu/R3nXKHhiFnbNflrKSkjlpJ> ;
-                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                              <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+                                                       <http://webprotege.stanford.edu/Color> ;
                                               rdfs:label "BrightColors"@en .
 
 
@@ -1590,16 +1580,14 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/Cabin
 <http://webprotege.stanford.edu/Cabin> rdf:type owl:NamedIndividual ,
                                                 <http://webprotege.stanford.edu/PhysicalSpace> ;
-                                       <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                       <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+                                       <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                        rdfs:label "Cabin"@en .
 
 
 ###  http://webprotege.stanford.edu/Chains
 <http://webprotege.stanford.edu/Chains> rdf:type owl:NamedIndividual ,
                                                  <http://webprotege.stanford.edu/AestheticElement> ;
-                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ; # ADDED
-                                        <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Grunge> ;
+                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                         rdfs:label "Chains"@en .
 
 
@@ -1615,63 +1603,58 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/ClassicalArt
 <http://webprotege.stanford.edu/ClassicalArt> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/AestheticElement> ;
-                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ; # ADDED
-                                              <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/DarkAcademia> ;
+                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                               rdfs:label "EuropeanClassicalArt"@en .
 
 
 ###  http://webprotege.stanford.edu/ClassicalLiterature
 <http://webprotege.stanford.edu/ClassicalLiterature> rdf:type owl:NamedIndividual ,
                                                               <http://webprotege.stanford.edu/AestheticElement> ;
-                                                     <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ; # ADDED
+                                                     <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                                      <http://webprotege.stanford.edu/influenced> <http://webprotege.stanford.edu/DarkAcademia> ;
-                                                     <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/DarkAcademia> ;
                                                      rdfs:label "ClassicalLiterature"@en .
 
 
 ###  http://webprotege.stanford.edu/CleanGirl
 <http://webprotege.stanford.edu/CleanGirl> rdf:type owl:NamedIndividual ,
-                                                    <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                           <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/GlossedLips> , # ADDED
-                                                                                           <http://webprotege.stanford.edu/NeutralColorPalette> , # ADDED
-                                                                                           <http://webprotege.stanford.edu/SleekPonytail> ; # ADDED
+                                                    <http://webprotege.stanford.edu/Aesthetic> ;
+                                           <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/GlossedLips> ,
+                                                                                            <http://webprotege.stanford.edu/NeutralColorPalette> ,
+                                                                                            <http://webprotege.stanford.edu/SleekPonytail> ;
                                            rdfs:label "CleanGirl"@en .
 
 
 ###  http://webprotege.stanford.edu/ColourfulHairClips
-<http://webprotege.stanford.edu/ColourfulHairClips> rdf:type owl:NamedIndividual ,
-                                                             <http://webprotege.stanford.edu/FashionProduct> ;
-                                                    <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                                    <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+<http://webprotege.stanford.edu/ColourfulHairClips> rdf:type owl:NamedIndividual ;
+                                                    <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                     rdfs:label "ColourfulHairClips"@en .
 
 
 ###  http://webprotege.stanford.edu/Cottagecore
 <http://webprotege.stanford.edu/Cottagecore> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                             <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Baking> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/Cabin> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/CountrySide> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/DesignAndCrafts> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/Floral> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/FlowySkirts> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/Gardening> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/MaryJaneShoes> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/Muted> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/PuffSleeves> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/SlowerPaceOfLife> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/StrawHat> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/Traditional> , # ADDED
-                                                                                             <http://webprotege.stanford.edu/Wood> ; # ADDED
+                                                      <http://webprotege.stanford.edu/Aesthetic> ;
+                                             <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Baking> ,
+                                                                                              <http://webprotege.stanford.edu/Cabin> ,
+                                                                                              <http://webprotege.stanford.edu/CountrySide> ,
+                                                                                              <http://webprotege.stanford.edu/DesignAndCrafts> ,
+                                                                                              <http://webprotege.stanford.edu/Floral> ,
+                                                                                              <http://webprotege.stanford.edu/FlowySkirts> ,
+                                                                                              <http://webprotege.stanford.edu/Gardening> ,
+                                                                                              <http://webprotege.stanford.edu/MaryJaneShoes> ,
+                                                                                              <http://webprotege.stanford.edu/Muted> ,
+                                                                                              <http://webprotege.stanford.edu/PuffSleeves> ,
+                                                                                              <http://webprotege.stanford.edu/SlowerPaceOfLife> ,
+                                                                                              <http://webprotege.stanford.edu/StrawHat> ,
+                                                                                              <http://webprotege.stanford.edu/Traditional> ,
+                                                                                              <http://webprotege.stanford.edu/Wood> ;
                                              rdfs:label "Cottagecore"@en .
 
 
 ###  http://webprotege.stanford.edu/CountrySide
 <http://webprotege.stanford.edu/CountrySide> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/SpatialContext> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                              <http://webprotege.stanford.edu/influenced> <http://webprotege.stanford.edu/Cottagecore> ;
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
                                              rdfs:label "CountrySide"@en .
 
 
@@ -1681,15 +1664,19 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                           rdfs:label "CyberY2K"@en .
 
 
+###  http://webprotege.stanford.edu/Y2K
+<http://webprotege.stanford.edu/Y2K> rdf:type owl:NamedIndividual .
+
+
 ###  http://webprotege.stanford.edu/DarkAcademia
 <http://webprotege.stanford.edu/DarkAcademia> rdf:type owl:NamedIndividual ,
-                                                       <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                              <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/ClassicalArt> , # ADDED
-                                                                                              <http://webprotege.stanford.edu/ClassicalLiterature> , # ADDED
-                                                                                              <http://webprotege.stanford.edu/Leather> , # ADDED
-                                                                                              <http://webprotege.stanford.edu/MutedColors> , # ADDED
-                                                                                              <http://webprotege.stanford.edu/TweedJackets> , # ADDED
-                                                                                              <http://webprotege.stanford.edu/VintageBooks> ; # ADDED
+                                                       <http://webprotege.stanford.edu/Aesthetic> ;
+                                              <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/ClassicalArt> ,
+                                                                                               <http://webprotege.stanford.edu/ClassicalLiterature> ,
+                                                                                               <http://webprotege.stanford.edu/Leather> ,
+                                                                                               <http://webprotege.stanford.edu/MutedColors> ,
+                                                                                               <http://webprotege.stanford.edu/TweedJackets> ,
+                                                                                               <http://webprotege.stanford.edu/VintageBooks> ;
                                               <http://webprotege.stanford.edu/hasContext> <http://webprotege.stanford.edu/AcademicContext> ;
                                               <http://webprotege.stanford.edu/revivesElement> <http://webprotege.stanford.edu/ClassicalLiterature> ;
                                               <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
@@ -1698,18 +1685,15 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 
 ###  http://webprotege.stanford.edu/Denim
-<http://webprotege.stanford.edu/Denim> rdf:type owl:NamedIndividual ,
-                                                <http://webprotege.stanford.edu/FashionProduct> ;
-                                       <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                       <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+<http://webprotege.stanford.edu/Denim> rdf:type owl:NamedIndividual ;
+                                       <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                        rdfs:label "Denim"@en .
 
 
 ###  http://webprotege.stanford.edu/DesignAndCrafts
 <http://webprotege.stanford.edu/DesignAndCrafts> rdf:type owl:NamedIndividual ,
                                                           <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                                 <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                                 <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+                                                 <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                                  rdfs:label "DesignAndCrafts"@en .
 
 
@@ -1734,10 +1718,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/FlannelShirt
 <http://webprotege.stanford.edu/FlannelShirt> rdf:type owl:NamedIndividual ,
-                                                       <http://webprotege.stanford.edu/AestheticElement> ,
-                                                       <http://webprotege.stanford.edu/FashionProduct> ;
-                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ; # ADDED
-                                              <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Grunge> ;
+                                                       <http://webprotege.stanford.edu/AestheticElement> ;
+                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                               rdfs:label "FlannelShirt"@en .
 
 
@@ -1745,24 +1727,20 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/FlipPhone> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/AestheticElement> ,
                                                     <http://webprotege.stanford.edu/Phone> ;
-                                           <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                           <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+                                           <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                            rdfs:label "FlipPhone"@en .
 
 
 ###  http://webprotege.stanford.edu/Floral
 <http://webprotege.stanford.edu/Floral> rdf:type owl:NamedIndividual ,
-                                                 <http://webprotege.stanford.edu/RDjU63s8m2zCEsDPjpKV1LC> ;
-                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                        <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+                                                 <http://webprotege.stanford.edu/Pattern> ;
+                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                         rdfs:label "Floral"@en .
 
 
 ###  http://webprotege.stanford.edu/FlowySkirts
-<http://webprotege.stanford.edu/FlowySkirts> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/FashionProduct> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+<http://webprotege.stanford.edu/FlowySkirts> rdf:type owl:NamedIndividual ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                              rdfs:label "FlowySkirts"@en .
 
 
@@ -1773,18 +1751,15 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 
 ###  http://webprotege.stanford.edu/FuturisticFonts
-<http://webprotege.stanford.edu/FuturisticFonts> rdf:type owl:NamedIndividual ,
-                                                          <http://webprotege.stanford.edu/TextualProduct> ;
-                                                 <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                                 <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+<http://webprotege.stanford.edu/FuturisticFonts> rdf:type owl:NamedIndividual ;
+                                                 <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                  rdfs:label "FuturisticFonts"@en .
 
 
 ###  http://webprotege.stanford.edu/Gardening
 <http://webprotege.stanford.edu/Gardening> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                           <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                           <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+                                           <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                            rdfs:label "Gardening"@en .
 
 
@@ -1799,10 +1774,9 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Glitter
 <http://webprotege.stanford.edu/Glitter> rdf:type owl:NamedIndividual ,
-                                                  <http://webprotege.stanford.edu/RBetNJjP0Zc59z2rfha83gs> ,
-                                                  <http://webprotege.stanford.edu/RDjU63s8m2zCEsDPjpKV1LC> ;
-                                         <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                         <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+                                                  <http://webprotege.stanford.edu/Material> ,
+                                                  <http://webprotege.stanford.edu/Pattern> ;
+                                         <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                          rdfs:label "Glitter"@en .
 
 
@@ -1816,19 +1790,16 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 
 ###  http://webprotege.stanford.edu/GlossedLips
-<http://webprotege.stanford.edu/GlossedLips> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/FashionProduct> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ; # ADDED
+<http://webprotege.stanford.edu/GlossedLips> rdf:type owl:NamedIndividual ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                              <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/CleanGirl> ;
                                              rdfs:label "GlossedLips"@en .
 
 
 ###  http://webprotege.stanford.edu/Golf
 <http://webprotege.stanford.edu/Golf> rdf:type owl:NamedIndividual ,
                                                <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                      <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ; # ADDED
-                                      <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/OldMoney> ;
+                                      <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
                                       rdfs:label "Golf"@en .
 
 
@@ -1841,13 +1812,13 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Grunge
 <http://webprotege.stanford.edu/Grunge> rdf:type owl:NamedIndividual ,
-                                                 <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                        <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Chains> , # ADDED
-                                                                                        <http://webprotege.stanford.edu/FlannelShirt> , # ADDED
-                                                                                        <http://webprotege.stanford.edu/MartensBoots> , # ADDED
-                                                                                        <http://webprotege.stanford.edu/Punk> , # ADDED
-                                                                                        <http://webprotege.stanford.edu/RippedJeans> , # ADDED
-                                                                                        <http://webprotege.stanford.edu/VinylRecord> ; # ADDED
+                                                 <http://webprotege.stanford.edu/Aesthetic> ;
+                                        <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Chains> ,
+                                                                                         <http://webprotege.stanford.edu/FlannelShirt> ,
+                                                                                         <http://webprotege.stanford.edu/MartensBoots> ,
+                                                                                         <http://webprotege.stanford.edu/Punk> ,
+                                                                                         <http://webprotege.stanford.edu/RippedJeans> ,
+                                                                                         <http://webprotege.stanford.edu/VinylRecord> ;
                                         rdfs:label "Grunge"@en .
 
 
@@ -1869,9 +1840,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Holographic
 <http://webprotege.stanford.edu/Holographic> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/RBetNJjP0Zc59z2rfha83gs> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+                                                      <http://webprotege.stanford.edu/Material> ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                              rdfs:label "Holographic"@en .
 
 
@@ -1889,14 +1859,14 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                     ] ,
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty <http://webprotege.stanford.edu/hasUser> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
+                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                     ] ;
                                            rdfs:label "Instagram"@en .
 
 
 ###  http://webprotege.stanford.edu/InstagramReel
 <http://webprotege.stanford.edu/InstagramReel> rdf:type owl:NamedIndividual ,
-                                                        <http://webprotege.stanford.edu/VideoProduct> ;
+                                                        <http://webprotege.stanford.edu/DigitalVideo> ;
                                                <http://webprotege.stanford.edu/isExecutedOnPlatform> <http://webprotege.stanford.edu/Instagram> ;
                                                rdfs:label "InstagramReel"@en .
 
@@ -1915,20 +1885,17 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 
 ###  http://webprotege.stanford.edu/JuicyVelourTrackSuit
-<http://webprotege.stanford.edu/JuicyVelourTrackSuit> rdf:type owl:NamedIndividual ,
-                                                               <http://webprotege.stanford.edu/FashionProduct> ;
-                                                      <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                                      <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+<http://webprotege.stanford.edu/JuicyVelourTrackSuit> rdf:type owl:NamedIndividual ;
+                                                      <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                       rdfs:label "JuicyVelourTrackSuit"@en .
 
 
 ###  http://webprotege.stanford.edu/KittenHeels
 <http://webprotege.stanford.edu/KittenHeels> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/AestheticElement> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                              <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ,
                                                                                                  <http://webprotege.stanford.edu/2000s> ;
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
                                              <http://webprotege.stanford.edu/reactsTo> <http://webprotege.stanford.edu/Grunge> ;
                                              rdfs:label "KittenHeels"@en .
 
@@ -1949,9 +1916,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Leather
 <http://webprotege.stanford.edu/Leather> rdf:type owl:NamedIndividual ,
-                                                  <http://webprotege.stanford.edu/RBetNJjP0Zc59z2rfha83gs> ;
-                                         <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ; # ADDED
-                                         <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/DarkAcademia> ;
+                                                  <http://webprotege.stanford.edu/Material> ;
+                                         <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                          rdfs:label "Leather"@en .
 
 
@@ -1968,6 +1934,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 
 ###  http://webprotege.stanford.edu/Lightroom_Preset
+
+###  http://webprotege.stanford.edu/Lightroom_Preset
 <http://webprotege.stanford.edu/Lightroom_Preset> rdf:type owl:NamedIndividual ;
                                                   <http://webprotege.stanford.edu/hasDomain> <http://webprotege.stanford.edu/Lightroom> ;
                                                   rdfs:label "Lightroom_Preset"@en .
@@ -1982,21 +1950,17 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Low-resolutionGraphics
 <http://webprotege.stanford.edu/Low-resolutionGraphics> rdf:type owl:NamedIndividual ,
-                                                                 <http://webprotege.stanford.edu/DigitalProduct> ,
-                                                                 <http://webprotege.stanford.edu/ImageProduct> ,
-                                                                 <http://webprotege.stanford.edu/RDjU63s8m2zCEsDPjpKV1LC> ;
-                                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                                        <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+                                                                 <http://webprotege.stanford.edu/DigitalImage> ,
+                                                                 <http://webprotege.stanford.edu/Pattern> ;
+                                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                         rdfs:label "Low-resolutionGraphics"@en .
 
 
 ###  http://webprotege.stanford.edu/Low-riseBottoms
 <http://webprotege.stanford.edu/Low-riseBottoms> rdf:type owl:NamedIndividual ,
-                                                          <http://webprotege.stanford.edu/AestheticElement> ,
-                                                          <http://webprotege.stanford.edu/FashionProduct> ;
-                                                 <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
+                                                          <http://webprotege.stanford.edu/AestheticElement> ;
+                                                 <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                  <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
-                                                 <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
                                                  rdfs:label "Low-rise bottoms"@en .
 
 
@@ -2022,29 +1986,24 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/MartensBoots
 <http://webprotege.stanford.edu/MartensBoots> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/AestheticElement> ,
-                                                       <http://webprotege.stanford.edu/FashionProduct> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://webprotege.stanford.edu/isSubjectOf> ;
                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
                                                        ] ;
-                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ; # ADDED
-                                              <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Grunge> ;
+                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                               rdfs:label "MartensBoots"@en .
 
 
 ###  http://webprotege.stanford.edu/MaryJaneShoes
-<http://webprotege.stanford.edu/MaryJaneShoes> rdf:type owl:NamedIndividual ,
-                                                        <http://webprotege.stanford.edu/FashionProduct> ;
-                                               <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                               <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+<http://webprotege.stanford.edu/MaryJaneShoes> rdf:type owl:NamedIndividual ;
+                                               <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                                rdfs:label "MaryJaneShoes"@en .
 
 
 ###  http://webprotege.stanford.edu/MeanGirls
 <http://webprotege.stanford.edu/MeanGirls> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/Movie> ;
-                                           <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                           <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+                                           <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                            rdfs:label "MeanGirls"@en .
 
 
@@ -2056,36 +2015,34 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Muted
 <http://webprotege.stanford.edu/Muted> rdf:type owl:NamedIndividual ,
-                                                <http://webprotege.stanford.edu/R3nXKHhiFnbNflrKSkjlpJ> ;
-                                       <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                       <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+                                                <http://webprotege.stanford.edu/Color> ;
+                                       <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                        rdfs:label "Muted"@en .
 
 
 ###  http://webprotege.stanford.edu/MutedColors
 <http://webprotege.stanford.edu/MutedColors> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/R3nXKHhiFnbNflrKSkjlpJ> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ; # ADDED
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/DarkAcademia> ;
+                                                      <http://webprotege.stanford.edu/Color> ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                              rdfs:label "MutedColors"@en .
 
 
 ###  http://webprotege.stanford.edu/NeutralColorPalette
 <http://webprotege.stanford.edu/NeutralColorPalette> rdf:type owl:NamedIndividual ,
-                                                              <http://webprotege.stanford.edu/R3nXKHhiFnbNflrKSkjlpJ> ;
-                                                     <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ; # ADDED
+                                                              <http://webprotege.stanford.edu/Color> ;
+                                                     <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                                      <http://webprotege.stanford.edu/isVisualElementOf> <http://webprotege.stanford.edu/CleanGirl> ;
                                                      rdfs:label "NeutralColorPalette"@en .
 
 
 ###  http://webprotege.stanford.edu/OldMoney
 <http://webprotege.stanford.edu/OldMoney> rdf:type owl:NamedIndividual ,
-                                                   <http://webprotege.stanford.edu/RGb0YcKZrk6UgoGfPYWZPE> ;
-                                          <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Golf> , # ADDED
-                                                                                          <http://webprotege.stanford.edu/PennyLoafers> , # ADDED
-                                                                                          <http://webprotege.stanford.edu/PoloShirts> , # ADDED
-                                                                                          <http://webprotege.stanford.edu/TailoredBlazers> , # ADDED
-                                                                                          <http://webprotege.stanford.edu/Tennis> ; # ADDED
+                                                   <http://webprotege.stanford.edu/Aesthetic> ;
+                                          <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Golf> ,
+                                                                                           <http://webprotege.stanford.edu/PennyLoafers> ,
+                                                                                           <http://webprotege.stanford.edu/PoloShirts> ,
+                                                                                           <http://webprotege.stanford.edu/TailoredBlazers> ,
+                                                                                           <http://webprotege.stanford.edu/Tennis> ;
                                           rdfs:label "OldMoney"@en .
 
 
@@ -2098,10 +2055,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/PennyLoafers
 <http://webprotege.stanford.edu/PennyLoafers> rdf:type owl:NamedIndividual ,
-                                                       <http://webprotege.stanford.edu/AestheticElement> ,
-                                                       <http://webprotege.stanford.edu/FashionProduct> ;
-                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ; # ADDED
-                                              <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/OldMoney> ;
+                                                       <http://webprotege.stanford.edu/AestheticElement> ;
+                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
                                               rdfs:label "PennyLoafers"@en .
 
 
@@ -2114,17 +2069,15 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                     ] ,
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty <http://webprotege.stanford.edu/hasUser> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/R7cMhgtaObW9VJFW8QBRkpm>
+                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                     ] ;
                                            rdfs:label "Pinterest"@en .
 
 
 ###  http://webprotege.stanford.edu/PoloShirts
 <http://webprotege.stanford.edu/PoloShirts> rdf:type owl:NamedIndividual ,
-                                                     <http://webprotege.stanford.edu/AestheticElement> ,
-                                                     <http://webprotege.stanford.edu/FashionProduct> ;
-                                            <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ; # ADDED
-                                            <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/OldMoney> ;
+                                                     <http://webprotege.stanford.edu/AestheticElement> ;
+                                            <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
                                             rdfs:label "PoloShirts"@en .
 
 
@@ -2151,19 +2104,16 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 
 ###  http://webprotege.stanford.edu/PuffSleeves
-<http://webprotege.stanford.edu/PuffSleeves> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/FashionProduct> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+<http://webprotege.stanford.edu/PuffSleeves> rdf:type owl:NamedIndividual ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                              rdfs:label "PuffSleeves"@en .
 
 
 ###  http://webprotege.stanford.edu/Punk
 <http://webprotege.stanford.edu/Punk> rdf:type owl:NamedIndividual ,
                                                <http://webprotege.stanford.edu/Community> ,
-                                               <http://webprotege.stanford.edu/FashionProduct> ,
                                                <http://webprotege.stanford.edu/Music> ;
-                                      <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ; # ADDED
+                                      <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                       <http://webprotege.stanford.edu/isAudioElementof> <http://webprotege.stanford.edu/Grunge> ;
                                       rdfs:label "Punk"@en .
 
@@ -2184,10 +2134,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/RippedJeans
 <http://webprotege.stanford.edu/RippedJeans> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/AestheticElement> ,
-                                                      <http://webprotege.stanford.edu/FashionProduct> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ; # ADDED
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Grunge> ;
+                                                      <http://webprotege.stanford.edu/AestheticElement> ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                              rdfs:label "RippedJeans"@en .
 
 
@@ -2217,10 +2165,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                         owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                        owl:someValuesFrom <http://webprotege.stanford.edu/VisualProduct>
                                                       ] ;
                                              <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ,
                                                                                               <http://webprotege.stanford.edu/DarkAcademia> ;
@@ -2241,17 +2185,16 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                           owl:onProperty <http://webprotege.stanford.edu/enablesProcess> ;
                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
                                                         ] ;
-                                               <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
+                                               <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
-                                               <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
                                                <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/KittenHeels> ;
-                                               rdfs:TimePeriod "1998-2004"^^xsd:string ;
+                                               rdfs:TimePeriod "1998-2004" ;
                                                rdfs:label "SexAndTheCity"@en .
 
 
 ###  http://webprotege.stanford.edu/ShortVideos
 <http://webprotege.stanford.edu/ShortVideos> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/VideoProduct> ;
+                                                      <http://webprotege.stanford.edu/DigitalVideo> ;
                                              rdfs:label "ShortVideos"@en .
 
 
@@ -2265,16 +2208,14 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/SleekPonytail
 <http://webprotege.stanford.edu/SleekPonytail> rdf:type owl:NamedIndividual ,
                                                         <http://webprotege.stanford.edu/AestheticElement> ;
-                                               <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ; # ADDED
-                                               <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/CleanGirl> ;
+                                               <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                                rdfs:label "SleekPonytail"@en .
 
 
 ###  http://webprotege.stanford.edu/SlowerPaceOfLife
 <http://webprotege.stanford.edu/SlowerPaceOfLife> rdf:type owl:NamedIndividual ,
                                                            <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                                  <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                                  <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+                                                  <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                                   rdfs:label "SlowerPaceOfLife"@en .
 
 
@@ -2302,42 +2243,35 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 
 ###  http://webprotege.stanford.edu/StrawHat
-<http://webprotege.stanford.edu/StrawHat> rdf:type owl:NamedIndividual ,
-                                                   <http://webprotege.stanford.edu/FashionProduct> ;
-                                          <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                          <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+<http://webprotege.stanford.edu/StrawHat> rdf:type owl:NamedIndividual ;
+                                          <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                           rdfs:label "StrawHat"@en .
 
 
 ###  http://webprotege.stanford.edu/TailoredBlazers
 <http://webprotege.stanford.edu/TailoredBlazers> rdf:type owl:NamedIndividual ,
-                                                          <http://webprotege.stanford.edu/AestheticElement> ,
-                                                          <http://webprotege.stanford.edu/FashionProduct> ;
-                                                 <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ; # ADDED
-                                                 <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/OldMoney> ;
+                                                          <http://webprotege.stanford.edu/AestheticElement> ;
+                                                 <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
                                                  rdfs:label "TailoredBlazers"@en .
 
 
 ###  http://webprotege.stanford.edu/Tamagotchis
 <http://webprotege.stanford.edu/Tamagotchis> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/Games> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ; # ADDED
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Y2K> ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                              rdfs:label "Tamagotchis"@en .
 
 
 ###  http://webprotege.stanford.edu/Tennis
 <http://webprotege.stanford.edu/Tennis> rdf:type owl:NamedIndividual ,
                                                  <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ; # ADDED
-                                        <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/OldMoney> ;
+                                        <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
                                         rdfs:label "Tennis"@en .
 
 
 ###  http://webprotege.stanford.edu/TheSecretHistory
 <http://webprotege.stanford.edu/TheSecretHistory> rdf:type owl:NamedIndividual ,
-                                                           <http://webprotege.stanford.edu/Book> ,
-                                                           <http://webprotege.stanford.edu/TextualProduct> ;
+                                                           <http://webprotege.stanford.edu/Book> ;
                                                   <http://webprotege.stanford.edu/influenced> <http://webprotege.stanford.edu/DarkAcademia> ;
                                                   rdfs:label "TheSecretHistory"@en .
 
@@ -2361,7 +2295,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/TikTokVideo
 <http://webprotege.stanford.edu/TikTokVideo> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/VideoProduct> ;
+                                                      <http://webprotege.stanford.edu/DigitalVideo> ;
                                              <http://webprotege.stanford.edu/isExecutedOnPlatform> <http://webprotege.stanford.edu/TikTok> ;
                                              rdfs:label "TikTokVideo"@en .
 
@@ -2376,8 +2310,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/Traditional
 <http://webprotege.stanford.edu/Traditional> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/LifeStyle> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ; # ADDED
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Cottagecore> ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                              rdfs:label "Traditional"@en .
 
 
@@ -2391,9 +2324,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/TweedJackets
 <http://webprotege.stanford.edu/TweedJackets> rdf:type owl:NamedIndividual ,
-                                                       <http://webprotege.stanford.edu/AestheticElement> ,
-                                                       <http://webprotege.stanford.edu/FashionProduct> ;
-                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ; # ADDED
+                                                       <http://webprotege.stanford.edu/AestheticElement> ;
+                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                               rdfs:label "TweedJackets"@en .
 
@@ -2412,15 +2344,38 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/VintageBooks
 <http://webprotege.stanford.edu/VintageBooks> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/AestheticElement> ;
-                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ; # ADDED
-                                              <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/DarkAcademia> ;
+                                              <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                               rdfs:label "VintageBooks"@en .
 
 
 ###  http://webprotege.stanford.edu/VinylRecord
 <http://webprotege.stanford.edu/VinylRecord> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/AestheticElement> ;
-                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ; # ADDED
-                                             <http://webprotege.stanford.edu/isAestheticElementOf> <http://webprotege.stanford.edu/Grunge> ;
+                                             <http://webprotege.stanford.edu/embodiesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                              rdfs:label "VinylRecord"@en .
 
+
+###  http://webprotege.stanford.edu/Wood
+<http://webprotege.stanford.edu/Wood> rdf:type owl:NamedIndividual .
+
+
+###  http://webprotege.stanford.edu/Y2K
+<http://webprotege.stanford.edu/Y2K> rdf:type owl:NamedIndividual .
+
+
+###  http://webprotege.stanford.edu/1990s
+<http://webprotege.stanford.edu/1990s> rdf:type owl:NamedIndividual .
+
+
+###  http://webprotege.stanford.edu/2000s
+<http://webprotege.stanford.edu/2000s> rdf:type owl:NamedIndividual .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#TestY2KOutfit
+:TestY2KOutfit rdf:type owl:NamedIndividual ,
+                        <http://webprotege.stanford.edu/CreativeProduct> ;
+               <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
+               <http://webprotege.stanford.edu/hasVisualElement> <http://webprotege.stanford.edu/BrightColors> .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
