@@ -50,6 +50,13 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                  rdfs:label "characterizedBy"@en .
 
 
+###  http://webprotege.stanford.edu/createdBy
+<http://webprotege.stanford.edu/createdBy> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                           owl:inverseOf <http://webprotege.stanford.edu/creates> ;
+                                           rdfs:label "createdBy"@en .
+
+
 ###  http://webprotege.stanford.edu/creates
 <http://webprotege.stanford.edu/creates> rdf:type owl:ObjectProperty ;
                                          rdfs:label "creates"@en .
@@ -57,6 +64,7 @@ xsd:Year rdf:type rdfs:Datatype ;
 
 ###  http://webprotege.stanford.edu/evokedBy
 <http://webprotege.stanford.edu/evokedBy> rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf <http://webprotege.stanford.edu/evokes> ;
                                           rdfs:label "evokedBy"@en .
 
 
@@ -116,14 +124,23 @@ xsd:Year rdf:type rdfs:Datatype ;
 
 ###  http://webprotege.stanford.edu/influenced
 <http://webprotege.stanford.edu/influenced> rdf:type owl:ObjectProperty ;
+                                            owl:inverseOf <http://webprotege.stanford.edu/influencedBy> ;
                                             rdfs:label "influenced"@en .
 
 
 ###  http://webprotege.stanford.edu/influencedBy
 <http://webprotege.stanford.edu/influencedBy> rdf:type owl:ObjectProperty ;
                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                              rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
-                                              rdfs:range <http://webprotege.stanford.edu/Influencer> ;
+                                              rdfs:domain [ rdf:type owl:Class ;
+                                                            owl:unionOf ( <http://webprotege.stanford.edu/Aesthetic>
+                                                                          <http://webprotege.stanford.edu/AestheticElement>
+                                                                        )
+                                                          ] ;
+                                              rdfs:range [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://webprotege.stanford.edu/Influencer>
+                                                                         <http://webprotege.stanford.edu/Media>
+                                                                       )
+                                                         ] ;
                                               rdfs:label "influencedBy"@en .
 
 
@@ -157,12 +174,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                  rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
                                                  rdfs:range <http://webprotege.stanford.edu/Process> ;
                                                  rdfs:label "involvesProcess"@en .
-
-
-###  http://webprotege.stanford.edu/isCreatedBy
-<http://webprotege.stanford.edu/isCreatedBy> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                             rdfs:label "createdBy"@en .
 
 
 ###  http://webprotege.stanford.edu/isSubjectOf
@@ -209,6 +220,7 @@ xsd:Year rdf:type rdfs:Datatype ;
 
 ###  http://webprotege.stanford.edu/spread
 <http://webprotege.stanford.edu/spread> rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf <http://webprotege.stanford.edu/spreadThrough> ;
                                         rdfs:label "spread"@en .
 
 
@@ -662,12 +674,12 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
 <http://webprotege.stanford.edu/Music> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://webprotege.stanford.edu/Media> ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/hasTemporalContext> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/TemporalContext>
+                                                         owl:onProperty <http://webprotege.stanford.edu/createdBy> ;
+                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/isCreatedBy> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Person>
+                                                         owl:onProperty <http://webprotege.stanford.edu/hasTemporalContext> ;
+                                                         owl:someValuesFrom <http://webprotege.stanford.edu/TemporalContext>
                                                        ] ;
                                        rdfs:label "Music"@en .
 
@@ -707,7 +719,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
 ###  http://webprotege.stanford.edu/Person
 <http://webprotege.stanford.edu/Person> rdf:type owl:Class ;
                                         rdfs:subClassOf owl:Thing ;
-                                        owl:disjointWith <http://webprotege.stanford.edu/TemporalContext> ;
                                         rdfs:label "Person"@en .
 
 
@@ -1508,6 +1519,10 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/Grunge> rdf:type owl:NamedIndividual ,
                                                  <http://webprotege.stanford.edu/Aesthetic> ,
                                                  [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://webprotege.stanford.edu/createdBy> ;
+                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Community>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
                                                    owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Melancholy>
                                                  ] ,
@@ -1522,10 +1537,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
-                                                 ] ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <http://webprotege.stanford.edu/isCreatedBy> ;
-                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Community>
                                                  ] ;
                                         <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Chains> ,
                                                                                          <http://webprotege.stanford.edu/ConverseSneakers> ,
@@ -1830,7 +1841,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                       owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                       owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
                                                     ] ;
-                                           <http://webprotege.stanford.edu/isCreatedBy> <http://webprotege.stanford.edu/WebCommunity> ;
+                                           <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                            <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Photoshop> .
 
 
@@ -1860,8 +1871,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/Nirvana
 <http://webprotege.stanford.edu/Nirvana> rdf:type owl:NamedIndividual ,
                                                   <http://webprotege.stanford.edu/Music> ;
+                                         <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/KurtCobain> ;
                                          <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ;
-                                         <http://webprotege.stanford.edu/isCreatedBy> <http://webprotege.stanford.edu/KurtCobain> ;
                                          <http://webprotege.stanford.edu/genre> "Punk" ;
                                          <http://webprotege.stanford.edu/type> "MusicBand" ;
                                          rdfs:label "Nirvana"@en .
@@ -1991,9 +2002,9 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/PhodePhoneCase> rdf:type owl:NamedIndividual ,
                                                          <http://webprotege.stanford.edu/AestheticElement> ,
                                                          <http://webprotege.stanford.edu/FashionProduct> ;
+                                                <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                                 <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                                 <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
-                                                <http://webprotege.stanford.edu/isCreatedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                                 rdfs:label "RhodePhoneCase"@en .
 
 
@@ -2384,6 +2395,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                       <http://webprotege.stanford.edu/Low-riseBottoms> ,
                                                                                       <http://webprotege.stanford.edu/Tamagotchis> ,
                                                                                       <http://webprotege.stanford.edu/iMac> ;
+                                     <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                      <http://webprotege.stanford.edu/hasContext> <http://webprotege.stanford.edu/GlobalSociety> ;
                                      <http://webprotege.stanford.edu/hasSpatialContext> <http://webprotege.stanford.edu/GlobalSociety> ;
                                      <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
@@ -2394,7 +2406,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                  <http://webprotege.stanford.edu/MTV> ,
                                                                                  <http://webprotege.stanford.edu/ParisHilton> ,
                                                                                  <http://webprotege.stanford.edu/SexAndTheCity> ;
-                                     <http://webprotege.stanford.edu/isCreatedBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                      <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                      rdfs:label "Y2K"@en .
 
