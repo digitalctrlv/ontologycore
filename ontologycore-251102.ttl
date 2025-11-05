@@ -291,6 +291,19 @@ xsd:Year rdf:type rdfs:Datatype ;
                                       rdfs:label "type"@en .
 
 
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#ageRange
+:ageRange rdf:type owl:DatatypeProperty .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#birthYear
+:birthYear rdf:type owl:DatatypeProperty .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#url
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf owl:topDataProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -1023,10 +1036,11 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                           owl:onProperty <http://webprotege.stanford.edu/creates> ;
                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Music>
                                                         ] ;
+                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
-                                               <http://webprotege.stanford.edu/influenced> <http://webprotege.stanford.edu/Y2K> ;
                                                <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Y2K> ;
                                                <http://webprotege.stanford.edu/type> "Singer" ;
+                                               :birthYear "1981"^^xsd:Year ;
                                                rdfs:label "BritneySpears"@en .
 
 
@@ -1040,6 +1054,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/Candles> rdf:type owl:NamedIndividual ,
                                                   <http://webprotege.stanford.edu/AestheticElement> ,
                                                   <http://webprotege.stanford.edu/Product> ;
+                                         <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                          rdfs:label "Candles"@en .
 
 
@@ -1054,6 +1069,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/Classical
 <http://webprotege.stanford.edu/Classical> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/ConceptualIdeas> ;
+                                           <http://webprotege.stanford.edu/startDate> "XVII century" ;
                                            rdfs:label "Classical"@en .
 
 
@@ -1096,6 +1112,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                            <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
                                                                                           <http://webprotege.stanford.edu/Pinterest> ,
                                                                                           <http://webprotege.stanford.edu/TikTok> ;
+                                           <http://webprotege.stanford.edu/startDate> 2021 ;
                                            rdfs:label "CleanGirl"@en .
 
 
@@ -1167,6 +1184,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/ColourfulHairClips
 <http://webprotege.stanford.edu/ColourfulHairClips> rdf:type owl:NamedIndividual ,
                                                              <http://webprotege.stanford.edu/FashionProduct> ;
+                                                    <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                     rdfs:label "ColourfulHairClips"@en .
 
 
@@ -1175,6 +1193,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                            <http://webprotege.stanford.edu/FashionProduct> ;
                                                   <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                                   <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/KurtCobain> ;
+                                                  <http://webprotege.stanford.edu/type> "Shoes"@en ;
                                                   rdfs:label "ConverseSneakers"@en .
 
 
@@ -1355,7 +1374,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/DarkColors
 <http://webprotege.stanford.edu/DarkColors> rdf:type owl:NamedIndividual ,
                                                      <http://webprotege.stanford.edu/Color> ;
-                                            <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
+                                            <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ,
+                                                                                                <http://webprotege.stanford.edu/Grunge> ;
                                             rdfs:label "DarkColors"@en .
 
 
@@ -1390,6 +1410,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                    ] ;
                                           <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                           <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;
+                                          <http://webprotege.stanford.edu/startDate> 2019 ;
                                           rdfs:label "Euphoria"@en .
 
 
@@ -1405,6 +1426,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/FlipPhone> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/AestheticElement> ,
                                                     <http://webprotege.stanford.edu/Phone> ;
+                                           <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                            rdfs:label "FlipPhone"@en .
 
 
@@ -1431,6 +1453,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                    <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
                                                    <http://webprotege.stanford.edu/influenced> <http://webprotege.stanford.edu/Grunge> ;
                                                    <http://webprotege.stanford.edu/type> "Singer" ;
+                                                   :birthYear "1992"^^xsd:Year ;
                                                    rdfs:label "FrancesBeanCobain"@en .
 
 
@@ -1443,6 +1466,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/FuturisticFonts
 <http://webprotege.stanford.edu/FuturisticFonts> rdf:type owl:NamedIndividual ,
                                                           <http://webprotege.stanford.edu/TextualProduct> ;
+                                                 <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                  rdfs:label "FuturisticFonts"@en .
 
 
@@ -1457,6 +1481,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                <http://webprotege.stanford.edu/AgeCommunity> ,
                                                <http://webprotege.stanford.edu/Consumer> ;
                                       <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/Grunge> ;
+                                      :ageRange "45-60" ;
                                       rdfs:label "GenX"@en .
 
 
@@ -1469,6 +1494,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                    <http://webprotege.stanford.edu/DarkAcademia> ,
                                                                                    <http://webprotege.stanford.edu/OldMoney> ,
                                                                                    <http://webprotege.stanford.edu/Y2K> ;
+                                      :ageRange "13-28" ;
                                       rdfs:label "GenZ"@en .
 
 
@@ -1491,6 +1517,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                       <http://webprotege.stanford.edu/FashionProduct> ;
                                              <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                              <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
+                                             <http://webprotege.stanford.edu/type> "Make up"@en ;
                                              rdfs:label "GlossedLips"@en .
 
 
@@ -1499,6 +1526,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                     <http://webprotege.stanford.edu/AestheticElement> ;
                                            <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                            <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
+                                           <http://webprotege.stanford.edu/type> "Make up"@en ;
                                            rdfs:label "GlowySkin"@en .
 
 
@@ -1627,6 +1655,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/HaileyBieber> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/SocialMediaInfluencer> ;
                                               <http://webprotege.stanford.edu/creates> <http://webprotege.stanford.edu/InstagramReel> ;
+                                              <http://webprotege.stanford.edu/type> "Blogger"@en ;
+                                              :birthYear "1996"^^xsd:Year ;
                                               rdfs:TimePeriod "2020s" ;
                                               rdfs:label "HaileyBieber"@en .
 
@@ -1643,11 +1673,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/Holographic> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/Material> ;
                                              rdfs:label "Holographic"@en .
-
-
-###  http://webprotege.stanford.edu/Horror
-<http://webprotege.stanford.edu/Horror> rdf:type owl:NamedIndividual ;
-                                        rdfs:label "Horror"@en .
 
 
 ###  http://webprotege.stanford.edu/Instagram
@@ -1695,6 +1720,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/JuicyVelourTrackSuit
 <http://webprotege.stanford.edu/JuicyVelourTrackSuit> rdf:type owl:NamedIndividual ,
                                                                <http://webprotege.stanford.edu/FashionProduct> ;
+                                                      <http://webprotege.stanford.edu/type> "Clothes"@en ;
                                                       rdfs:label "JuicyVelourTrackSuit"@en .
 
 
@@ -1707,6 +1733,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                              <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ,
                                                                                                  <http://webprotege.stanford.edu/2000s> ;
                                              <http://webprotege.stanford.edu/opposesTo> <http://webprotege.stanford.edu/Grunge> ;
+                                             <http://webprotege.stanford.edu/type> "Shoes"@en ;
                                              rdfs:label "KittenHeels"@en .
 
 
@@ -1721,6 +1748,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                             <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ;
                                             <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Grunge> ;
                                             <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/ConverseSneakers> ;
+                                            <http://webprotege.stanford.edu/type> "Singer"@en ;
+                                            :birthYear "1967"^^xsd:Year ;
                                             rdfs:label "KurtCobain"@en .
 
 
@@ -1769,6 +1798,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                           <http://webprotege.stanford.edu/AestheticElement> ,
                                                           <http://webprotege.stanford.edu/FashionProduct> ;
                                                  <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
+                                                 <http://webprotege.stanford.edu/type> "Clothes"@en ;
                                                  rdfs:label "Low-rise bottoms"@en .
 
 
@@ -1795,12 +1825,14 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                          owl:onProperty <http://webprotege.stanford.edu/isSubjectOf> ;
                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
                                                        ] ;
+                                              <http://webprotege.stanford.edu/type> "Shoes"@en ;
                                               rdfs:label "MartensBoots"@en .
 
 
 ###  http://webprotege.stanford.edu/MaryJaneShoes
 <http://webprotege.stanford.edu/MaryJaneShoes> rdf:type owl:NamedIndividual ,
                                                         <http://webprotege.stanford.edu/FashionProduct> ;
+                                               <http://webprotege.stanford.edu/type> "Shoes"@en ;
                                                rdfs:label "MaryJaneShoes"@en .
 
 
@@ -1813,6 +1845,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/Millenials
 <http://webprotege.stanford.edu/Millenials> rdf:type owl:NamedIndividual ,
                                                      <http://webprotege.stanford.edu/AgeCommunity> ;
+                                            :ageRange "29-44" ;
                                             rdfs:label "Millenials"@en .
 
 
@@ -1860,11 +1893,15 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/NeutralColorPalette
 <http://webprotege.stanford.edu/NeutralColorPalette> rdf:type owl:NamedIndividual ,
                                                               <http://webprotege.stanford.edu/Color> ;
+                                                     <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                                      rdfs:label "NeutralColorPalette"@en .
 
 
 ###  http://webprotege.stanford.edu/NeutralMakeup
-<http://webprotege.stanford.edu/NeutralMakeup> rdf:type owl:NamedIndividual ;
+<http://webprotege.stanford.edu/NeutralMakeup> rdf:type owl:NamedIndividual ,
+                                                        <http://webprotege.stanford.edu/FashionProduct> ;
+                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
+                                               <http://webprotege.stanford.edu/type> "Make up"@en ;
                                                rdfs:label "NeutralMakeup"@en .
 
 
@@ -1987,6 +2024,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/ParisHilton> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/Celebrity> ;
                                              <http://webprotege.stanford.edu/influenced> <http://webprotege.stanford.edu/Y2K> ;
+                                             :birthYear "1981"^^xsd:Year ;
                                              rdfs:label "ParisHilton"@en .
 
 
@@ -1995,6 +2033,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                        <http://webprotege.stanford.edu/AestheticElement> ,
                                                        <http://webprotege.stanford.edu/FashionProduct> ;
                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
+                                              <http://webprotege.stanford.edu/type> "Shoes"@en ;
                                               rdfs:label "PennyLoafers"@en .
 
 
@@ -2040,6 +2079,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/PoloShirts> rdf:type owl:NamedIndividual ,
                                                      <http://webprotege.stanford.edu/AestheticElement> ,
                                                      <http://webprotege.stanford.edu/FashionProduct> ;
+                                            <http://webprotege.stanford.edu/type> "Clothes"@en ;
                                             rdfs:label "PoloShirts"@en .
 
 
@@ -2052,13 +2092,15 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/Present-day
 <http://webprotege.stanford.edu/Present-day> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/TemporalContext> ;
-                                             <http://webprotege.stanford.edu/startDate> 2020 ;
+                                             <http://webprotege.stanford.edu/startDate> "2020"^^xsd:Year ;
                                              rdfs:label "2020s"@en .
 
 
 ###  http://webprotege.stanford.edu/PuffSleeves
 <http://webprotege.stanford.edu/PuffSleeves> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/FashionProduct> ;
+                                             <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
+                                             <http://webprotege.stanford.edu/type> "Clothes"@en ;
                                              rdfs:label "PuffSleeves"@en .
 
 
@@ -2067,6 +2109,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                <http://webprotege.stanford.edu/Community> ,
                                                <http://webprotege.stanford.edu/FashionProduct> ,
                                                <http://webprotege.stanford.edu/Music> ;
+                                      <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                       rdfs:label "Punk"@en .
 
 
@@ -2087,6 +2130,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/RippedJeans> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/AestheticElement> ,
                                                       <http://webprotege.stanford.edu/FashionProduct> ;
+                                             <http://webprotege.stanford.edu/type> "Clothes"@en ;
                                              rdfs:label "RippedJeans"@en .
 
 
@@ -2155,6 +2199,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/SleekPonytail
 <http://webprotege.stanford.edu/SleekPonytail> rdf:type owl:NamedIndividual ,
                                                         <http://webprotege.stanford.edu/AestheticElement> ;
+                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                                rdfs:label "SleekPonytail"@en .
 
 
@@ -2177,8 +2222,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/SoftGrunge
 <http://webprotege.stanford.edu/SoftGrunge> rdf:type owl:NamedIndividual ,
                                                      <http://webprotege.stanford.edu/TemporalContext> ;
-                                            <http://webprotege.stanford.edu/endDate> 1980 ;
-                                            <http://webprotege.stanford.edu/startDate> 1970 ;
+                                            <http://webprotege.stanford.edu/endDate> "1979"^^xsd:Year ;
+                                            <http://webprotege.stanford.edu/startDate> "1970"^^xsd:Year ;
                                             rdfs:label "1970s"@en .
 
 
@@ -2281,6 +2326,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
                                                        ] ;
                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
+                                              <http://webprotege.stanford.edu/type> "Clothes"@en ;
                                               rdfs:label "TweedJackets"@en .
 
 
@@ -2478,8 +2524,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/19thCentury> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/TemporalContext> ;
                                              <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/DarkAcademia> ;
-                                             <http://webprotege.stanford.edu/endDate> 2000 ;
-                                             <http://webprotege.stanford.edu/startDate> 1800 ;
+                                             <http://webprotege.stanford.edu/endDate> "1900"^^xsd:Year ;
+                                             <http://webprotege.stanford.edu/startDate> "1801"^^xsd:Year ;
                                              rdfs:label "19thCentury"@en .
 
 
@@ -2487,8 +2533,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/1990s> rdf:type owl:NamedIndividual ,
                                                 <http://webprotege.stanford.edu/TemporalContext> ;
                                        <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Grunge> ;
-                                       <http://webprotege.stanford.edu/endDate> 2000 ;
-                                       <http://webprotege.stanford.edu/startDate> 1990 ;
+                                       <http://webprotege.stanford.edu/endDate> "1999"^^xsd:Year ;
+                                       <http://webprotege.stanford.edu/startDate> "1990"^^xsd:Year ;
                                        rdfs:label "1990s"@en .
 
 
@@ -2499,7 +2545,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                           <http://webprotege.stanford.edu/DarkAcademia> ,
                                                                                           <http://webprotege.stanford.edu/OldMoney> ;
                                              <http://webprotege.stanford.edu/endDate> 2000 ;
-                                             <http://webprotege.stanford.edu/startDate> 1900 ;
+                                             <http://webprotege.stanford.edu/startDate> 1901 ;
                                              rdfs:label "20thCentury"@en .
 
 
@@ -2511,22 +2557,24 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
                                                 ] ;
                                        <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Y2K> ;
-                                       <http://webprotege.stanford.edu/endDate> 2010 ;
-                                       <http://webprotege.stanford.edu/startDate> 2000 ;
+                                       <http://webprotege.stanford.edu/endDate> "2009"^^xsd:Year ;
+                                       <http://webprotege.stanford.edu/startDate> "2000"^^xsd:Year ;
                                        rdfs:label "2000s"@en .
 
 
 ###  http://webprotege.stanford.edu/2010s
 <http://webprotege.stanford.edu/2010s> rdf:type owl:NamedIndividual ,
                                                 <http://webprotege.stanford.edu/TemporalContext> ;
-                                       <http://webprotege.stanford.edu/endDate> 2020 ;
-                                       <http://webprotege.stanford.edu/startDate> 2010 ;
+                                       <http://webprotege.stanford.edu/endDate> "2019"^^xsd:Year ;
+                                       <http://webprotege.stanford.edu/startDate> "2010"^^xsd:Year ;
                                        rdfs:label "2010s"@en .
 
 
 ###  http://webprotege.stanford.edu/Charlie%27sAngels
 <http://webprotege.stanford.edu/Charlie%27sAngels> rdf:type owl:NamedIndividual ,
                                                             <http://webprotege.stanford.edu/Movie> ;
+                                                   <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
+                                                   <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
                                                    rdfs:label "Charlie'sAngels"@en .
 
 
