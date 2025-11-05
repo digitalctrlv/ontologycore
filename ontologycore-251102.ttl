@@ -98,7 +98,7 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                     rdfs:subPropertyOf owl:topObjectProperty ;
                                                     rdfs:domain <http://webprotege.stanford.edu/Aesthetic> ;
                                                     rdfs:range <http://webprotege.stanford.edu/Context> ;
-                                                    rdfs:label <hasCulturalContext> .
+                                                    rdfs:label "hasCulturalContext"@en .
 
 
 ###  http://webprotege.stanford.edu/hasMedium
