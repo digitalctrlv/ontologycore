@@ -9,6 +9,8 @@
 import pandas as pd
 from rdflib import Graph, URIRef
 from rdflib.namespace import RDF
+from rdflib import Graph, URIRef, Literal, Namespace
+from rdflib.namespace import RDFS
 
 
 # Define URIs for relevant properties
@@ -23,20 +25,25 @@ AES_EL = URIRef("http://webprotege.stanford.edu/AestheticElement")
 LIFESTYLE = URIRef("http://webprotege.stanford.edu/LifeStyle")
 BEH_PAT = URIRef("http://webprotege.stanford.edu/BehaviourPattern")
 INV_BEH = URIRef("http://webprotege.stanford.edu/involvesBehaviour")
+SPREAD = URIRef("http://webprotege.stanford.edu/spreadThrough")
 
-# Function to get the label of a linked individual via an object property
+# Function to get ALL labels of linked individuals via an object property
 def get_linked_label(g, individual, object_prop, label_prop, default_none=" ", default_unknown=" "):
-    linked_individual = g.value(individual, object_prop)
-    if linked_individual:
+    labels = []
+    
+    # Gebruik g.objects() om ALLE gelinkte individuen te krijgen
+    for linked_individual in g.objects(subject=individual, predicate=object_prop):
         label_literal = g.value(linked_individual, label_prop)
+        
         if label_literal:
-            return str(label_literal)
+            labels.append(str(label_literal))
         else:
-            return default_unknown
+            labels.append(default_unknown)
+    
+    if labels:
+        return ", ".join(labels) 
     else:
         return default_none
-
-from rdflib.namespace import RDF  # Zorg ervoor dat je RDF importeert!
 
 # Function to get filtered types of linked individuals via an object property
 def get_filtered_labels(g, individual, object_prop, label_prop, required_types, default_none=" "):
@@ -94,6 +101,8 @@ def extract_aesthetics_from_ontology(file_path):
         # if the aesthetic is linked through the object property CHAR_BY and the link individual is not a type AES_EL, we skip it
         aes_el = get_filtered_labels(g, individual, CHAR_BY, LABEL, AES_EL)
         life_style = get_filtered_labels(g, individual, INV_BEH, LABEL, [LIFESTYLE, BEH_PAT])
+        spread_through = get_linked_label(g, individual, SPREAD, LABEL)
+
 
         aesthetic_data.append({
             'Aesthetic': name, 
@@ -101,7 +110,8 @@ def extract_aesthetics_from_ontology(file_path):
             'Temporal Context': temporal_context,
             'Influence': influence,
             'Aesthetic Element': aes_el,
-            'Lifestyle/Behaviour Pattern': life_style
+            'Lifestyle': life_style,
+            'Spread Through': spread_through
             })
     
     aesthetics_df = pd.DataFrame(aesthetic_data)
@@ -109,6 +119,13 @@ def extract_aesthetics_from_ontology(file_path):
     return aesthetics_df
 
 my_df = extract_aesthetics_from_ontology("./ontologycore/ontologycore-251102.ttl")
+aes = my_df.iloc[1, 0]
+spr = my_df.iloc[1, 6]
+print(f"{aes} has the following spread through: {spr}")
 print(my_df)
+
+my_df.to_csv("aesthetics_dataset.csv", index=False)
+# Save the DataFrame to a CSV file
+
 
 

@@ -1127,6 +1127,7 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                                                               <http://webprotege.stanford.edu/Wood> ;
                                              <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ,
                                                                                             <http://webprotege.stanford.edu/Millenials> ;
+                                             <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                              <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/Western> ;
                                              <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2010s> ;
                                              <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/CountrySide> ,
@@ -1138,8 +1139,9 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                                                                 <http://webprotege.stanford.edu/Gardening> ,
                                                                                                 <http://webprotege.stanford.edu/SlowerPaceOfLife> ;
                                              <http://webprotege.stanford.edu/involvesEmotion> :Escapism ;
-                                             <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/MoodBoard> ,
-                                                                                            <http://webprotege.stanford.edu/WebCommunity> ;
+                                             <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                            <http://webprotege.stanford.edu/MoodBoard> ,
+                                                                                            <http://webprotege.stanford.edu/Pinterest> ;
                                              <http://webprotege.stanford.edu/hasName> "Cottagecore"@en ;
                                              <http://purl.org/dc/elements/1.1/description> """Cottagecore is an internet aesthetic that romanticizes a simple, self-sufficient life in harmony with nature, drawing inspiration from an idealized vision of Western rural and farm life. Gaining widespread popularity in the late 2010s and early 2020s on platforms like Tumblr and TikTok, it serves as a form of gentle escapism from the pressures of modern, capitalist society. The aesthetic is defined by a visual language of pastoral nostalgia, featuring imagery of baking bread, gardening, foraging, and caring for farm animals. The fashion consists of soft, comfortable clothing made from natural fibers, such as flowy prairie dresses, aprons, and hand-knitted items.
 
@@ -1203,7 +1205,6 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
                                                                                                <http://webprotege.stanford.edu/Leather> ,
                                                                                                <http://webprotege.stanford.edu/TweedJackets> ,
                                                                                                <http://webprotege.stanford.edu/VintageBooks> ;
-                                              <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/MoodBoard> ;
                                               <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/AcademicContext> ,
                                                                                                   <http://webprotege.stanford.edu/Western> ;
                                               <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/19thCentury> ,
@@ -1218,6 +1219,10 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
                                                                                                :Nostalgia ;
                                               <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                               <http://webprotege.stanford.edu/revivesElement> <http://webprotege.stanford.edu/ClassicalLiterature> ;
+                                              <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                             <http://webprotege.stanford.edu/MoodBoard> ,
+                                                                                             <http://webprotege.stanford.edu/Pinterest> ,
+                                                                                             <http://webprotege.stanford.edu/TikTok> ;
                                               <http://webprotege.stanford.edu/hasName> "Dark Academia"@en ;
                                               <http://purl.org/dc/elements/1.1/description> """Dark Academia is an internet aesthetic that revolves around classic literature, the pursuit of self-discovery, and a passion for knowledge and learning. The visuals of the aesthetic are drawn from upper-class European cultures of the 19th century, Gothicism, and American Prep. These influences romanticize an education in subjects like Latin, rhetoric, and classics, presenting schooling as a pursuit of mystery and curiosity rather than a dreary obligation. As the aesthetic grew in the late 2010s and early 2020s, it also became a new microgenre in fiction, with publishers using the term to advertise Young Adult (YA) books.
 
@@ -1458,6 +1463,10 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
+                                                   owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
                                                  ] ;
                                         <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Chains> ,
                                                                                          <http://webprotege.stanford.edu/ConverseSneakers> ,
@@ -1805,7 +1814,11 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 
 ###  http://webprotege.stanford.edu/OldMoney
 <http://webprotege.stanford.edu/OldMoney> rdf:type owl:NamedIndividual ,
-                                                   <http://webprotege.stanford.edu/Aesthetic> ;
+                                                   <http://webprotege.stanford.edu/Aesthetic> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
+                                                     owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
+                                                   ] ;
                                           <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Classical> ,
                                                                                            <http://webprotege.stanford.edu/PennyLoafers> ,
                                                                                            <http://webprotege.stanford.edu/PoloShirts> ,
@@ -1823,6 +1836,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                                                              <http://webprotege.stanford.edu/Tennis> ;
                                           <http://webprotege.stanford.edu/involvesEmotion> :Aspiration ,
                                                                                            :Pride ;
+                                          <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/TikTok> ;
                                           <http://webprotege.stanford.edu/hasName> "Old Money" ;
                                           <http://purl.org/dc/elements/1.1/description> """Old Money is an aesthetic based around a wealthy, classic style. Old Money refers to people who have inherited their wealth instead of working for it. In the United States, Old Money is associated with WASP (White Anglo-Saxon Protestant) culture, and in Europe, Old Money is associated with titles of nobility.
 
@@ -2311,6 +2325,9 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                                                  <http://webprotege.stanford.edu/SexAndTheCity> ;
                                      <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Thrifting> ;
                                      <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
+                                     <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                    <http://webprotege.stanford.edu/MoodBoard> ,
+                                                                                    <http://webprotege.stanford.edu/TikTok> ;
                                      <http://webprotege.stanford.edu/hasName> "Y2K" ;
                                      <http://purl.org/dc/elements/1.1/description> "Y2K is a retrospective term for the cultural period and zeitgeist that existed from approximately the late 1990s to the early 2000s. The name is derived from the Year 2000 problem, a widespread computer programming issue that created a cultural focal point of both anxiety and optimism about the new millennium. While the term \"Y2K\" is now used colloquially on social media to describe a wide range of 2000s trends, it originally referred to a more specific futuristic style. (source: aesthetics.fandom.com)"@en ;
                                      rdfs:label "Y2K"@en ;
