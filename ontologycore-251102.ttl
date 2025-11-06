@@ -291,6 +291,34 @@ xsd:Year rdf:type rdfs:Datatype ;
 ###  http://webprotege.stanford.edu/Aesthetic
 <http://webprotege.stanford.edu/Aesthetic> rdf:type owl:Class ;
                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/characterizedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/AestheticElement>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/characterizedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/LifeStyle>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/experiencedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Community>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/experiencedBy> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Person>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/hasTemporalContext> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/TemporalContext>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Process>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
+                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Press>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://webprotege.stanford.edu/hasName> ;
                                                              owl:someValuesFrom xsd:string
                                                            ] ;
@@ -408,7 +436,11 @@ xsd:Year rdf:type rdfs:Datatype ;
 
 
 ###  http://webprotege.stanford.edu/Context
-<http://webprotege.stanford.edu/Context> rdf:type owl:Class .
+<http://webprotege.stanford.edu/Context> rdf:type owl:Class ;
+                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://webprotege.stanford.edu/shapesAesthetic> ;
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
+                                                         ] .
 
 
 ###  http://webprotege.stanford.edu/Convergence
@@ -503,10 +535,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
                                                            owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://webprotege.stanford.edu/experiencedBy> ;
-                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/expressedBy> ;
@@ -2334,59 +2362,59 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                      rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Y2K"@en .
 
 
-###  http://webprotege.stanford.edu/Y2K_Inspiration_Phase
-<http://webprotege.stanford.edu/Y2K_Inspiration_Phase> rdf:type owl:NamedIndividual ,
-                                                                <http://webprotege.stanford.edu/Divergence> ,
+###  http://webprotege.stanford.edu/Y2K_Convergence_Phase
+<http://webprotege.stanford.edu/Y2K_Convergence_Phase> rdf:type owl:NamedIndividual ,
+                                                                <http://webprotege.stanford.edu/Convergence> ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
+                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
                                                                 ] ,
                                                                 [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
+                                                                  owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
+                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Serendipity>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
+                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Synthesis>
                                                                 ] ;
                                                        <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
-                                                       <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/2000s> ;
-                                                       <http://webprotege.stanford.edu/involvesEmotion> :Nostalgia ;
-                                                       <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/Y2K_Selection_Phase> ;
-                                                       <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/WebCommunity> ;
-                                                       rdfs:label "Y2K_Divergence_Phase"@en .
+                                                       <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Thrifting> ;
+                                                       <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/Y2K_Metaconvergence_Phase> ;
+                                                       rdfs:label "Y2K_Convergence_Phase"@en .
 
 
-###  http://webprotege.stanford.edu/Y2K_Selection_Phase
-<http://webprotege.stanford.edu/Y2K_Selection_Phase> rdf:type owl:NamedIndividual ,
-                                                              <http://webprotege.stanford.edu/Convergence> ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                owl:someValuesFrom <http://webprotege.stanford.edu/Serendipity>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                owl:someValuesFrom <http://webprotege.stanford.edu/Synthesis>
-                                                              ] ;
-                                                     <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
-                                                     <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Thrifting> ;
-                                                     <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/Y2K_Synthesis_Phase> ;
-                                                     rdfs:label "Y2K_Convergence_Phase"@en .
+###  http://webprotege.stanford.edu/Y2K_Divergence_Phase
+<http://webprotege.stanford.edu/Y2K_Divergence_Phase> rdf:type owl:NamedIndividual ,
+                                                               <http://webprotege.stanford.edu/Divergence> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
+                                                                 owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
+                                                                 owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
+                                                               ] ;
+                                                      <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
+                                                      <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/2000s> ;
+                                                      <http://webprotege.stanford.edu/involvesEmotion> :Nostalgia ;
+                                                      <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/Y2K_Convergence_Phase> ;
+                                                      <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/WebCommunity> ;
+                                                      rdfs:label "Y2K_Divergence_Phase"@en .
 
 
-###  http://webprotege.stanford.edu/Y2K_Synthesis_Phase
-<http://webprotege.stanford.edu/Y2K_Synthesis_Phase> rdf:type owl:NamedIndividual ,
-                                                              <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
-                                                              ] ;
-                                                     <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/Y2K> ;
-                                                     rdfs:label "Y2K_Metaconvergence_Phase"@en .
+###  http://webprotege.stanford.edu/Y2K_Metaconvergence_Phase
+<http://webprotege.stanford.edu/Y2K_Metaconvergence_Phase> rdf:type owl:NamedIndividual ,
+                                                                    <http://webprotege.stanford.edu/Metaconvergence> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
+                                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
+                                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
+                                                                    ] ;
+                                                           <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/Y2K> ;
+                                                           rdfs:label "Y2K_Metaconvergence_Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/iMac
