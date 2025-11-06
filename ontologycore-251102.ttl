@@ -327,7 +327,11 @@ xsd:Year rdf:type rdfs:Datatype ;
 
 ###  http://webprotege.stanford.edu/AestheticElement
 <http://webprotege.stanford.edu/AestheticElement> rdf:type owl:Class ;
-                                                  rdfs:subClassOf owl:Thing ;
+                                                  rdfs:subClassOf owl:Thing ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://webprotege.stanford.edu/includes> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Product>
+                                                                  ] ;
                                                   rdfs:label "AestheticElement"@en .
 
 
@@ -535,6 +539,10 @@ xsd:Year rdf:type rdfs:Datatype ;
                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
                                                            owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://webprotege.stanford.edu/experiencedBy> ;
+                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Person>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/expressedBy> ;
