@@ -317,16 +317,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                               rdfs:label "AgeCommunity"@en .
 
 
-###  http://webprotege.stanford.edu/Aspiration
-<http://webprotege.stanford.edu/Aspiration> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
-                                                              owl:someValuesFrom <http://webprotege.stanford.edu/Influencer>
-                                                            ] ;
-                                            rdfs:label "Aspiration"@en .
-
-
 ###  http://webprotege.stanford.edu/AudioElement
 <http://webprotege.stanford.edu/AudioElement> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://webprotege.stanford.edu/AestheticElement> ,
@@ -344,15 +334,6 @@ xsd:Year rdf:type rdfs:Datatype ;
 <http://webprotege.stanford.edu/BehaviourPattern> rdf:type owl:Class ;
                                                   rdfs:subClassOf <http://webprotege.stanford.edu/LifeStyle> ;
                                                   rdfs:label "BehaviourPattern"@en .
-
-
-###  http://webprotege.stanford.edu/Belonging
-<http://webprotege.stanford.edu/Belonging> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://webprotege.stanford.edu/creates> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Community>
-                                                           ] .
 
 
 ###  http://webprotege.stanford.edu/Blog
@@ -535,16 +516,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                          rdfs:label "Emotion"@en .
 
 
-###  http://webprotege.stanford.edu/Escapism
-<http://webprotege.stanford.edu/Escapism> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
-                                                            owl:someValuesFrom <http://webprotege.stanford.edu/Nostalgia>
-                                                          ] ;
-                                          rdfs:label "Escapism"@en .
-
-
 ###  http://webprotege.stanford.edu/FashionProduct
 <http://webprotege.stanford.edu/FashionProduct> rdf:type owl:Class ;
                                                 rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProduct> ;
@@ -606,16 +577,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                     rdfs:label "InteractiveProduct"@en .
 
 
-###  http://webprotege.stanford.edu/Irony
-<http://webprotege.stanford.edu/Irony> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/shapesAesthetic> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/AestheticElement>
-                                                       ] ;
-                                       rdfs:label "Irony"@en .
-
-
 ###  http://webprotege.stanford.edu/LifeStyle
 <http://webprotege.stanford.edu/LifeStyle> rdf:type owl:Class ;
                                            rdfs:subClassOf owl:Thing ;
@@ -640,19 +601,9 @@ xsd:Year rdf:type rdfs:Datatype ;
                                        rdfs:label "Media"@en .
 
 
-###  http://webprotege.stanford.edu/Melancholy
-<http://webprotege.stanford.edu/Melancholy> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ;
-                                            rdfs:label "Melancholy"@en .
-
-
 ###  http://webprotege.stanford.edu/Memeification
 <http://webprotege.stanford.edu/Memeification> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                 owl:someValuesFrom <http://webprotege.stanford.edu/Irony>
-                                                               ] ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ;
                                                rdfs:comment "The transformation of an aesthetic element into a meme through simplification, templatization, and viral replication." ;
                                                rdfs:label "Memeification"@en .
 
@@ -696,27 +647,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                          owl:someValuesFrom <http://webprotege.stanford.edu/TemporalContext>
                                                        ] ;
                                        rdfs:label "Music"@en .
-
-
-###  http://webprotege.stanford.edu/Nostalgia
-<http://webprotege.stanford.edu/Nostalgia> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://webprotege.stanford.edu/evokedBy> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/TemporalContext>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://webprotege.stanford.edu/experiencedBy> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Person>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Belonging>
-                                                           ] .
 
 
 ###  http://webprotege.stanford.edu/OnlineCommunity
@@ -766,12 +696,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                        rdfs:label "Press"@en .
 
 
-###  http://webprotege.stanford.edu/Pride
-<http://webprotege.stanford.edu/Pride> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ;
-                                       rdfs:label "Pride"@en .
-
-
 ###  http://webprotege.stanford.edu/Print
 <http://webprotege.stanford.edu/Print> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://webprotege.stanford.edu/Media> ;
@@ -800,12 +724,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                        rdfs:label "Radio"@en .
 
 
-###  http://webprotege.stanford.edu/Rebellion
-<http://webprotege.stanford.edu/Rebellion> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://webprotege.stanford.edu/Emotion> ;
-                                           rdfs:label "Rebellion"@en .
-
-
 ###  http://webprotege.stanford.edu/Recontextualization
 <http://webprotege.stanford.edu/Recontextualization> rdf:type owl:Class ;
                                                      rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ;
@@ -831,10 +749,6 @@ Recontextualization often involves strategic modification to ensure legibility i
 ###  http://webprotege.stanford.edu/Reproduction
 <http://webprotege.stanford.edu/Reproduction> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://webprotege.stanford.edu/creates> ;
-                                                                owl:someValuesFrom <http://webprotege.stanford.edu/Nostalgia>
-                                                              ] ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://webprotege.stanford.edu/revivesElement> ;
                                                                 owl:someValuesFrom <http://webprotege.stanford.edu/AestheticElement>
@@ -1112,8 +1026,13 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                            <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
                                                                                           <http://webprotege.stanford.edu/Pinterest> ,
                                                                                           <http://webprotege.stanford.edu/TikTok> ;
+                                           <http://webprotege.stanford.edu/hasName> "Clean Girl"@en ;
                                            <http://webprotege.stanford.edu/startDate> 2021 ;
-                                           rdfs:label "CleanGirl"@en .
+                                           <http://purl.org/dc/elements/1.1/description> """Clean Girl is a recent fashion and lifestyle microtrend characterized by a minimalist and refined approach to beauty and style. It originated as a popular trend on TikTok and Instagram around 2023. This aesthetic draws inspiration from Scandinavian Design, minimalism, and the concept of \"clean living.\" The \"Clean Girl\" trend has been adopted and popularized by influencers and celebrities like Hailey Bieber and Sofia Richie, who frequently show minimalist outfits and polished, \"effortless\" appearances. It largely overlaps with That Girl and Vanilla Girl.
+
+It emphasizes a natural, fresh-faced look, typically achieved through a focus on skincare routines that prioritize healthy, \"glowy\" skin, and simple makeup application with neutral tones and sheer coverage. Hair is often styled in sleek, pulled-back styles like a bun or ponytail. Wardrobe choices favor well-fitted clothing with clean lines and neutral color palettes, such as white button-down shirts, tailored blazers, and minimalist dresses. Accessories tend to be minimal and elegant, including delicate jewelry like gold hoops or simple necklaces."""@en ;
+                                           rdfs:label "CleanGirl"@en ;
+                                           rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Clean_Girl"@en .
 
 
 ###  http://webprotege.stanford.edu/CleanGirl_Convergence_Phase
@@ -1199,10 +1118,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/Cottagecore> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/Aesthetic> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Escapism>
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
                                                         owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                         owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
                                                       ] ;
@@ -1218,8 +1133,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                               <http://webprotege.stanford.edu/PuffSleeves> ,
                                                                                               <http://webprotege.stanford.edu/StrawHat> ,
                                                                                               <http://webprotege.stanford.edu/Wood> ;
-                                             <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/GenZ> ,
-                                                                                          <http://webprotege.stanford.edu/Millenials> ;
+                                             <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ,
+                                                                                            <http://webprotege.stanford.edu/Millenials> ;
                                              <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/Western> ;
                                              <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2010s> ;
                                              <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/CountrySide> ,
@@ -1227,10 +1142,16 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                          <http://webprotege.stanford.edu/MarieAntoinette> ,
                                                                                          <http://webprotege.stanford.edu/Tradition> ;
                                              <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/SlowerPaceOfLife> ;
+                                             <http://webprotege.stanford.edu/involvesEmotion> :Escapism ;
                                              <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/MoodBoard> ,
                                                                                             <http://webprotege.stanford.edu/WebCommunity> ;
+                                             <http://webprotege.stanford.edu/hasName> "Cottagecore"@en ;
+                                             <http://purl.org/dc/elements/1.1/description> """Cottagecore is an internet aesthetic that romanticizes a simple, self-sufficient life in harmony with nature, drawing inspiration from an idealized vision of Western rural and farm life. Gaining widespread popularity in the late 2010s and early 2020s on platforms like Tumblr and TikTok, it serves as a form of gentle escapism from the pressures of modern, capitalist society. The aesthetic is defined by a visual language of pastoral nostalgia, featuring imagery of baking bread, gardening, foraging, and caring for farm animals. The fashion consists of soft, comfortable clothing made from natural fibers, such as flowy prairie dresses, aprons, and hand-knitted items.
+
+While broadly popular, Cottagecore is particularly embraced within LGBTQ+ communities, especially woman-loving-woman (WLW) and nonbinary-loving-woman (NBLW), who see its gentle and domestic world as a safe and inclusive space. However, despite its progressive and subversive aspects, Cottagecore has been criticized for romanticizing Eurocentric farming life and, in North American and Australian contexts, for inadvertently celebrating colonial aesthetics. This contrasts with its simultaneous adoption by the politically conservative Tradwife movement, which is drawn to the same traditional imagery but for reasons of reinforcing patriarchal gender roles, creating a significant ideological tension within the aesthetic."""@en ;
                                              <http://webprotege.stanford.edu/hasContext> <http://webprotege.stanford.edu/Western> ;
-                                             rdfs:label "Cottagecore"@en .
+                                             rdfs:label "Cottagecore"@en ;
+                                             rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Cottagecore"@en .
 
 
 ###  http://webprotege.stanford.edu/Cottagecore_Convergence_Phase
@@ -1245,19 +1166,13 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/Cottagecore_Divergence_Phase> rdf:type owl:NamedIndividual ,
                                                                        <http://webprotege.stanford.edu/Convergence> ,
                                                                        [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Aspiration>
-                                                                       ] ,
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Melancholy>
-                                                                       ] ,
-                                                                       [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
                                                                        ] ;
                                                               <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/Tradition> ,
                                                                                                           <http://webprotege.stanford.edu/20thCentury> ;
+                                                              <http://webprotege.stanford.edu/involvesEmotion> :Aspiration ,
+                                                                                                               :Melancholy ;
                                                               rdfs:label "Cottagecore_Divergence_Phase"@en .
 
 
@@ -1282,22 +1197,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/DarkAcademia> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/Aesthetic> ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Belonging>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Escapism>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Melancholy>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Nostalgia>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                          owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
                                                        ] ;
@@ -1318,9 +1217,20 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                           <http://webprotege.stanford.edu/Romanticism> ;
                                               <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Journaling> ,
                                                                                                  <http://webprotege.stanford.edu/SelfDiscovery> ;
+                                              <http://webprotege.stanford.edu/involvesEmotion> :Belonging ,
+                                                                                               :Escapism ,
+                                                                                               :Melancholy ,
+                                                                                               :Nostalgia ;
                                               <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                               <http://webprotege.stanford.edu/revivesElement> <http://webprotege.stanford.edu/ClassicalLiterature> ;
-                                              rdfs:label "DarkAcademia"@en .
+                                              <http://webprotege.stanford.edu/hasName> "Dark Academia"@en ;
+                                              <http://purl.org/dc/elements/1.1/description> """Dark Academia is an internet aesthetic that revolves around classic literature, the pursuit of self-discovery, and a passion for knowledge and learning. The visuals of the aesthetic are drawn from upper-class European cultures of the 19th century, Gothicism, and American Prep. These influences romanticize an education in subjects like Latin, rhetoric, and classics, presenting schooling as a pursuit of mystery and curiosity rather than a dreary obligation. As the aesthetic grew in the late 2010s and early 2020s, it also became a new microgenre in fiction, with publishers using the term to advertise Young Adult (YA) books.
+
+Within the Dark Academia community, a hint of intellectual pretentiousness is often celebrated. The aesthetic includes motifs of criminality, decadence, and danger. Themes of secret societies, cults, and murder are common, as seen in the works of fiction associated with the aesthetic, such as The Secret History and Kill Your Darlings. These narratives often portray characters with self-destructive lifestyles, showing a darker side similar to the Old Money aesthetic.
+
+While those who follow the aesthetic are sometimes referred to as \"Dark Academics,\" this typically refers to a persona rather than an actual profession. Most fans do not hold academic credentials but may craft a persona based on the characters and themes of the aesthetic. This persona often romanticizes the university experience and its related academic pursuits, though it does not reflect the typical environment of modern academia (source: aesthetics.fandom.com)"""@en ;
+                                              rdfs:label "DarkAcademia"@en ;
+                                              rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Dark_Academia"@en .
 
 
 ###  http://webprotege.stanford.edu/DarkAcademia_Inspiration_Phase
@@ -1547,14 +1457,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Community>
                                                  ] ,
                                                  [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Melancholy>
-                                                 ] ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Rebellion>
-                                                 ] ,
-                                                 [ rdf:type owl:Restriction ;
                                                    owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Bricolage>
                                                  ] ,
@@ -1577,13 +1479,20 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                     <http://webprotege.stanford.edu/Nirvana> ,
                                                                                     <http://webprotege.stanford.edu/Punk> ,
                                                                                     <http://webprotege.stanford.edu/ThePixies> ;
+                                        <http://webprotege.stanford.edu/involvesEmotion> :Melancholy ,
+                                                                                         :Rebellion ;
                                         <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ,
                                                                                    <http://webprotege.stanford.edu/2010s> ;
                                         <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
                                                                                        <http://webprotege.stanford.edu/MTV> ,
                                                                                        <http://webprotege.stanford.edu/TikTok> ,
                                                                                        <http://webprotege.stanford.edu/Tumblr> ;
-                                        rdfs:label "Grunge"@en .
+                                        <http://webprotege.stanford.edu/hasName> "Grunge"@en ;
+                                        <http://purl.org/dc/elements/1.1/description> """Grunge is an alternative rock genre and associated subculture that emerged from Seattle, Washington in the mid-late 1980s and achieved mainstream popularity in the early-mid 1990s. As the definitive sound of Generation X, it was a reaction against the glamorous excess of 1980s glam metal, fusing the raw energy of punk with the sludgy, heavy riffs of early heavy metal.
+
+The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirvana, Pearl Jam, Soundgarden, and Alice in Chains, and is defined by its distorted guitars and angst-filled lyrics with themes of social alienation, apathy, and confinement.[1] The associated fashion was a utilitarian, anti-consumerist statement rooted in the Pacific Northwest's working-class culture, consisting of thrifted items like oversized flannel shirts, ripped jeans, band t-shirts, and combat boots. The movement's mainstream popularity was short-lived, largely ending with the breakup of Soundgarden in 1997, but its influence on alternative music and fashion has been profound and long-lasting (source: aesthetics.fandom.com)"""@en ;
+                                        rdfs:label "Grunge"@en ;
+                                        rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Grunge"@en .
 
 
 ###  http://webprotege.stanford.edu/Grunge_Convergence_Phase
@@ -1607,10 +1516,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/Grunge_Divergence_Phase> rdf:type owl:NamedIndividual ,
                                                                   <http://webprotege.stanford.edu/Divergence> ,
                                                                   [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Nostalgia>
-                                                                  ] ,
-                                                                  [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
                                                                     owl:someValuesFrom <http://webprotege.stanford.edu/Bricolage>
                                                                   ] ,
@@ -1629,6 +1534,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                          <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenX> ,
                                                                                                         <http://webprotege.stanford.edu/GenZ> ;
                                                          <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/1990s> ;
+                                                         <http://webprotege.stanford.edu/involvesEmotion> :Nostalgia ;
                                                          rdfs:label "Grunge_Divergence_Phase"@en .
 
 
@@ -1904,15 +1810,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/OldMoney
 <http://webprotege.stanford.edu/OldMoney> rdf:type owl:NamedIndividual ,
-                                                   <http://webprotege.stanford.edu/Aesthetic> ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                     owl:someValuesFrom <http://webprotege.stanford.edu/Aspiration>
-                                                   ] ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                     owl:someValuesFrom <http://webprotege.stanford.edu/Pride>
-                                                   ] ;
+                                                   <http://webprotege.stanford.edu/Aesthetic> ;
                                           <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Classical> ,
                                                                                            <http://webprotege.stanford.edu/PennyLoafers> ,
                                                                                            <http://webprotege.stanford.edu/PoloShirts> ,
@@ -1922,25 +1820,27 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                            <http://webprotege.stanford.edu/Tradition> ,
                                                                                            <http://webprotege.stanford.edu/Wealth> ;
                                           <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
-                                          <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/GenZ> ;
                                           <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/Western> ;
                                           <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;
                                           <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/GossipGirl> ,
                                                                                         <http://webprotege.stanford.edu/Vogue> ;
                                           <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Golf> ,
                                                                                              <http://webprotege.stanford.edu/Tennis> ;
+                                          <http://webprotege.stanford.edu/involvesEmotion> :Aspiration ,
+                                                                                           :Pride ;
+                                          <http://webprotege.stanford.edu/hasName> "Old Money" ;
+                                          <http://purl.org/dc/elements/1.1/description> """Old Money is an aesthetic based around a wealthy, classic style. Old Money refers to people who have inherited their wealth instead of working for it. In the United States, Old Money is associated with WASP (White Anglo-Saxon Protestant) culture, and in Europe, Old Money is associated with titles of nobility.
+
+Old Money is always contrasted with New Money, also known as the bourgeoisie, who are middle class but came into wealth rather than being raised in it. As a result, the visual aesthetics of Old Money are to be low-key and subdued in contrast with the supposed ostentation and tackiness of New Money (source: aesthetics.fandom.com)"""@en ;
                                           <http://webprotege.stanford.edu/hasContext> <http://webprotege.stanford.edu/WASPCulture> ,
                                                                                       <http://webprotege.stanford.edu/Western> ;
-                                          rdfs:label "OldMoney"@en .
+                                          rdfs:label "OldMoney"@en ;
+                                          rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Old_Money" .
 
 
 ###  http://webprotege.stanford.edu/OldMoney_Convergence_Phase
 <http://webprotege.stanford.edu/OldMoney_Convergence_Phase> rdf:type owl:NamedIndividual ,
                                                                      <http://webprotege.stanford.edu/Convergence> ,
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Pride>
-                                                                     ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
                                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Refinement>
@@ -1950,6 +1850,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
                                                                      ] ;
                                                             <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
+                                                            <http://webprotege.stanford.edu/involvesEmotion> :Pride ;
                                                             <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/OldMoney_MetaConvergence_Phase> ;
                                                             rdfs:label "OldMoney_Convergence_Phase"@en .
 
@@ -1957,14 +1858,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/OldMoney_Divergence_Phase
 <http://webprotege.stanford.edu/OldMoney_Divergence_Phase> rdf:type owl:NamedIndividual ,
                                                                     <http://webprotege.stanford.edu/Divergence> ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Aspiration>
-                                                                    ] ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Nostalgia>
-                                                                    ] ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
@@ -1984,6 +1877,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                            <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                                            <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/19thCentury> ,
                                                                                                        <http://webprotege.stanford.edu/20thCentury> ;
+                                                           <http://webprotege.stanford.edu/involvesEmotion> :Aspiration ,
+                                                                                                            :Nostalgia ;
                                                            <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/OldMoney_Convergence_Phase> ;
                                                            <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/WebCommunity> ;
                                                            rdfs:label "OldMoney_Divergence_Phase"@en .
@@ -2128,10 +2023,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                       <http://webprotege.stanford.edu/ConceptualIdeas> ,
                                                       <http://webprotege.stanford.edu/CulturalContext> ,
                                                       <http://webprotege.stanford.edu/TemporalContext> ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <http://webprotege.stanford.edu/creates> ;
-                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Nostalgia>
-                                                      ] ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                         owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
@@ -2308,11 +2199,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Vintage
 <http://webprotege.stanford.edu/Vintage> rdf:type owl:NamedIndividual ,
-                                                  <http://webprotege.stanford.edu/TemporalContext> ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <http://webprotege.stanford.edu/creates> ;
-                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Nostalgia>
-                                                  ] ;
+                                                  <http://webprotege.stanford.edu/TemporalContext> ;
                                          <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                          rdfs:label "Vintage"@en .
 
@@ -2427,16 +2314,15 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                                  <http://webprotege.stanford.edu/ParisHilton> ,
                                                                                  <http://webprotege.stanford.edu/SexAndTheCity> ;
                                      <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
-                                     rdfs:label "Y2K"@en .
+                                     <http://webprotege.stanford.edu/hasName> "Y2K" ;
+                                     <http://purl.org/dc/elements/1.1/description> "Y2K is a retrospective term for the cultural period and zeitgeist that existed from approximately the late 1990s to the early 2000s. The name is derived from the Year 2000 problem, a widespread computer programming issue that created a cultural focal point of both anxiety and optimism about the new millennium. While the term \"Y2K\" is now used colloquially on social media to describe a wide range of 2000s trends, it originally referred to a more specific futuristic style. (source: aesthetics.fandom.com)"@en ;
+                                     rdfs:label "Y2K"@en ;
+                                     rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Y2K"@en .
 
 
 ###  http://webprotege.stanford.edu/Y2K_Inspiration_Phase
 <http://webprotege.stanford.edu/Y2K_Inspiration_Phase> rdf:type owl:NamedIndividual ,
                                                                 <http://webprotege.stanford.edu/Divergence> ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Nostalgia>
-                                                                ] ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
                                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
@@ -2447,6 +2333,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                                 ] ;
                                                        <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                                        <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/2000s> ;
+                                                       <http://webprotege.stanford.edu/involvesEmotion> :Nostalgia ;
                                                        <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/Y2K_Selection_Phase> ;
                                                        <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/WebCommunity> ;
                                                        rdfs:label "Y2K_Divergence_Phase"@en .
@@ -2546,6 +2433,50 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                    <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                    <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
                                                    rdfs:label "Charlie'sAngels"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Aspiration
+:Aspiration rdf:type owl:NamedIndividual ,
+                     <http://webprotege.stanford.edu/Emotion> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Belonging
+:Belonging rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/Emotion> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Escapism
+:Escapism rdf:type owl:NamedIndividual ,
+                   <http://webprotege.stanford.edu/Emotion> ;
+          <http://webprotege.stanford.edu/evokedBy> :Nostalgia .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Irony
+:Irony rdf:type owl:NamedIndividual ,
+                <http://webprotege.stanford.edu/Emotion> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Melancholy
+:Melancholy rdf:type owl:NamedIndividual .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Nostalgia
+:Nostalgia rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/Emotion> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Pride
+:Pride rdf:type owl:NamedIndividual ,
+                <http://webprotege.stanford.edu/Emotion> ;
+       <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/OldMoney> .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Rebellion
+:Rebellion rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/Emotion> ;
+           <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/Grunge> ,
+                                                        <http://webprotege.stanford.edu/Punk> ,
+                                                        <http://webprotege.stanford.edu/Rock> .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
