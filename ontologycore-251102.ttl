@@ -1004,7 +1004,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                     ] ;
                                            <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/GlossedLips> ,
                                                                                             <http://webprotege.stanford.edu/GlowySkin> ,
-                                                                                            <http://webprotege.stanford.edu/Minimalism> ,
                                                                                             <http://webprotege.stanford.edu/NeutralColorPalette> ,
                                                                                             <http://webprotege.stanford.edu/NeutralMakeup> ,
                                                                                             <http://webprotege.stanford.edu/PhodePhoneCase> ,
@@ -1012,7 +1011,8 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                            <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                            <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;
                                            <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
-                                           <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/MorningWorkout> ,
+                                           <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Minimalism> ,
+                                                                                              <http://webprotege.stanford.edu/MorningWorkout> ,
                                                                                               <http://webprotege.stanford.edu/SkinRoutine> ;
                                            <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/CleanGirl_Convergence_Phase> ,
                                                                                             <http://webprotege.stanford.edu/CleanGirl_Divergence_Phase> ,
@@ -1116,11 +1116,8 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                         owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                         owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
                                                       ] ;
-                                             <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Baking> ,
-                                                                                              <http://webprotege.stanford.edu/Cabin> ,
-                                                                                              <http://webprotege.stanford.edu/DesignAndCrafts> ,
+                                             <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Cabin> ,
                                                                                               <http://webprotege.stanford.edu/FlowySkirts> ,
-                                                                                              <http://webprotege.stanford.edu/Gardening> ,
                                                                                               <http://webprotege.stanford.edu/MaryJaneShoes> ,
                                                                                               <http://webprotege.stanford.edu/Muted> ,
                                                                                               <http://webprotege.stanford.edu/NeutralColorPalette> ,
@@ -1136,7 +1133,10 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                                                          <http://webprotege.stanford.edu/LittleHouseOnThePriarie> ,
                                                                                          <http://webprotege.stanford.edu/MarieAntoinette> ,
                                                                                          <http://webprotege.stanford.edu/Tradition> ;
-                                             <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/SlowerPaceOfLife> ;
+                                             <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Baking> ,
+                                                                                                <http://webprotege.stanford.edu/DesignAndCrafts> ,
+                                                                                                <http://webprotege.stanford.edu/Gardening> ,
+                                                                                                <http://webprotege.stanford.edu/SlowerPaceOfLife> ;
                                              <http://webprotege.stanford.edu/involvesEmotion> :Escapism ;
                                              <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/MoodBoard> ,
                                                                                             <http://webprotege.stanford.edu/WebCommunity> ;
@@ -2033,6 +2033,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 ###  http://webprotege.stanford.edu/SelfDiscovery
 <http://webprotege.stanford.edu/SelfDiscovery> rdf:type owl:NamedIndividual ,
+                                                        <http://webprotege.stanford.edu/BehaviourPattern> ,
                                                         <http://webprotege.stanford.edu/ConceptualIdeas> ;
                                                <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
                                                rdfs:label "SelfDiscovery"@en .
@@ -2308,6 +2309,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                                                  <http://webprotege.stanford.edu/MTV> ,
                                                                                  <http://webprotege.stanford.edu/ParisHilton> ,
                                                                                  <http://webprotege.stanford.edu/SexAndTheCity> ;
+                                     <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Thrifting> ;
                                      <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                      <http://webprotege.stanford.edu/hasName> "Y2K" ;
                                      <http://purl.org/dc/elements/1.1/description> "Y2K is a retrospective term for the cultural period and zeitgeist that existed from approximately the late 1990s to the early 2000s. The name is derived from the Year 2000 problem, a widespread computer programming issue that created a cultural focal point of both anxiety and optimism about the new millennium. While the term \"Y2K\" is now used colloquially on social media to describe a wide range of 2000s trends, it originally referred to a more specific futuristic style. (source: aesthetics.fandom.com)"@en ;

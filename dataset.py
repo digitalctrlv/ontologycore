@@ -1,32 +1,114 @@
-# Extracting the dataset of aesthetics from the ontologycore-251102.ttl file
-from rdflib import Graph, URIRef, Literal
-from rdflib.namespace import RDF, RDFS
-import pandas as pd
 
+# """
+# This script creates a dataset of aesthetics from the turtle ontology file ontologycore-251102.ttl.
+# Each aesthetic (Y2K, Cottagecore, Dark Academia) is an individual of the Aesthetic class in the ontology.
+# The script extracts data properties and object properties and stores them in a csv file using pandas.
+# After, we will ask an LLM to generate more instances to complement the custom dataset.
+# """
+
+import pandas as pd
+from rdflib import Graph, URIRef
+from rdflib.namespace import RDF
+
+
+# Define URIs for relevant properties
+LABEL = URIRef("http://www.w3.org/2000/01/rdf-schema#label")
+AESTHETIC_CLASS = URIRef("http://webprotege.stanford.edu/Aesthetic")
+HAS_NAME = URIRef("http://webprotege.stanford.edu/hasName")
+DC_DESCRIPTION = URIRef("http://purl.org/dc/elements/1.1/description")
+TEMP_CON = URIRef("http://webprotege.stanford.edu/hasTemporalContext")
+INFLUENCE = URIRef("http://webprotege.stanford.edu/influencedBy")
+CHAR_BY = URIRef("http://webprotege.stanford.edu/characterizedBy")
+AES_EL = URIRef("http://webprotege.stanford.edu/AestheticElement")
+LIFESTYLE = URIRef("http://webprotege.stanford.edu/LifeStyle")
+BEH_PAT = URIRef("http://webprotege.stanford.edu/BehaviourPattern")
+INV_BEH = URIRef("http://webprotege.stanford.edu/involvesBehaviour")
+
+# Function to get the label of a linked individual via an object property
+def get_linked_label(g, individual, object_prop, label_prop, default_none=" ", default_unknown=" "):
+    linked_individual = g.value(individual, object_prop)
+    if linked_individual:
+        label_literal = g.value(linked_individual, label_prop)
+        if label_literal:
+            return str(label_literal)
+        else:
+            return default_unknown
+    else:
+        return default_none
+
+from rdflib.namespace import RDF  # Zorg ervoor dat je RDF importeert!
+
+# Function to get filtered types of linked individuals via an object property
+def get_filtered_labels(g, individual, object_prop, label_prop, required_types, default_none=" "):
+    """
+    1. Follows an object property,
+    2. Filters the results by a required type,
+    3. Returns a string of all found labels, separated by a comma.
+    """
+    labels = []
+
+    if not isinstance(required_types, list):
+        required_types = [required_types]
+    
+    # Uses g.objects to retrieve all linked individuals via the object property
+    for linked_individual in g.objects(subject=individual, predicate=object_prop):
+
+        has_required_type = False
+        for req_type in required_types:
+            if (linked_individual, RDF.type, req_type) in g:
+                has_required_type = True
+                break  # Stop searching for required types if one is found
+
+        if has_required_type:
+            label_literal = g.value(linked_individual, label_prop)
+            if label_literal:
+                labels.append(str(label_literal))
+            else:
+                labels.append(" ")
+    
+    if labels:
+        # Concatenate labels into a single string
+        return ", ".join(labels) 
+    else:
+        return default_none      
+
+# Main function to extract aesthetics from the ontology
 def extract_aesthetics_from_ontology(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
 
-    AESTHETIC_INDIVIDUAL = URIRef("http://webprotege.stanford.edu/Aesthetic")
+    aesthetic_data = []  
 
-    aesthetic_data = []  # Use a list to collect multiple dictionaries
+    for individual in g.subjects(predicate=RDF.type, object=AESTHETIC_CLASS):
+        
+        # === Data properties === #
+        name_literal = g.value(individual, HAS_NAME)
+        desc_literal = g.value(individual, DC_DESCRIPTION)
 
-    # Debug: Print all subjects and their types
-    for subj, obj in g.subject_objects(RDF.type):
-        if obj == AESTHETIC_INDIVIDUAL:
-            name = g.value(subj, URIRef("http://webprotege.stanford.edu/hasName")) or "Unknown"
-            print(name)
-            description = g.value(subj, URIRef("http://webprotege.stanford.edu/dcdescription")) or "No description"
+        name = str(name_literal) if name_literal else " "
+        description = str(desc_literal) if desc_literal else " "
 
-            # Append each aesthetic as a dictionary to the list
-            aesthetic_data.append({'Aesthetic': name, 'Description': description})
+        # === Object properties === #
+        temporal_context = get_linked_label(g, individual, TEMP_CON, LABEL)
+        influence = get_linked_label(g, individual, INFLUENCE, LABEL)
+        # if the aesthetic is linked through the object property CHAR_BY and the link individual is not a type AES_EL, we skip it
+        aes_el = get_filtered_labels(g, individual, CHAR_BY, LABEL, AES_EL)
+        life_style = get_filtered_labels(g, individual, INV_BEH, LABEL, [LIFESTYLE, BEH_PAT])
+
+        aesthetic_data.append({
+            'Aesthetic': name, 
+            'Description': description,
+            'Temporal Context': temporal_context,
+            'Influence': influence,
+            'Aesthetic Element': aes_el,
+            'Lifestyle/Behaviour Pattern': life_style
+            })
     
-    # Create DataFrame
     aesthetics_df = pd.DataFrame(aesthetic_data)
 
     return aesthetics_df
 
-# Call the function
-extract_aesthetics_from_ontology("/Users/anoukflinkert/Desktop/DHDK_2425_S2/KRE/ontologycore/ontologycore-251102.ttl")
+my_df = extract_aesthetics_from_ontology("./ontologycore/ontologycore-251102.ttl")
+print(my_df)
 
 
