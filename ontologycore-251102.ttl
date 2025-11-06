@@ -260,7 +260,6 @@ xsd:Year rdf:type rdfs:Datatype ;
 ###  http://webprotege.stanford.edu/hasName
 <http://webprotege.stanford.edu/hasName> rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf owl:topDataProperty ;
-                                         rdfs:range xsd:Name ;
                                          rdfs:label "name"@en .
 
 
@@ -414,10 +413,6 @@ xsd:Year rdf:type rdfs:Datatype ;
 
 ###  http://webprotege.stanford.edu/Convergence
 <http://webprotege.stanford.edu/Convergence> rdf:type owl:Class ;
-                                             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://webprotege.stanford.edu/precedesProcess> ;
-                                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Metaconvergence>
-                                                                 ] ;
                                              rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProcess> ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://webprotege.stanford.edu/includes> ;
@@ -426,6 +421,10 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://webprotege.stanford.edu/includes> ;
                                                                owl:someValuesFrom <http://webprotege.stanford.edu/CreativeProduct>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://webprotege.stanford.edu/precedesProcess> ;
+                                                               owl:someValuesFrom <http://webprotege.stanford.edu/Metaconvergence>
                                                              ] ;
                                              rdfs:comment "Convergence represents a process within the creative domain that seeks coherence and unity of meaning or form. In the context of aesthetics, convergent processes involve the deliberate organization of aesthetic elements toward a recognizable expression, guided by stylistic, cultural, or formal principles rather than by purely logical reasoning. While aesthetic creation allows open exploration, convergence emphasizes the synthesis and application of shared conventions or elements that lead to a specific, communicable outcome." ;
                                              rdfs:label "Convergence"@en .
@@ -610,10 +609,6 @@ xsd:Year rdf:type rdfs:Datatype ;
 
 ###  http://webprotege.stanford.edu/Metaconvergence
 <http://webprotege.stanford.edu/Metaconvergence> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://webprotege.stanford.edu/resultsIn> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
-                                                                     ] ;
                                                  rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProcess> ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://webprotege.stanford.edu/resultsIn> ;
@@ -2457,7 +2452,8 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Melancholy
-:Melancholy rdf:type owl:NamedIndividual .
+:Melancholy rdf:type owl:NamedIndividual ,
+                     <http://webprotege.stanford.edu/Emotion> .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Nostalgia
