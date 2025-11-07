@@ -16,6 +16,7 @@ from rdflib.namespace import RDFS
 # Define URIs for relevant properties
 LABEL = URIRef("http://www.w3.org/2000/01/rdf-schema#label")
 AESTHETIC_CLASS = URIRef("http://webprotege.stanford.edu/Aesthetic")
+PROCESS = URIRef ("http://webprotege.stanford.edu/Process")
 HAS_NAME = URIRef("http://webprotege.stanford.edu/hasName")
 DC_DESCRIPTION = URIRef("http://purl.org/dc/elements/1.1/description")
 TEMP_CON = URIRef("http://webprotege.stanford.edu/hasTemporalContext")
@@ -28,6 +29,7 @@ INV_BEH = URIRef("http://webprotege.stanford.edu/involvesBehaviour")
 SPREAD = URIRef("http://webprotege.stanford.edu/spreadThrough")
 INSPIRATION = URIRef("http://webprotege.stanford.edu/inspiredBy")
 EMOTION = URIRef ("http://webprotege.stanford.edu/involvesEmotion")
+CREATOR = URIRef ("http://webprotege.stanford.edu/createdBy")
 
 # Function to get ALL labels of linked individuals via an object property
 def get_linked_label(g, individual, object_prop, label_prop, default_none=" ", default_unknown=" "):
@@ -86,7 +88,11 @@ def extract_aesthetics_from_ontology(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
 
-    aesthetic_data = []  
+    aesthetic_data = []
+
+    for individual in g.subjects(predicate=RDF.type, object=PROCESS):
+
+        
 
     for individual in g.subjects(predicate=RDF.type, object=AESTHETIC_CLASS):
         
@@ -106,6 +112,7 @@ def extract_aesthetics_from_ontology(file_path):
         spread_through = get_linked_label(g, individual, SPREAD, LABEL)
         inspiration = get_linked_label(g, individual, INSPIRATION, LABEL)
         emotion = get_linked_label(g, individual, EMOTION, LABEL)
+        creator = get_linked_label(g, individual, CREATOR, LABEL)
 
 
         aesthetic_data.append({
@@ -117,17 +124,18 @@ def extract_aesthetics_from_ontology(file_path):
             'Lifestyle': life_style,
             'Spread Through': spread_through,
             'Inspiration': inspiration,
-            'Emotion': emotion
+            'Emotion': emotion,
+            'Creator': creator,
             })
     
     aesthetics_df = pd.DataFrame(aesthetic_data)
 
     return aesthetics_df
 
-my_df = extract_aesthetics_from_ontology("./ontologycore/ontologycore-251102.ttl")
-print(my_df)
+aesthetic_df = extract_aesthetics_from_ontology("./ontologycore/ontologycore-251102.ttl", AESTHETIC_CLASS)
+print(aesthetic_df)
 
-my_df.to_csv("aesthetics_dataset.csv", index=False)
+aesthetic_df.to_csv("aesthetics_dataset.csv", index=False)
 # Save the DataFrame to a CSV file
 
 
