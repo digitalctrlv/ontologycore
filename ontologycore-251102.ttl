@@ -335,13 +335,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                   rdfs:label "AestheticElement"@en .
 
 
-###  http://webprotege.stanford.edu/AestheticSaturation
-<http://webprotege.stanford.edu/AestheticSaturation> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ;
-                                                     rdfs:comment "The intentional, excessive application of an aesthetic's tropes to the point of absurdity, often leading to its ironic consumption or \"death.\"" ;
-                                                     rdfs:label "AestheticSaturation"@en .
-
-
 ###  http://webprotege.stanford.edu/AgeCommunity
 <http://webprotege.stanford.edu/AgeCommunity> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://webprotege.stanford.edu/Community> ;
@@ -382,13 +375,6 @@ xsd:Year rdf:type rdfs:Datatype ;
 <http://webprotege.stanford.edu/Book> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://webprotege.stanford.edu/Media> ;
                                       rdfs:label "Book"@en .
-
-
-###  http://webprotege.stanford.edu/Bricolage
-<http://webprotege.stanford.edu/Bricolage> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://webprotege.stanford.edu/Divergence> ;
-                                           rdfs:comment "The practice of creating something new from a diverse range of existing or \"found\" materials at hand. Manifests in various forms, including visual collage, audio sampling, and stylistic remixing." ;
-                                           rdfs:label "Bricolage"@en .
 
 
 ###  http://webprotege.stanford.edu/Camera
@@ -557,17 +543,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                 rdfs:label "FashionProduct"@en .
 
 
-###  http://webprotege.stanford.edu/FeedbackLoop
-<http://webprotege.stanford.edu/FeedbackLoop> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://webprotege.stanford.edu/hasMedium> ;
-                                                                owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                                              ] ;
-                                              rdfs:comment "The process where creator and community reception (likes, comments, trends) directly influences and alters the ongoing creative process." ;
-                                              rdfs:label "FeedbackLoop"@en .
-
-
 ###  http://webprotege.stanford.edu/Games
 <http://webprotege.stanford.edu/Games> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://webprotege.stanford.edu/Media> ;
@@ -580,13 +555,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                rdfs:label "HistoricalEra"@en .
 
 
-###  http://webprotege.stanford.edu/Ideation
-<http://webprotege.stanford.edu/Ideation> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://webprotege.stanford.edu/Divergence> ;
-                                          rdfs:comment "The generation of multiple concepts, moods, or directions without immediate pressure to select a final one." ;
-                                          rdfs:label "Ideation"@en .
-
-
 ###  http://webprotege.stanford.edu/ImageProduct
 <http://webprotege.stanford.edu/ImageProduct> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://webprotege.stanford.edu/VisualProduct> ;
@@ -597,13 +565,6 @@ xsd:Year rdf:type rdfs:Datatype ;
 <http://webprotege.stanford.edu/Influencer> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://webprotege.stanford.edu/Person> ;
                                             rdfs:label "Influencer"@en .
-
-
-###  http://webprotege.stanford.edu/Inspiration
-<http://webprotege.stanford.edu/Inspiration> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://webprotege.stanford.edu/Divergence> ;
-                                             rdfs:comment "The active or passive act of seeking and collecting references, motifs, and content that fuel the aesthetic." ;
-                                             rdfs:label "Inspiration"@en .
 
 
 ###  http://webprotege.stanford.edu/InteractiveProduct
@@ -634,13 +595,6 @@ xsd:Year rdf:type rdfs:Datatype ;
 <http://webprotege.stanford.edu/Media> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://webprotege.stanford.edu/Press> ;
                                        rdfs:label "Media"@en .
-
-
-###  http://webprotege.stanford.edu/Memeification
-<http://webprotege.stanford.edu/Memeification> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ;
-                                               rdfs:comment "The transformation of an aesthetic element into a meme through simplification, templatization, and viral replication." ;
-                                               rdfs:label "Memeification"@en .
 
 
 ###  http://webprotege.stanford.edu/Metaconvergence
@@ -715,13 +669,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                               rdfs:label "PhysicalTool"@en .
 
 
-###  http://webprotege.stanford.edu/Platform-SpecificAdaptation
-<http://webprotege.stanford.edu/Platform-SpecificAdaptation> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <http://webprotege.stanford.edu/Convergence> ;
-                                                             rdfs:comment "The process of tailoring the final product to meet the technical and cultural norms of a specific platform (e.g., formatting for TikTok vs. Instagram)." ;
-                                                             rdfs:label "Platform-Specific Adaptation"@en .
-
-
 ###  http://webprotege.stanford.edu/Press
 <http://webprotege.stanford.edu/Press> rdf:type owl:Class ;
                                        rdfs:label "Press"@en .
@@ -755,68 +702,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                        rdfs:label "Radio"@en .
 
 
-###  http://webprotege.stanford.edu/Recontextualization
-<http://webprotege.stanford.edu/Recontextualization> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ;
-                                                     rdfs:comment """Recontextualization is the metaconvergent process of adapting and transforming aesthetic elements or creative products by placing them into fundamentally different contexts—whether spatial, cultural, temporal, or platform-specific.
-
-Unlike reproduction, which emphasizes temporal recycling from past to present, recontextualization focuses on the active translation and reframing of aesthetic expressions across boundaries. This includes:
-- Adapting aesthetics across different digital platforms (e.g., TikTok vs. Instagram vs. Pinterest)
-- Translating subcultural aesthetics into mainstream contexts or vice versa
-- Shifting aesthetic meanings through new cultural or social frameworks
-- Repurposing aesthetic elements for different communities with distinct interpretative codes
-
-Recontextualization often involves strategic modification to ensure legibility in the new context while potentially transforming the original meaning, function, or emotional resonance. A meme template recontextualized across different subcultures, or a fashion aesthetic adapted from streetwear to high fashion, exemplifies this process.""" ;
-                                                     rdfs:label "Recontextualization"@en .
-
-
-###  http://webprotege.stanford.edu/Refinement
-<http://webprotege.stanford.edu/Refinement> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://webprotege.stanford.edu/Convergence> ;
-                                            rdfs:comment "The final polishing stage, involving adjustments like color grading, applying specific filters, and fine-tuning details to align with the aesthetic." ;
-                                            rdfs:label "Refinement"@en .
-
-
-###  http://webprotege.stanford.edu/Reproduction
-<http://webprotege.stanford.edu/Reproduction> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://webprotege.stanford.edu/revivesElement> ;
-                                                                owl:someValuesFrom <http://webprotege.stanford.edu/AestheticElement>
-                                                              ] ;
-                                              rdfs:comment """Reproduction is the metaconvergent process of deliberately reviving and recycling aesthetic elements, styles, or cultural artifacts from past eras or different contexts into present-day creative production. 
-
-This process involves more than simple imitation—it requires selecting, extracting, and standardizing historical or cross-cultural aesthetic features to make them functional and relevant within contemporary contexts. Reproduction often drives nostalgia-based aesthetics and retro movements, where past visual languages, color palettes, materials, or design principles are systematically reintroduced and adapted to current media platforms and cultural expectations.
-
-Examples include Y2K aesthetics recycling early 2000s digital culture, or cottagecore reproducing romanticized pastoral imagery. The process transforms historical references into legible, shareable formats that resonate with contemporary audiences while maintaining recognizable connections to their original temporal or cultural context.""" ;
-                                              rdfs:label "Reproduction"@en .
-
-
-###  http://webprotege.stanford.edu/Selection
-<http://webprotege.stanford.edu/Selection> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://webprotege.stanford.edu/Convergence> ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://webprotege.stanford.edu/includes> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/AestheticElement>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://webprotege.stanford.edu/includes> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Product>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://webprotege.stanford.edu/involvesEmotion> ;
-                                                             owl:someValuesFrom <http://webprotege.stanford.edu/Emotion>
-                                                           ] ;
-                                           rdfs:label "Selection"@en .
-
-
-###  http://webprotege.stanford.edu/Serendipity
-<http://webprotege.stanford.edu/Serendipity> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://webprotege.stanford.edu/Divergence> ;
-                                             rdfs:comment "The process of stumbling upon valuable ideas or materials by chance, often a happy accident during research." ;
-                                             rdfs:label "Serendipity"@en .
-
-
 ###  http://webprotege.stanford.edu/SocialCommunity
 <http://webprotege.stanford.edu/SocialCommunity> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://webprotege.stanford.edu/Community> ;
@@ -826,10 +711,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/SocialMedia
 <http://webprotege.stanford.edu/SocialMedia> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://webprotege.stanford.edu/Media> ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                               owl:someValuesFrom <http://webprotege.stanford.edu/Platform-SpecificAdaptation>
-                                                             ] ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://webprotege.stanford.edu/popularized> ;
                                                                owl:someValuesFrom <http://webprotege.stanford.edu/AestheticElement>
@@ -858,12 +739,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 <http://webprotege.stanford.edu/SubCulture> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://webprotege.stanford.edu/Community> ;
                                             rdfs:label "SubCulture"@en .
-
-
-###  http://webprotege.stanford.edu/Synthesis
-<http://webprotege.stanford.edu/Synthesis> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://webprotege.stanford.edu/Convergence> ;
-                                           rdfs:label "Synthesis"@en .
 
 
 ###  http://webprotege.stanford.edu/TechnologicalContext
@@ -956,7 +831,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                               <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/SoftGrunge> ;
                                               <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Grunge> ;
                                               :hasGenre <http://webprotege.stanford.edu/Rock> ;
-                                              rdfs:label "BlackSabbath"@en .
+                                              rdfs:label "Black Sabbath"@en .
 
 
 ###  http://webprotege.stanford.edu/Bratz
@@ -985,11 +860,12 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
                                                <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Y2K> ;
                                                :birthYear "1981"^^xsd:Year ;
-                                               rdfs:label "BritneySpears"@en .
+                                               rdfs:label "Britney Spears"@en .
 
 
 ###  http://webprotege.stanford.edu/Cabin
 <http://webprotege.stanford.edu/Cabin> rdf:type owl:NamedIndividual ,
+                                                <http://webprotege.stanford.edu/AestheticElement> ,
                                                 <http://webprotege.stanford.edu/PhysicalSpace> ;
                                        rdfs:label "Cabin"@en .
 
@@ -1013,6 +889,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 
 ###  http://webprotege.stanford.edu/Classical
 <http://webprotege.stanford.edu/Classical> rdf:type owl:NamedIndividual ,
+                                                    <http://webprotege.stanford.edu/BehaviourPattern> ,
                                                     <http://webprotege.stanford.edu/ConceptualIdeas> ;
                                            <http://webprotege.stanford.edu/startDate> "XVII century" ;
                                            rdfs:label "Classical"@en .
@@ -1021,23 +898,21 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 ###  http://webprotege.stanford.edu/ClassicalArt
 <http://webprotege.stanford.edu/ClassicalArt> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/AestheticElement> ;
-                                              rdfs:label "EuropeanClassicalArt"@en .
+                                              <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/DarkAcademia> ;
+                                              rdfs:label "European Classical Art"@en .
 
 
 ###  http://webprotege.stanford.edu/ClassicalLiterature
 <http://webprotege.stanford.edu/ClassicalLiterature> rdf:type owl:NamedIndividual ,
-                                                              <http://webprotege.stanford.edu/AestheticElement> ;
+                                                              <http://webprotege.stanford.edu/AestheticElement> ,
+                                                              <http://webprotege.stanford.edu/TextualProduct> ;
                                                      <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/DarkAcademia> ;
-                                                     rdfs:label "ClassicalLiterature"@en .
+                                                     rdfs:label "Classical Literature"@en .
 
 
 ###  http://webprotege.stanford.edu/CleanGirl
 <http://webprotege.stanford.edu/CleanGirl> rdf:type owl:NamedIndividual ,
-                                                    <http://webprotege.stanford.edu/Aesthetic> ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
-                                                    ] ;
+                                                    <http://webprotege.stanford.edu/Aesthetic> ;
                                            <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/GlossedLips> ,
                                                                                             <http://webprotege.stanford.edu/GlowySkin> ,
                                                                                             <http://webprotege.stanford.edu/NeutralColorPalette> ,
@@ -1062,29 +937,20 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                            <http://purl.org/dc/elements/1.1/description> """Clean Girl is a recent fashion and lifestyle microtrend characterized by a minimalist and refined approach to beauty and style. It originated as a popular trend on TikTok and Instagram around 2023. This aesthetic draws inspiration from Scandinavian Design, minimalism, and the concept of \"clean living.\" The \"Clean Girl\" trend has been adopted and popularized by influencers and celebrities like Hailey Bieber and Sofia Richie, who frequently show minimalist outfits and polished, \"effortless\" appearances. It largely overlaps with That Girl and Vanilla Girl.
 
 It emphasizes a natural, fresh-faced look, typically achieved through a focus on skincare routines that prioritize healthy, \"glowy\" skin, and simple makeup application with neutral tones and sheer coverage. Hair is often styled in sleek, pulled-back styles like a bun or ponytail. Wardrobe choices favor well-fitted clothing with clean lines and neutral color palettes, such as white button-down shirts, tailored blazers, and minimalist dresses. Accessories tend to be minimal and elegant, including delicate jewelry like gold hoops or simple necklaces."""@en ;
-                                           rdfs:label "CleanGirl"@en ;
+                                           rdfs:label "Clean Girl"@en ;
                                            rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Clean_Girl"@en .
 
 
 ###  http://webprotege.stanford.edu/CleanGirl_Convergence_Phase
 <http://webprotege.stanford.edu/CleanGirl_Convergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                      <http://webprotege.stanford.edu/Convergence> ,
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Platform-SpecificAdaptation>
-                                                                      ] ,
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Refinement>
-                                                                      ] ,
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
-                                                                      ] ;
+                                                                      <http://webprotege.stanford.edu/Convergence> ;
                                                              <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
+                                                             <http://webprotege.stanford.edu/involvesProcess> :Platform-SpecificAdaptation ,
+                                                                                                              :Refinement ,
+                                                                                                              :Selection ;
                                                              <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/CleanGirl_Metaconvergence_Phase> ;
                                                              <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Instagram_Filters> ;
-                                                             rdfs:label "CleanGirl_Convergence_Phase"@en .
+                                                             rdfs:label "CleanGirl Convergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/CleanGirl_Divergence_Phase
@@ -1095,46 +961,30 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Influencer>
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Ideation>
-                                                                     ] ,
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                                     ] ,
-                                                                     [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                                        owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
                                                                      ] ;
                                                             <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
-                                                            <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/WebCommunity> ;
-                                                            rdfs:label "CleanGirl_Divergence_Phase"@en .
+                                                            <http://webprotege.stanford.edu/involvesProcess> :Ideation ,
+                                                                                                             :Inspiration ;
+                                                            <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                                           <http://webprotege.stanford.edu/TikTok> ,
+                                                                                                           <http://webprotege.stanford.edu/WebCommunity> ;
+                                                            rdfs:label "CleanGirl Divergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/CleanGirl_Metaconvergence_Phase
 <http://webprotege.stanford.edu/CleanGirl_Metaconvergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                          <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                                          [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty <http://webprotege.stanford.edu/evokes> ;
-                                                                            owl:someValuesFrom <http://webprotege.stanford.edu/AestheticSaturation>
-                                                                          ] ,
-                                                                          [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty <http://webprotege.stanford.edu/evokes> ;
-                                                                            owl:someValuesFrom <http://webprotege.stanford.edu/Memeification>
-                                                                          ] ,
-                                                                          [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                            owl:someValuesFrom <http://webprotege.stanford.edu/FeedbackLoop>
-                                                                          ] ;
+                                                                          <http://webprotege.stanford.edu/Metaconvergence> ;
                                                                  <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/CleanGirl> ;
-                                                                 rdfs:label "CleanGirl_Metaconvergence_Phase"@en .
+                                                                 rdfs:label "CleanGirl Metaconvergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/ColourfulHairClips
 <http://webprotege.stanford.edu/ColourfulHairClips> rdf:type owl:NamedIndividual ,
                                                              <http://webprotege.stanford.edu/FashionProduct> ;
                                                     <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
-                                                    rdfs:label "ColourfulHairClips"@en .
+                                                    rdfs:label "Colourful Hair Clips"@en .
 
 
 ###  http://webprotege.stanford.edu/ConverseSneakers
@@ -1142,7 +992,7 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                            <http://webprotege.stanford.edu/FashionProduct> ;
                                                   <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                                   <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/KurtCobain> ;
-                                                  rdfs:label "ConverseSneakers"@en .
+                                                  rdfs:label "Converse Sneakers"@en .
 
 
 ###  http://webprotege.stanford.edu/Cottagecore
@@ -1160,6 +1010,7 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                                                               <http://webprotege.stanford.edu/PennyLoafers> ,
                                                                                               <http://webprotege.stanford.edu/PuffSleeves> ,
                                                                                               <http://webprotege.stanford.edu/StrawHat> ,
+                                                                                              <http://webprotege.stanford.edu/Vintage> ,
                                                                                               <http://webprotege.stanford.edu/Wood> ;
                                              <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ,
                                                                                             <http://webprotege.stanford.edu/Millenials> ;
@@ -1192,38 +1043,40 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
                                                                         <http://webprotege.stanford.edu/Convergence> ;
                                                                <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ,
                                                                                                               <http://webprotege.stanford.edu/Millenials> ;
-                                                               rdfs:label "Cottagecore_Convergence_Phase"@en .
+                                                               <http://webprotege.stanford.edu/involvesProcess> :Refinement ,
+                                                                                                                :Selection ,
+                                                                                                                :Synthesis ;
+                                                               rdfs:label "Cottagecore Convergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/Cottagecore_Divergence_Phase
 <http://webprotege.stanford.edu/Cottagecore_Divergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                       <http://webprotege.stanford.edu/Convergence> ,
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                                       ] ;
+                                                                       <http://webprotege.stanford.edu/Divergence> ;
                                                               <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/Tradition> ,
                                                                                                           <http://webprotege.stanford.edu/20thCentury> ;
                                                               <http://webprotege.stanford.edu/involvesEmotion> :Aspiration ,
                                                                                                                :Melancholy ;
-                                                              rdfs:label "Cottagecore_Divergence_Phase"@en .
+                                                              <http://webprotege.stanford.edu/involvesProcess> :Bricolage ,
+                                                                                                               :Ideation ,
+                                                                                                               :Inspiration ;
+                                                              <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                                             <http://webprotege.stanford.edu/Pinterest> ,
+                                                                                                             <http://webprotege.stanford.edu/TikTok> ;
+                                                              rdfs:label "Cottagecore Divergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/Cottagecore_Metaconvergence_Phase
 <http://webprotege.stanford.edu/Cottagecore_Metaconvergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                            <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                              owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
-                                                                            ] ;
+                                                                            <http://webprotege.stanford.edu/Metaconvergence> ;
+                                                                   <http://webprotege.stanford.edu/involvesProcess> :Reproduction ;
                                                                    <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/Cottagecore> ;
-                                                                   rdfs:label "Cottagecore_Metaconvergence_Phase"@en .
+                                                                   rdfs:label "Cottagecore Metaconvergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/CountrySide
 <http://webprotege.stanford.edu/CountrySide> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/SpatialContext> ;
-                                             rdfs:label "CountrySide"@en .
+                                             rdfs:label "Country Side"@en .
 
 
 ###  http://webprotege.stanford.edu/DarkAcademia
@@ -1265,56 +1118,40 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
 Within the Dark Academia community, a hint of intellectual pretentiousness is often celebrated. The aesthetic includes motifs of criminality, decadence, and danger. Themes of secret societies, cults, and murder are common, as seen in the works of fiction associated with the aesthetic, such as The Secret History and Kill Your Darlings. These narratives often portray characters with self-destructive lifestyles, showing a darker side similar to the Old Money aesthetic.
 
 While those who follow the aesthetic are sometimes referred to as \"Dark Academics,\" this typically refers to a persona rather than an actual profession. Most fans do not hold academic credentials but may craft a persona based on the characters and themes of the aesthetic. This persona often romanticizes the university experience and its related academic pursuits, though it does not reflect the typical environment of modern academia (source: aesthetics.fandom.com)"""@en ;
-                                              rdfs:label "DarkAcademia"@en ;
+                                              rdfs:label "Dark Academia"@en ;
                                               rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Dark_Academia"@en .
 
 
-###  http://webprotege.stanford.edu/DarkAcademia_Inspiration_Phase
-<http://webprotege.stanford.edu/DarkAcademia_Inspiration_Phase> rdf:type owl:NamedIndividual ,
-                                                                         <http://webprotege.stanford.edu/Divergence> ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Bricolage>
-                                                                         ] ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Ideation>
-                                                                         ] ;
-                                                                <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/19thCentury> ,
-                                                                                                            <http://webprotege.stanford.edu/20thCentury> ;
-                                                                <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Tumblr> ,
-                                                                                                               <http://webprotege.stanford.edu/WebCommunity> ;
-                                                                rdfs:label "DarkAcademia_Divergence_Phase"@en .
+###  http://webprotege.stanford.edu/DarkAcademia_Convergence_Phase
+<http://webprotege.stanford.edu/DarkAcademia_Convergence_Phase> rdf:type owl:NamedIndividual ,
+                                                                         <http://webprotege.stanford.edu/Convergence> ;
+                                                                <http://webprotege.stanford.edu/involvesProcess> :Selection ,
+                                                                                                                 :Synthesis ;
+                                                                rdfs:label "DarkAcademia Convergence Phase"@en .
 
 
-###  http://webprotege.stanford.edu/DarkAcademia_Selection_Phase
-<http://webprotege.stanford.edu/DarkAcademia_Selection_Phase> rdf:type owl:NamedIndividual ,
-                                                                       <http://webprotege.stanford.edu/Convergence> ,
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
-                                                                       ] ,
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Synthesis>
-                                                                       ] ;
-                                                              rdfs:label "DarkAcademia_Convergence_Phase"@en .
+###  http://webprotege.stanford.edu/DarkAcademia_Divergence_Phase
+<http://webprotege.stanford.edu/DarkAcademia_Divergence_Phase> rdf:type owl:NamedIndividual ,
+                                                                        <http://webprotege.stanford.edu/Divergence> ;
+                                                               <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/19thCentury> ,
+                                                                                                           <http://webprotege.stanford.edu/20thCentury> ;
+                                                               <http://webprotege.stanford.edu/involvesProcess> :Bricolage ,
+                                                                                                                :Ideation ,
+                                                                                                                :Inspiration ;
+                                                               <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Pinterest> ,
+                                                                                                              <http://webprotege.stanford.edu/Tumblr> ,
+                                                                                                              <http://webprotege.stanford.edu/WebCommunity> ;
+                                                               rdfs:label "DarkAcademia Divergence Phase"@en .
 
 
-###  http://webprotege.stanford.edu/DarkAcademia_Synthesis_Phase
-<http://webprotege.stanford.edu/DarkAcademia_Synthesis_Phase> rdf:type owl:NamedIndividual ,
-                                                                       <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
-                                                                       ] ,
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
-                                                                       ] ;
-                                                              <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/MoodBoard> ;
-                                                              <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/DarkAcademia> ;
-                                                              rdfs:label "DarkAcademia_Metaconvergence_Phase"@en .
+###  http://webprotege.stanford.edu/DarkAcademia_Metaconvergence_Phase
+<http://webprotege.stanford.edu/DarkAcademia_Metaconvergence_Phase> rdf:type owl:NamedIndividual ,
+                                                                             <http://webprotege.stanford.edu/Metaconvergence> ;
+                                                                    <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/MoodBoard> ;
+                                                                    <http://webprotege.stanford.edu/involvesProcess> :Recontextualization ,
+                                                                                                                     :Reproduction ;
+                                                                    <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/DarkAcademia> ;
+                                                                    rdfs:label "DarkAcademia Metaconvergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/DarkColors
@@ -1322,7 +1159,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                      <http://webprotege.stanford.edu/Color> ;
                                             <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ,
                                                                                                 <http://webprotege.stanford.edu/Grunge> ;
-                                            rdfs:label "DarkColors"@en .
+                                            rdfs:label "Dark Colors"@en .
 
 
 ###  http://webprotege.stanford.edu/Denim
@@ -1336,7 +1173,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
 ###  http://webprotege.stanford.edu/DesignAndCrafts
 <http://webprotege.stanford.edu/DesignAndCrafts> rdf:type owl:NamedIndividual ,
                                                           <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                                 rdfs:label "DesignAndCrafts"@en .
+                                                 rdfs:label "Design and crafts"@en .
 
 
 ###  http://webprotege.stanford.edu/DigitalCamera
@@ -1344,16 +1181,12 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                         <http://webprotege.stanford.edu/AestheticElement> ,
                                                         <http://webprotege.stanford.edu/Camera> ,
                                                         <http://webprotege.stanford.edu/PhysicalTool> ;
-                                               rdfs:label "DigitalCamera"@en .
+                                               rdfs:label "Digital Camera"@en .
 
 
 ###  http://webprotege.stanford.edu/Euphoria
 <http://webprotege.stanford.edu/Euphoria> rdf:type owl:NamedIndividual ,
-                                                   <http://webprotege.stanford.edu/TvShow> ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <http://webprotege.stanford.edu/evokes> ;
-                                                     owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                   ] ;
+                                                   <http://webprotege.stanford.edu/TvShow> ;
                                           <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                           <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;
                                           <http://webprotege.stanford.edu/startDate> 2019 ;
@@ -1365,7 +1198,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                        <http://webprotege.stanford.edu/AestheticElement> ,
                                                        <http://webprotege.stanford.edu/FashionProduct> ;
                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
-                                              rdfs:label "FlannelShirt"@en .
+                                              rdfs:label "Flannel Shirt"@en .
 
 
 ###  http://webprotege.stanford.edu/FlipPhone
@@ -1373,7 +1206,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                     <http://webprotege.stanford.edu/AestheticElement> ,
                                                     <http://webprotege.stanford.edu/Phone> ;
                                            <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
-                                           rdfs:label "FlipPhone"@en .
+                                           rdfs:label "Flip phone"@en .
 
 
 ###  http://webprotege.stanford.edu/Floral
@@ -1385,7 +1218,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
 ###  http://webprotege.stanford.edu/FlowySkirts
 <http://webprotege.stanford.edu/FlowySkirts> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/FashionProduct> ;
-                                             rdfs:label "FlowySkirts"@en .
+                                             rdfs:label "Flowy skirts"@en .
 
 
 ###  http://webprotege.stanford.edu/FrancesBeanCobain
@@ -1399,7 +1232,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                    <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
                                                    <http://webprotege.stanford.edu/influenced> <http://webprotege.stanford.edu/Grunge> ;
                                                    :birthYear "1992"^^xsd:Year ;
-                                                   rdfs:label "FrancesBeanCobain"@en .
+                                                   rdfs:label "Frances Bean Cobain"@en .
 
 
 ###  http://webprotege.stanford.edu/Friends
@@ -1412,7 +1245,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
 <http://webprotege.stanford.edu/FuturisticFonts> rdf:type owl:NamedIndividual ,
                                                           <http://webprotege.stanford.edu/TextualProduct> ;
                                                  <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
-                                                 rdfs:label "FuturisticFonts"@en .
+                                                 rdfs:label "Futuristic fonts"@en .
 
 
 ###  http://webprotege.stanford.edu/Gardening
@@ -1453,7 +1286,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
 ###  http://webprotege.stanford.edu/GlobalSociety
 <http://webprotege.stanford.edu/GlobalSociety> rdf:type owl:NamedIndividual ,
                                                         <http://webprotege.stanford.edu/CulturalContext> ;
-                                               rdfs:label "Global"@en .
+                                               rdfs:label "Global society"@en .
 
 
 ###  http://webprotege.stanford.edu/GlossedLips
@@ -1461,7 +1294,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                       <http://webprotege.stanford.edu/FashionProduct> ;
                                              <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                              <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
-                                             rdfs:label "GlossedLips"@en .
+                                             rdfs:label "Glossed lips"@en .
 
 
 ###  http://webprotege.stanford.edu/GlowySkin
@@ -1469,7 +1302,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                     <http://webprotege.stanford.edu/AestheticElement> ;
                                            <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                            <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
-                                           rdfs:label "GlowySkin"@en .
+                                           rdfs:label "Glowy skin"@en .
 
 
 ###  http://webprotege.stanford.edu/Golf
@@ -1482,7 +1315,7 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
 <http://webprotege.stanford.edu/GossipGirl> rdf:type owl:NamedIndividual ,
                                                      <http://webprotege.stanford.edu/TvShow> ;
                                             <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/OldMoney> ;
-                                            rdfs:label "GossipGirl"@en .
+                                            rdfs:label "Gossip Girl"@en .
 
 
 ###  http://webprotege.stanford.edu/Grunge
@@ -1491,14 +1324,6 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty <http://webprotege.stanford.edu/createdBy> ;
                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Community>
-                                                 ] ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Bricolage>
-                                                 ] ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                   owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
                                                  ] ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
@@ -1537,60 +1362,38 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 
 ###  http://webprotege.stanford.edu/Grunge_Convergence_Phase
 <http://webprotege.stanford.edu/Grunge_Convergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                   <http://webprotege.stanford.edu/Convergence> ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                     owl:someValuesFrom <http://webprotege.stanford.edu/Refinement>
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                     owl:someValuesFrom <http://webprotege.stanford.edu/Synthesis>
-                                                                   ] ;
+                                                                   <http://webprotege.stanford.edu/Convergence> ;
                                                           <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenX> ,
                                                                                                          <http://webprotege.stanford.edu/GenZ> ;
+                                                          <http://webprotege.stanford.edu/involvesProcess> :Refinement ,
+                                                                                                           :Synthesis ;
                                                           <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/Grunge_Metaconvergence_Phase> ;
-                                                          rdfs:label "Grunge_Convergence_Phase"@en .
+                                                          rdfs:label "Grunge Convergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/Grunge_Divergence_Phase
 <http://webprotege.stanford.edu/Grunge_Divergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                  <http://webprotege.stanford.edu/Divergence> ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Bricolage>
-                                                                  ] ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Ideation>
-                                                                  ] ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                                  ] ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Serendipity>
-                                                                  ] ;
+                                                                  <http://webprotege.stanford.edu/Divergence> ;
                                                          <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenX> ,
                                                                                                         <http://webprotege.stanford.edu/GenZ> ;
                                                          <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/1990s> ;
                                                          <http://webprotege.stanford.edu/involvesEmotion> :Nostalgia ;
-                                                         rdfs:label "Grunge_Divergence_Phase"@en .
+                                                         <http://webprotege.stanford.edu/involvesProcess> :Bricolage ,
+                                                                                                          :Ideation ,
+                                                                                                          :Inspiration ,
+                                                                                                          :Serendipity ;
+                                                         <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                                        <http://webprotege.stanford.edu/Tumblr> ;
+                                                         rdfs:label "Grunge Divergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/Grunge_Metaconvergence_Phase
 <http://webprotege.stanford.edu/Grunge_Metaconvergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                       <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
-                                                                       ] ,
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
-                                                                       ] ;
+                                                                       <http://webprotege.stanford.edu/Metaconvergence> ;
+                                                              <http://webprotege.stanford.edu/involvesProcess> :Recontextualization ,
+                                                                                                               :Reproduction ;
                                                               <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/Grunge> ;
-                                                              rdfs:label "Grunge_Metaconvergence_Phase"@en .
+                                                              rdfs:label "Grunge Metaconvergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/HaileyBieber
@@ -1599,7 +1402,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                               <http://webprotege.stanford.edu/creates> <http://webprotege.stanford.edu/InstagramReel> ;
                                               :birthYear "1996"^^xsd:Year ;
                                               rdfs:TimePeriod "2020s" ;
-                                              rdfs:label "HaileyBieber"@en .
+                                              rdfs:label "Hailey Bieber"@en .
 
 
 ###  http://webprotege.stanford.edu/HarryPotter
@@ -1607,7 +1410,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                       <http://webprotege.stanford.edu/Book> ,
                                                       <http://webprotege.stanford.edu/Movie> ,
                                                       <http://webprotege.stanford.edu/TextualProduct> ;
-                                             rdfs:label "HarryPotter"@en .
+                                             rdfs:label "Harry Potter"@en .
 
 
 ###  http://webprotege.stanford.edu/Holographic
@@ -1618,11 +1421,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 
 ###  http://webprotege.stanford.edu/Instagram
 <http://webprotege.stanford.edu/Instagram> rdf:type owl:NamedIndividual ,
-                                                    <http://webprotege.stanford.edu/SocialMedia> ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/evokes> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                    ] ;
+                                                    <http://webprotege.stanford.edu/SocialMedia> ;
                                            rdfs:label "Instagram"@en .
 
 
@@ -1632,19 +1431,18 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                         <http://webprotege.stanford.edu/VideoProduct> ;
                                                <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/Instagram> ;
                                                <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Instagram_Filters> ;
-                                               rdfs:label "InstagramReel"@en .
+                                               rdfs:label "Instagram Reel"@en .
 
 
 ###  http://webprotege.stanford.edu/Instagram_Filters
 <http://webprotege.stanford.edu/Instagram_Filters> rdf:type owl:NamedIndividual ,
                                                             <http://webprotege.stanford.edu/DigitalProduct> ,
-                                                            <http://webprotege.stanford.edu/Refinement> ,
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty <http://webprotege.stanford.edu/resultsIn> ;
                                                               owl:someValuesFrom <http://webprotege.stanford.edu/ImageProduct>
                                                             ] ;
                                                    <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/Instagram> ;
-                                                   rdfs:label "Instagram_Filters"@en .
+                                                   rdfs:label "Instagram filters"@en .
 
 
 ###  http://webprotege.stanford.edu/Intellectualism
@@ -1663,7 +1461,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 ###  http://webprotege.stanford.edu/JuicyVelourTrackSuit
 <http://webprotege.stanford.edu/JuicyVelourTrackSuit> rdf:type owl:NamedIndividual ,
                                                                <http://webprotege.stanford.edu/FashionProduct> ;
-                                                      rdfs:label "JuicyVelourTrackSuit"@en .
+                                                      rdfs:label "Juicy velour tracksuit"@en .
 
 
 ###  http://webprotege.stanford.edu/KittenHeels
@@ -1675,7 +1473,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                              <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ,
                                                                                                  <http://webprotege.stanford.edu/2000s> ;
                                              <http://webprotege.stanford.edu/opposesTo> <http://webprotege.stanford.edu/Grunge> ;
-                                             rdfs:label "KittenHeels"@en .
+                                             rdfs:label "Kitten heels"@en .
 
 
 ###  http://webprotege.stanford.edu/KurtCobain
@@ -1690,7 +1488,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                             <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Grunge> ;
                                             <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/ConverseSneakers> ;
                                             :birthYear "1967"^^xsd:Year ;
-                                            rdfs:label "KurtCobain"@en .
+                                            rdfs:label "Kurt Cobain"@en .
 
 
 ###  http://webprotege.stanford.edu/Leather
@@ -1702,11 +1500,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 
 ###  http://webprotege.stanford.edu/Lightroom
 <http://webprotege.stanford.edu/Lightroom> rdf:type owl:NamedIndividual ,
-                                                    <http://webprotege.stanford.edu/SoftwareTool> ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Refinement>
-                                                    ] ;
+                                                    <http://webprotege.stanford.edu/SoftwareTool> ;
                                            owl:sameAs <http://webprotege.stanford.edu/Lightroom_Preset> ;
                                            rdfs:label "Lightroom"@en .
 
@@ -1715,13 +1509,13 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 
 ###  http://webprotege.stanford.edu/Lightroom_Preset
 <http://webprotege.stanford.edu/Lightroom_Preset> rdf:type owl:NamedIndividual ;
-                                                  rdfs:label "Lightroom_Preset"@en .
+                                                  rdfs:label "Lightroom Preset"@en .
 
 
 ###  http://webprotege.stanford.edu/LittleHouseOnThePriarie
 <http://webprotege.stanford.edu/LittleHouseOnThePriarie> rdf:type owl:NamedIndividual ,
                                                                   <http://webprotege.stanford.edu/TvShow> ;
-                                                         rdfs:label "LittleHouseOnThePriarie"@en .
+                                                         rdfs:label "Little House On The Priarie"@en .
 
 
 ###  http://webprotege.stanford.edu/Low-resolutionGraphics
@@ -1729,7 +1523,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                                  <http://webprotege.stanford.edu/DigitalProduct> ,
                                                                  <http://webprotege.stanford.edu/ImageProduct> ,
                                                                  <http://webprotege.stanford.edu/Pattern> ;
-                                                        rdfs:label "Low-resolutionGraphics"@en .
+                                                        rdfs:label "Low-resolution Graphics"@en .
 
 
 ###  http://webprotege.stanford.edu/Low-riseBottoms
@@ -1751,30 +1545,26 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 ###  http://webprotege.stanford.edu/MarieAntoinette
 <http://webprotege.stanford.edu/MarieAntoinette> rdf:type owl:NamedIndividual ,
                                                           <http://webprotege.stanford.edu/Celebrity> ;
-                                                 rdfs:label "MarieAntoinette"@en .
+                                                 rdfs:label "Marie Antoinette"@en .
 
 
 ###  http://webprotege.stanford.edu/MartensBoots
 <http://webprotege.stanford.edu/MartensBoots> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/AestheticElement> ,
-                                                       <http://webprotege.stanford.edu/FashionProduct> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/isSubjectOf> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
-                                                       ] ;
-                                              rdfs:label "MartensBoots"@en .
+                                                       <http://webprotege.stanford.edu/FashionProduct> ;
+                                              rdfs:label "Martens Boots"@en .
 
 
 ###  http://webprotege.stanford.edu/MaryJaneShoes
 <http://webprotege.stanford.edu/MaryJaneShoes> rdf:type owl:NamedIndividual ,
                                                         <http://webprotege.stanford.edu/FashionProduct> ;
-                                               rdfs:label "MaryJaneShoes"@en .
+                                               rdfs:label "Mary Jane Shoes"@en .
 
 
 ###  http://webprotege.stanford.edu/MeanGirls
 <http://webprotege.stanford.edu/MeanGirls> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/Movie> ;
-                                           rdfs:label "MeanGirls"@en .
+                                           rdfs:label "Mean Girls"@en .
 
 
 ###  http://webprotege.stanford.edu/Millenials
@@ -1798,42 +1588,38 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                     <http://webprotege.stanford.edu/DigitalProduct> ,
                                                     <http://webprotege.stanford.edu/ImageProduct> ,
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Bricolage>
-                                                    ] ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
-                                                    ] ,
-                                                    [ rdf:type owl:Restriction ;
                                                       owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                       owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
                                                     ] ;
                                            <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
-                                           <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Photoshop> .
+                                           <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Photoshop> ;
+                                           rdfs:label "Mood board" .
 
 
 ###  http://webprotege.stanford.edu/MorningWorkout
 <http://webprotege.stanford.edu/MorningWorkout> rdf:type owl:NamedIndividual ,
                                                          <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                                rdfs:label "MorningWorkout"@en .
+                                                rdfs:label "Morning Workout"@en .
 
 
 ###  http://webprotege.stanford.edu/Muted
 <http://webprotege.stanford.edu/Muted> rdf:type owl:NamedIndividual ,
+                                                <http://webprotege.stanford.edu/AestheticElement> ,
                                                 <http://webprotege.stanford.edu/Color> ;
                                        rdfs:label "Muted"@en .
 
 
 ###  http://webprotege.stanford.edu/NeutralColorPalette
 <http://webprotege.stanford.edu/NeutralColorPalette> rdf:type owl:NamedIndividual ,
+                                                              <http://webprotege.stanford.edu/AestheticElement> ,
                                                               <http://webprotege.stanford.edu/Color> ;
                                                      <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
-                                                     rdfs:label "NeutralColorPalette"@en .
+                                                     rdfs:label "Neutral color palette"@en .
 
 
 ###  http://webprotege.stanford.edu/NeutralMakeup
 <http://webprotege.stanford.edu/NeutralMakeup> rdf:type owl:NamedIndividual ,
+                                                        <http://webprotege.stanford.edu/AestheticElement> ,
                                                         <http://webprotege.stanford.edu/FashionProduct> ;
                                                <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                                rdfs:label "NeutralMakeup"@en .
@@ -1879,34 +1665,24 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 Old Money is always contrasted with New Money, also known as the bourgeoisie, who are middle class but came into wealth rather than being raised in it. As a result, the visual aesthetics of Old Money are to be low-key and subdued in contrast with the supposed ostentation and tackiness of New Money (source: aesthetics.fandom.com)"""@en ;
                                           <http://webprotege.stanford.edu/hasContext> <http://webprotege.stanford.edu/WASPCulture> ,
                                                                                       <http://webprotege.stanford.edu/Western> ;
-                                          rdfs:label "OldMoney"@en ;
+                                          rdfs:label "Old Money"@en ;
                                           rdfs:seeAlso "https://aesthetics.fandom.com/wiki/Old_Money" .
 
 
 ###  http://webprotege.stanford.edu/OldMoney_Convergence_Phase
 <http://webprotege.stanford.edu/OldMoney_Convergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                     <http://webprotege.stanford.edu/Convergence> ,
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Refinement>
-                                                                     ] ,
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
-                                                                     ] ;
+                                                                     <http://webprotege.stanford.edu/Convergence> ;
                                                             <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                                             <http://webprotege.stanford.edu/involvesEmotion> :Pride ;
+                                                            <http://webprotege.stanford.edu/involvesProcess> :Refinement ,
+                                                                                                             :Selection ;
                                                             <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/OldMoney_MetaConvergence_Phase> ;
-                                                            rdfs:label "OldMoney_Convergence_Phase"@en .
+                                                            rdfs:label "OldMoney Convergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/OldMoney_Divergence_Phase
 <http://webprotege.stanford.edu/OldMoney_Divergence_Phase> rdf:type owl:NamedIndividual ,
                                                                     <http://webprotege.stanford.edu/Divergence> ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                                    ] ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Magazine>
@@ -1924,35 +1700,30 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                                                                        <http://webprotege.stanford.edu/20thCentury> ;
                                                            <http://webprotege.stanford.edu/involvesEmotion> :Aspiration ,
                                                                                                             :Nostalgia ;
+                                                           <http://webprotege.stanford.edu/involvesProcess> :Inspiration ;
                                                            <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/OldMoney_Convergence_Phase> ;
-                                                           <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/WebCommunity> ;
-                                                           rdfs:label "OldMoney_Divergence_Phase"@en .
+                                                           <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                                          <http://webprotege.stanford.edu/TikTok> ,
+                                                                                                          <http://webprotege.stanford.edu/Vogue> ,
+                                                                                                          <http://webprotege.stanford.edu/WebCommunity> ;
+                                                           rdfs:label "OldMoney Divergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/OldMoney_MetaConvergence_Phase
 <http://webprotege.stanford.edu/OldMoney_MetaConvergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                         <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Memeification>
-                                                                         ] ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
-                                                                         ] ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
-                                                                         ] ;
+                                                                         <http://webprotege.stanford.edu/Metaconvergence> ;
+                                                                <http://webprotege.stanford.edu/involvesProcess> :Memeification ,
+                                                                                                                 :Recontextualization ,
+                                                                                                                 :Reproduction ;
                                                                 <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/OldMoney> ;
-                                                                rdfs:label "OldMoney_MetaConvergence_Phase"@en .
+                                                                rdfs:label "OldMoney Metaconvergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/ParisHilton
 <http://webprotege.stanford.edu/ParisHilton> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/Celebrity> ;
                                              :birthYear "1981"^^xsd:Year ;
-                                             rdfs:label "ParisHilton"@en .
+                                             rdfs:label "Paris Hilton"@en .
 
 
 ###  http://webprotege.stanford.edu/PennyLoafers
@@ -1960,7 +1731,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                        <http://webprotege.stanford.edu/AestheticElement> ,
                                                        <http://webprotege.stanford.edu/FashionProduct> ;
                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
-                                              rdfs:label "PennyLoafers"@en .
+                                              rdfs:label "Penny loafers"@en .
 
 
 ###  http://webprotege.stanford.edu/PhodePhoneCase
@@ -1970,34 +1741,18 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                 <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                                 <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
                                                 <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
-                                                rdfs:label "RhodePhoneCase"@en .
+                                                rdfs:label "Rhode phonecase"@en .
 
 
 ###  http://webprotege.stanford.edu/Photoshop
 <http://webprotege.stanford.edu/Photoshop> rdf:type owl:NamedIndividual ,
-                                                    <http://webprotege.stanford.edu/SoftwareTool> ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Bricolage>
-                                                    ] ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Refinement>
-                                                    ] ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Synthesis>
-                                                    ] ;
+                                                    <http://webprotege.stanford.edu/SoftwareTool> ;
                                            rdfs:label "Photoshop"@en .
 
 
 ###  http://webprotege.stanford.edu/Pinterest
 <http://webprotege.stanford.edu/Pinterest> rdf:type owl:NamedIndividual ,
-                                                    <http://webprotege.stanford.edu/SocialMedia> ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/evokes> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                    ] ;
+                                                    <http://webprotege.stanford.edu/SocialMedia> ;
                                            rdfs:label "Pinterest"@en .
 
 
@@ -2005,7 +1760,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 <http://webprotege.stanford.edu/PoloShirts> rdf:type owl:NamedIndividual ,
                                                      <http://webprotege.stanford.edu/AestheticElement> ,
                                                      <http://webprotege.stanford.edu/FashionProduct> ;
-                                            rdfs:label "PoloShirts"@en .
+                                            rdfs:label "Poloshirts"@en .
 
 
 ###  http://webprotege.stanford.edu/Pop
@@ -2023,9 +1778,9 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 ###  http://webprotege.stanford.edu/PuffSleeves
 <http://webprotege.stanford.edu/PuffSleeves> rdf:type owl:NamedIndividual ,
+                                                      <http://webprotege.stanford.edu/AestheticElement> ,
                                                       <http://webprotege.stanford.edu/FashionProduct> ;
-                                             <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
-                                             rdfs:label "PuffSleeves"@en .
+                                             rdfs:label "Puff sleeves"@en .
 
 
 ###  http://webprotege.stanford.edu/Punk
@@ -2039,22 +1794,22 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 ###  http://webprotege.stanford.edu/QuietLuxury
 <http://webprotege.stanford.edu/QuietLuxury> rdf:type owl:NamedIndividual ,
+                                                      <http://webprotege.stanford.edu/BehaviourPattern> ,
                                                       <http://webprotege.stanford.edu/ConceptualIdeas> ;
                                              <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
-                                             rdfs:label "QuietLuxury"@en .
+                                             rdfs:label "Quiet luxury"@en .
 
 
 ###  http://webprotege.stanford.edu/Reel_Creation_Process
-<http://webprotege.stanford.edu/Reel_Creation_Process> rdf:type owl:NamedIndividual ,
-                                                                <http://webprotege.stanford.edu/Platform-SpecificAdaptation> ;
-                                                       rdfs:label "ReelCreationProcess"@en .
+<http://webprotege.stanford.edu/Reel_Creation_Process> rdf:type owl:NamedIndividual ;
+                                                       rdfs:label "Reel-creation process"@en .
 
 
 ###  http://webprotege.stanford.edu/RippedJeans
 <http://webprotege.stanford.edu/RippedJeans> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/AestheticElement> ,
                                                       <http://webprotege.stanford.edu/FashionProduct> ;
-                                             rdfs:label "RippedJeans"@en .
+                                             rdfs:label "Ripped jeans"@en .
 
 
 ###  http://webprotege.stanford.edu/Rock
@@ -2065,6 +1820,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 ###  http://webprotege.stanford.edu/Romanticism
 <http://webprotege.stanford.edu/Romanticism> rdf:type owl:NamedIndividual ,
+                                                      <http://webprotege.stanford.edu/BehaviourPattern> ,
                                                       <http://webprotege.stanford.edu/ConceptualIdeas> ,
                                                       <http://webprotege.stanford.edu/CulturalContext> ,
                                                       <http://webprotege.stanford.edu/TemporalContext> ,
@@ -2086,40 +1842,36 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                         <http://webprotege.stanford.edu/BehaviourPattern> ,
                                                         <http://webprotege.stanford.edu/ConceptualIdeas> ;
                                                <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
-                                               rdfs:label "SelfDiscovery"@en .
+                                               rdfs:label "Self discovery"@en .
 
 
 ###  http://webprotege.stanford.edu/SexAndTheCity
 <http://webprotege.stanford.edu/SexAndTheCity> rdf:type owl:NamedIndividual ,
-                                                        <http://webprotege.stanford.edu/TvShow> ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <http://webprotege.stanford.edu/evokes> ;
-                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                        ] ;
+                                                        <http://webprotege.stanford.edu/TvShow> ;
                                                <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
                                                <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/KittenHeels> ;
                                                rdfs:TimePeriod "1998-2004" ;
-                                               rdfs:label "SexAndTheCity"@en .
+                                               rdfs:label "Sex and the City"@en .
 
 
 ###  http://webprotege.stanford.edu/ShortVideos
 <http://webprotege.stanford.edu/ShortVideos> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/VideoProduct> ;
-                                             rdfs:label "ShortVideos"@en .
+                                             rdfs:label "Short videos"@en .
 
 
 ###  http://webprotege.stanford.edu/SkinRoutine
 <http://webprotege.stanford.edu/SkinRoutine> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/BehaviourPattern> ;
                                              <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
-                                             rdfs:label "SkinRoutine"@en .
+                                             rdfs:label "Skinroutine"@en .
 
 
 ###  http://webprotege.stanford.edu/SleekPonytail
 <http://webprotege.stanford.edu/SleekPonytail> rdf:type owl:NamedIndividual ,
-                                                        <http://webprotege.stanford.edu/AestheticElement> ;
-                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
-                                               rdfs:label "SleekPonytail"@en .
+                                                        <http://webprotege.stanford.edu/AestheticElement> ,
+                                                        <http://webprotege.stanford.edu/FashionProduct> ;
+                                               rdfs:label "Sleek ponytail"@en .
 
 
 ###  http://webprotege.stanford.edu/SlowerPaceOfLife
@@ -2138,11 +1890,13 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                      <http://webprotege.stanford.edu/TemporalContext> ;
                                             <http://webprotege.stanford.edu/endDate> "1979"^^xsd:Year ;
                                             <http://webprotege.stanford.edu/startDate> "1970"^^xsd:Year ;
-                                            rdfs:label "1970s"@en .
+                                            rdfs:label "1970s"@en ,
+                                                       "Soft grunge" .
 
 
 ###  http://webprotege.stanford.edu/Sophistication
 <http://webprotege.stanford.edu/Sophistication> rdf:type owl:NamedIndividual ,
+                                                         <http://webprotege.stanford.edu/BehaviourPattern> ,
                                                          <http://webprotege.stanford.edu/ConceptualIdeas> ;
                                                 <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
                                                 rdfs:label "Sophistication"@en .
@@ -2150,19 +1904,21 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 ###  http://webprotege.stanford.edu/StrawHat
 <http://webprotege.stanford.edu/StrawHat> rdf:type owl:NamedIndividual ,
+                                                   <http://webprotege.stanford.edu/AestheticElement> ,
                                                    <http://webprotege.stanford.edu/FashionProduct> ;
-                                          rdfs:label "StrawHat"@en .
+                                          rdfs:label "Straw hat"@en .
 
 
 ###  http://webprotege.stanford.edu/TailoredBlazers
 <http://webprotege.stanford.edu/TailoredBlazers> rdf:type owl:NamedIndividual ,
                                                           <http://webprotege.stanford.edu/AestheticElement> ,
                                                           <http://webprotege.stanford.edu/FashionProduct> ;
-                                                 rdfs:label "TailoredBlazers"@en .
+                                                 rdfs:label "Tailored blazers"@en .
 
 
 ###  http://webprotege.stanford.edu/Tamagotchis
 <http://webprotege.stanford.edu/Tamagotchis> rdf:type owl:NamedIndividual ,
+                                                      <http://webprotege.stanford.edu/AestheticElement> ,
                                                       <http://webprotege.stanford.edu/Games> ;
                                              rdfs:label "Tamagotchis"@en .
 
@@ -2177,23 +1933,19 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 <http://webprotege.stanford.edu/ThePixies> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/Music> ;
                                            :hasGenre <http://webprotege.stanford.edu/Grunge> ;
-                                           rdfs:label "ThePixies "@en .
+                                           rdfs:label "The Pixies"@en .
 
 
 ###  http://webprotege.stanford.edu/TheSecretHistory
 <http://webprotege.stanford.edu/TheSecretHistory> rdf:type owl:NamedIndividual ,
                                                            <http://webprotege.stanford.edu/Book> ,
                                                            <http://webprotege.stanford.edu/TextualProduct> ;
-                                                  rdfs:label "TheSecretHistory"@en .
+                                                  rdfs:label "The Secret History"@en .
 
 
 ###  http://webprotege.stanford.edu/Thrifting
 <http://webprotege.stanford.edu/Thrifting> rdf:type owl:NamedIndividual ,
-                                                    <http://webprotege.stanford.edu/BehaviourPattern> ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Serendipity>
-                                                    ] ;
+                                                    <http://webprotege.stanford.edu/BehaviourPattern> ;
                                            rdfs:label "Thrifting"@en .
 
 
@@ -2207,11 +1959,12 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  http://webprotege.stanford.edu/TikTokVideo
 <http://webprotege.stanford.edu/TikTokVideo> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/VideoProduct> ;
-                                             rdfs:label "TikTokVideo"@en .
+                                             rdfs:label "TikTok Video"@en .
 
 
 ###  http://webprotege.stanford.edu/Tradition
 <http://webprotege.stanford.edu/Tradition> rdf:type owl:NamedIndividual ,
+                                                    <http://webprotege.stanford.edu/BehaviourPattern> ,
                                                     <http://webprotege.stanford.edu/ConceptualIdeas> ;
                                            <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
                                            rdfs:label "Tradition"@en .
@@ -2234,17 +1987,14 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  http://webprotege.stanford.edu/TweedJackets
 <http://webprotege.stanford.edu/TweedJackets> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/AestheticElement> ,
-                                                       <http://webprotege.stanford.edu/FashionProduct> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
-                                                       ] ;
+                                                       <http://webprotege.stanford.edu/FashionProduct> ;
                                               <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/DarkAcademia> ;
-                                              rdfs:label "TweedJackets"@en .
+                                              rdfs:label "Tweed jackets"@en .
 
 
 ###  http://webprotege.stanford.edu/Vintage
 <http://webprotege.stanford.edu/Vintage> rdf:type owl:NamedIndividual ,
+                                                  <http://webprotege.stanford.edu/LifeStyle> ,
                                                   <http://webprotege.stanford.edu/TemporalContext> ;
                                          <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/Cottagecore> ;
                                          rdfs:label "Vintage"@en .
@@ -2252,14 +2002,16 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 ###  http://webprotege.stanford.edu/VintageBooks
 <http://webprotege.stanford.edu/VintageBooks> rdf:type owl:NamedIndividual ,
-                                                       <http://webprotege.stanford.edu/AestheticElement> ;
-                                              rdfs:label "VintageBooks"@en .
+                                                       <http://webprotege.stanford.edu/AestheticElement> ,
+                                                       <http://webprotege.stanford.edu/TextualProduct> ;
+                                              rdfs:label "Vintage books"@en .
 
 
 ###  http://webprotege.stanford.edu/VinylRecord
 <http://webprotege.stanford.edu/VinylRecord> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/AestheticElement> ;
-                                             rdfs:label "VinylRecord"@en .
+                                                      <http://webprotege.stanford.edu/AestheticElement> ,
+                                                      <http://webprotege.stanford.edu/AuditoryProduct> ;
+                                             rdfs:label "Vinyl Record"@en .
 
 
 ###  http://webprotege.stanford.edu/Vogue
@@ -2273,7 +2025,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 <http://webprotege.stanford.edu/WASPCulture> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/SocialCommunity> ;
                                              <http://purl.org/dc/elements/1.1/description> "White Anglo-Saxon Protestant culture" ;
-                                             rdfs:label "WASPCulture"@en .
+                                             rdfs:label "WASP Culture"@en .
 
 
 ###  http://webprotege.stanford.edu/Wealth
@@ -2299,7 +2051,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                          owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
                                                        ] ;
                                               <http://webprotege.stanford.edu/hasSpatialContext> <http://webprotege.stanford.edu/Web> ;
-                                              rdfs:label "WebCommunity"@en .
+                                              rdfs:label "Web community"@en .
 
 
 ###  http://webprotege.stanford.edu/Western
@@ -2321,18 +2073,6 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  http://webprotege.stanford.edu/Y2K
 <http://webprotege.stanford.edu/Y2K> rdf:type owl:NamedIndividual ,
                                               <http://webprotege.stanford.edu/Aesthetic> ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
-                                              ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                 owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
@@ -2372,57 +2112,37 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 ###  http://webprotege.stanford.edu/Y2K_Convergence_Phase
 <http://webprotege.stanford.edu/Y2K_Convergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                <http://webprotege.stanford.edu/Convergence> ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Selection>
-                                                                ] ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Serendipity>
-                                                                ] ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                  owl:someValuesFrom <http://webprotege.stanford.edu/Synthesis>
-                                                                ] ;
+                                                                <http://webprotege.stanford.edu/Convergence> ;
                                                        <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
-                                                       <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Thrifting> ;
+                                                       <http://webprotege.stanford.edu/involvesProcess> :Selection ,
+                                                                                                        :Synthesis ;
                                                        <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/Y2K_Metaconvergence_Phase> ;
-                                                       rdfs:label "Y2K_Convergence_Phase"@en .
+                                                       rdfs:label "Y2K Convergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/Y2K_Divergence_Phase
 <http://webprotege.stanford.edu/Y2K_Divergence_Phase> rdf:type owl:NamedIndividual ,
-                                                               <http://webprotege.stanford.edu/Divergence> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                 owl:someValuesFrom <http://webprotege.stanford.edu/Inspiration>
-                                                               ] ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                                 owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                                               ] ;
+                                                               <http://webprotege.stanford.edu/Divergence> ;
                                                       <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                                       <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/2000s> ;
                                                       <http://webprotege.stanford.edu/involvesEmotion> :Nostalgia ;
+                                                      <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Thrifting> ,
+                                                                                                       :Inspiration ,
+                                                                                                       :Serendipity ;
                                                       <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/Y2K_Convergence_Phase> ;
-                                                      <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/WebCommunity> ;
-                                                      rdfs:label "Y2K_Divergence_Phase"@en .
+                                                      <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                                     <http://webprotege.stanford.edu/TikTok> ,
+                                                                                                     <http://webprotege.stanford.edu/WebCommunity> ;
+                                                      rdfs:label "Y2K Divergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/Y2K_Metaconvergence_Phase
 <http://webprotege.stanford.edu/Y2K_Metaconvergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                    <http://webprotege.stanford.edu/Metaconvergence> ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Recontextualization>
-                                                                    ] ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <http://webprotege.stanford.edu/involvesProcess> ;
-                                                                      owl:someValuesFrom <http://webprotege.stanford.edu/Reproduction>
-                                                                    ] ;
+                                                                    <http://webprotege.stanford.edu/Metaconvergence> ;
+                                                           <http://webprotege.stanford.edu/involvesProcess> :Recontextualization ,
+                                                                                                            :Reproduction ;
                                                            <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/Y2K> ;
-                                                           rdfs:label "Y2K_Metaconvergence_Phase"@en .
+                                                           rdfs:label "Y2K Metaconvergence Phase"@en .
 
 
 ###  http://webprotege.stanford.edu/iMac
@@ -2482,44 +2202,99 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                             <http://webprotege.stanford.edu/Movie> ;
                                                    <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                    <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
-                                                   rdfs:label "Charlie'sAngels"@en .
+                                                   rdfs:label "Charlie's Angels"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#AestheticSaturation
+:AestheticSaturation rdf:type owl:NamedIndividual ,
+                              <http://webprotege.stanford.edu/Metaconvergence> ;
+                     <http://purl.org/dc/elements/1.1/description> "The intentional, excessive application of an aesthetic's tropes to the point of absurdity, often leading to its ironic consumption or death."@en ;
+                     rdfs:label "Aesthetic saturation"@en .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Aspiration
 :Aspiration rdf:type owl:NamedIndividual ,
-                     <http://webprotege.stanford.edu/Emotion> .
+                     <http://webprotege.stanford.edu/Emotion> ;
+            rdfs:label "Aspiration" .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Belonging
 :Belonging rdf:type owl:NamedIndividual ,
-                    <http://webprotege.stanford.edu/Emotion> .
+                    <http://webprotege.stanford.edu/Emotion> ;
+           rdfs:label "Belonging" .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Bricolage
+:Bricolage rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/Divergence> ;
+           <http://purl.org/dc/elements/1.1/description> "The practice of creating something new from a diverse range of existing or \\\"found\\\" materials at hand. Manifests in various forms, including visual collage, audio sampling, and stylistic remixing."@en ;
+           rdfs:label "Bricolage"@en .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Escapism
 :Escapism rdf:type owl:NamedIndividual ,
                    <http://webprotege.stanford.edu/Emotion> ;
-          <http://webprotege.stanford.edu/evokedBy> :Nostalgia .
+          <http://webprotege.stanford.edu/evokedBy> :Nostalgia ;
+          rdfs:label "Escapism" .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#FeedbackLoop
+:FeedbackLoop rdf:type owl:NamedIndividual ,
+                       <http://webprotege.stanford.edu/Metaconvergence> ;
+              <http://purl.org/dc/elements/1.1/description> "Feedback loop"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Ideation
+:Ideation rdf:type owl:NamedIndividual ,
+                   <http://webprotege.stanford.edu/Divergence> ;
+          <http://purl.org/dc/elements/1.1/description> "The generation of multiple concepts, moods, or directions without immediate pressure to select a final one."@en ;
+          rdfs:label "Ideation"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Inspiration
+:Inspiration rdf:type owl:NamedIndividual ,
+                      <http://webprotege.stanford.edu/Divergence> ;
+             <http://purl.org/dc/elements/1.1/description> "The active or passive act of seeking and collecting references, motifs, and content that fuel the aesthetic."@en ;
+             rdfs:label "Inspiration"@en .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Irony
 :Irony rdf:type owl:NamedIndividual ,
-                <http://webprotege.stanford.edu/Emotion> .
+                <http://webprotege.stanford.edu/Emotion> ;
+       rdfs:label "Irony" .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Melancholy
 :Melancholy rdf:type owl:NamedIndividual ,
-                     <http://webprotege.stanford.edu/Emotion> .
+                     <http://webprotege.stanford.edu/Emotion> ;
+            rdfs:label "Melancholy" .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Memeification
+:Memeification rdf:type owl:NamedIndividual ,
+                        <http://webprotege.stanford.edu/Metaconvergence> ;
+               <http://purl.org/dc/elements/1.1/description> "The transformation of an aesthetic element into a meme through simplification, templatization, and viral replication."@en ;
+               rdfs:label "Memeification"@en .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Nostalgia
 :Nostalgia rdf:type owl:NamedIndividual ,
-                    <http://webprotege.stanford.edu/Emotion> .
+                    <http://webprotege.stanford.edu/Emotion> ;
+           rdfs:label "Nostalgia" .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Platform-SpecificAdaptation
+:Platform-SpecificAdaptation rdf:type owl:NamedIndividual ,
+                                      <http://webprotege.stanford.edu/Convergence> ;
+                             <http://purl.org/dc/elements/1.1/description> "he process of tailoring the final product to meet the technical and cultural norms of a specific platform (e.g., formatting for TikTok vs. Instagram)."@en ;
+                             rdfs:label "Platform-specific adaptation"@en .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Pride
 :Pride rdf:type owl:NamedIndividual ,
                 <http://webprotege.stanford.edu/Emotion> ;
-       <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/OldMoney> .
+       <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/OldMoney> ;
+       rdfs:label "Pride" .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Rebellion
@@ -2527,7 +2302,65 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                     <http://webprotege.stanford.edu/Emotion> ;
            <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/Grunge> ,
                                                         <http://webprotege.stanford.edu/Punk> ,
-                                                        <http://webprotege.stanford.edu/Rock> .
+                                                        <http://webprotege.stanford.edu/Rock> ;
+           rdfs:label "Rebellion" .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Recontextualization
+:Recontextualization rdf:type owl:NamedIndividual ,
+                              <http://webprotege.stanford.edu/Metaconvergence> ;
+                     <http://purl.org/dc/elements/1.1/description> """Recontextualization is the metaconvergent process of adapting and transforming aesthetic elements or creative products by placing them into fundamentally different contexts—whether spatial, cultural, temporal, or platform-specific.
+
+Unlike reproduction, which emphasizes temporal recycling from past to present, recontextualization focuses on the active translation and reframing of aesthetic expressions across boundaries. This includes:
+- Adapting aesthetics across different digital platforms (e.g., TikTok vs. Instagram vs. Pinterest)
+- Translating subcultural aesthetics into mainstream contexts or vice versa
+- Shifting aesthetic meanings through new cultural or social frameworks
+- Repurposing aesthetic elements for different communities with distinct interpretative codes
+
+Recontextualization often involves strategic modification to ensure legibility in the new context while potentially transforming the original meaning, function, or emotional resonance. A meme template recontextualized across different subcultures, or a fashion aesthetic adapted from streetwear to high fashion, exemplifies this process."""@en ;
+                     rdfs:label "Recontextualization"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Refinement
+:Refinement rdf:type owl:NamedIndividual ,
+                     <http://webprotege.stanford.edu/Convergence> ;
+            <http://purl.org/dc/elements/1.1/description> "The final polishing stage, involving adjustments like color grading, applying specific filters, and fine-tuning details to align with the aesthetic."@en ;
+            rdfs:label "Refinement"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Reproduction
+:Reproduction rdf:type owl:NamedIndividual ,
+                       <http://webprotege.stanford.edu/Metaconvergence> ;
+              <http://purl.org/dc/elements/1.1/description> """Reproduction is the metaconvergent process of deliberately reviving and recycling aesthetic elements, styles, or cultural artifacts from past eras or different contexts into present-day creative production. 
+This process involves more than simple imitation—it requires selecting, extracting, and standardizing historical or cross-cultural aesthetic features to make them functional and relevant within contemporary contexts. Reproduction often drives nostalgia-based aesthetics and retro movements, where past visual languages, color palettes, materials, or design principles are systematically reintroduced and adapted to current media platforms and cultural expectations.
+Examples include Y2K aesthetics recycling early 2000s digital culture, or cottagecore reproducing romanticized pastoral imagery. The process transforms historical references into legible, shareable formats that resonate with contemporary audiences while maintaining recognizable connections to their original temporal or cultural context."""@en ;
+              rdfs:label "Reproduction"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Selection
+:Selection rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/Convergence> ;
+           rdfs:label "Selection"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Serendipity
+:Serendipity rdf:type owl:NamedIndividual ,
+                      <http://webprotege.stanford.edu/Divergence> ;
+             <http://purl.org/dc/elements/1.1/description> "The process of stumbling upon valuable ideas or materials by chance, often a happy accident during research."@en ;
+             rdfs:label "Serendipity"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Synthesis
+:Synthesis rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/Convergence> ;
+           rdfs:label "Synthesis"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://webprotege.stanford.edu/SocialMediaInfluencer> rdfs:label "Social media influencer"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

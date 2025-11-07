@@ -119,9 +119,9 @@ def extract_aesthetics_from_ontology(file_path):
     return aesthetics_df
 
 my_df = extract_aesthetics_from_ontology("./ontologycore/ontologycore-251102.ttl")
-aes = my_df.iloc[1, 0]
-spr = my_df.iloc[1, 6]
-print(f"{aes} has the following spread through: {spr}")
+# aes = my_df.iloc[1, 0]
+# spr = my_df.iloc[1, 6]
+# print(f"{aes} has the following spread through: {spr}")
 print(my_df)
 
 my_df.to_csv("aesthetics_dataset.csv", index=False)
