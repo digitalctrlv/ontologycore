@@ -16,7 +16,6 @@ from rdflib.namespace import RDFS
 # Define URIs for relevant properties
 LABEL = URIRef("http://www.w3.org/2000/01/rdf-schema#label")
 AESTHETIC_CLASS = URIRef("http://webprotege.stanford.edu/Aesthetic")
-PROCESS = URIRef ("http://webprotege.stanford.edu/Process")
 HAS_NAME = URIRef("http://webprotege.stanford.edu/hasName")
 DC_DESCRIPTION = URIRef("http://purl.org/dc/elements/1.1/description")
 TEMP_CON = URIRef("http://webprotege.stanford.edu/hasTemporalContext")
@@ -89,10 +88,6 @@ def extract_aesthetics_from_ontology(file_path):
     g.parse(file_path, format='turtle')
 
     aesthetic_data = []
-
-    for individual in g.subjects(predicate=RDF.type, object=PROCESS):
-
-        
 
     for individual in g.subjects(predicate=RDF.type, object=AESTHETIC_CLASS):
         

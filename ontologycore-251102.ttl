@@ -1019,6 +1019,9 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                                                                 <http://webprotege.stanford.edu/Gardening> ,
                                                                                                 <http://webprotege.stanford.edu/SlowerPaceOfLife> ;
                                              <http://webprotege.stanford.edu/involvesEmotion> :Escapism ;
+                                             <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Cottagecore_Convergence_Phase> ,
+                                                                                              <http://webprotege.stanford.edu/Cottagecore_Divergence_Phase> ,
+                                                                                              <http://webprotege.stanford.edu/Cottagecore_Metaconvergence_Phase> ;
                                              <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
                                                                                             <http://webprotege.stanford.edu/MoodBoard> ,
                                                                                             <http://webprotege.stanford.edu/Pinterest> ;
@@ -1100,6 +1103,9 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
                                                                                                :Escapism ,
                                                                                                :Melancholy ,
                                                                                                :Nostalgia ;
+                                              <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/DarkAcademia_Convergence_Phase> ,
+                                                                                               <http://webprotege.stanford.edu/DarkAcademia_Divergence_Phase> ,
+                                                                                               <http://webprotege.stanford.edu/DarkAcademia_Metaconvergence_Phase> ;
                                               <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                               <http://webprotege.stanford.edu/revivesElement> <http://webprotege.stanford.edu/ClassicalLiterature> ;
                                               <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
@@ -1338,6 +1344,9 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                                                     <http://webprotege.stanford.edu/ThePixies> ;
                                         <http://webprotege.stanford.edu/involvesEmotion> :Melancholy ,
                                                                                          :Rebellion ;
+                                        <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Grunge_Convergence_Phase> ,
+                                                                                         <http://webprotege.stanford.edu/Grunge_Divergence_Phase> ,
+                                                                                         <http://webprotege.stanford.edu/Grunge_Metaconvergence_Phase> ;
                                         <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ,
                                                                                    <http://webprotege.stanford.edu/2010s> ;
                                         <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
@@ -1644,6 +1653,9 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                                                              <http://webprotege.stanford.edu/Tennis> ;
                                           <http://webprotege.stanford.edu/involvesEmotion> :Aspiration ,
                                                                                            :Pride ;
+                                          <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/OldMoney_Convergence_Phase> ,
+                                                                                           <http://webprotege.stanford.edu/OldMoney_Divergence_Phase> ,
+                                                                                           <http://webprotege.stanford.edu/OldMoney_Metaconvergence_Phase> ;
                                           <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/TikTok> ;
                                           <http://webprotege.stanford.edu/hasName> "Old Money" ;
                                           <http://purl.org/dc/elements/1.1/description> """Old Money is an aesthetic based around a wealthy, classic style. Old Money refers to people who have inherited their wealth instead of working for it. In the United States, Old Money is associated with WASP (White Anglo-Saxon Protestant) culture, and in Europe, Old Money is associated with titles of nobility.
@@ -1662,7 +1674,6 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                             <http://webprotege.stanford.edu/involvesEmotion> :Pride ;
                                                             <http://webprotege.stanford.edu/involvesProcess> :Refinement ,
                                                                                                              :Selection ;
-                                                            <http://webprotege.stanford.edu/precedesProcess> <http://webprotege.stanford.edu/OldMoney_MetaConvergence_Phase> ;
                                                             rdfs:label "OldMoney Convergence Phase"@en .
 
 
@@ -1695,8 +1706,8 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                            rdfs:label "OldMoney Divergence Phase"@en .
 
 
-###  http://webprotege.stanford.edu/OldMoney_MetaConvergence_Phase
-<http://webprotege.stanford.edu/OldMoney_MetaConvergence_Phase> rdf:type owl:NamedIndividual ,
+###  http://webprotege.stanford.edu/OldMoney_Metaconvergence_Phase
+<http://webprotege.stanford.edu/OldMoney_Metaconvergence_Phase> rdf:type owl:NamedIndividual ,
                                                                          <http://webprotege.stanford.edu/Metaconvergence> ;
                                                                 <http://webprotege.stanford.edu/involvesProcess> :Memeification ,
                                                                                                                  :Recontextualization ,
@@ -2088,6 +2099,9 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                      <http://webprotege.stanford.edu/involvesEmotion> :Belonging ,
                                                                                       :Irony ,
                                                                                       :Nostalgia ;
+                                     <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Y2K_Convergence_Phase> ,
+                                                                                      <http://webprotege.stanford.edu/Y2K_Divergence_Phase> ,
+                                                                                      <http://webprotege.stanford.edu/Y2K_Metaconvergence_Phase> ;
                                      <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                      <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
                                                                                     <http://webprotege.stanford.edu/MoodBoard> ,
