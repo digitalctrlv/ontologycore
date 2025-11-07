@@ -124,12 +124,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                           rdfs:label "includes"@en .
 
 
-###  http://webprotege.stanford.edu/influenced
-<http://webprotege.stanford.edu/influenced> rdf:type owl:ObjectProperty ;
-                                            owl:inverseOf <http://webprotege.stanford.edu/influencedBy> ;
-                                            rdfs:label "influenced"@en .
-
-
 ###  http://webprotege.stanford.edu/influencedBy
 <http://webprotege.stanford.edu/influencedBy> rdf:type owl:ObjectProperty ;
                                               rdfs:subPropertyOf owl:topObjectProperty ;
@@ -829,7 +823,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
 <http://webprotege.stanford.edu/BlackSabbath> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/Music> ;
                                               <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/SoftGrunge> ;
-                                              <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Grunge> ;
                                               :hasGenre <http://webprotege.stanford.edu/Rock> ;
                                               rdfs:label "Black Sabbath"@en .
 
@@ -991,7 +984,6 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                            <http://webprotege.stanford.edu/AestheticElement> ,
                                                            <http://webprotege.stanford.edu/FashionProduct> ;
                                                   <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
-                                                  <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/KurtCobain> ;
                                                   rdfs:label "Converse Sneakers"@en .
 
 
@@ -1294,7 +1286,6 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
 <http://webprotege.stanford.edu/GlossedLips> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/FashionProduct> ;
                                              <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
-                                             <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                              rdfs:label "Glossed lips"@en .
 
 
@@ -1302,7 +1293,6 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
 <http://webprotege.stanford.edu/GlowySkin> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/AestheticElement> ;
                                            <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
-                                           <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                            rdfs:label "Glowy skin"@en .
 
 
@@ -1401,7 +1391,10 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 ###  http://webprotege.stanford.edu/HaileyBieber
 <http://webprotege.stanford.edu/HaileyBieber> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/SocialMediaInfluencer> ;
-                                              <http://webprotege.stanford.edu/creates> <http://webprotege.stanford.edu/InstagramReel> ;
+                                              <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/GlossedLips> ,
+                                                                                           <http://webprotege.stanford.edu/GlowySkin> ,
+                                                                                           <http://webprotege.stanford.edu/PhodePhoneCase> ,
+                                                                                           <http://webprotege.stanford.edu/SkinRoutine> ;
                                               :birthYear "1996"^^xsd:Year ;
                                               rdfs:TimePeriod "2020s" ;
                                               rdfs:label "Hailey Bieber"@en .
@@ -1425,15 +1418,6 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 <http://webprotege.stanford.edu/Instagram> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/SocialMedia> ;
                                            rdfs:label "Instagram"@en .
-
-
-###  http://webprotege.stanford.edu/InstagramReel
-<http://webprotege.stanford.edu/InstagramReel> rdf:type owl:NamedIndividual ,
-                                                        <http://webprotege.stanford.edu/DigitalProduct> ,
-                                                        <http://webprotege.stanford.edu/VideoProduct> ;
-                                               <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/Instagram> ;
-                                               <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Instagram_Filters> ;
-                                               rdfs:label "Instagram Reel"@en .
 
 
 ###  http://webprotege.stanford.edu/Instagram_Filters
@@ -1742,7 +1726,6 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                          <http://webprotege.stanford.edu/FashionProduct> ;
                                                 <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                                 <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/CleanGirl> ;
-                                                <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                                 rdfs:label "Rhode phonecase"@en .
 
 
@@ -1790,6 +1773,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                <http://webprotege.stanford.edu/Community> ,
                                                <http://webprotege.stanford.edu/FashionProduct> ,
                                                <http://webprotege.stanford.edu/Music> ;
+                                      <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Grunge> ;
                                       <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                       rdfs:label "Punk"@en .
 
@@ -1865,7 +1849,6 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  http://webprotege.stanford.edu/SkinRoutine
 <http://webprotege.stanford.edu/SkinRoutine> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/BehaviourPattern> ;
-                                             <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                              rdfs:label "Skinroutine"@en .
 
 
