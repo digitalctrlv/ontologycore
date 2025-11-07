@@ -889,7 +889,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
 
 ###  http://webprotege.stanford.edu/Classical
 <http://webprotege.stanford.edu/Classical> rdf:type owl:NamedIndividual ,
-                                                    <http://webprotege.stanford.edu/BehaviourPattern> ,
                                                     <http://webprotege.stanford.edu/ConceptualIdeas> ;
                                            <http://webprotege.stanford.edu/startDate> "XVII century" ;
                                            rdfs:label "Classical"@en .
@@ -1641,8 +1640,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                      owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
                                                      owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
                                                    ] ;
-                                          <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Classical> ,
-                                                                                           <http://webprotege.stanford.edu/PennyLoafers> ,
+                                          <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/PennyLoafers> ,
                                                                                            <http://webprotege.stanford.edu/PoloShirts> ,
                                                                                            <http://webprotege.stanford.edu/QuietLuxury> ,
                                                                                            <http://webprotege.stanford.edu/Sophistication> ,
@@ -1654,6 +1652,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                           <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;
                                           <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/GossipGirl> ,
                                                                                         <http://webprotege.stanford.edu/Vogue> ;
+                                          <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/Classical> ;
                                           <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Golf> ,
                                                                                              <http://webprotege.stanford.edu/Tennis> ;
                                           <http://webprotege.stanford.edu/involvesEmotion> :Aspiration ,
@@ -2100,6 +2099,9 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                                                  <http://webprotege.stanford.edu/ParisHilton> ,
                                                                                  <http://webprotege.stanford.edu/SexAndTheCity> ;
                                      <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Thrifting> ;
+                                     <http://webprotege.stanford.edu/involvesEmotion> :Belonging ,
+                                                                                      :Irony ,
+                                                                                      :Nostalgia ;
                                      <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                      <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
                                                                                     <http://webprotege.stanford.edu/MoodBoard> ,
