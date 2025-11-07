@@ -858,7 +858,6 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                         ] ;
                                                <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                                <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
-                                               <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Y2K> ;
                                                :birthYear "1981"^^xsd:Year ;
                                                rdfs:label "Britney Spears"@en .
 
@@ -918,6 +917,7 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                                                             <http://webprotege.stanford.edu/NeutralMakeup> ,
                                                                                             <http://webprotege.stanford.edu/PhodePhoneCase> ,
                                                                                             <http://webprotege.stanford.edu/SleekPonytail> ;
+                                           <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                            <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                            <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;
                                            <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
@@ -988,6 +988,7 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
 
 ###  http://webprotege.stanford.edu/ConverseSneakers
 <http://webprotege.stanford.edu/ConverseSneakers> rdf:type owl:NamedIndividual ,
+                                                           <http://webprotege.stanford.edu/AestheticElement> ,
                                                            <http://webprotege.stanford.edu/FashionProduct> ;
                                                   <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Grunge> ;
                                                   <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/KurtCobain> ;
@@ -1011,6 +1012,7 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                                                                               <http://webprotege.stanford.edu/StrawHat> ,
                                                                                               <http://webprotege.stanford.edu/Vintage> ,
                                                                                               <http://webprotege.stanford.edu/Wood> ;
+                                             <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                              <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ,
                                                                                             <http://webprotege.stanford.edu/Millenials> ;
                                              <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/WebCommunity> ;
@@ -1093,6 +1095,7 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
                                                                                                <http://webprotege.stanford.edu/Leather> ,
                                                                                                <http://webprotege.stanford.edu/TweedJackets> ,
                                                                                                <http://webprotege.stanford.edu/VintageBooks> ;
+                                              <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                               <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/AcademicContext> ,
                                                                                                   <http://webprotege.stanford.edu/Western> ;
                                               <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/19thCentury> ,
@@ -1229,7 +1232,6 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                               owl:someValuesFrom <http://webprotege.stanford.edu/Music>
                                                             ] ;
                                                    <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
-                                                   <http://webprotege.stanford.edu/influenced> <http://webprotege.stanford.edu/Grunge> ;
                                                    :birthYear "1992"^^xsd:Year ;
                                                    rdfs:label "Frances Bean Cobain"@en .
 
@@ -1338,7 +1340,8 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                         <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenX> ,
                                                                                        <http://webprotege.stanford.edu/GenZ> ;
                                         <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ;
-                                        <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/FrancesBeanCobain> ;
+                                        <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/FrancesBeanCobain> ,
+                                                                                      <http://webprotege.stanford.edu/KurtCobain> ;
                                         <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/BlackSabbath> ,
                                                                                     <http://webprotege.stanford.edu/Nirvana> ,
                                                                                     <http://webprotege.stanford.edu/Punk> ,
@@ -1484,7 +1487,6 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                        owl:someValuesFrom <http://webprotege.stanford.edu/Music>
                                                      ] ;
                                             <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ;
-                                            <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Grunge> ;
                                             <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/ConverseSneakers> ;
                                             :birthYear "1967"^^xsd:Year ;
                                             rdfs:label "Kurt Cobain"@en .
@@ -1647,6 +1649,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                                                            <http://webprotege.stanford.edu/TailoredBlazers> ,
                                                                                            <http://webprotege.stanford.edu/Tradition> ,
                                                                                            <http://webprotege.stanford.edu/Wealth> ;
+                                          <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                           <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                           <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/Western> ;
                                           <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;

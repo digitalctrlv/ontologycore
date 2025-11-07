@@ -27,6 +27,7 @@ BEH_PAT = URIRef("http://webprotege.stanford.edu/BehaviourPattern")
 INV_BEH = URIRef("http://webprotege.stanford.edu/involvesBehaviour")
 SPREAD = URIRef("http://webprotege.stanford.edu/spreadThrough")
 INSPIRATION = URIRef("http://webprotege.stanford.edu/inspiredBy")
+EMOTION = URIRef ("http://webprotege.stanford.edu/involvesEmotion")
 
 # Function to get ALL labels of linked individuals via an object property
 def get_linked_label(g, individual, object_prop, label_prop, default_none=" ", default_unknown=" "):
@@ -91,30 +92,32 @@ def extract_aesthetics_from_ontology(file_path):
         
         # === Data properties === #
         name_literal = g.value(individual, HAS_NAME)
-        # desc_literal = g.value(individual, DC_DESCRIPTION)
+        desc_literal = g.value(individual, DC_DESCRIPTION)
 
         name = str(name_literal) if name_literal else " "
-        # description = str(desc_literal) if desc_literal else " "
+        description = str(desc_literal) if desc_literal else " "
 
         # === Object properties === #
-        # temporal_context = get_linked_label(g, individual, TEMP_CON, LABEL)
+        temporal_context = get_linked_label(g, individual, TEMP_CON, LABEL)
         influence = get_linked_label(g, individual, INFLUENCE, LABEL)
         # # if the aesthetic is linked through the object property CHAR_BY and the link individual is not a type AES_EL, we skip it
-        # aes_el = get_filtered_labels(g, individual, CHAR_BY, LABEL, AES_EL)
-        # life_style = get_filtered_labels(g, individual, INV_BEH, LABEL, [LIFESTYLE, BEH_PAT])
-        # spread_through = get_linked_label(g, individual, SPREAD, LABEL)
+        aes_el = get_filtered_labels(g, individual, CHAR_BY, LABEL, AES_EL)
+        life_style = get_filtered_labels(g, individual, INV_BEH, LABEL, [LIFESTYLE, BEH_PAT])
+        spread_through = get_linked_label(g, individual, SPREAD, LABEL)
         inspiration = get_linked_label(g, individual, INSPIRATION, LABEL)
+        emotion = get_linked_label(g, individual, EMOTION, LABEL)
 
 
         aesthetic_data.append({
             'Aesthetic': name, 
-            # 'Description': description,
-            # 'Temporal Context': temporal_context,
+            'Description': description,
+            'Temporal Context': temporal_context,
             'Influence': influence,
-            # 'Aesthetic Element': aes_el,
-            # 'Lifestyle': life_style,
-            # 'Spread Through': spread_through,
-            'Inspiration': inspiration
+            'Aesthetic Element': aes_el,
+            'Lifestyle': life_style,
+            'Spread Through': spread_through,
+            'Inspiration': inspiration,
+            'Emotion': emotion
             })
     
     aesthetics_df = pd.DataFrame(aesthetic_data)
@@ -122,9 +125,6 @@ def extract_aesthetics_from_ontology(file_path):
     return aesthetics_df
 
 my_df = extract_aesthetics_from_ontology("./ontologycore/ontologycore-251102.ttl")
-# aes = my_df.iloc[1, 0]
-# spr = my_df.iloc[1, 6]
-# print(f"{aes} has the following spread through: {spr}")
 print(my_df)
 
 my_df.to_csv("aesthetics_dataset.csv", index=False)
