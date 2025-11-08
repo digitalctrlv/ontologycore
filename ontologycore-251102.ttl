@@ -1609,7 +1609,8 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                           <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/OldMoney_Convergence_Phase> ,
                                                                                            <http://webprotege.stanford.edu/OldMoney_Divergence_Phase> ,
                                                                                            <http://webprotege.stanford.edu/OldMoney_Metaconvergence_Phase> ;
-                                          <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/TikTok> ;
+                                          <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                         <http://webprotege.stanford.edu/TikTok> ;
                                           <http://webprotege.stanford.edu/hasName> "Old Money" ;
                                           <http://purl.org/dc/elements/1.1/description> """Old Money is an aesthetic based around a wealthy, classic style. Old Money refers to people who have inherited their wealth instead of working for it. In the United States, Old Money is associated with WASP (White Anglo-Saxon Protestant) culture, and in Europe, Old Money is associated with titles of nobility.
 
