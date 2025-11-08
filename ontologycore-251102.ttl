@@ -82,11 +82,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                rdfs:label "experiencedBy"@en .
 
 
-###  http://webprotege.stanford.edu/expressedBy
-<http://webprotege.stanford.edu/expressedBy> rdf:type owl:ObjectProperty ;
-                                             rdfs:label "expressedBy"@en .
-
-
 ###  http://webprotege.stanford.edu/expressesAesthetic
 <http://webprotege.stanford.edu/expressesAesthetic> rdf:type owl:ObjectProperty ;
                                                     rdfs:subPropertyOf owl:topObjectProperty ;
@@ -498,14 +493,6 @@ xsd:Year rdf:type rdfs:Datatype ;
 <http://webprotege.stanford.edu/Divergence> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://webprotege.stanford.edu/CreativeProcess> ,
                                                             [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://webprotege.stanford.edu/expressedBy> ;
-                                                              owl:someValuesFrom <http://webprotege.stanford.edu/AestheticElement>
-                                                            ] ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://webprotege.stanford.edu/expressedBy> ;
-                                                              owl:someValuesFrom <http://webprotege.stanford.edu/CreativeProduct>
-                                                            ] ,
-                                                            [ rdf:type owl:Restriction ;
                                                               owl:onProperty <http://webprotege.stanford.edu/precedesProcess> ;
                                                               owl:someValuesFrom <http://webprotege.stanford.edu/Convergence>
                                                             ] ;
@@ -523,10 +510,6 @@ xsd:Year rdf:type rdfs:Datatype ;
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://webprotege.stanford.edu/experiencedBy> ;
                                                            owl:someValuesFrom <http://webprotege.stanford.edu/Person>
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://webprotege.stanford.edu/expressedBy> ;
-                                                           owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
                                                          ] ;
                                          rdfs:label "Emotion"@en .
 
@@ -882,7 +865,7 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
 ###  http://webprotege.stanford.edu/Classical
 <http://webprotege.stanford.edu/Classical> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/ConceptualIdeas> ;
-                                           <http://webprotege.stanford.edu/startDate> "XVII century" ;
+                                           <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/OldMoney> ;
                                            rdfs:label "Classical"@en .
 
 
@@ -911,7 +894,8 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                                                             <http://webprotege.stanford.edu/PhodePhoneCase> ,
                                                                                             <http://webprotege.stanford.edu/SleekPonytail> ;
                                            <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
-                                           <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
+                                           <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ,
+                                                                                          <http://webprotege.stanford.edu/Millenials> ;
                                            <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;
                                            <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/HaileyBieber> ;
                                            <http://webprotege.stanford.edu/involvesBehaviour> <http://webprotege.stanford.edu/Minimalism> ,
@@ -921,11 +905,12 @@ In the context of online aesthetics and digital culture, metaconvergence manifes
                                                                                             <http://webprotege.stanford.edu/CleanGirl_Divergence_Phase> ,
                                                                                             <http://webprotege.stanford.edu/CleanGirl_Metaconvergence_Phase> ;
                                            <http://webprotege.stanford.edu/opposesTo> <http://webprotege.stanford.edu/Grunge> ;
+                                           <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/ShortVideos> ,
+                                                                                      :Instagram_Post ;
                                            <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
                                                                                           <http://webprotege.stanford.edu/Pinterest> ,
                                                                                           <http://webprotege.stanford.edu/TikTok> ;
                                            <http://webprotege.stanford.edu/hasName> "Clean Girl"@en ;
-                                           <http://webprotege.stanford.edu/startDate> 2021 ;
                                            <http://purl.org/dc/elements/1.1/description> """Clean Girl is a recent fashion and lifestyle microtrend characterized by a minimalist and refined approach to beauty and style. It originated as a popular trend on TikTok and Instagram around 2023. This aesthetic draws inspiration from Scandinavian Design, minimalism, and the concept of \"clean living.\" The \"Clean Girl\" trend has been adopted and popularized by influencers and celebrities like Hailey Bieber and Sofia Richie, who frequently show minimalist outfits and polished, \"effortless\" appearances. It largely overlaps with That Girl and Vanilla Girl.
 
 It emphasizes a natural, fresh-faced look, typically achieved through a focus on skincare routines that prioritize healthy, \"glowy\" skin, and simple makeup application with neutral tones and sheer coverage. Hair is often styled in sleek, pulled-back styles like a bun or ponytail. Wardrobe choices favor well-fitted clothing with clean lines and neutral color palettes, such as white button-down shirts, tailored blazers, and minimalist dresses. Accessories tend to be minimal and elegant, including delicate jewelry like gold hoops or simple necklaces."""@en ;
@@ -947,15 +932,7 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
 
 ###  http://webprotege.stanford.edu/CleanGirl_Divergence_Phase
 <http://webprotege.stanford.edu/CleanGirl_Divergence_Phase> rdf:type owl:NamedIndividual ,
-                                                                     <http://webprotege.stanford.edu/Divergence> ,
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://webprotege.stanford.edu/influencedBy> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/Influencer>
-                                                                     ] ,
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                                       owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                                                     ] ;
+                                                                     <http://webprotege.stanford.edu/Divergence> ;
                                                             <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                                             <http://webprotege.stanford.edu/involvesProcess> :Ideation ,
                                                                                                              :Inspiration ;
@@ -989,11 +966,7 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
 
 ###  http://webprotege.stanford.edu/Cottagecore
 <http://webprotege.stanford.edu/Cottagecore> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/Aesthetic> ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                        owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                                      ] ;
+                                                      <http://webprotege.stanford.edu/Aesthetic> ;
                                              <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Cabin> ,
                                                                                               <http://webprotege.stanford.edu/FlowySkirts> ,
                                                                                               <http://webprotege.stanford.edu/MaryJaneShoes> ,
@@ -1007,7 +980,6 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                              <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                              <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ,
                                                                                             <http://webprotege.stanford.edu/Millenials> ;
-                                             <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                              <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/Western> ;
                                              <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2010s> ;
                                              <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/CountrySide> ,
@@ -1022,8 +994,8 @@ It emphasizes a natural, fresh-faced look, typically achieved through a focus on
                                              <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Cottagecore_Convergence_Phase> ,
                                                                                               <http://webprotege.stanford.edu/Cottagecore_Divergence_Phase> ,
                                                                                               <http://webprotege.stanford.edu/Cottagecore_Metaconvergence_Phase> ;
+                                             <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/MoodBoard> ;
                                              <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
-                                                                                            <http://webprotege.stanford.edu/MoodBoard> ,
                                                                                             <http://webprotege.stanford.edu/Pinterest> ;
                                              <http://webprotege.stanford.edu/hasName> "Cottagecore"@en ;
                                              <http://purl.org/dc/elements/1.1/description> """Cottagecore is an internet aesthetic that romanticizes a simple, self-sufficient life in harmony with nature, drawing inspiration from an idealized vision of Western rural and farm life. Gaining widespread popularity in the late 2010s and early 2020s on platforms like Tumblr and TikTok, it serves as a form of gentle escapism from the pressures of modern, capitalist society. The aesthetic is defined by a visual language of pastoral nostalgia, featuring imagery of baking bread, gardening, foraging, and caring for farm animals. The fashion consists of soft, comfortable clothing made from natural fibers, such as flowy prairie dresses, aprons, and hand-knitted items.
@@ -1072,16 +1044,13 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
 ###  http://webprotege.stanford.edu/CountrySide
 <http://webprotege.stanford.edu/CountrySide> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/SpatialContext> ;
+                                             <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Cottagecore> ;
                                              rdfs:label "Country Side"@en .
 
 
 ###  http://webprotege.stanford.edu/DarkAcademia
 <http://webprotege.stanford.edu/DarkAcademia> rdf:type owl:NamedIndividual ,
-                                                       <http://webprotege.stanford.edu/Aesthetic> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                                       ] ;
+                                                       <http://webprotege.stanford.edu/Aesthetic> ;
                                               <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/Candles> ,
                                                                                                <http://webprotege.stanford.edu/ClassicalArt> ,
                                                                                                <http://webprotege.stanford.edu/ClassicalLiterature> ,
@@ -1106,10 +1075,10 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
                                               <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/DarkAcademia_Convergence_Phase> ,
                                                                                                <http://webprotege.stanford.edu/DarkAcademia_Divergence_Phase> ,
                                                                                                <http://webprotege.stanford.edu/DarkAcademia_Metaconvergence_Phase> ;
+                                              <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/MoodBoard> ;
                                               <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                               <http://webprotege.stanford.edu/revivesElement> <http://webprotege.stanford.edu/ClassicalLiterature> ;
                                               <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
-                                                                                             <http://webprotege.stanford.edu/MoodBoard> ,
                                                                                              <http://webprotege.stanford.edu/Pinterest> ,
                                                                                              <http://webprotege.stanford.edu/TikTok> ;
                                               <http://webprotege.stanford.edu/hasName> "Dark Academia"@en ;
@@ -1189,7 +1158,6 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                    <http://webprotege.stanford.edu/TvShow> ;
                                           <http://webprotege.stanford.edu/expressesAesthetic> <http://webprotege.stanford.edu/Y2K> ;
                                           <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/Present-day> ;
-                                          <http://webprotege.stanford.edu/startDate> 2019 ;
                                           rdfs:label "Euphoria"@en .
 
 
@@ -1343,10 +1311,13 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                                                     <http://webprotege.stanford.edu/Punk> ,
                                                                                     <http://webprotege.stanford.edu/ThePixies> ;
                                         <http://webprotege.stanford.edu/involvesEmotion> :Melancholy ,
+                                                                                         :Nostalgia ,
                                                                                          :Rebellion ;
                                         <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Grunge_Convergence_Phase> ,
                                                                                          <http://webprotege.stanford.edu/Grunge_Divergence_Phase> ,
                                                                                          <http://webprotege.stanford.edu/Grunge_Metaconvergence_Phase> ;
+                                        <http://webprotege.stanford.edu/opposesTo> <http://webprotege.stanford.edu/CleanGirl> ,
+                                                                                   <http://webprotege.stanford.edu/OldMoney> ;
                                         <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ,
                                                                                    <http://webprotege.stanford.edu/2010s> ;
                                         <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
@@ -1399,6 +1370,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 
 ###  http://webprotege.stanford.edu/HaileyBieber
 <http://webprotege.stanford.edu/HaileyBieber> rdf:type owl:NamedIndividual ,
+                                                       <http://webprotege.stanford.edu/Blogger> ,
                                                        <http://webprotege.stanford.edu/SocialMediaInfluencer> ;
                                               <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/GlossedLips> ,
                                                                                            <http://webprotege.stanford.edu/GlowySkin> ,
@@ -1431,13 +1403,9 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 
 ###  http://webprotege.stanford.edu/Instagram_Filters
 <http://webprotege.stanford.edu/Instagram_Filters> rdf:type owl:NamedIndividual ,
-                                                            <http://webprotege.stanford.edu/DigitalProduct> ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://webprotege.stanford.edu/resultsIn> ;
-                                                              owl:someValuesFrom <http://webprotege.stanford.edu/ImageProduct>
-                                                            ] ;
+                                                            <http://webprotege.stanford.edu/DigitalProduct> ;
                                                    <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/Instagram> ;
-                                                   rdfs:label "Instagram filters"@en .
+                                                   rdfs:label "Instagram_Filters"@en .
 
 
 ###  http://webprotege.stanford.edu/Intellectualism
@@ -1467,7 +1435,6 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                                                                  <http://webprotege.stanford.edu/Y2K> ;
                                              <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ,
                                                                                                  <http://webprotege.stanford.edu/2000s> ;
-                                             <http://webprotege.stanford.edu/opposesTo> <http://webprotege.stanford.edu/Grunge> ;
                                              rdfs:label "Kitten heels"@en .
 
 
@@ -1564,6 +1531,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 ###  http://webprotege.stanford.edu/Millenials
 <http://webprotege.stanford.edu/Millenials> rdf:type owl:NamedIndividual ,
                                                      <http://webprotege.stanford.edu/AgeCommunity> ;
+                                            <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/CleanGirl> ;
                                             :ageRange "29-44" ;
                                             rdfs:label "Millenials"@en .
 
@@ -1580,13 +1548,10 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 ###  http://webprotege.stanford.edu/MoodBoard
 <http://webprotege.stanford.edu/MoodBoard> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/DigitalProduct> ,
-                                                    <http://webprotege.stanford.edu/ImageProduct> ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                      owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                                    ] ;
+                                                    <http://webprotege.stanford.edu/ImageProduct> ;
                                            <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
-                                           <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Photoshop> ;
+                                           <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Lightroom> ,
+                                                                                 <http://webprotege.stanford.edu/Photoshop> ;
                                            rdfs:label "Mood board" .
 
 
@@ -1630,11 +1595,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
 
 ###  http://webprotege.stanford.edu/OldMoney
 <http://webprotege.stanford.edu/OldMoney> rdf:type owl:NamedIndividual ,
-                                                   <http://webprotege.stanford.edu/Aesthetic> ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                     owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                                   ] ;
+                                                   <http://webprotege.stanford.edu/Aesthetic> ;
                                           <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/PennyLoafers> ,
                                                                                            <http://webprotege.stanford.edu/PoloShirts> ,
                                                                                            <http://webprotege.stanford.edu/QuietLuxury> ,
@@ -1762,6 +1723,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  http://webprotege.stanford.edu/Pop
 <http://webprotege.stanford.edu/Pop> rdf:type owl:NamedIndividual ,
                                               <http://webprotege.stanford.edu/Music> ;
+                                     <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Y2K> ;
                                      rdfs:label "Pop"@en .
 
 
@@ -1795,11 +1757,6 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                       <http://webprotege.stanford.edu/ConceptualIdeas> ;
                                              <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/OldMoney> ;
                                              rdfs:label "Quiet luxury"@en .
-
-
-###  http://webprotege.stanford.edu/Reel_Creation_Process
-<http://webprotege.stanford.edu/Reel_Creation_Process> rdf:type owl:NamedIndividual ;
-                                                       rdfs:label "Reel-creation process"@en .
 
 
 ###  http://webprotege.stanford.edu/RippedJeans
@@ -1846,6 +1803,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 <http://webprotege.stanford.edu/SexAndTheCity> rdf:type owl:NamedIndividual ,
                                                         <http://webprotege.stanford.edu/TvShow> ;
                                                <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
+                                               <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/Y2K> ;
                                                <http://webprotege.stanford.edu/popularized> <http://webprotege.stanford.edu/KittenHeels> ;
                                                rdfs:TimePeriod "1998-2004" ;
                                                rdfs:label "Sex and the City"@en .
@@ -1854,6 +1812,8 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  http://webprotege.stanford.edu/ShortVideos
 <http://webprotege.stanford.edu/ShortVideos> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/VideoProduct> ;
+                                             <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/Instagram> ,
+                                                                                        <http://webprotege.stanford.edu/TikTok> ;
                                              rdfs:label "Short videos"@en .
 
 
@@ -1876,18 +1836,12 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                   rdfs:label "SlowerPaceOfLife"@en .
 
 
-###  http://webprotege.stanford.edu/SocialMediaInfluencer
-<http://webprotege.stanford.edu/SocialMediaInfluencer> rdf:type owl:NamedIndividual ,
-                                                                <http://webprotege.stanford.edu/Influencer> .
-
-
 ###  http://webprotege.stanford.edu/SoftGrunge
 <http://webprotege.stanford.edu/SoftGrunge> rdf:type owl:NamedIndividual ,
                                                      <http://webprotege.stanford.edu/TemporalContext> ;
                                             <http://webprotege.stanford.edu/endDate> "1979"^^xsd:Year ;
                                             <http://webprotege.stanford.edu/startDate> "1970"^^xsd:Year ;
-                                            rdfs:label "1970s"@en ,
-                                                       "Soft grunge" .
+                                            rdfs:label "1970s"@en .
 
 
 ###  http://webprotege.stanford.edu/Sophistication
@@ -1952,12 +1906,6 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                         rdfs:label "TikTok"@en .
 
 
-###  http://webprotege.stanford.edu/TikTokVideo
-<http://webprotege.stanford.edu/TikTokVideo> rdf:type owl:NamedIndividual ,
-                                                      <http://webprotege.stanford.edu/VideoProduct> ;
-                                             rdfs:label "TikTok Video"@en .
-
-
 ###  http://webprotege.stanford.edu/Tradition
 <http://webprotege.stanford.edu/Tradition> rdf:type owl:NamedIndividual ,
                                                     <http://webprotege.stanford.edu/BehaviourPattern> ,
@@ -2020,6 +1968,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  http://webprotege.stanford.edu/WASPCulture
 <http://webprotege.stanford.edu/WASPCulture> rdf:type owl:NamedIndividual ,
                                                       <http://webprotege.stanford.edu/SocialCommunity> ;
+                                             <http://webprotege.stanford.edu/isSubjectOf> <http://webprotege.stanford.edu/OldMoney> ;
                                              <http://purl.org/dc/elements/1.1/description> "White Anglo-Saxon Protestant culture" ;
                                              rdfs:label "WASP Culture"@en .
 
@@ -2041,11 +1990,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  http://webprotege.stanford.edu/WebCommunity
 <http://webprotege.stanford.edu/WebCommunity> rdf:type owl:NamedIndividual ,
                                                        <http://webprotege.stanford.edu/Community> ,
-                                                       <http://webprotege.stanford.edu/Consumer> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://webprotege.stanford.edu/uses> ;
-                                                         owl:someValuesFrom <http://webprotege.stanford.edu/Aesthetic>
-                                                       ] ;
+                                                       <http://webprotege.stanford.edu/Consumer> ;
                                               <http://webprotege.stanford.edu/hasSpatialContext> <http://webprotege.stanford.edu/Web> ;
                                               rdfs:label "Web community"@en .
 
@@ -2068,11 +2013,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 
 ###  http://webprotege.stanford.edu/Y2K
 <http://webprotege.stanford.edu/Y2K> rdf:type owl:NamedIndividual ,
-                                              <http://webprotege.stanford.edu/Aesthetic> ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty <http://webprotege.stanford.edu/spreadThrough> ;
-                                                owl:someValuesFrom <http://webprotege.stanford.edu/SocialMedia>
-                                              ] ;
+                                              <http://webprotege.stanford.edu/Aesthetic> ;
                                      <http://webprotege.stanford.edu/characterizedBy> <http://webprotege.stanford.edu/BrightColors> ,
                                                                                       <http://webprotege.stanford.edu/ColourfulHairClips> ,
                                                                                       <http://webprotege.stanford.edu/Denim> ,
@@ -2084,8 +2025,10 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                                                       <http://webprotege.stanford.edu/JuicyVelourTrackSuit> ,
                                                                                       <http://webprotege.stanford.edu/Low-resolutionGraphics> ,
                                                                                       <http://webprotege.stanford.edu/Low-riseBottoms> ,
+                                                                                      <http://webprotege.stanford.edu/Pop> ,
                                                                                       <http://webprotege.stanford.edu/Tamagotchis> ,
-                                                                                      <http://webprotege.stanford.edu/iMac> ;
+                                                                                      <http://webprotege.stanford.edu/iMac> ,
+                                                                                      :Glamour ;
                                      <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
                                      <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
                                      <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/Vogue> ;
@@ -2102,9 +2045,11 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                      <http://webprotege.stanford.edu/involvesProcess> <http://webprotege.stanford.edu/Y2K_Convergence_Phase> ,
                                                                                       <http://webprotege.stanford.edu/Y2K_Divergence_Phase> ,
                                                                                       <http://webprotege.stanford.edu/Y2K_Metaconvergence_Phase> ;
+                                     <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/MoodBoard> ,
+                                                                                <http://webprotege.stanford.edu/ShortVideos> ,
+                                                                                :Instagram_Post ;
                                      <http://webprotege.stanford.edu/revivedIn> <http://webprotege.stanford.edu/Present-day> ;
                                      <http://webprotege.stanford.edu/spreadThrough> <http://webprotege.stanford.edu/Instagram> ,
-                                                                                    <http://webprotege.stanford.edu/MoodBoard> ,
                                                                                     <http://webprotege.stanford.edu/TikTok> ;
                                      <http://webprotege.stanford.edu/hasName> "Y2K" ;
                                      <http://purl.org/dc/elements/1.1/description> "Y2K is a retrospective term for the cultural period and zeitgeist that existed from approximately the late 1990s to the early 2000s. The name is derived from the Year 2000 problem, a widespread computer programming issue that created a cultural focal point of both anxiety and optimism about the new millennium. While the term \"Y2K\" is now used colloquially on social media to describe a wide range of 2000s trends, it originally referred to a more specific futuristic style. (source: aesthetics.fandom.com)"@en ;
@@ -2246,6 +2191,14 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
               <http://purl.org/dc/elements/1.1/description> "Feedback loop"@en .
 
 
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Glamour
+:Glamour rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/ConceptualIdeas> ,
+                  <http://webprotege.stanford.edu/LifeStyle> ;
+         <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
+         <http://webprotege.stanford.edu/shapesAesthetic> <http://webprotege.stanford.edu/Y2K> .
+
+
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Ideation
 :Ideation rdf:type owl:NamedIndividual ,
                    <http://webprotege.stanford.edu/Divergence> ;
@@ -2258,6 +2211,12 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                       <http://webprotege.stanford.edu/Divergence> ;
              <http://purl.org/dc/elements/1.1/description> "The active or passive act of seeking and collecting references, motifs, and content that fuel the aesthetic."@en ;
              rdfs:label "Inspiration"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Instagram_Post
+:Instagram_Post rdf:type owl:NamedIndividual ,
+                         <http://webprotege.stanford.edu/DigitalProduct> ;
+                <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/Instagram> .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Irony
@@ -2295,16 +2254,12 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Pride
 :Pride rdf:type owl:NamedIndividual ,
                 <http://webprotege.stanford.edu/Emotion> ;
-       <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/OldMoney> ;
        rdfs:label "Pride" .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Rebellion
 :Rebellion rdf:type owl:NamedIndividual ,
                     <http://webprotege.stanford.edu/Emotion> ;
-           <http://webprotege.stanford.edu/expressedBy> <http://webprotege.stanford.edu/Grunge> ,
-                                                        <http://webprotege.stanford.edu/Punk> ,
-                                                        <http://webprotege.stanford.edu/Rock> ;
            rdfs:label "Rebellion" .
 
 
@@ -2356,13 +2311,6 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 :Synthesis rdf:type owl:NamedIndividual ,
                     <http://webprotege.stanford.edu/Convergence> ;
            rdfs:label "Synthesis"@en .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-<http://webprotege.stanford.edu/SocialMediaInfluencer> rdfs:label "Social media influencer"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
