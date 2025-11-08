@@ -28,7 +28,7 @@
 
 ###  http://www.w3.org/2000/01/rdf-schema#TimePeriod
 rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
-                rdfs:label "TimePeriod"@en .
+                rdfs:label "Instagram_Post"@en .
 
 
 #################################################################
@@ -1061,6 +1061,7 @@ While broadly popular, Cottagecore is particularly embraced within LGBTQ+ commun
                                                                                                <http://webprotege.stanford.edu/TweedJackets> ,
                                                                                                <http://webprotege.stanford.edu/VintageBooks> ;
                                               <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
+                                              <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                               <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/AcademicContext> ,
                                                                                                   <http://webprotege.stanford.edu/Western> ;
                                               <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/19thCentury> ,
@@ -1117,7 +1118,6 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
 ###  http://webprotege.stanford.edu/DarkAcademia_Metaconvergence_Phase
 <http://webprotege.stanford.edu/DarkAcademia_Metaconvergence_Phase> rdf:type owl:NamedIndividual ,
                                                                              <http://webprotege.stanford.edu/Metaconvergence> ;
-                                                                    <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/MoodBoard> ;
                                                                     <http://webprotege.stanford.edu/involvesProcess> :Recontextualization ,
                                                                                                                      :Reproduction ;
                                                                     <http://webprotege.stanford.edu/resultsIn> <http://webprotege.stanford.edu/DarkAcademia> ;
@@ -1295,7 +1295,8 @@ While those who follow the aesthetic are sometimes referred to as \"Dark Academi
                                                                                          <http://webprotege.stanford.edu/RippedJeans> ,
                                                                                          <http://webprotege.stanford.edu/VinylRecord> ;
                                         <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenX> ,
-                                                                                       <http://webprotege.stanford.edu/GenZ> ;
+                                                                                       <http://webprotege.stanford.edu/GenZ> ,
+                                                                                       <http://webprotege.stanford.edu/Millenials> ;
                                         <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/1990s> ;
                                         <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/FrancesBeanCobain> ,
                                                                                       <http://webprotege.stanford.edu/KurtCobain> ;
@@ -1544,7 +1545,7 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                     <http://webprotege.stanford.edu/ImageProduct> ;
                                            <http://webprotege.stanford.edu/uses> <http://webprotege.stanford.edu/Lightroom> ,
                                                                                  <http://webprotege.stanford.edu/Photoshop> ;
-                                           rdfs:label "Mood board" .
+                                           rdfs:label "MoodBoard" .
 
 
 ###  http://webprotege.stanford.edu/MorningWorkout
@@ -1596,7 +1597,8 @@ The music, also known as the \"Seattle sound,\" was pioneered by bands like Nirv
                                                                                            <http://webprotege.stanford.edu/Tradition> ,
                                                                                            <http://webprotege.stanford.edu/Wealth> ;
                                           <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
-                                          <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
+                                          <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ,
+                                                                                         <http://webprotege.stanford.edu/Millenials> ;
                                           <http://webprotege.stanford.edu/hasCulturalContext> <http://webprotege.stanford.edu/Western> ;
                                           <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/20thCentury> ;
                                           <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/GossipGirl> ,
@@ -2019,6 +2021,7 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
                                                                                       <http://webprotege.stanford.edu/iMac> ,
                                                                                       :Glamour ;
                                      <http://webprotege.stanford.edu/createdBy> <http://webprotege.stanford.edu/WebCommunity> ;
+                                     <http://webprotege.stanford.edu/experiencedBy> <http://webprotege.stanford.edu/GenZ> ;
                                      <http://webprotege.stanford.edu/hasTemporalContext> <http://webprotege.stanford.edu/2000s> ;
                                      <http://webprotege.stanford.edu/influencedBy> <http://webprotege.stanford.edu/Vogue> ;
                                      <http://webprotege.stanford.edu/inspiredBy> <http://webprotege.stanford.edu/Bratz> ,
@@ -2205,7 +2208,8 @@ Old Money is always contrasted with New Money, also known as the bourgeoisie, wh
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Instagram_Post
 :Instagram_Post rdf:type owl:NamedIndividual ,
                          <http://webprotege.stanford.edu/DigitalProduct> ;
-                <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/Instagram> .
+                <http://webprotege.stanford.edu/hasMedium> <http://webprotege.stanford.edu/Instagram> ;
+                rdfs:label "Instagram_Post"@en .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Irony
