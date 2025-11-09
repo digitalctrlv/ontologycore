@@ -6,6 +6,92 @@
     <p>Describe the sources and composition of your dataset here.</p>
     
     <h3 id="knowledge-graph">5.2 Knowledge Graph</h3>
-    <p>Here you can find the live interactive visualisation of our ontology.</p>
-    <iframe src="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/digitalctrlv/ontologycore/refs/heads/main/ontologycore-251102.ttl" title="WebVOWL visualization" width="100%" height="100%"></iframe>
+    <style>
+    /* Minimal responsive image styling */
+    .kg-figure {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    .kg-figure img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1200px; /* prevents overly large images on very large screens */
+      height: auto;
+    }
+      .kg-figure-vertical img {
+      display: block;
+      margin: 0 auto;
+      width: auto;
+      max-width: 1200px; /* prevents overly large images on very large screens */
+      height: 80%;
+    }
+    /* On larger screens, limit to 80% of the viewport width */
+    @media (min-width: 768px) {
+      .kg-figure img { width: 80%; }
+    }
+    .kg-caption {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+    p { margin: 0.75rem 0; line-height: 1.5; color: #111; }
+  </style>
+
+
+  <p>
+    To represent the ontology visually and make its structure more intuitive, we visualized the OWL model exported from Protégé as RDF triples and explored several graph representations. Because the entire ontology contains a large amount of information, a single static diagram is often too dense to read. We therefore produced multiple visualizations using different tools and perspectives to highlight specific parts of the model.
+  </p>
+
+  <div class="kg-figure">
+    <img src="img/aes_classses.png" alt="OntoGraph focused on Aesthetic" />
+    <p class="kg-caption">Figure 1 : OntoGraph view focused on the core entity <em>Aesthetic</em>. The diagram shows classes directly connected to Aesthetic and related subclasses (Community, Context, Emotion, AestheticElement, etc.), giving a quick overview of the main building blocks that form an aesthetic.</p>
+  </div>
+
+  <p>
+    OntoGraph gives a useful overview, but it cannot display the names of object properties directly on each link. To show concrete property names and make relationships explicit, we exported OntoGraph to a directed-graph (.dot) format and rendered it with another tool. The result shows labeled arrows that indicate which object properties connect the main classes to <em>Aesthetic</em>.
+  </p>
+
+  <div class="kg-figure">
+    <img src="img/aes_digraph.png" alt="Graph with object property labels" />
+    <p class="kg-caption">Figure 2 : The same core classes rendered with object-property labels on the edges. This view clarifies, for example, how <em>Context</em> and <em>ConceptualIdea</em> shape an aesthetic, and how <em>AestheticElement</em> and <em>LifeStyle</em> concretely embody it.</p>
+  </div>
+
+  <p>
+    Next, we focused on the creative-process perspective (as described in Section 4.4). We modelled aesthetic diffusion as a three-stage creative process — <em>Divergence</em>, <em>Convergence</em>, and <em>Metaconvergence</em> — and used graph links (e.g., <code>resultsIn</code>) to show how these stages produce or stabilize an aesthetic. The cycle representation also suggests how one aesthetic can give rise to or influence another.
+  </p>
+
+  <div class="kg-figure-vertical">
+    <img src="img/aes_creativeprocess_digraph.png" alt="Creative process cycle: Divergence, Convergence, Metaconvergence" />
+    <p class="kg-caption">Figure 3 : Visualization of the creative-process cycle. Nodes represent process classes and edges show relations (e.g., <code>resultsIn</code>) that link stages to aesthetic outcomes and to other aesthetics.</p>
+  </div>
+
+  <p>
+    We then loaded our dataset of instantiated aesthetics and attempted instance-level visualizations. The example below shows elements related to <em>Dark Academia</em> (outside the creative-process subgraph). The purple diamonds are instances and the ochre dots indicate their class/cluster type. Although this instance graph is somewhat dense, it helps reveal which aesthetic elements, emotions, and behaviours concretely characterize <em>Dark Academia</em>.
+  </p>
+
+  <div class="kg-figure">
+    <img src="img/DarkAcademia_relations.png" alt="Dark Academia instance-level graph" />
+    <p class="kg-caption">Figure 4 : Instance-level graph for <em>Dark Academia</em>. Instance nodes (purple diamonds) connect to category nodes (ochre dots), showing concrete examples of elements, emotions, and behaviours associated with the aesthetic.</p>
+  </div>
+
+  <p>
+    To make the creative phases clearer at the instance level, we separated instance nodes by process phase (Divergence, Convergence, Metaconvergence) and connected each instance to the dataset activities that instantiate those phases. The diagram below demonstrates how <em>Dark Academia</em> maps to specific phase activities  e.g., <em>Inspiration, Bricolage, Ideation</em> in Divergence; <em>Synthesis, Selection</em> in Convergence; and <em>Recontextualization, Reproduction</em> in Metaconvergence.
+  </p>
+
+  <div class="kg-figure">
+    <img src="img/DarkAcademia_process.png" alt="Dark Academia process-phase mapping" />
+    <p class="kg-caption">Figure 5 : Process-phase mapping for <em>Dark Academia</em>. Instances are grouped by Divergence / Convergence / Metaconvergence, showing how concrete activities and elements realise each phase.</p>
+  </div>
+
+  <p>
+    Finally, we provide an interactive visualization of the full ontology to explore concepts, classes, properties dynamically.
+  </p>
+
+  <div class="kg-figure">
+    <iframe src="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/digitalctrlv/ontologycore/refs/heads/main/ontologycore-251102.ttl" title="WebVOWL visualization" width="90%" height="700"></iframe>
+
+    <!-- iframe is already defined elsewhere in the site; placeholder left intentionally blank -->
+    <p class="kg-caption">Interactive visualization — an embedded, interactive graph viewer (iframe inserted in the final page). Use the interactive view to filter nodes, inspect triples, and navigate between classes and instances.</p>
+  </div>
 </section>
