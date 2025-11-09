@@ -18,6 +18,9 @@ AESTHETIC_CLASS = URIRef("http://webprotege.stanford.edu/Aesthetic")
 HAS_NAME = URIRef("http://webprotege.stanford.edu/hasName")
 DC_DESCRIPTION = URIRef("http://purl.org/dc/elements/1.1/description")
 TEMP_CON = URIRef("http://webprotege.stanford.edu/hasTemporalContext")
+CUL_CON = URIRef("http://webprotege.stanford.edu/hasCulturalContext")
+SPA_CON = URIRef("http://webprotege.stanford.edu/hasSpatialContext")
+TECH_CON = URIRef("http://webprotege.stanford.edu/hasTechnologicalContext")
 INFLUENCE = URIRef("http://webprotege.stanford.edu/influencedBy")
 CHAR_BY = URIRef("http://webprotege.stanford.edu/characterizedBy")
 AES_EL = URIRef("http://webprotege.stanford.edu/AestheticElement")
@@ -29,64 +32,72 @@ INSPIRATION = URIRef("http://webprotege.stanford.edu/inspiredBy")
 EMOTION = URIRef("http://webprotege.stanford.edu/involvesEmotion")
 CREATOR = URIRef("http://webprotege.stanford.edu/createdBy")
 PROCESS = URIRef("http://webprotege.stanford.edu/involvesProcess")
+CREA_RESULT = URIRef("http://webprotege.stanford.edu/resultsIn")
+USER = URIRef("http://webprotege.stanford.edu/experiencedBy")
 
 def get_labels(g, individual, object_prop, label_prop, required_types=None, default_none=" ", default_unknown=" "):
     """
-    Evalueert een 1-staps relatie.
-    Haalt ALLE labels op voor een object property.
-    Filtert optioneel op een lijst van 'required_types'.
-    Gebruikt HAS_NAME als fallback voor rdfs:label.
+    Retrieves labels for individuals linked via specified object properties.
     """
     labels = []
     
-    # Zorg ervoor dat 'required_types' altijd een lijst is als het bestaat
+    # Make sure 'object_prop' is a list
+    if not isinstance(object_prop, list):
+        object_prop = [object_prop]  
+
+    # Make sure 'required_types' is a list if provided
     if required_types and not isinstance(required_types, list):
         required_types = [required_types]
     
-    for linked_individual in g.objects(subject=individual, predicate=object_prop):
+    # Iterate over list of object properties
+    for p in object_prop:
+        for linked_individual in g.objects(subject=individual, predicate=p):
         
-        # --- Type Check ---
-        passes_filter = True # Ga ervan uit dat het goed is
-        if required_types:
-            passes_filter = False # Bewijs het tegendeel
-            for req_type in required_types:
-                if (linked_individual, RDF.type, req_type) in g:
-                    passes_filter = True
-                    break # Gevonden, stop met zoeken
-        
-        # --- Label ophalen ---
-        if passes_filter:
-            # Gebruik rdfs:label OF hasName als fallback
-            label_literal = g.value(linked_individual, label_prop) or g.value(linked_individual, HAS_NAME)
+            # Check type
+            passes_filter = True 
+            if required_types:
+                passes_filter = False
+                for req_type in required_types:
+                    if (linked_individual, RDF.type, req_type) in g:
+                        passes_filter = True
+                        break # Found, stop searching
             
-            if label_literal:
-                labels.append(str(label_literal))
-            else:
-                labels.append(default_unknown)
+            # Get label
+            if passes_filter:
+                label_literal = g.value(linked_individual, label_prop) or g.value(linked_individual, HAS_NAME)
+                
+                if label_literal:
+                    labels.append(str(label_literal))
+                else:
+                    labels.append(default_unknown)
     
     if labels:
-        return ", ".join(labels)
+        # Delete duplicates while preserving order
+        # Convert to dict and back to list
+        unique_labels = list(dict.fromkeys(labels))
+        return ", ".join(unique_labels)
     else:
         return default_none
 
 def get_two_hop_labels(g, individual, prop_hop1, keyword, prop_hop2, label_prop, default_none=" ", default_unknown=" "):
     """
-    Evalueert een 2-staps relatie op basis van een trefwoord op het 'middelste' individu.
-    Pad: Individu --(prop_hop1)--> MiddenIndividu --(prop_hop2)--> EindIndividu
-    Filtert MiddenIndividu op 'keyword'.
-    Retourneert labels van EindIndividu.
+    Evaluates a 2-hop relationship.
+    Retrieves labels for the final individuals reached after two hops,
+    filtering the intermediate individuals by a keyword in their label.
+    1st hop: from 'individual' via 'prop_hop1' to 'mid_individual'
+    2nd hop: from 'mid_individual' via 'prop_hop2' to 'final_individual'
     """
     final_labels = []
     
-    # Hop 1: Van Aesthetic naar Fase (bv. Y2K -> Y2K_Convergence_Phase)
+    # Hop 1: From aesthetic to phase (e.g. Y2K -> Y2K_Convergence_Phase)
     for mid_individual in g.objects(subject=individual, predicate=prop_hop1):
         
-        # Controleer label/naam van het middelste individu
+        # Check label/name of mid_individual for keyword
         mid_label_literal = g.value(mid_individual, label_prop) or g.value(mid_individual, HAS_NAME)
         
         if mid_label_literal and keyword.lower() in str(mid_label_literal).lower():
             
-            # Trefwoord match! Nu Hop 2: Van Fase naar Proces (bv. Y2K_Convergence_Phase -> Selection)
+            # Key word match. Now Hop 2: From phase to process (e.g. Y2K_Convergence_Phase -> Selection)
             for final_individual in g.objects(subject=mid_individual, predicate=prop_hop2):
                 
                 final_label_literal = g.value(final_individual, label_prop) or g.value(final_individual, HAS_NAME)
@@ -101,69 +112,69 @@ def get_two_hop_labels(g, individual, prop_hop1, keyword, prop_hop2, label_prop,
     else:
         return default_none
 
-# Hoofdfunctie om aesthetics te extraheren
+# Main function to extract aesthetics data
 def extract_aesthetics_from_ontology(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
 
-    # --- DIT IS DE NIEUWE LOGICA ---
-    # Een 'kaart' die definieert wat we willen extraheren.
-    # 'types' en 'prop2'/'keyword' zijn optioneel.
+    # A 'card' defining which properties to extract for each column.
+    # 'types' en 'prop2'/'keyword' are optional and only for 2-hop queries.
     extraction_map = [
-        # 1-hop queries (simpel en gefilterd)
-        {'col': 'Temporal Context', 'prop': TEMP_CON},
+        # 1-hop queries (simple and with optional type filtering)
+        {'col': 'Context', 'prop': [TEMP_CON, CUL_CON, SPA_CON, TECH_CON]},
+        {'col': 'User',          'prop': USER},
+        {'col': 'Creator',          'prop': CREATOR},
         {'col': 'Influence',        'prop': INFLUENCE},
         {'col': 'Spread Through',   'prop': SPREAD},
         {'col': 'Inspiration',      'prop': INSPIRATION},
-        {'col': 'Emotion',          'prop': EMOTION},
-        {'col': 'Creator',          'prop': CREATOR},
         {'col': 'Aesthetic Element','prop': CHAR_BY, 'types': [AES_EL]},
         {'col': 'Lifestyle',        'prop': INV_BEH, 'types': [LIFESTYLE, BEH_PAT]},
+        {'col': 'Creative Result',  'prop': CREA_RESULT},
+        {'col': 'Emotion',          'prop': EMOTION},
         
-        # 2-hop queries (met trefwoord-filter)
-        {'col': 'Convergence',     'type': '2-hop', 'prop1': PROCESS, 'prop2': PROCESS, 'keyword': 'Convergence'},
-        {'col': 'Divergence',      'type': '2-hop', 'prop1': PROCESS, 'prop2': PROCESS, 'keyword': 'Divergence'},
-        {'col': 'Metaconvergence', 'type': '2-hop', 'prop1': PROCESS, 'prop2': PROCESS, 'keyword': 'Metaconvergence'},
+        # 2-hop queries (with intermediate filtering)
+        {'col': 'Convergence processes',     'type': '2-hop', 'prop1': PROCESS, 'prop2': PROCESS, 'keyword': 'Convergence'},
+        {'col': 'Divergence processes',      'type': '2-hop', 'prop1': PROCESS, 'prop2': PROCESS, 'keyword': 'Divergence'},
+        {'col': 'Metaconvergence processes', 'type': '2-hop', 'prop1': PROCESS, 'prop2': PROCESS, 'keyword': 'Metaconvergence'},
     ]
 
     aesthetic_data = []
 
     for individual in g.subjects(predicate=RDF.type, object=AESTHETIC_CLASS):
         
-        # Start de datarij voor deze aesthetic
+        # Start the row dictionary for this individual
         data_row = {}
 
-        # === Data properties (deze zijn simpel) === #
+        # === Data properties === #
         data_row['Aesthetic'] = str(g.value(individual, HAS_NAME) or " ")
         data_row['Description'] = str(g.value(individual, DC_DESCRIPTION) or " ")
 
-        # === Object properties (configuratie-gestuurd) === #
+        # === Object properties === #
         for task in extraction_map:
             col_name = task['col']
             
             if task.get('type') == '2-hop':
-                # Voer 2-hop query uit
+                # Perform 2-hop query
                 data_row[col_name] = get_two_hop_labels(g, individual, 
                                                         task['prop1'], 
                                                         task['keyword'], 
                                                         task['prop2'], 
                                                         LABEL)
             else:
-                # Voer 1-hop query uit
-                # .get('types', None) haalt de types-lijst op, of 'None' als die niet bestaat
+                # Perform 1-hop query
+                # .get('types', None) makes 'types' optional
                 types_filter = task.get('types', None)
                 data_row[col_name] = get_labels(g, individual, 
                                                 task['prop'], 
                                                 LABEL, 
                                                 required_types=types_filter)
         
-        # Voeg de complete rij toe
+        # Add the completed row to the dataset
         aesthetic_data.append(data_row)
     
     aesthetics_df = pd.DataFrame(aesthetic_data)
     return aesthetics_df
 
-# --- Je aanroep blijft hetzelfde ---
 aesthetic_df = extract_aesthetics_from_ontology("./ontologycore/ontologycore-251102.ttl")
 print(aesthetic_df)
 
