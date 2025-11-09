@@ -27,8 +27,9 @@ BEH_PAT = URIRef("http://webprotege.stanford.edu/BehaviourPattern")
 INV_BEH = URIRef("http://webprotege.stanford.edu/involvesBehaviour")
 SPREAD = URIRef("http://webprotege.stanford.edu/spreadThrough")
 INSPIRATION = URIRef("http://webprotege.stanford.edu/inspiredBy")
-EMOTION = URIRef ("http://webprotege.stanford.edu/involvesEmotion")
-CREATOR = URIRef ("http://webprotege.stanford.edu/createdBy")
+EMOTION = URIRef("http://webprotege.stanford.edu/involvesEmotion")
+CREATOR = URIRef("http://webprotege.stanford.edu/createdBy")
+PROCESS = URIRef("http://webprotege.stanford.edu/involvesProcess")
 
 # Function to get ALL labels of linked individuals via an object property
 def get_linked_label(g, individual, object_prop, label_prop, default_none=" ", default_unknown=" "):
@@ -101,7 +102,6 @@ def extract_aesthetics_from_ontology(file_path):
         # === Object properties === #
         temporal_context = get_linked_label(g, individual, TEMP_CON, LABEL)
         influence = get_linked_label(g, individual, INFLUENCE, LABEL)
-        # # if the aesthetic is linked through the object property CHAR_BY and the link individual is not a type AES_EL, we skip it
         aes_el = get_filtered_labels(g, individual, CHAR_BY, LABEL, AES_EL)
         life_style = get_filtered_labels(g, individual, INV_BEH, LABEL, [LIFESTYLE, BEH_PAT])
         spread_through = get_linked_label(g, individual, SPREAD, LABEL)
