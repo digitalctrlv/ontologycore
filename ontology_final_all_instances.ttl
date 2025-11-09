@@ -29,7 +29,7 @@ webprotege:xsd rdf:type owl:AnnotationProperty ;
 
 ###  http://www.w3.org/2000/01/rdf-schema#TimePeriod
 rdfs:TimePeriod rdf:type owl:AnnotationProperty ;
-                rdfs:label "Instagram_Post"@en .
+                rdfs:label "TimePeriod"@en .
 
 
 #################################################################
@@ -936,6 +936,7 @@ webprotege:CleanGirl_Divergence_Phase rdf:type owl:NamedIndividual ,
                                       webprotege:experiencedBy webprotege:GenZ ;
                                       webprotege:involvesProcess :Ideation ,
                                                                  :Inspiration ;
+                                      webprotege:precedesProcess webprotege:CleanGirl_Convergence_Phase ;
                                       webprotege:spreadThrough webprotege:Instagram ,
                                                                webprotege:TikTok ,
                                                                webprotege:WebCommunity ;
@@ -1016,6 +1017,7 @@ webprotege:Cottagecore_Convergence_Phase rdf:type owl:NamedIndividual ,
                                          webprotege:involvesProcess :Refinement ,
                                                                     :Selection ,
                                                                     :Synthesis ;
+                                         webprotege:precedesProcess webprotege:Cottagecore_Metaconvergence_Phase ;
                                          rdfs:label "Cottagecore Convergence Phase"@en .
 
 
@@ -1029,6 +1031,7 @@ webprotege:Cottagecore_Divergence_Phase rdf:type owl:NamedIndividual ,
                                         webprotege:involvesProcess :Bricolage ,
                                                                    :Ideation ,
                                                                    :Inspiration ;
+                                        webprotege:precedesProcess webprotege:Cottagecore_Convergence_Phase ;
                                         webprotege:spreadThrough webprotege:Instagram ,
                                                                  webprotege:Pinterest ,
                                                                  webprotege:TikTok ,
@@ -1100,6 +1103,7 @@ webprotege:DarkAcademia_Convergence_Phase rdf:type owl:NamedIndividual ,
                                                    webprotege:Convergence ;
                                           webprotege:involvesProcess :Selection ,
                                                                      :Synthesis ;
+                                          webprotege:precedesProcess webprotege:DarkAcademia_Metaconvergence_Phase ;
                                           rdfs:label "DarkAcademia Convergence Phase"@en .
 
 
@@ -1111,6 +1115,7 @@ webprotege:DarkAcademia_Divergence_Phase rdf:type owl:NamedIndividual ,
                                          webprotege:involvesProcess :Bricolage ,
                                                                     :Ideation ,
                                                                     :Inspiration ;
+                                         webprotege:precedesProcess webprotege:DarkAcademia_Convergence_Phase ;
                                          webprotege:spreadThrough webprotege:Pinterest ,
                                                                   webprotege:Tumblr ,
                                                                   webprotege:WebCommunity ;
@@ -1365,6 +1370,7 @@ webprotege:Grunge_Divergence_Phase rdf:type owl:NamedIndividual ,
                                                               :Ideation ,
                                                               :Inspiration ,
                                                               :Serendipity ;
+                                   webprotege:precedesProcess webprotege:Grunge_Convergence_Phase ;
                                    webprotege:spreadThrough webprotege:Instagram ,
                                                             webprotege:Tumblr ;
                                    rdfs:label "Grunge Divergence Phase"@en .
@@ -2209,6 +2215,13 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                      rdfs:label "Aesthetic saturation"@en .
 
 
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Akira
+:Akira rdf:type owl:NamedIndividual ,
+                webprotege:Movie ;
+       rdfs:TimePeriod "1988"^^xsd:Year ;
+       rdfs:label "Akira" .
+
+
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#AngelWings
 :AngelWings rdf:type owl:NamedIndividual ,
                      webprotege:VisualElement ;
@@ -2218,14 +2231,16 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Angelcore
 :Angelcore rdf:type owl:NamedIndividual ,
                     webprotege:Aesthetic ;
-           webprotege:characterizedBy webprotege:Muted ,
+           webprotege:characterizedBy webprotege:Candles ,
+                                      webprotege:Muted ,
                                       :AngelWings ,
                                       :Halos ,
                                       :PastelColors ;
            webprotege:createdBy webprotege:WebCommunity ;
            webprotege:experiencedBy webprotege:GenZ ;
            webprotege:hasTemporalContext <http://webprotege.stanford.edu/2010s> ;
-           webprotege:inspiredBy webprotege:ClassicalArt ;
+           webprotege:inspiredBy webprotege:ClassicalArt ,
+                                 :Unearthliness ;
            webprotege:involvesBehaviour webprotege:Journaling ;
            webprotege:involvesEmotion :Escapism ,
                                       :Nostalgia ,
@@ -2253,6 +2268,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
 :Angelcore_Divergence_Phase rdf:type owl:NamedIndividual ,
                                      webprotege:Divergence ;
                             webprotege:involvesProcess :Inspiration ;
+                            webprotege:precedesProcess :Angelcore_Convergence_Phase ;
                             rdfs:label "Angelcore Divergence Phase"@en .
 
 
@@ -2314,6 +2330,12 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
            rdfs:label "Belonging" .
 
 
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#BioShock
+:BioShock rdf:type owl:NamedIndividual ,
+                   webprotege:Games ;
+          rdfs:label "BioShock" .
+
+
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Bloomcore
 :Bloomcore rdf:type owl:NamedIndividual ,
                     webprotege:Aesthetic ;
@@ -2356,6 +2378,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
 :Bloomcore_Divergence_Phase rdf:type owl:NamedIndividual ,
                                      webprotege:Divergence ;
                             webprotege:involvesProcess :Inspiration ;
+                            webprotege:precedesProcess :Bloomcore_Convergence_Phase ;
                             rdfs:label "Bloomcore Divergence Phase"@en .
 
 
@@ -2475,7 +2498,8 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                     webprotege:Millenials ;
            webprotege:hasTemporalContext <http://webprotege.stanford.edu/1990s> ,
                                          <http://webprotege.stanford.edu/2010s> ;
-           webprotege:inspiredBy webprotege:Movie ;
+           webprotege:inspiredBy :Akira ,
+                                 :HighTech ;
            webprotege:involvesBehaviour :Anti-establishment ,
                                         :Gaming ;
            webprotege:involvesEmotion :DystopianAngst ,
@@ -2505,6 +2529,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                      webprotege:Divergence ;
                             webprotege:involvesProcess :Ideation ,
                                                        :Inspiration ;
+                            webprotege:precedesProcess :Cyberpunk_Convergence_Phase ;
                             rdfs:label "Cyberpunk Divergence Phase"@en .
 
 
@@ -2553,7 +2578,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
        webprotege:hasTemporalContext webprotege:Present-day ,
                                      <http://webprotege.stanford.edu/2010s> ;
        webprotege:inspiredBy webprotege:Grunge ,
-                             webprotege:Music ;
+                             :Emo ;
        webprotege:involvesBehaviour :Gaming ;
        webprotege:involvesEmotion :Melancholy ,
                                   :Playfulness ;
@@ -2581,6 +2606,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                  webprotege:Divergence ;
                         webprotege:involvesProcess :Bricolage ,
                                                    :Inspiration ;
+                        webprotege:precedesProcess :EGirl_Convergence_Phase ;
                         rdfs:label "E-Girl/E-Boy Divergence Phase"@en .
 
 
@@ -2592,6 +2618,18 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                                         :Reproduction ;
                              webprotege:resultsIn :EGirl ;
                              rdfs:label "E-Girl/E-Boy Metaconvergence Phase"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Eclecticism
+:Eclecticism rdf:type owl:NamedIndividual ,
+                      webprotege:ConceptualIdeas ;
+             rdfs:label "Eclecticism" .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Emo
+:Emo rdf:type owl:NamedIndividual ,
+              webprotege:Community ;
+     rdfs:label "Emo" .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Empowerment
@@ -2664,6 +2702,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                      webprotege:Divergence ;
                             webprotege:involvesProcess :Ideation ,
                                                        :Inspiration ;
+                            webprotege:precedesProcess :Fairycore_Convergence_Phase ;
                             rdfs:label "Fairycore Divergence Phase"@en .
 
 
@@ -2790,6 +2829,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                       webprotege:Divergence ;
                              webprotege:involvesProcess :Bricolage ,
                                                         :Inspiration ;
+                             webprotege:precedesProcess :Goblincore_Convergence_Phase ;
                              rdfs:label "Goblincore Divergence Phase"@en .
 
 
@@ -2858,6 +2898,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                        webprotege:Divergence ;
                               webprotege:involvesProcess :Bricolage ,
                                                          :Inspiration ;
+                              webprotege:precedesProcess :Grandmacore_Convergence_Phase ;
                               rdfs:label "Grandmacore Divergence Phase"@en .
 
 
@@ -2925,6 +2966,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                       webprotege:Divergence ;
                              webprotege:involvesProcess :Bricolage ,
                                                         :Inspiration ;
+                             webprotege:precedesProcess :HealthGoth_Convergence_Phase ;
                              rdfs:label "Health Goth Divergence Phase"@en .
 
 
@@ -2940,6 +2982,13 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
 :Herbs rdf:type owl:NamedIndividual ,
                 webprotege:VisualElement ;
        rdfs:label "Herbs"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#HighTech
+:HighTech rdf:type owl:NamedIndividual ,
+                   webprotege:ConceptualIdeas ;
+          webprotege:shapesAesthetic :Cyberpunk ;
+          rdfs:label "HighTech" .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#HolographicDisplay
@@ -3023,7 +3072,8 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
          webprotege:involvesBehaviour webprotege:Thrifting ;
          webprotege:involvesEmotion :Escapism ,
                                     :Happiness ,
-                                    :Nostalgia ;
+                                    :Nostalgia ,
+                                    :Playfulness ;
          webprotege:involvesProcess :Kidcore_Convergence_Phase ,
                                     :Kidcore_Divergence_Phase ,
                                     :Kidcore_Metaconvergence_Phase ;
@@ -3048,6 +3098,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                    webprotege:Divergence ;
                           webprotege:involvesProcess :Bricolage ,
                                                      :Inspiration ;
+                          webprotege:precedesProcess :Kidcore_Convergence_Phase ;
                           rdfs:label "Kidcore Divergence Phase"@en .
 
 
@@ -3114,6 +3165,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
 :LightAcademia_Divergence_Phase rdf:type owl:NamedIndividual ,
                                          webprotege:Divergence ;
                                 webprotege:involvesProcess :Inspiration ;
+                                webprotege:precedesProcess :LightAcademia_Convergence_Phase ;
                                 rdfs:label "Light Academia Divergence Phase"@en .
 
 
@@ -3137,7 +3189,8 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                      webprotege:Millenials ;
             webprotege:hasTemporalContext webprotege:Present-day ,
                                           <http://webprotege.stanford.edu/2010s> ;
-            webprotege:inspiredBy webprotege:Minimalism ;
+            webprotege:inspiredBy :ArtNouveau ,
+                                  :Eclecticism ;
             webprotege:involvesBehaviour webprotege:Thrifting ,
                                          :CollectingObjects ;
             webprotege:involvesEmotion :Joy ;
@@ -3145,6 +3198,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                        :Maximalism_Divergence_Phase ,
                                        :Maximalism_Metaconvergence_Phase ;
             webprotege:opposesTo webprotege:Minimalism ;
+            webprotege:resultsIn :TheStudioJob_homepage ;
             webprotege:spreadThrough webprotege:Instagram ,
                                      webprotege:Pinterest ;
             webprotege:hasName "Maximalism"@en ;
@@ -3166,6 +3220,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                       webprotege:Divergence ;
                              webprotege:involvesProcess :Bricolage ,
                                                         :Inspiration ;
+                             webprotege:precedesProcess :Maximalism_Convergence_Phase ;
                              rdfs:label "Maximalism Divergence Phase"@en .
 
 
@@ -3272,6 +3327,7 @@ webprotege:iMac rdf:type owl:NamedIndividual ,
                                     webprotege:Divergence ;
                            webprotege:involvesProcess :Inspiration ,
                                                       :Serendipity ;
+                           webprotege:precedesProcess :Normcore_Convergence_Phase ;
                            rdfs:label "Normcore Divergence Phase"@en .
 
 
@@ -3439,6 +3495,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 :Royalcore_Divergence_Phase rdf:type owl:NamedIndividual ,
                                      webprotege:Divergence ;
                             webprotege:involvesProcess :Inspiration ;
+                            webprotege:precedesProcess :Royalcore_Convergence_Phase ;
                             rdfs:label "Royalcore Divergence Phase"@en .
 
 
@@ -3496,6 +3553,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                           webprotege:involvesProcess :Bricolage ,
                                                      :Inspiration ,
                                                      :Serendipity ;
+                          webprotege:precedesProcess :Seapunk_Convergence_Phase ;
                           rdfs:label "Seapunk Divergence Phase"@en .
 
 
@@ -3610,8 +3668,9 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
            webprotege:createdBy webprotege:WebCommunity ;
            webprotege:experiencedBy webprotege:GenX ,
                                     webprotege:Millenials ;
-           webprotege:hasTemporalContext <http://webprotege.stanford.edu/2000s> ;
-           webprotege:inspiredBy webprotege:Book ;
+           webprotege:hasTemporalContext <urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#1960s> ;
+           webprotege:inspiredBy :BioShock ,
+                                 :VictorianEra ;
            webprotege:involvesBehaviour webprotege:Thrifting ,
                                         :CraftingDIY ;
            webprotege:involvesEmotion :Adventure ,
@@ -3641,6 +3700,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                      webprotege:Divergence ;
                             webprotege:involvesProcess :Bricolage ,
                                                        :Inspiration ;
+                            webprotege:precedesProcess :Steampunk_Convergence_Phase ;
                             rdfs:label "Steampunk Divergence Phase"@en .
 
 
@@ -3664,10 +3724,23 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
            rdfs:label "Synthesis"@en .
 
 
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#TheStudioJob_homepage
+:TheStudioJob_homepage rdf:type owl:NamedIndividual ,
+                                webprotege:DigitalProduct ;
+                       rdfs:label "TheStudioJob homepage" .
+
+
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Tiaras
 :Tiaras rdf:type owl:NamedIndividual ,
                  webprotege:FashionProduct ;
         rdfs:label "Tiaras"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Unearthliness
+:Unearthliness rdf:type owl:NamedIndividual ,
+                        webprotege:ConceptualIdeas ;
+               webprotege:shapesAesthetic :Angelcore ;
+               rdfs:label "Unearthliness"@en .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#VSCOGirl
@@ -3707,6 +3780,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                     webprotege:Divergence ;
                            webprotege:involvesProcess :Inspiration ,
                                                       :Serendipity ;
+                           webprotege:precedesProcess :VSCOGirl_Convergence_Phase ;
                            rdfs:label "VSCO Girl Divergence Phase"@en .
 
 
@@ -3761,6 +3835,7 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                             webprotege:involvesProcess :Bricolage ,
                                                        :Inspiration ,
                                                        :Serendipity ;
+                            webprotege:precedesProcess :Vaporwave_Convergence_Phase ;
                             rdfs:label "Vaporwave Divergence Phase"@en .
 
 
@@ -3772,6 +3847,13 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
                                                             :Reproduction ;
                                  webprotege:resultsIn :Vaporwave ;
                                  rdfs:label "Vaporwave Metaconvergence Phase"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#VictorianEra
+:VictorianEra rdf:type owl:NamedIndividual ,
+                       webprotege:CulturalContext ;
+              webprotege:hasTemporalContext <http://webprotege.stanford.edu/19thCentury> ;
+              rdfs:label "VictorianEra" .
 
 
 ###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#Weirdcore
@@ -3893,6 +3975,15 @@ Examples include Y2K aesthetics recycling early 2000s digital culture, or cottag
 :Wonder rdf:type owl:NamedIndividual ,
                  webprotege:Emotion ;
         rdfs:label "Wonder"@en .
+
+
+###  urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#1960s
+<urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#1960s> rdf:type owl:NamedIndividual ,
+                                                                              webprotege:TemporalContext ;
+                                                                     webprotege:isSubjectOf :Steampunk ;
+                                                                     webprotege:endDate "1969"^^xsd:Year ;
+                                                                     webprotege:startDate "1960"^^xsd:Year ;
+                                                                     rdfs:label "1960s" .
 
 
 #################################################################
