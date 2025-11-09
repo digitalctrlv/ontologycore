@@ -2,11 +2,95 @@
     <h2>4. Knowledge representation</h2>
     
     <h3 id="ontology-intro">4.1 The Ontology</h3>
-    <p>Introduction to the ontology. You could place a 'word cloud' or another visualization (e.g., a .png export of your ontology graph) here.</p>
-    <h3 id="modeling">4.2 Modeling</h3>
+    <p class="lead">Our ontology formalizes aesthetics as complex cultural entities that emerge through community-driven creative processes on digital platforms. By modeling their characteristic elements and behavioral patterns, we can better understand how contemporary aesthetics differ from traditional subcultures in their formation and dissemination, and how they offer new popular ways of being creative through the reuse and recontextualization of past creative products.</p>
+    <p>Aesthetics are abstract, dynamic, and modern concepts. With our ontology, we aim to map their characteristic elements, relevant behaviors, and the creative processes involved in their creation and dissemination. The previous chapters introduced three theoretical frameworks that helped us create these focus points and position these intangible cultural commodities within creative theory.</p>
     
-    <h4 id="user-story">4.2.1 User story & LLMs</h4>
-    <p>Content about user stories and LLMs...</p>
+    <p>There have been numerous resources classifying what belongs to an aesthetic and what does not. For example, we made deliberate use of the independent, crowd-sourced <a href="http://aesthetics.fandom.com/wiki/">Aesthetics Wiki</a> for identifying defining features of our selected aesthetics. Essentially, this classification task represents the genesis of aesthetics themselves. Aesthetics inherit from their 'parent class' of Subcultures the practice of inclusion and exclusion. This practice operates through various cultural forms such as art, music, and clothing, often based on ethnicity, interests, and social background.</p>
+
+    <p>Undeniably, these types of social groupings are extremely similar. Yet recent aesthetics such as Clean Girl, Y2K, and Dark Academia demonstrate distinctive characteristics through <i>Metaconvergence</i>. This term is coined in the earlier mentioned <a href="https://github.com/aldogangemi/CreOn/blob/main/creon.ttl">CreOn ontology</a> and has become an increasingly popular method of expressing creativity on digital platforms. To clarify this concept within our framework, we interpret the term in our ontology core as follows:</p>
+
+    <blockquote>
+        <p><i>"Metaconvergence is the process by which individuals or groups combine elements from multiple subcultures or aesthetics to create new, hybrid forms of expression. This phenomenon is particularly prevalent in digital spaces, where the rapid exchange of ideas and cultural artifacts facilitates the blending of diverse influences. Metaconvergence allows for greater creativity and innovation, as individuals draw upon a wider range of sources to inform their aesthetic choices. It also reflects the fluid and dynamic nature of contemporary culture, where traditional boundaries between subcultures are increasingly blurred."</i></p>
+    </blockquote>
+    
+    <p><i>Bricolage</i>, a creative technique within our Metaconvergence class, appears similar to the Montage and Collage art techniques that gained significant popularity during the Dada art movement in the first half of the twentieth century. Reusing existing visual elements is not an uncommon phenomenon in art and creativity. However, contemporary aesthetics like Y2K operate differently. Y2K's reproduction of a 2000s 'aesthetic' evokes particular emotions such as nostalgia or a sense of belonging to a period that users may have never even experienced. Creative products from the past are recontextualized at rapid speed, not just by one dominant artist but by an anonymous web community. Often, the motive is not protest against dominant culture but rather a means to gain acknowledgment for stylistic efforts and to shape identity.</p>
+        
+    <p>From here, with our ontology, we aim not only bring aesthetics into existence but also formalize the specific creative processes present in their emergence. It is valuable to move beyond understanding aesthetics as predominantly formalistic subcultures. Instead, we can observe how they facilitate a modern, grassroots, community-driven approach to identity formation and art making.</p>
+
+    <p>We initially selected six aesthetics and adapted our model to their characteristics: <b>Y2K</b>, <b>Cottagecore</b>, <b>Dark Academia</b>, <b>Grunge</b>, <b>Old Money</b> and <b>Clean Girl</b>. Our selection aimed to cover a variety of aesthetics that address different temporal contexts and demonstrate distinct creative phases. Notwithstanding, we recognize that there is considerable overlap since their usage and emergence occur around the same time period. Therefore, our analysis will show that most of them use the same types of media channels to disseminate the aesthetic. This shared infrastructure highlights the interconnected nature of contemporary aesthetic movements and their collective reliance on digital platforms for expression and growth.</p>
+
+    <h3 id="modeling">4.2 Modeling</h3>
+    <p class="lead">In this section we will describe how we used LLMs to model our ontology using a bottom-up extreme design methodolgy and CLOWN. During this phase, we systematically generated definitions, descriptions, and user scenarios for each aesthetic. This generated content informed the development of competency questions, which provided the structural foundation for constructing the ontology.</p>
+
+    <h4 id="user-story">4.1.1 User story & LLMs</h4>
+    <p class="lead">First stop: <b>C</b>ontext and Literature State of the Art (<b>C</b>LOWN).</p>
+
+    <p>Our search for a model started by searching for interesting concepts that should be defined in the model. Here are some examples of the prompts we fed to the LLM and the output it provided us.</p>
+
+    <p class="prompt">Please give a definition of an "aesthetic."</p>
+    <div class="chatbot">🤖 An "aesthetic" refers to a set of principles or philosophy concerning beauty, art, and taste. It encompasses the study of what makes something beautiful, pleasing, or artistically valuable. The term can be used in several ways:
+        
+        <li><b>As a noun: An aesthetic is a particular style, approach, or set of principles that defines what is considered beautiful or artistically appealing within a specific context. For example, "the minimalist aesthetic" emphasizes simplicity and clean lines, while "the vintage aesthetic" draws on nostalgic elements from past eras.</b></li>
+        
+        <li>In philosophy: Aesthetics is the branch of philosophy that examines the nature of beauty, art, and artistic judgment. It explores questions like what makes something beautiful, how we experience and evaluate art, and what constitutes good taste.</li>
+        
+        <li><b>In everyday usage: People often use "aesthetic" to describe the overall visual style or mood of something - whether it's fashion, interior design, social media posts, or any curated visual presentation. In this context, it's become somewhat synonymous with "style" or "vibe."</b></li>
+    </div>
+
+    <p class="prompt">Please give me 10 examples of aesthetics.</p>
+    <div class="chatbot">🤖 Here are 10 examples of aesthetics:
+        
+       <ol>1. Cottagecore</ol>
+       <ol>2. Fairycore</ol>
+       <ol>3. Dark Academia</ol>
+       <ol>4. Goblincore</ol>
+       <ol>5. Vaporwave</ol>
+       <ol>6. Y2K/Cyber Y2K</ol>
+       <ol>7. Heroin Chic (90s)</ol>
+       <ol>8. Minimalism</ol>
+       <ol>9. Cyberpunk</ol>
+       <ol>10. Weirdcore</ol>
+
+    </div>
+
+    <p>When we arrived at our selection of six aesthetics (<b>Y2K</b>, <b>Cottagecore</b>, <b>Dark Academia</b>, <b>Grunge</b>, <b>Old Money</b> and <b>Clean Girl</b>), we aimed to explore its interpretation of these phenomena further.</p>
+
+    <p class="prompt">Please give me a description and user scenario for our selection of aesthetics.</p>
+    <div class="chatbot">🤖 An "aesthetic" refers to a set of principles or philosophy concerning beauty, art, and taste. It encompasses the study of what makes something beautiful, pleasing, or artistically valuable. The term can be used in several ways:
+        
+        <ol>1. Y2K (/Cyber Y2K)</ol>
+        Metallic silver textures, holographic materials, frosted plastics, bright blues and pinks, bubble shapes, futuristic fonts, digital camera aesthetics, low-resolution graphics, and late 90s/early 2000s technology references. Think iMacs, flip phones, and optimistic digital future vibes.<br>
+
+        <i>User scenario:</i> Fashion Influencer's Aesthetic Evolution Jamie, a fashion content creator, embraces Y2K revival as both personal style and career strategy. They wear metallic fabrics, platform shoes, colorful hair clips, and carry iridescent handbags. They document their thrift shopping for vintage tech accessories, create makeup tutorials using holographic eyeshadows, and attend events in futuristic outfits. Their apartment features inflatable furniture and mood lighting that changes colors. This lifestyle positions them at the forefront of nostalgic fashion trends, appeals to their Gen Z audience's desire for optimistic futurism, and creates endless content opportunities around Y2K nostalgia.<br>
+
+        <ol>2. Dark Academia</ol>
+        Characterized by gothic architecture, vintage books, candlelit libraries, tweed blazers, leather-bound journals, classical art, and muted colors like deep browns, forest greens, and burgundy. Think old university halls, typewriters, and scholarly pursuits with a moody, intellectual atmosphere.<br>
+
+        <i>User scenario:</i> Graduate Student's Daily Routine Sarah, a philosophy PhD candidate, structures her entire lifestyle around Dark Academia principles. She wakes early to write in leather-bound journals by candlelight, wears vintage blazers and wool sweaters to campus, carries her books in a worn leather satchel, and spends evenings in dimly lit libraries or coffee shops reading classical literature. She handwrites letters to friends, collects vintage fountain pens, and decorates her studio apartment with antique maps and poetry books. This lifestyle helps her feel connected to intellectual traditions, provides motivation for her rigorous studies, and creates a romantic narrative around academic pursuits that might otherwise feel isolating.<br>
+
+        <ol>3. Cottagecore</ol>
+        Emphasizes rural, pastoral life with floral patterns, vintage dresses, wildflower bouquets, homemade bread, cozy cabins, garden vegetables, and soft, natural lighting. Colors include cream, sage green, dusty pink, and earth tones that evoke a romanticized countryside lifestyle.<br>
+
+        <i>User scenario:</i>Remote Worker's Life Shift Marcus, burned out from corporate life, adopts cottagecore living while working remotely as a freelance graphic designer. He moves to a small town, starts each day by tending his vegetable garden, bakes his own bread, and takes work breaks to forage for mushrooms or press flowers. He wears linen shirts, shops at farmers markets, preserves seasonal fruits, and hosts dinner parties featuring homegrown ingredients. This lifestyle provides stress relief, reconnects him with natural cycles, and gives him a sense of self-sufficiency that balances his digital work life.<br>
+
+        <ol>4. Clean girl</ol>
+        Lifestyle aesthetic, including heavy consumerism.
+        is a recent fashion and lifestyle microtrend characterized by a minimalist and refined approach to beauty and style. It originated as a popular trend on TikTok and Instagram around 2023. This aesthetic draws inspiration from Scandinavian Design, minimalism, and the concept of "clean living." The "Clean Girl" trend has been adopted and popularized by influencers and celebrities like Hailey Bieber and Sofia Richie, who frequently show minimalist outfits and polished, "effortless" appearances. It largely overlaps with That Girl and Vanilla Girl.<br>
+
+        <i>User scenario:</i> Emma, a 22-year-old marketing professional, adopts the Clean Girl aesthetic to cultivate a polished, effortless image for her new city life. She browses TikTok and Instagram for inspiration, purchasing minimalist staples like gold hoops and neutral loungewear. Emma films her simplified morning routine showcasing dewy skin and slicked-back hair, sharing it with trending audio. Through consistent posting, she gains social validation and refines her personal brand.
+
+        <ol>5. Old Money</ol>
+        Emulates understated elegance of generational wealth through tailored blazers, cable-knit sweaters, polo shirts, penny loafers, silk scarves, and pearl jewelry in neutral palettes. Emphasizes "quiet luxury" with timeless pieces and minimal logos. Associated with tennis, golf, yachting, and horseback riding. Often functions as performative facade—curating an image of inherited wealth through thrifted designer pieces and "elevated" hobbies regardless of actual economic status.<br>
+
+       <i>User Scenario:</i> Sofia, a 22-year-old marketing coordinator, curates an "old money" persona on social media. She thrifts vintage Ralph Lauren, learns tennis at public courts, and photographs herself at free museum days. For Sofia, this aesthetic signals refinement and social capital through styling alone, offering comfort of appearing "established" while teaching her about quality and timeless taste.
+        
+        <ol>6. Grunge</ol>
+        Grunge is an aesthetic rooted in the early 1990s alternative music scene, particularly from Seattle. It rejects mainstream polish and consumerism, embracing imperfection, rebellion, and authenticity. The style features flannel shirts, ripped jeans, band tees, combat boots, and layered thrifted clothing in muted or dark tones. Its visual language is raw and unkempt, expressing disillusionment with societal expectations and material excess while celebrating individuality and emotional honesty.
+
+        <i>User Scenario:</i>
+        Eli, a 20-year-old art student, expresses his grunge aesthetic through worn-out denim, oversized plaid shirts, and secondhand band tees. He frequents local record stores, sketches in cafés, and documents the city’s forgotten corners on film. For Eli, grunge isn’t just a fashion choice—it’s a way to resist conformity and find beauty in imperfection, using art and style as an outlet for frustration and self-discovery.
+
+    </div>
 
     <h4 id="classes-properties">4.2.2 Classes and properties</h4>
     <p>Content about the classes and properties...</p>

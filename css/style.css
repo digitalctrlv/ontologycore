@@ -1,0 +1,142 @@
+/* --- General Styling --- */
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #fdfdfd; }
+.project-wrapper { display: flex; flex-direction: row; }
+
+/* --- Sidebar Styling --- */
+.sidebar { width: 300px; height: 100vh; position: fixed; top: 0; left: 0; background-color: #f7f7f7; border-right: 1px solid #e0e0e0; padding: 25px; overflow-y: auto; box-sizing: border-box; }
+.sidebar h2 { margin-top: 0; font-size: 1.2rem; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+.sidebar ul { list-style: none; padding-left: 0; }
+.sidebar li { margin-bottom: 5px; position: relative; /* Needed for the toggle button */ }
+
+/* The main navigation link (the text) */
+.sidebar a.nav-link { 
+    text-decoration: none; 
+    color: #333; 
+    display: block; 
+    padding: 4px 8px 4px 28px; /* Added left padding to make space for the toggle */
+    border-radius: 4px; 
+    transition: background-color 0.2s ease; 
+}
+.sidebar a.nav-link:hover { background-color: #e9e9e9; }
+.sidebar a.nav-link.active { background-color: #e0e7ff; color: #0044cc; font-weight: 600; }
+
+/* The sub-chapter links */
+.sidebar a.sub-link {
+    text-decoration: none; 
+    color: #333; 
+    display: block; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    transition: background-color 0.2s ease;
+}
+.sidebar a.sub-link:hover { background-color: #e9e9e9; }
+
+/* --- NEW: Accordion Styling --- */
+.sidebar ul ul {
+    padding-left: 20px;
+    font-size: 0.95rem;
+    display: none; /* Hide sub-menus by default */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin-top: 5px;
+}
+.sidebar li.open > ul {
+    display: block;
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* The toggle button (the arrow) */
+.toggle-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px; /* Clickable area for the arrow */
+    height: 28px; /* Same height as the link padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+.toggle-btn::after {
+    content: '►'; /* Right-pointing arrow */
+    font-size: 0.7em;
+    color: #777;
+    transition: transform 0.3s ease-out;
+}
+
+/* When open, rotate the arrow */
+.sidebar li.open > .toggle-btn::after {
+    transform: rotate(90deg);
+}
+
+/* Hide toggle button if there is no sub-menu */
+.toggle-btn.no-submenu {
+    display: none;
+}
+
+/* --- Content Area Styling --- */
+.content { margin-left: 300px; padding: 40px 50px; width: 100%; max-width: 900px; box-sizing: border-box; }
+.content section { margin-bottom: 60px; padding-top: 20px; }
+h1 { font-size: 2.5rem; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
+h2 { font-size: 2rem; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px; position: sticky; top: 0; background: #fdfdfd; z-index: 10; }
+h3 { font-size: 1.5rem; margin-top: 30px; }
+h4 { font-size: 2rem; margin-top: 25px; margin-bottom: 5px; }
+blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0; font-style: italic; color: #555; }
+.lead {     font-size: 1.2rem; color: #a5a5a5; font-weight: 300; }
+.prompt { background: #f4f4f4; border-left: 4px solid #ccc; padding: 15px 30px; margin: 20px 0; }
+.chatbot { background: #e8f0fe; border-left: 4px solid #4a90e2; padding: 15px 30px; margin: 20px 0; }
+
+/* --- NEW: Mobile Styling --- */
+
+/* Mobile toggle buttons are hidden by default on desktop */
+.sidebar-toggle {
+    display: none;
+    padding: 8px 12px;
+    font-size: 1rem;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .project-wrapper { flex-direction: column; }
+    .sidebar { 
+        position: static; /* It's open by default, as requested */
+        width: 100%; 
+        height: auto; 
+        border-right: none; 
+        border-bottom: 1px solid #e0e0e0; 
+    }
+    .content { margin-left: 0; padding: 20px 30px; }
+
+    /* Show mobile toggle buttons */
+    .sidebar-toggle {
+        display: block;
+    }
+
+    #sidebar-close-btn {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
+    #sidebar-open-btn {
+        position: fixed; /* Lets it float */
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        display: none; /* Hidden by default, only shown when sidebar is closed */
+    }
+
+    /* When sidebar is closed on mobile */
+    body.sidebar-closed .sidebar {
+        display: none;
+    }
+    body.sidebar-closed #sidebar-open-btn {
+        display: block;
+    }
+}
