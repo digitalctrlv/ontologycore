@@ -23,8 +23,7 @@
       display: block;
       margin: 0 auto;
       width: auto;
-      max-width: 800px; /* prevents overly large images on very large screens */
-      height: 80%;
+      height: 50%;
     }
     /* On larger screens, limit to 80% of the viewport width */
     @media (min-width: 768px) {
@@ -58,12 +57,12 @@
   </div>
 
   <p>
-    Next, we focused on the creative-process perspective (as described in Section 4.4). We modelled aesthetic diffusion as a three-stage creative process — <em>Divergence</em>, <em>Convergence</em>, and <em>Metaconvergence</em> — and used graph links (e.g., <code>resultsIn</code>) to show how these stages produce or stabilize an aesthetic. The cycle representation also suggests how one aesthetic can give rise to or influence another.
+    Next, we focused on the creative-process perspective (as described in Section 4.4). We modelled aesthetic diffusion as a three-stage creative process; <em>Divergence</em>, <em>Convergence</em>, and <em>Metaconvergence</em>, and used graph links (e.g., <code>resultsIn</code>) to show how these stages produce or stabilize an aesthetic. The cycle representation also suggests how one aesthetic can give rise to or influence another.
   </p>
 
   <div class="kg-figure-vertical">
     <img src="img/aes_creativeprocess_digraph.png" alt="Creative process cycle: Divergence, Convergence, Metaconvergence" />
-    <p class="kg-caption">Figure 3 : Visualization of the creative-process cycle. Nodes represent process classes and edges show relations (e.g., <code>resultsIn</code>) that link stages to aesthetic outcomes and to other aesthetics.</p>
+    <p class="kg-caption">Figure 3 : Visualization of the creative-process cycle. Nodes represent process classes and edges show relations that link stages to aesthetic outcomes and to other aesthetics.</p>
   </div>
 
   <p>
@@ -91,7 +90,5 @@
   <div class="kg-figure">
     <iframe src="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/digitalctrlv/ontologycore/refs/heads/main/ontologycore-251102.ttl" title="WebVOWL visualization" width="90%" height="600"></iframe>
 
-    <!-- iframe is already defined elsewhere in the site; placeholder left intentionally blank -->
-    <p class="kg-caption">Interactive visualization — an embedded, interactive graph viewer (iframe inserted in the final page). Use the interactive view to filter nodes, inspect triples, and navigate between classes and instances.</p>
   </div>
 </section>
