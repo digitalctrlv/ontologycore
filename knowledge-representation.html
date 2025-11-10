@@ -1909,26 +1909,6 @@ ORDER BY ?inspiredAesthetic</pre>
         }
     </style>
 
-    <script>
-        function toggleClass(elementId) {
-            const element = document.getElementById(elementId);
-            const toggle = element.previousElementSibling.querySelector('.class-toggle');
-
-            element.classList.toggle('active');
-            toggle.textContent = element.classList.contains('active') ? '−' : '+';
-        }
-
-        // Initialize category headers
-        document.querySelectorAll('.category-header').forEach(header => {
-            header.addEventListener('click', function () {
-                const content = this.nextElementSibling;
-                const icon = this.querySelector('.category-icon');
-
-                content.style.display = content.style.display === 'none' ? 'block' : 'none';
-                icon.textContent = content.style.display === 'none' ? '▶' : '▼';
-            });
-        });
-    </script>
     <style>
         .properties-section {
             margin-top: 40px;
@@ -2097,7 +2077,8 @@ ORDER BY ?inspiredAesthetic</pre>
         }
     </style>
 
-
+<script src="script.js"></script>
     <!-- <h4 id="ontologies-alignment">4.2.4 Ontologies Alignment</h4>
     <p>Content about the alignment...</p> -->
+
 </section>
