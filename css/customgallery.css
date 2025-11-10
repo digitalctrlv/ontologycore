@@ -99,7 +99,7 @@
     position: relative;
     width: 100%;
     max-width: 1100px;
-    max-height: 90vh;
+    max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,7 +109,7 @@
 #modal-content-container {
     position: relative;
     max-width: 90vw;
-    max-height: 90vh;
+    max-height: 100vh;
     margin: auto;
 }
 
@@ -170,7 +170,7 @@
 /* 5. Responsive Design */
 @media (max-width: 1200px) {
     .pinterest-grid {
-        column-width: 220px;
+        column-width: 200px;
     }
 }
 
@@ -188,6 +188,6 @@
 
 @media (max-width: 576px) {
     .pinterest-grid {
-        column-count: 100%;
+        column-width: 100px;
     }
 }

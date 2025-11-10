@@ -30,14 +30,22 @@ function initGallery() {
     const mediaData = [
         { type: 'image', src: 'img/y2ktechmoodboard.jpeg' },
         { type: 'image', src: 'img/cottagecore.jpg' },
+        { type: 'image', src: 'img/oldmoney2.jpg' },
         { type: 'image', src: 'img/y2k2.png' },
-        { type: 'video', src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', thumbnail: 'https://picsum.photos/id/10/600/400' },
+        { type: 'image', src: 'img/darkacademia2.jpg' },
         { type: 'image', src: 'img/grunge.png' },
         { type: 'image', src: 'img/darkacademia.jpg' },
-        { type: 'iframe', src: 'https://www.youtube.com/embed/GTRdWBwEahs?si=U0aqt597SmtLiKZj' },
-        { type: 'image', src: 'img/grunge.png' },
-        { type: 'image', src: 'img/darkacademia.jpg' },
-        { type: 'iframe', src: 'https://www.youtube.com/embed/GTRdWBwEahs?si=U0aqt597SmtLiKZj' },
+        { type: 'image', src: 'img/cleangirl2.png' },
+        { type: 'image', src: 'img/grunge2.png' },
+        { type: 'image', src: 'img/cleangirl.jpg' },
+        { type: 'image', src: 'img/oldmoney.jpg' },
+        { type: 'image', src: 'img/y2k3.jpg' },
+        { type: 'image', src: 'img/cottagecore2.png' },
+        { type: 'image', src: 'img/darkacademia3.jpg' },
+        { type: 'image', src: 'img/y2k4.png' },
+        { type: 'image', src: 'img/oldmoney3.jpg' },
+
+
     ];
 
     // Clear the grid
