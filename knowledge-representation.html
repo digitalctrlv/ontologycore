@@ -72,7 +72,7 @@
     <p>Our search for a model started by searching for interesting concepts that should be defined in the model. Here
         are some examples of the prompts we fed to the LLM and the output it provided us.</p>
 
-    <p class="prompt">Please give a definition of an "aesthetic."</p>
+    <p class="prompt">💁‍♀️Please give a definition of an "aesthetic."</p>
     <div class="chatbot">🤖 An "aesthetic" refers to a set of principles or philosophy concerning beauty, art, and
         taste. It encompasses the study of what makes something beautiful, pleasing, or artistically valuable. The term
         can be used in several ways:
@@ -91,7 +91,7 @@
                 context, it's become somewhat synonymous with "style" or "vibe."</b></li>
     </div>
 
-    <p class="prompt">Please give me 10 examples of aesthetics.</p>
+    <p class="prompt">💁‍♀️Please give me 10 examples of aesthetics.</p>
     <div class="chatbot">🤖 Here are 10 examples of aesthetics:
 
         <ol>1. Cottagecore</ol>
@@ -112,7 +112,7 @@
         phenomena further.
     </p>
 
-    <p class="prompt">Please give me a description and user scenario for our selection of aesthetics.</p>
+    <p class="prompt">💁‍♀️Please give me a description and user scenario for our selection of aesthetics.</p>
     <div class="chatbot">🤖 An "aesthetic" refers to a set of principles or philosophy concerning beauty, art, and
         taste. It encompasses the study of what makes something beautiful, pleasing, or artistically valuable. The term
         can be used in several ways:
@@ -1721,7 +1721,128 @@ ORDER BY ?inspiredAesthetic</pre>
             </div>
         </div>
     </div>
+ 
+   
+    <style> /* STYLE SECTION */ 
+        /* LLM Chat Styles */
+        .prompt {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 18px 20px;
+            margin: 25px 0 0 0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #2d3748;
+            font-weight: 500;
+            border-radius: 8px 0 0 8px;
+        }
 
+        .chatbot {
+            background: #f7fafc;
+            padding: 25px;
+            border-left: 4px solid #38a169;
+            margin: 0 0 25px 0;
+            border-radius: 0 8px 8px 0;
+            color: #4a5568;
+            line-height: 1.6;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chatbot ol,
+        .chatbot ul {
+            margin: 15px 0;
+            padding-left: 24px;
+        }
+
+        .chatbot li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .chatbot b {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        .chatbot i {
+            color: #718096;
+            font-style: italic;
+        }
+
+        .chatbot ol {
+            list-style-type: decimal;
+            color: #4a5568;
+        }
+
+        .chatbot ol ol {
+            list-style-type: lower-alpha;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        .chatbot ul {
+            list-style-type: disc;
+        }
+
+        .chatbot ul ul {
+            list-style-type: circle;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+    </style>
+    <style сlass>
+        .properties-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .properties-section h5 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .properties-detailed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
+        }
+
+        .property-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .property-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .property-item code {
+            background: #f7fafc;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 0.95em;
+            border: 1px solid #e2e8f0;
+        }
+
+        .property-description {
+            color: #4a5568;
+            margin-top: 12px;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+    </style>
     <style>
         .ontology-structure {
             background: white;
