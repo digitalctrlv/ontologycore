@@ -48,6 +48,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
     transition: max-height 0.5s ease-in;
 }
 
+
+
 /* The toggle button (the arrow) */
 .toggle-btn {
     position: absolute;
@@ -84,11 +86,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 h1 { font-size: 2.5rem; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
 h2 { font-size: 2rem; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px; position: sticky; top: 0; background: #fdfdfd; z-index: 10; }
 h3 { font-size: 1.5rem; margin-top: 30px; }
-h4 { font-size: 2rem; margin-top: 25px; margin-bottom: 5px; }
+h4 { font-size: 1rem; margin-top: 25px; margin-bottom: 5px; }
 blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0; font-style: italic; color: #555; }
 .lead {     font-size: 1.2rem; color: #a5a5a5; font-weight: 300; }
 .prompt { background: #f4f4f4; border-left: 4px solid #ccc; padding: 15px 30px; margin: 20px 0; }
 .chatbot { background: #e8f0fe; border-left: 4px solid #4a90e2; padding: 15px 30px; margin: 20px 0; }
+.highlight { color: #0044cc; }
 
 /* --- NEW: Mobile Styling --- */
 

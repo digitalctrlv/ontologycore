@@ -1,10 +1,97 @@
 <section id="knowledge-extraction">
     <h2>5. Knowledge Extraction</h2>
-    <p>Content about the extraction process...</p>
+    <p class="lead">Following the model's refinement, we validated the knowledge captured by the ontology using several analysis methods, including Large Language Models (LLMs) and graph visualization tools.</p>
+
+    <p>This section first describes the dataset of aesthetic instances used to populate the ontology. Subsequently, we present knowledge graph visualizations generated from the ontology and its instantiated data to illustrate the model's structure.</p>
 
     <h3 id="dataset">5.1 Dataset</h3>
-    <p>Describe the sources and composition of your dataset here.</p>
+    <p class="lead">This section details the dataset used for instantiation and the methodology for generating new instances via an LLM.</p>
+
+    <p>Reflecting our bottom-up eXtreme Design approach, six initial 'seed' instances were used to shape the model's development. As the model evolved, these instances were iteratively enriched with more detail, reciprocally enhancing the ontology's knowledge base.</p>
+
+    <p>We populated the ontology with six well-known aesthetics: Cottagecore, Dark Academia, Y2K, Grunge, Clean Girl, and Old Money. For each aesthetic, we gathered detailed information about its characteristics, elements, emotions, and associated lifestyles. This information was structured according to the classes and properties defined in our ontology.</p>
+
+    <p>To further test the ontology's knowledge representation capabilities, we employed an LLM to generate additional aesthetic instances derived from the existing dataset. The LLM was prompted using our ontology file (in Turtle format) combined with descriptions of the six initial aesthetics. The model was then instructed to generate new aesthetics that adhered to the established ontological framework. The generated instances were then reviewed and refined to ensure they aligned with our ontology's structure and concepts.</p>
+
+    <h4>CSV and spreadsheet</h4>
+    <p>The dataset is visualized in a google spreadsheet here below. The original CSV file can be found in our Github repository <a href="https://github.com/digitalctrlv/ontologycore/blob/main/datasets/aesthetics_dataset_merged.csv">here</a>.</p>
+
+    <div class="spreadsheet-container">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSK7GbiWK3eGE_TDbM5_6Nec3-gOreJhIZgre0LEolnCqSqQtHVjvVJ0YgswHGxUWf5VLIcFgtTqzHV/pubhtml?widget=true&amp;headers=false"
+        style="border: 0;"
+        width="100%"
+        height="600"
+        allowfullscreen=""
+        title="Aesthetics Dataset Spreadsheet">
+      </iframe>
+    </div>
+
+    <section id="dataset-analysis">
+      <h3 id="dataset-statistics">5.1.1 Dataset analysis</h3>
+      <p class="lead">
+        An analysis of the 26 aesthetic instances in our dataset reveals several key patterns regarding their emotional drivers, user adoption, creative processes, and core components.
+      </p>
     
+      <h4>> Key demographics & emotional drivers</h4>
+      <p>
+        The dataset confirms that these aesthetics are primarily driven by contemporary online communities. 
+        <strong>GenZ</strong> was cited in 22 aesthetics and <strong>Millennials</strong> in 16, with GenX appearing only 3 times.
+      </p>
+      <p>
+        The emotional drivers are highly consistent. The top 3 most-cited emotions across the dataset are 
+        <strong>Nostalgia</strong> (13 instances), <strong>Escapism</strong> (11), and <strong>Melancholy</strong> (8). 
+        This strongly suggests that aesthetics are often adopted as a way to find comfort by longing for an idealized past or escaping the pressures of the present.
+      </p>
+      <hr>
+    
+      <h4>> Unique processes of aesthetics</h4>
+      <p>
+        When analyzing the creative processes, we found that aesthetics share abstract mechanisms more often than concrete elements. 
+        <strong>Inspiration</strong> (found in all 26 instances) and <strong>Selection</strong> (22 instances) are nearly universal, forming the core of how aesthetics begin and are refined.
+      </p>
+    
+      <p>
+        While individual processes are shared, the total combination of processes (the "creative signature") is more unique. We found two specific combinations that were shared:
+      </p>
+      
+      <div class="combination-explainer">
+        <div class="combo-box">
+          <strong>Combination 1 (Shared by 3):</strong>
+          <ul>
+            <li><strong>Processes:</strong> Inspiration, Recontextualization, Refinement, Reproduction, Selection</li>
+            <li><strong>Shared by:</strong> Light Academia, Angelcore, Royalcore</li>
+          </ul>
+        </div>
+        <div class="combo-box">
+          <strong>Combination 2 (Shared by 3):</strong>
+          <ul>
+            <li><strong>Processes:</strong> Bricolage, Inspiration, Recontextualization, Selection, Synthesis</li>
+            <li><strong>Shared by:</strong> Goblincore, Health Goth, Maximalism</li>
+          </ul>
+        </div>
+      </div>
+    
+      <p style="margin-top: 1.5rem;">
+        Interestingly, <strong>none of the newly added aesthetics shared an exact process signature with the original six</strong> (Y2K, Grunge, Cottagecore, etc.). This suggests that while they use the same "building blocks," the new aesthetics assemble them in unique ways.
+      </p>
+      
+      <p>
+        We also measured "process complexity" by counting the number of unique processes per aesthetic. This showed that <span class="highlight"><strong>older, established aesthetics like Grunge (8 processes), Vaporwave (8), and Dark Academia (7) have a more layered and complex signature.</strong></span> In contrast, newer niche aesthetics like Bloomcore (4), Grandmacore (4), and Solarpunk (4) have a simpler, more focused creative process.
+      </p>
+  
+      <hr>
+    
+      <h4>> Interpretation: elements as key classifiers and differentiators</h4>
+      <p>
+        The most significant finding is the distinction between abstract processes and concrete elements. While processes like 'Inspiration' are universal, the <strong>`Aesthetic Element`</strong> column is extremely diverse, with <strong>124 unique elements</strong> across only 26 aesthetics. 
+      </p>
+      <p>
+        The most common elements, like 'Muted' (4 instances) or 'Leather' (3 instances), are still very rare. <span class="highlight"><strong>This analysis shows that aesthetics, amongst themselves, truly distinguish and create their unique identity not through their abstract creation process (which is largely shared), but through their specific, concrete, and highly unique combination of visual and material elements.</strong></span>
+      </p>
+    </section>
+
+     
     <h3 id="knowledge-graph">5.2 Knowledge Graph</h3>
     <style>
     /* Minimal responsive image styling */
@@ -26,6 +113,7 @@
       height: 500px;
       max-height:500px;
     }
+
     /* On larger screens, limit to 80% of the viewport width */
     @media (min-width: 768px) {
       .kg-figure img
@@ -37,6 +125,45 @@
       color: #333;
     }
     p { margin: 0.75rem 0; line-height: 1.5; color: #111; }
+
+    /* Styles for the combination explainer boxes */
+    .combination-explainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns */
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .combo-box {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .combo-box strong {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .combo-box ul {
+      padding-left: 20px; /* Indent list */
+      margin-top: 10px;
+    }
+
+    .combo-box li {
+      margin-bottom: 5px; /* Spacing between list items */
+    }
+
+    /* Media query for smaller screens (mobile) */
+    @media (max-width: 768px) {
+      /* Stack grid items in a single column */
+      .stats-figure-grid,
+      .combination-explainer {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 1rem;
+      }
+    }
   </style>
 
 
