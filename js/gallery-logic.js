@@ -35,6 +35,9 @@ function initGallery() {
         { type: 'image', src: 'img/grunge.png' },
         { type: 'image', src: 'img/darkacademia.jpg' },
         { type: 'iframe', src: 'https://www.youtube.com/embed/GTRdWBwEahs?si=U0aqt597SmtLiKZj' },
+        { type: 'image', src: 'img/grunge.png' },
+        { type: 'image', src: 'img/darkacademia.jpg' },
+        { type: 'iframe', src: 'https://www.youtube.com/embed/GTRdWBwEahs?si=U0aqt597SmtLiKZj' },
     ];
 
     // Clear the grid

@@ -1,13 +1,14 @@
 /* 1. The Grid Container */
 /* Use responsive column width instead of fixed column-count for better scaling on wide screens */
 .pinterest-grid {
-    column-count: auto;
-    column-width: 150px; /* ideal item width; browser decides column count */
+    column-width: 200px; /* ideal item width; browser decides column count */
     column-gap: 15px;
     padding: 15px;
-    max-width: 1400px; /* avoid extremely wide stretched layout */
+    /* max-width: 1400px;  */
+    box-sizing: border-box;
     margin: 0 auto;
 }
+
 
 /* grid items remain inline-block so they flow into columns */
 .grid-item {
@@ -18,12 +19,20 @@
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
     transition: box-shadow 0.2s ease-in-out, transform 0.15s ease;
-    cursor: pointer;
+    cursor: pointer;    
     position: relative;
     vertical-align: top;
     opacity: 0;
     transform: translateY(12px);
     animation: fadeInUp 0.45s forwards;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    page-break-inside: avoid;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    height: auto;   
 }
 
 
@@ -37,6 +46,7 @@
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 /* 3. Video Icon Overlay */
@@ -160,24 +170,24 @@
 /* 5. Responsive Design */
 @media (max-width: 1200px) {
     .pinterest-grid {
-        column-count: 4;
+        column-width: 220px;
     }
 }
 
 @media (max-width: 992px) {
     .pinterest-grid {
-        column-count: 3;
+        column-width: 180px;
     }
 }
 
 @media (max-width: 768px) {
     .pinterest-grid {
-        column-count: 2;
+        column-width: 180px;
     }
 }
 
 @media (max-width: 576px) {
     .pinterest-grid {
-        column-count: 1;
+        column-count: 100%;
     }
 }
