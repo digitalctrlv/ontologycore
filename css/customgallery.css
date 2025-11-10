@@ -1,29 +1,31 @@
 /* 1. The Grid Container */
+/* Use responsive column width instead of fixed column-count for better scaling on wide screens */
 .pinterest-grid {
-    /* Defines the number of columns. This is the core of the masonry layout. */
-    column-count: 5;
-    column-gap: 15px; /* Space between columns */
+    column-count: auto;
+    column-width: 250px; /* ideal item width; browser decides column count */
+    column-gap: 15px;
     padding: 15px;
+    max-width: 1400px; /* avoid extremely wide stretched layout */
+    margin: 0 auto;
 }
 
-#pinterest-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-/* 2. Grid Items */
+/* grid items remain inline-block so they flow into columns */
 .grid-item {
-    display: inline-block; /* Ensures items flow correctly in the columns */
+    display: inline-block;
     width: 100%;
-    margin-bottom: 15px; /* Space below each item */
+    margin-bottom: 15px;
     border-radius: 12px;
-    overflow: hidden; /* Ensures media corners are also rounded */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s ease-in-out, transform 0.15s ease;
     cursor: pointer;
-    position: relative; /* Needed for the video icon overlay */
+    position: relative;
+    vertical-align: top;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeInUp 0.45s forwards;
 }
+
 
 .grid-item:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -53,9 +55,9 @@
     opacity: 0.8;
 }
 
-/* 4. Modal / Lightbox Styling */
+/* modal visibility toggled by class .open */
 .modal-overlay {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -65,6 +67,10 @@
     background-color: rgba(0, 0, 0, 0.85);
     padding: 20px;
     box-sizing: border-box;
+}
+
+.modal-overlay.open {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -79,19 +85,44 @@
     cursor: pointer;
     z-index: 1002;
 }
-
 .modal-content-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    max-width: 1100px;
+    max-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
 #modal-content-container {
+    position: relative;
     max-width: 90vw;
     max-height: 90vh;
+    margin: auto;
+}
+
+/* Add navigation buttons styling */
+.modal-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.modal-nav button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal-nav button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 #modal-content-container img,
@@ -101,16 +132,30 @@
     display: block;
 }
 
-/* Styling for iframe embeds in the modal */
+/* iframe keep correct aspect ratio */
 #modal-content-container iframe {
-    width: 80vw;
-    height: 80vh; /* Will be adjusted by JS, but good default */
-    max-width: 1280px;
-    max-height: 720px;
-    background: #000;
-    border: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
+}
+#modal-content-container iframe,
+#modal-content-container iframe + * {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+/* reveal animation */
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
 }
 
+.grid-item img,
+.grid-item video,
+.grid-item iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* 5. Responsive Design */
 @media (max-width: 1200px) {

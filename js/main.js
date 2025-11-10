@@ -15,22 +15,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Function to load content ---
-    async function loadContent(url) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+function loadContent(url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('content-area').innerHTML = html;
+            // Initialize gallery if we're on the homepage
+            if (url === 'homepage.html') {
+                const script = document.createElement('script');
+                script.src = './js/gallery-logic.js';
+                script.onload = () => {
+                    // After script loads, initialize the gallery
+                    if (typeof initGallery === 'function') {
+                        initGallery();
+                    }
+                };
+                document.body.appendChild(script);
+            }
+        })
+        .catch(error => console.error('Error loading content:', error));
+}
+    // async function loadContent(url) {
+    //     try {
+    //         const response = await fetch(url);
+    //         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             
-            const html = await response.text();
-            contentArea.innerHTML = html;
+    //         const html = await response.text();
+    //         contentArea.innerHTML = html;
             
-            // Re-attach listeners for any buttons *inside* the new content
-            attachDynamicButtonListeners();
+    //         // Re-attach listeners for any buttons *inside* the new content
+    //         attachDynamicButtonListeners();
 
-        } catch (error) {
-            console.error('Error loading page: ', error);
-            contentArea.innerHTML = `<p>Could not load content. Check the filename and make sure you are running a local server.</p>`;
-        }
-    }
+    //     } catch (error) {
+    //         console.error('Error loading page: ', error);
+    //         contentArea.innerHTML = `<p>Could not load content. Check the filename and make sure you are running a local server.</p>`;
+    //     }
+    // }
     
     // --- Function to manage the "active" class ---
     function setActiveLink(clickedLink) {
