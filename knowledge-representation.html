@@ -270,6 +270,21 @@
                 <strong>Finding:</strong> Aesthetics show clear generational patterns - Grunge (1990s), Y2K (2000s),
                 Cottagecore (2010s), Clean Girl (2020s). Some span multiple eras like Dark Academia (19th-20th century).
             </div>
+            <div class="query-example">
+                <h5>📋SPARQL-example</h5>
+                <p class="query-description">This query retrieves temporal contexts for each aesthetic.</p>
+                <div class="sparql-block">
+                    <pre class="sparql-content">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+SELECT ?aestheticName ?timePeriodName
+WHERE {
+  ?aesthetic a :Aesthetic ;
+             rdfs:label ?aestheticName ;
+             :hasTemporalContext/rdfs:label ?timePeriodName .
+}</pre>
+                </div>
+            </div>
         </div>
 
         <div class="question-item">
@@ -279,6 +294,30 @@
                 <strong>Finding:</strong> Each aesthetic has distinct visual signatures - Dark Academia features
                 candles, classical literature, tweed jackets; Goblincore embraces mushrooms, moss, and natural elements.
             </div>
+            <div class="query-example">
+                <h5>📋SPARQL-example</h5>
+                <p class="query-description">This query retrieves all elements characterizing the Dark Academia
+                    aesthetic with their types and labels.</p>
+                <div class="sparql-block">
+                    <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+
+SELECT ?aesthetic ?aestheticLabel ?element ?elementLabel ?elementType ?typeLabel
+WHERE {
+  ?aesthetic a wp:Aesthetic ;
+             rdfs:label "DarkAcademia"@en ;
+             wp:characterizedBy ?element .
+  
+  OPTIONAL { ?element rdfs:label ?elementLabel }
+  
+  ?element rdf:type ?elementType .
+  OPTIONAL { ?elementType rdfs:label ?typeLabel }
+  
+  FILTER (?elementType != owl:NamedIndividual)
+}</pre>
+                </div>
+            </div>
         </div>
 
         <div class="question-item">
@@ -287,6 +326,34 @@
             <div class="finding">
                 <strong>Finding:</strong> Aesthetics follow structured creative processes involving divergence,
                 convergence and metaconvergence phases.
+            </div>
+            <div class="query-example">
+                <h5>📋SPARQL-example</h5>
+                <p class="query-description">This query shows processes leading from divergence to convergence.</p>
+                <div class="sparql-block">
+                    <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT ?divergentProcess ?divergentLabel ?convergentProcess ?convergentLabel
+WHERE {
+  ?divergentProcess rdf:type ?divType .
+  ?divType rdfs:subClassOf* wp:Divergence .
+  
+  OPTIONAL { ?divergentProcess rdfs:label ?divergentLabel }
+  
+  ?divergentProcess wp:precedesProcess ?convergentProcess .
+  
+  ?convergentProcess rdf:type ?convType .
+  ?convType rdfs:subClassOf* wp:Convergence .
+  
+  OPTIONAL { ?convergentProcess rdfs:label ?convergentLabel }
+  
+  FILTER (?divType != owl:NamedIndividual && 
+          ?convType != owl:NamedIndividual)
+}</pre>
+                </div>
             </div>
         </div>
 
@@ -298,6 +365,24 @@
                 melancholy, Grunge involves rebellion etc. Thus, we see that aesthetics is determined not only by the
                 external facade, but also by the emotional content.
             </div>
+            <div class="query-example">
+                <h5>📋SPARQL-example</h5>
+                <p class="query-description">This query shows emotional profiles of different aesthetics.</p>
+                <div class="sparql-block">
+                    <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?aesthetic ?aestheticLabel 
+       (GROUP_CONCAT(DISTINCT ?emotionLabel; SEPARATOR=", ") AS ?emotions)
+WHERE {
+  ?aesthetic a wp:Aesthetic ;
+             rdfs:label ?aestheticLabel ;
+             wp:involvesEmotion ?emotion .
+  ?emotion rdfs:label ?emotionLabel .
+}
+GROUP BY ?aesthetic ?aestheticLabel</pre>
+                </div>
+            </div>
         </div>
 
         <div class="question-item">
@@ -308,6 +393,24 @@
                 Vaporwave), TikTok drives mainstream trends (Clean Girl, VSCOGirl), Pinterest serves visual-centric
                 aesthetics (Cottagecore, Dark Academia).
             </div>
+            <div class="query-example">
+                <h5>📋SPARQL-example</h5>
+                <p class="query-description">This query shows dissemination platforms for each aesthetic.</p>
+                <div class="sparql-block">
+                    <pre class="sparql-content">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+SELECT ?aestheticName (GROUP_CONCAT(?mediumName; SEPARATOR=", ") AS ?platforms)
+WHERE {
+  ?aesthetic a :Aesthetic ;
+             rdfs:label ?aestheticName ;
+             :spreadThrough ?medium .
+  ?medium rdfs:label ?mediumName .
+}
+GROUP BY ?aestheticName
+ORDER BY ?aestheticName</pre>
+                </div>
+            </div>
         </div>
 
         <div class="question-item">
@@ -317,6 +420,24 @@
                 <strong>Finding:</strong> GenZ (13-28) dominates most internet aesthetics, while Millennials (29-44)
                 show stronger presence in Normcore, Steampunk, and Cottagecore.
             </div>
+            <div class="query-example">
+                <h5>📋SPARQL-example</h5>
+                <p class="query-description">This query shows age groups engaged with different aesthetics.</p>
+                <div class="sparql-block">
+                    <pre class="sparql-content">PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX base: &lt;urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#&gt;
+
+SELECT ?aestheticName ?communityName (STR(?ageRange) AS ?age)
+WHERE {
+  ?aesthetic a :Aesthetic ;
+             rdfs:label ?aestheticName ;
+             :experiencedBy ?community .
+  ?community rdfs:label ?communityName .
+  OPTIONAL { ?community base:ageRange ?ageRange }
+}</pre>
+                </div>
+            </div>
         </div>
 
         <div class="question-item">
@@ -325,6 +446,30 @@
             <div class="finding">
                 <strong>Finding:</strong> Consistent output patterns emerge across aesthetics - mood boards
                 (Image/Digital Products), short videos (Video Products), and Instagram posts (Digital Products).
+            </div>
+            <div class="query-example">
+                <h5>📋SPARQL-example</h5>
+                <p class="query-description">This query shows creative products generated by aesthetic movements.</p>
+                <div class="sparql-block">
+                    <pre class="sparql-content">PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?aestheticName (STR(?productName) AS ?product) 
+       (GROUP_CONCAT(DISTINCT ?productTypeLabel; SEPARATOR=", ") AS ?productTypes)
+WHERE {
+  ?aesthetic a :Aesthetic ;
+             rdfs:label ?aestheticName ;
+             :resultsIn ?product .
+  ?product rdfs:label ?productName .
+  
+  ?product a ?productType .
+  FILTER (?productType != &lt;http://www.w3.org/2002/07/owl#NamedIndividual&gt;)
+  
+  OPTIONAL { ?productType rdfs:label ?productTypeLabel }
+}
+GROUP BY ?aestheticName ?productName
+ORDER BY ?aestheticName ?productName</pre>
+                </div>
             </div>
         </div>
 
@@ -337,8 +482,84 @@
                 creative sources in historical imagery and past eras (Dark Academia, Steampunk), with several movements
                 explicitly attempting to "revive" and reinterpret historical elements (Y2K, Old Money).
             </div>
+            <div class="query-example">
+                <h5>📋SPARQL-example</h5>
+                <p class="query-description">This query shows inspiration sources for aesthetic movements.</p>
+                <div class="sparql-block">
+                    <pre class="sparql-content">PREFIX webprotege: &lt;http://webprotege.stanford.edu/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?inspiredAesthetic 
+      (GROUP_CONCAT(DISTINCT ?inspirationSource; SEPARATOR=", ") AS ?inspirationSources)
+WHERE {
+  ?aesthetic a webprotege:Aesthetic ;
+             rdfs:label ?inspiredAesthetic ;
+             webprotege:inspiredBy ?source .
+  OPTIONAL { ?source rdfs:label ?inspirationSource }
+  FILTER (isIRI(?source))
+}
+GROUP BY ?inspiredAesthetic
+ORDER BY ?inspiredAesthetic</pre>
+                </div>
+            </div>
         </div>
     </div>
+
+    <style>
+        .query-example {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+
+        .query-example h5 {
+            margin-top: 0;
+            color: #495057;
+            font-size: 1.1em;
+        }
+
+        .query-description {
+            color: #6c757d;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .sparql-block {
+            background-color: #2d3748;
+            border-radius: 6px;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .sparql-content {
+            color: #e2e8f0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.85em;
+            line-height: 1.4;
+            padding: 20px;
+            margin: 0;
+            overflow-x: auto;
+            white-space: pre;
+        }
+
+        .sparql-content .prefix {
+            color: #feb2b2;
+        }
+
+        .sparql-content .keyword {
+            color: #90cdf4;
+        }
+
+        .sparql-content .variable {
+            color: #faf089;
+        }
+
+        .sparql-content .comment {
+            color: #a0aec0;
+        }
+    </style>
 
     <h4 id="ontologies-alignment">4.2.4 Ontologies Alignment</h4>
     <p>Content about the alignment...</p>
