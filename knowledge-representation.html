@@ -320,42 +320,36 @@ WHERE {
             </div>
         </div>
 
-        <div class="question-item">
-            <h5>Creative Process Mapping:</h5>
-            <p><em>"What processes are part of an aesthetic's development?"</em></p>
-            <div class="finding">
-                <strong>Finding:</strong> Aesthetics follow structured creative processes involving divergence,
-                convergence and metaconvergence phases.
-            </div>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query shows processes leading from divergence to convergence.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
+   <div class="question-item">
+    <h5>Creative Process Mapping:</h5>
+    <p><em>"What processes are part of an aesthetic's development?"</em></p>
+    <div class="finding">
+        <strong>Finding:</strong> Aesthetics follow structured creative processes involving divergence,
+        convergence and metaconvergence phases.
+    </div>
+    <div class="query-example">
+        <h5>📋SPARQL-example</h5>
+        <p class="query-description">This query shows the development processes of Y2K aesthetic.</p>
+        <div class="sparql-block">
+            <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
 
-SELECT ?divergentProcess ?divergentLabel ?convergentProcess ?convergentLabel
+SELECT ?phase ?phaseLabel 
+       (GROUP_CONCAT(DISTINCT ?processLabel; SEPARATOR=", ") AS ?processes)
+       (GROUP_CONCAT(DISTINCT ?processType; SEPARATOR=", ") AS ?processTypes)
 WHERE {
-  ?divergentProcess rdf:type ?divType .
-  ?divType rdfs:subClassOf* wp:Divergence .
+  ?phase rdfs:label ?phaseLabel .
+  ?phase wp:involvesProcess ?process .
   
-  OPTIONAL { ?divergentProcess rdfs:label ?divergentLabel }
+  OPTIONAL { ?process rdfs:label ?processLabel }
+  OPTIONAL { ?process a ?processType }
   
-  ?divergentProcess wp:precedesProcess ?convergentProcess .
-  
-  ?convergentProcess rdf:type ?convType .
-  ?convType rdfs:subClassOf* wp:Convergence .
-  
-  OPTIONAL { ?convergentProcess rdfs:label ?convergentLabel }
-  
-  FILTER (?divType != owl:NamedIndividual && 
-          ?convType != owl:NamedIndividual)
-}</pre>
-                </div>
-            </div>
+  FILTER regex(?phaseLabel, "Y2K", "i")
+}
+GROUP BY ?phase ?phaseLabel</pre>
         </div>
+    </div>
+</div>
 
         <div class="question-item">
             <h5>Emotional Profiling:</h5>
