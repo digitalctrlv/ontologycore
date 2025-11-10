@@ -2201,5 +2201,68 @@ ORDER BY ?inspiredAesthetic</pre>
 <script src="script.js"></script>
     <!-- <h4 id="ontologies-alignment">4.2.4 Ontologies Alignment</h4>
     <p>Content about the alignment...</p> -->
+<script>
+function toggleClass(elementId) {
+    console.log('Toggling:', elementId);
+    const element = document.getElementById(elementId);
+    if (!element) {
+        console.log('❌ Element not found:', elementId);
+        return;
+    }
+    
+    const toggle = element.previousElementSibling.querySelector('.class-toggle');
+    console.log('Toggle element:', toggle);
+    
+    element.classList.toggle('active');
+    toggle.textContent = element.classList.contains('active') ? '−' : '+';
+    console.log('✅ Toggled successfully');
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 DOM loaded - initializing accordions');
+    
+    // Check if category headers exist
+    const headers = document.querySelectorAll('.category-header');
+    console.log('Found category headers:', headers.length);
+    
+    headers.forEach((header, index) => {
+        console.log(`Header ${index}:`, header);
+        
+        header.addEventListener('click', function() {
+            console.log('📦 Category header clicked:', this);
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('.category-icon');
+            
+            console.log('Content:', content);
+            console.log('Icon:', icon);
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.textContent = '▼';
+                console.log('📖 Category opened');
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▶';
+                console.log('📕 Category closed');
+            }
+        });
+        
+        // Initially hide category content
+        const content = header.nextElementSibling;
+        if (content) {
+            content.style.display = 'none';
+            console.log('📕 Initially hidden category content');
+        }
+    });
+    
+    console.log('✅ Accordions initialized');
+});
+
+// Also try initializing on window load as backup
+window.addEventListener('load', function() {
+    console.log('🔄 Window loaded - double checking accordions');
+});
+</script>
 
 </section>
