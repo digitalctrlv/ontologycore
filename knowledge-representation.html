@@ -93,10 +93,252 @@
     </div>
 
     <h4 id="classes-properties">4.2.2 Classes and properties</h4>
-    <p>Content about the classes and properties...</p>
-    
+    <div class="ontology-structure">
+        <h5>Core Classes Analysis:</h5>
+
+        <div class="class-category">
+            <h6>Aesthetic Core Hierarchy:</h6>
+            <ul>
+                <li><code>Aesthetic</code> - Main class representing internet aesthetic movements</li>
+                <li><code>AestheticElement</code> - Visual and sensory components characterizing aesthetics</li>
+                <li>Subclasses: <code>AudioElement</code>, <code>VisualElement</code>, <code>Color</code>,
+                    <code>Material</code>, <code>Pattern</code>
+                </li>
+            </ul>
+        </div>
+
+        <div class="class-category">
+            <h6>Social Structure:</h6>
+            <ul>
+                <li><code>Community</code> - Groups experiencing aesthetics</li>
+                <li>Specialized: <code>AgeCommunity</code> (GenZ, Millennials, GenX), <code>OnlineCommunity</code>,
+                    <code>SubCulture</code>
+                </li>
+            </ul>
+        </div>
+
+        <div class="class-category">
+            <h6>Contextual Framework:</h6>
+            <ul>
+                <li><code>Context</code> - Environmental factors shaping aesthetics</li>
+                <li>Subclasses: <code>CulturalContext</code>, <code>SpatialContext</code>,
+                    <code>TechnologicalContext</code>, <code>TemporalContext</code>
+                </li>
+            </ul>
+        </div>
+
+        <div class="class-category">
+            <h6>Creative Process Model:</h6>
+            <ul>
+                <li><code>Process</code> - Developmental phases of aesthetics</li>
+                <li>Specialized: <code>CreativeProcess</code> with <code>Divergence</code>, <code>Convergence</code>,
+                    <code>Metaconvergence</code> subclasses
+                </li>
+                <li>Represents the complete lifecycle from inspiration to dissemination</li>
+            </ul>
+        </div>
+
+        <div class="class-category">
+            <h6>Production Ecosystem:</h6>
+            <ul>
+                <li><code>Product</code> - Creative outputs resulting from aesthetic processes</li>
+                <li><code>CreativeProduct</code> with specialized subclasses: <code>DigitalProduct</code>,
+                    <code>FashionProduct</code>, <code>TextualProduct</code>, <code>VisualProduct</code> and
+                    <code>AUditoryProduct</code>
+                </li>
+                <div class="class-description">Classes <code>VisualProduct</code> and <code>AUditoryProduct</code> has
+                    subclasses <code>VisualElement</code> and <code>AudioElement</code> respectively, because
+                    Visual/Audio elements can represent both aesthetic and its product.
+                </div>
+            </ul>
+        </div>
+
+        <h5>Property Definitions:</h5>
+        <div class="properties-detailed">
+            <div class="property-item">
+                <code>characterizedBy</code>
+                <div class="property-description">Links aesthetics to their defining visual and sensory elements,
+                    establishing the core visual vocabulary of each aesthetic movement.</div>
+            </div>
+
+            <div class="property-item">
+                <code>involvesProcess</code>
+                <div class="property-description">Connects aesthetics or processes with other processes essential for
+                    the aesthetic's development and creation, mapping the creative workflow.</div>
+            </div>
+
+            <div class="property-item">
+                <code>involvesEmotion / involvesBehaviour</code>
+                <div class="property-description">Establishes connections between aesthetics and specific
+                    social/emotional profiles of both creators and consumers, defining the psychological dimensions of
+                    aesthetic engagement.</div>
+            </div>
+
+            <div class="property-item">
+                <code>hasCulturalContext / hasSpatialContext / hasTemporalContext</code>
+                <div class="property-description">Links aesthetics or objects to their contextual environments
+                    (culture/space/time), documenting the conditions under which specific individuals were created or
+                    emerged.</div>
+            </div>
+
+            <div class="property-item">
+                <code>experiencedBy</code>
+                <div class="property-description">Specifies which demographic or social groups actively practice and
+                    engage with the aesthetic, mapping audience participation.</div>
+            </div>
+
+            <div class="property-item">
+                <code>hasMedium</code>
+                <div class="property-description">Defines the channels and platforms through which creative products are
+                    expressed and distributed, mapping dissemination pathways.</div>
+            </div>
+
+            <div class="property-item">
+                <code>spreadThrough</code>
+                <div class="property-description">Identifies the media platforms and channels responsible for
+                    propagating and popularizing aesthetic movements across digital ecosystems.</div>
+            </div>
+
+            <div class="property-item">
+                <code>resultsIn</code>
+                <div class="property-description">Documents the creative outputs and tangible products generated through
+                    aesthetic processes, connecting creative activities to their material outcomes.</div>
+            </div>
+
+            <div class="property-item">
+                <code>inspiredBy</code>
+                <div class="property-description">Traces genealogical influences and inspirational sources between
+                    aesthetic movements, mapping the evolution and cross-pollination of visual styles.</div>
+            </div>
+
+            <div class="property-item">
+                <code>influencedBy</code>
+                <div class="property-description">Records the impact of specific influencers, creators, or media
+                    entities on the development and popularization of aesthetic movements.</div>
+            </div>
+
+            <div class="property-item">
+                <code>createdBy</code>
+                <div class="property-description">Attributes the origin and authorship of aesthetics to specific
+                    communities, individuals, or collective creative forces.</div>
+            </div>
+
+            <div class="property-item">
+                <code>opposesTo</code>
+                <div class="property-description">Maps ideological and stylistic oppositions between aesthetic
+                    movements, highlighting contrasting values and visual approaches.</div>
+            </div>
+
+            <div class="property-item">
+                <code>precedesProcess</code>
+                <div class="property-description">Defines temporal sequences in creative workflows, establishing the
+                    order of process phases from initial ideation to final refinement.</div>
+            </div>
+
+            <div class="property-item">
+                <code>revivedIn / revivesElement</code>
+                <div class="property-description">Documents temporal recycling and nostalgic revivals, tracking how
+                    historical aesthetic elements are reintroduced in contemporary contexts.</div>
+            </div>
+
+            <div class="property-item">
+                <code>expressesAesthetic</code>
+                <div class="property-description">Indicates how specific elements, products, or media directly manifest
+                    and represent particular aesthetic qualities and principles.</div>
+            </div>
+
+            <div class="property-item">
+                <code>uses</code>
+                <div class="property-description">Specifies the tools, technologies, and resources employed in the
+                    creation and production of aesthetic content and products.</div>
+            </div>
+
+            <div class="property-item">
+                <code>shapesAesthetic</code>
+                <div class="property-description">Describes how contextual factors, conceptual ideas, or cultural
+                    movements actively form and influence the development of aesthetic characteristics.</div>
+            </div>
+        </div>
+    </div>
+
     <h4 id="competency-questions">4.2.3 Competency questions</h4>
-    <p>Content about the competency questions...</p>
+    <div class="competency-questions">
+        <div class="question-item">
+            <h5>Temporal Analysis:</h5>
+            <p><em>"What are the temporal contexts associated with each aesthetic?"</em></p>
+            <div class="finding">
+                <strong>Finding:</strong> Aesthetics show clear generational patterns - Grunge (1990s), Y2K (2000s),
+                Cottagecore (2010s), Clean Girl (2020s). Some span multiple eras like Dark Academia (19th-20th century).
+            </div>
+        </div>
+
+        <div class="question-item">
+            <h5>Element Characterization:</h5>
+            <p><em>"Which aesthetic elements characterize particular aesthetics?"</em></p>
+            <div class="finding">
+                <strong>Finding:</strong> Each aesthetic has distinct visual signatures - Dark Academia features
+                candles, classical literature, tweed jackets; Goblincore embraces mushrooms, moss, and natural elements.
+            </div>
+        </div>
+
+        <div class="question-item">
+            <h5>Creative Process Mapping:</h5>
+            <p><em>"What processes are part of an aesthetic's development?"</em></p>
+            <div class="finding">
+                <strong>Finding:</strong> Aesthetics follow structured creative processes involving divergence,
+                convergence and metaconvergence phases.
+            </div>
+        </div>
+
+        <div class="question-item">
+            <h5>Emotional Profiling:</h5>
+            <p><em>"Which emotions are involved in different aesthetics?"</em></p>
+            <div class="finding">
+                <strong>Finding:</strong> Distinct emotional landscapes emerge - Dark Academia evokes nostalgia and
+                melancholy, Grunge involves rebellion etc. Thus, we see that aesthetics is determined not only by the
+                external facade, but also by the emotional content.
+            </div>
+        </div>
+
+        <div class="question-item">
+            <h5>Platform Ecology:</h5>
+            <p><em>"What are the primary dissemination platforms for each aesthetic?"</em></p>
+            <div class="finding">
+                <strong>Finding:</strong> Platform specialization exists - Tumblr hosts niche communities (Goblincore,
+                Vaporwave), TikTok drives mainstream trends (Clean Girl, VSCOGirl), Pinterest serves visual-centric
+                aesthetics (Cottagecore, Dark Academia).
+            </div>
+        </div>
+
+        <div class="question-item">
+            <h5>Demographic Engagement:</h5>
+            <p><em>"Which age groups are engaged with different aesthetic movements?"</em></p>
+            <div class="finding">
+                <strong>Finding:</strong> GenZ (13-28) dominates most internet aesthetics, while Millennials (29-44)
+                show stronger presence in Normcore, Steampunk, and Cottagecore.
+            </div>
+        </div>
+
+        <div class="question-item">
+            <h5>Creative Outputs:</h5>
+            <p><em>"What types of creative products are generated by different aesthetic movements?"</em></p>
+            <div class="finding">
+                <strong>Finding:</strong> Consistent output patterns emerge across aesthetics - mood boards
+                (Image/Digital Products), short videos (Video Products), and Instagram posts (Digital Products).
+            </div>
+        </div>
+
+        <div class="question-item">
+            <h5>Genealogical Analysis:</h5>
+            <p><em>"What are the primary sources of inspiration for different aesthetic movements?"</em></p>
+            <div class="finding">
+                <strong>Finding:</strong> Based on the results, many niche aesthetics drew inspiration from other,
+                larger internet aesthetics. Conversely, the major aesthetic movements themselves frequently found their
+                creative sources in historical imagery and past eras (Dark Academia, Steampunk), with several movements
+                explicitly attempting to "revive" and reinterpret historical elements (Y2K, Old Money).
+            </div>
+        </div>
+    </div>
 
     <h4 id="ontologies-alignment">4.2.4 Ontologies Alignment</h4>
     <p>Content about the alignment...</p>
