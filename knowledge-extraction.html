@@ -23,11 +23,13 @@
       display: block;
       margin: 0 auto;
       width: auto;
-      height: 50%;
+      max-height:;
+      height: 80%;
     }
     /* On larger screens, limit to 80% of the viewport width */
     @media (min-width: 768px) {
-      .kg-figure img { width: 80%; }
+      .kg-figure img
+      .kg-figure-vertical { width: 80%; }
     }
     .kg-caption {
       margin-top: 0.5rem;
@@ -39,25 +41,25 @@
 
 
   <p>
-    To represent the ontology visually and make its structure more intuitive, we visualized the OWL model exported from Protégé as RDF triples and explored several graph representations. Because the entire ontology contains a large amount of information, a single static diagram is often too dense to read. We therefore produced multiple visualizations using different tools and perspectives to highlight specific parts of the model.
+    To represent the ontology visually and to provide an intuitive understanding of the structure, we visualized the OWL model exported from Protégé as RDF triples and explored several graph representations. Because the entire ontology contains a large amount of information, a single static diagram is often too dense to read. We therefore produced multiple visualizations using different tools and perspectives to highlight specific parts of the model.
   </p>
 
   <div class="kg-figure">
     <img src="img/aes_classses.png" alt="OntoGraph focused on Aesthetic" />
-    <p class="kg-caption">Figure 1 : OntoGraph view focused on the core entity <em>Aesthetic</em>. The diagram shows classes directly connected to Aesthetic and related subclasses (Community, Context, Emotion, AestheticElement, etc.), giving a quick overview of the main building blocks that form an aesthetic.</p>
+    <p class="kg-caption">Figure 1 : OntoGraph view focused on the core entity <em>Aesthetic</em>. The view shows classes directly connected to Aesthetic and related subclasses (Community, Context, Emotion, AestheticElement, etc.), giving a quick overview of the main building blocks that form an aesthetic.</p>
   </div>
 
   <p>
-    OntoGraph gives a useful overview, but it cannot display the names of object properties directly on each link. To show concrete property names and make relationships explicit, we exported OntoGraph to a directed-graph (.dot) format and rendered it with another tool. The result shows labeled arrows that indicate which object properties connect the main classes to <em>Aesthetic</em>.
+    OntoGraph could give a useful overview, but it cannot display the names of object properties directly on each link. To show concrete property names and relationships, we exported OntoGraph to a directed-graph (.dot) format. The result shows labeled arrows that indicate which object properties connect the main classes to <em>Aesthetic</em>.
   </p>
 
   <div class="kg-figure">
     <img src="img/aes_digraph.png" alt="Graph with object property labels" />
-    <p class="kg-caption">Figure 2 : The same core classes rendered with object-property labels on the edges. This view clarifies, for example, how <em>Context</em> and <em>ConceptualIdea</em> shape an aesthetic, and how <em>AestheticElement</em> and <em>LifeStyle</em> concretely embody it.</p>
+    <p class="kg-caption">Figure 2 : Core classes rendered with object-property labels on the edges. This view clarifies, for example, how <em>Context</em> and <em>ConceptualIdea</em> shape an aesthetic, and how <em>AestheticElement</em> and <em>LifeStyle</em> concretely embody it.</p>
   </div>
 
   <p>
-    Next, we focused on the creative-process perspective (as described in Section 4.4). We modelled aesthetic diffusion as a three-stage creative process; <em>Divergence</em>, <em>Convergence</em>, and <em>Metaconvergence</em>, and used graph links (e.g., <code>resultsIn</code>) to show how these stages produce or stabilize an aesthetic. The cycle representation also suggests how one aesthetic can give rise to or influence another.
+    Next is a focus on the creative process perspective. We modelled aesthetic diffusion as a three-stage creative process; <em>Divergence</em>, <em>Convergence</em>, and <em>Metaconvergence</em>, and used graph links (e.g., <code>resultsIn</code>) to show how these stages produce or stabilize an aesthetic. The cycle representation also suggests how one aesthetic can give rise to or influence another.
   </p>
 
   <div class="kg-figure-vertical">
@@ -66,16 +68,16 @@
   </div>
 
   <p>
-    We then loaded our dataset of instantiated aesthetics and attempted instance-level visualizations. The example below shows elements related to <em>Dark Academia</em> (outside the creative-process subgraph). The purple diamonds are instances and the ochre dots indicate their class/cluster type. Although this instance graph is somewhat dense, it helps reveal which aesthetic elements, emotions, and behaviours concretely characterize <em>Dark Academia</em>.
+    We then loaded our dataset of instantiated aesthetics and attempted instance level visualizations. The example below shows elements related to <em>Dark Academia</em>. Although this instance graph is somewhat dense, it helps reveal which aesthetic elements, emotions, and behaviours concretely characterize <em>Dark Academia</em>.
   </p>
 
   <div class="kg-figure">
     <img src="img/DarkAcademia_relations.png" alt="Dark Academia instance-level graph" />
-    <p class="kg-caption">Figure 4 : Instance-level graph for <em>Dark Academia</em>. Instance nodes (purple diamonds) connect to category nodes (ochre dots), showing concrete examples of elements, emotions, and behaviours associated with the aesthetic.</p>
+    <p class="kg-caption">Figure 4 : Instance level graph for <em>Dark Academia</em>. Instance nodes (purple diamonds) connect to category nodes (ochre dots), showing concrete examples of elements, emotions, and behaviours associated with the aesthetic.</p>
   </div>
 
   <p>
-    To make the creative phases clearer at the instance level, we separated instance nodes by process phase (Divergence, Convergence, Metaconvergence) and connected each instance to the dataset activities that instantiate those phases. The diagram below demonstrates how <em>Dark Academia</em> maps to specific phase activities  e.g., <em>Inspiration, Bricolage, Ideation</em> in Divergence; <em>Synthesis, Selection</em> in Convergence; and <em>Recontextualization, Reproduction</em> in Metaconvergence.
+    The image below demonstrates the creative process phases (Divergence, Convergence, Metaconvergence) at the instance level. We can understand that <em>Dark Academia</em> maps to specific phase activities  e.g., <em>Inspiration, Bricolage, Ideation</em> in Divergence; <em>Synthesis, Selection</em> in Convergence; and <em>Recontextualization, Reproduction</em> in Metaconvergence.
   </p>
 
   <div class="kg-figure">
