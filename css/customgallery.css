@@ -2,7 +2,7 @@
 /* Use responsive column width instead of fixed column-count for better scaling on wide screens */
 .pinterest-grid {
     column-count: auto;
-    column-width: 250px; /* ideal item width; browser decides column count */
+    column-width: 150px; /* ideal item width; browser decides column count */
     column-gap: 15px;
     padding: 15px;
     max-width: 1400px; /* avoid extremely wide stretched layout */

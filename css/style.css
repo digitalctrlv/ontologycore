@@ -79,7 +79,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 }
 
 /* --- Content Area Styling --- */
-.content { margin-left: 300px; padding: 40px 50px; width: 100%; max-width: 900px; box-sizing: border-box; }
+.content { margin-left: 300px; padding: 40px 50px; width: 100%; max-width: 1200px; box-sizing: border-box; }
 .content section { margin-bottom: 60px; padding-top: 20px; }
 h1 { font-size: 2.5rem; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
 h2 { font-size: 2rem; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px; position: sticky; top: 0; background: #fdfdfd; z-index: 10; }
@@ -139,4 +139,74 @@ blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0;
     body.sidebar-closed #sidebar-open-btn {
         display: block;
     }
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-wrapper {
+    max-width: 90%;
+    max-height: 90vh;
+    position: relative;
+}
+
+.modal-content-container {
+    position: relative;
+}
+
+.modal-content-container img,
+.modal-content-container video,
+.modal-content-container iframe {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-nav button {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal-nav button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.grid-item {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.grid-item:hover {
+    transform: scale(1.02);
 }
