@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
             
     const contentArea = document.getElementById('content-area');
@@ -35,23 +36,6 @@ function loadContent(url) {
         })
         .catch(error => console.error('Error loading content:', error));
 }
-    // async function loadContent(url) {
-    //     try {
-    //         const response = await fetch(url);
-    //         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
-    //         const html = await response.text();
-    //         contentArea.innerHTML = html;
-            
-    //         // Re-attach listeners for any buttons *inside* the new content
-    //         attachDynamicButtonListeners();
-
-    //     } catch (error) {
-    //         console.error('Error loading page: ', error);
-    //         contentArea.innerHTML = `<p>Could not load content. Check the filename and make sure you are running a local server.</p>`;
-    //     }
-    // }
-    
     // --- Function to manage the "active" class ---
     function setActiveLink(clickedLink) {
         sidebar.querySelectorAll('a.nav-link').forEach(link => link.classList.remove('active'));
@@ -173,4 +157,34 @@ function loadContent(url) {
     loadContent('homepage.html');
     // Set the 'Home' link as active manually on first load
     setActiveLink(sidebar.querySelector('a[href="homepage.html"]'));
+});
+
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Get the button
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    if (scrollToTopBtn) {
+        // When the user scrolls down 200px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            // Check both document.body (Chrome, Firefox, Safari) and document.documentElement (IE/Edge)
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        scrollToTopBtn.onclick = function() {
+            // Your CSS already has 'scroll-behavior: smooth' on the <html> tag,
+            // so this will be a smooth scroll.
+            window.scrollTo(0, 0);
+        }
+    }
 });

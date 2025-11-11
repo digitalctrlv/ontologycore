@@ -1,39 +1,65 @@
-<section id="epilogue">
-    <h2>6. Epilogue</h2>
+<!DOCTYPE html>
+<html lang="en" encoding="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontologycore: Web Aesthetics Ontology</title>
 
-    <h3 id="conclusion">6.1 Conclusion</h3>
-
-    <p>This project successfully developed a formal ontology to conceptualize and map the creative processes behind contemporary internet aesthetics. Our primary goal was to move beyond simple classification and formalize the dynamic, community-driven lifecycle of these cultural entities.</p>
-
-    <p>To conceptualize this, we integrated two theoretical frameworks: Mel Rhodes' 4P's Model (Person, Process, Product, Press) and Aldo Gangemi's CreOn ontology. This synthesis provided the core structure for our model, allowing us to define the emergence of an aesthetic as a three-phase creative process: Divergence (initial inspiration and recombination), Convergence (solidification of identity), and Metaconvergence (reinterpretation and reproduction).</p>
-
-    <p>The model's consistency was validated through a series of SPARQL competency questions. The queries consistently retrieved distinct, logical patterns, successfully identifying clear generational patterns, distinct emotional landscapes, and platform-specific specializations for each aesthetic. This confirmed the ontology's robust descriptive power.</p>
-
-    <p>Our analysis of the creative processes across 26 instances revealed that our initial, pre-established aesthetics like Grunge and Dark Academia possess a more layered and complex "process signature". This suggests that when the LLM was employed to generate new instances, it focused on different differentiating variables. While the LLM did not generate many unique process signatures—effectively "playing it safe" with the abstract Divergence, Convergence, and Metaconvergence phases—it proved highly effective at generating novel instances by focusing on Aesthetic Elements. This is evidenced by the extreme diversity of elements, with 124 unique elements identified across the 26 instances. Although new process combinations were rare, the LLM accurately mapped generated instances to existing process frameworks, demonstrating that the ontology functions as an excellent classifier.</p>
-
-    <p>Overall, this work provides a robust framework that functions as a classifier for aesthetics and can spark the generation of new, coherent aesthetic types. The model confirms that while aesthetics share abstract creative processes, they derive their unique identity from the specific, concrete elements they synthesize. Future work could focus on strengthening the logical mapping between creative processes and other key factors, such as Press (environmental/media factors) and Emotions, to enhance the ontology's predictive and explanatory power regarding how aesthetics are built.</p>
-
-    <p>As a further consideration, the graph reveals that the creative processes of aesthetics can follow through a cyclical manner. Certain aesthetics serve as references or foundations for others, while some arise in opposition to existing styles, revealing a network of mutual influence and reinterpretation among aesthetics</p>
-
-    <p>This dynamic also connects to current phenomena in which past contexts are being rapidly revived and recontextualized. Looking ahead, in the next decades, we may also witness aesthetics that have emerged through reconstruction will themselves be reconstructed again, or entirely different aesthetic frameworks perhaps drawn from overlooked historical or cultural contexts.</p>
-
-    <p>In the current age of 2020s aesthetic formation and expression are deeply intertwined with the habits characterized by digital social media platforms. As technology and the means of communication continues to evolve, both the ways aesthetics circulate and how people embody them are likely to transform.</p>
-
-    <p>Furthermore, with the proliferation of generative AI content, a new kind of entity "artificial intelligence" is already participating in the creation and dissemination of aesthetics. Its role in future aesthetic formation remains an open and compelling question.</p>
-
-    <p>Ultimately, this ontology can be viewed as a snapshot of concepts as they exist in the current timeframe. It captures the idea that aesthetic itself is a living, evolving entity, constantly reshaped by culture, technology, and human creativity.</p>
+    <link rel="icon" href="./img/spark.png" type="image/x-icon">
     
-    <h3 id="bibliography">6.2 Bibliography</h3>
-<ul>
-  <li>Aesthetics Wiki. (n.d.). <i>Aesthetics Wiki</i>. Fandom. <a href="https://aesthetics.fandom.com/wiki/Aesthetics_Wiki">https://aesthetics.fandom.com/wiki/Aesthetics_Wiki</a></li> 
-  <li>Boon, M. (2013). <i>In praise of copying</i>. Harvard University Press. <a href="https://ebookcentral-proquest-com.ezproxy.unibo.it/lib/unibo/detail.action?docID=3300878">https://ebookcentral-proquest-com.ezproxy.unibo.it/lib/unibo/detail.action?docID=3300878</a></li>
-  <li>Gangemi, A. (n.d.). <i>CreOn</i>. GitHub. <a href="https://github.com/aldogangemi/CreOn/tree/main">https://github.com/aldogangemi/CreOn/tree/main</a></li> 
-  <li>Noy, N. F., & McGuinness, D. L. (2001). <i>Ontology development 101: A guide to creating your first ontology</i>. Stanford University. <a href="https://www-ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness.pdf">https://www-ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness.pdf</a></li>
-  <li>Presutti, V., Daga, E., Gangemi, A., & Blomqvist, E. (2009). eXtreme design with content ontology design patterns. In <i>Proceedings of the Workshop on Ontology Patterns (WOP)</i>. <a href="https://ceur-ws.org/Vol-516/">https://ceur-ws.org/Vol-516/</a></li>
-  <li>Rhodes, M. (1961). An analysis of creativity. <i>Phi Beta Kappa</i>, <i>42</i>, 305–310.</li>
-  <li>Sternberg, R. J., & Karami, S. (2022). An 8P theoretical framework for understanding creativity and theories of creativity. <i>The Journal of Creative Behavior</i>, <i>56</i>(1), 55–78. <a href="https://doi.org/10.1002/jocb.516">https://doi.org/10.1002/jocb.516</a></li>
-  <li>Ugrekhelidze, I. (2024). Vintage revival: Exploring nostalgia and retro aesthetics in contemporary fashion. <i>Interculture Journal</i>, <i>3</i>(2). <a href="https://interculture.com.ua/journals/vol-3-no-2-2024/vintage-revival-exploring-nostalgia-and-retro-aesthetics-in-contemporary-fashion">https://interculture.com.ua/journals/vol-3-no-2-2024/vintage-revival-exploring-nostalgia-and-retro-aesthetics-in-contemporary-fashion</a></li>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/customgallery.css">
+</head>
+
+<body>  
+  <section id="epilogue">
+      <h2>6. Epilogue</h2>
+
+      <h3 id="conclusion">6.1 Conclusion</h3>
+
+      <p>This project successfully developed a formal ontology to conceptualize and map the creative processes behind contemporary internet aesthetics. Our primary goal was to move beyond simple classification and formalize the dynamic, community-driven lifecycle of these cultural entities.</p>
+
+      <p>To conceptualize this, we integrated two theoretical frameworks: Mel Rhodes' 4P's Model (Person, Process, Product, Press) and Aldo Gangemi's CreOn ontology. This synthesis provided the core structure for our model, allowing us to define the emergence of an aesthetic as a three-phase creative process: Divergence (initial inspiration and recombination), Convergence (solidification of identity), and Metaconvergence (reinterpretation and reproduction).</p>
+
+      <p>The ontology's robust descriptive power and practical value were validated through SPARQL competency questions; these queries confirmed the model's consistency and completeness by successfully retrieving distinct, logical patterns (such as generational patterns, emotional landscapes, and platform-specific specializations) and enabling comprehensive, multi-faceted data analysis from different viewpoints (like temporal analysis and emotional profiling).</p>
+
+      <p>Our analysis of the creative processes across 26 instances revealed that our initial, pre-established aesthetics like Grunge and Dark Academia possess a more layered and complex "process signature". This suggests that when the LLM was employed to generate new instances, it focused on different differentiating variables. While the LLM did not generate many unique process signatures—effectively "playing it safe" with the abstract Divergence, Convergence, and Metaconvergence phases—it proved highly effective at generating novel instances by focusing on Aesthetic Elements. This is evidenced by the extreme diversity of elements, with 124 unique elements identified across the 26 instances. Although new process combinations were rare, the LLM accurately mapped generated instances to existing process frameworks, demonstrating that the ontology functions as an excellent classifier.</p>
+
+      <p>Overall, this work provides a robust framework that functions as a classifier for aesthetics and can spark the generation of new, coherent aesthetic types. The model confirms that while aesthetics share abstract creative processes, they derive their unique identity from the specific, concrete elements they synthesize. Future work could focus on strengthening the logical mapping between creative processes and other key factors, such as Press (environmental/media factors) and Emotions, to enhance the ontology's predictive and explanatory power regarding how aesthetics are built.</p>
+
+      <p>As a further consideration, the graph reveals that the creative processes of aesthetics can follow through a cyclical manner. Certain aesthetics serve as references or foundations for others, while some arise in opposition to existing styles, revealing a network of mutual influence and reinterpretation among aesthetics</p>
+
+      <p>This dynamic also connects to current phenomena in which past contexts are being rapidly revived and recontextualized. Looking ahead, in the next decades, we may also witness aesthetics that have emerged through reconstruction will themselves be reconstructed again, or entirely different aesthetic frameworks perhaps drawn from overlooked historical or cultural contexts.</p>
+
+      <p>In the current age of 2020s aesthetic formation and expression are deeply intertwined with the habits characterized by digital social media platforms. As technology and the means of communication continues to evolve, both the ways aesthetics circulate and how people embody them are likely to transform.</p>
+
+      <p>Furthermore, with the proliferation of generative AI content, a new kind of entity "artificial intelligence" is already participating in the creation and dissemination of aesthetics. Its role in future aesthetic formation remains an open and compelling question.</p>
+
+      <p>Ultimately, this ontology can be viewed as a snapshot of concepts as they exist in the current timeframe. It captures the idea that aesthetic itself is a living, evolving entity, constantly reshaped by culture, technology, and human creativity.</p>
+      
+      <h3 id="bibliography">6.2 Bibliography</h3>
+  <ul>
+    <li>Aesthetics Wiki. (n.d.). <i>Aesthetics Wiki</i>. Fandom. <a href="https://aesthetics.fandom.com/wiki/Aesthetics_Wiki">https://aesthetics.fandom.com/wiki/Aesthetics_Wiki</a></li> 
+    <li>Boon, M. (2013). <i>In praise of copying</i>. Harvard University Press. <a href="https://ebookcentral-proquest-com.ezproxy.unibo.it/lib/unibo/detail.action?docID=3300878">https://ebookcentral-proquest-com.ezproxy.unibo.it/lib/unibo/detail.action?docID=3300878</a></li>
+    <li>Gangemi, A. (n.d.). <i>CreOn</i>. GitHub. <a href="https://github.com/aldogangemi/CreOn/tree/main">https://github.com/aldogangemi/CreOn/tree/main</a></li> 
+    <li>Noy, N. F., & McGuinness, D. L. (2001). <i>Ontology development 101: A guide to creating your first ontology</i>. Stanford University. <a href="https://www-ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness.pdf">https://www-ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness.pdf</a></li>
+    <li>Presutti, V., Daga, E., Gangemi, A., & Blomqvist, E. (2009). eXtreme design with content ontology design patterns. In <i>Proceedings of the Workshop on Ontology Patterns (WOP)</i>. <a href="https://ceur-ws.org/Vol-516/">https://ceur-ws.org/Vol-516/</a></li>
+    <li>Rhodes, M. (1961). An analysis of creativity. <i>Phi Beta Kappa</i>, <i>42</i>, 305–310.</li>
+    <li>Sternberg, R. J., & Karami, S. (2022). An 8P theoretical framework for understanding creativity and theories of creativity. <i>The Journal of Creative Behavior</i>, <i>56</i>(1), 55–78. <a href="https://doi.org/10.1002/jocb.516">https://doi.org/10.1002/jocb.516</a></li>
+    <li>Ugrekhelidze, I. (2024). Vintage revival: Exploring nostalgia and retro aesthetics in contemporary fashion. <i>Interculture Journal</i>, <i>3</i>(2). <a href="https://interculture.com.ua/journals/vol-3-no-2-2024/vintage-revival-exploring-nostalgia-and-retro-aesthetics-in-contemporary-fashion">https://interculture.com.ua/journals/vol-3-no-2-2024/vintage-revival-exploring-nostalgia-and-retro-aesthetics-in-contemporary-fashion</a></li>
 
 
-</ul>
-</section>
+  </ul>
+  </section>
+
+  <button id="scrollToTopBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+<script src="./js/main.js"></script>
+
+</body>
+</html>

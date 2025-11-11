@@ -1,230 +1,177 @@
-<section id="knowledge-extraction">
-    <h2>5. Knowledge Extraction</h2>
-    <p class="lead">Following the model's refinement, we validated the knowledge captured by the ontology using several analysis methods, including Large Language Models (LLMs) and graph visualization tools.</p>
+<!DOCTYPE html>
+<html lang="en" encoding="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontologycore: Web Aesthetics Ontology</title>
 
-    <p>This section first describes the dataset of aesthetic instances used to populate the ontology. Subsequently, we present knowledge graph visualizations generated from the ontology and its instantiated data to illustrate the model's structure.</p>
-
-    <h3 id="dataset">5.1 Dataset</h3>
-    <p class="lead">This section details the dataset used for instantiation and the methodology for generating new instances via an LLM.</p>
-
-    <p>Reflecting our bottom-up eXtreme Design approach, six initial 'seed' instances were used to shape the model's development. As the model evolved, these instances were iteratively enriched with more detail, reciprocally enhancing the ontology's knowledge base.</p>
-
-    <p>We populated the ontology with six well-known aesthetics: Cottagecore, Dark Academia, Y2K, Grunge, Clean Girl, and Old Money. For each aesthetic, we gathered detailed information about its characteristics, elements, emotions, and associated lifestyles. This information was structured according to the classes and properties defined in our ontology.</p>
-
-    <p>To further test the ontology's knowledge representation capabilities, we employed an LLM to generate additional aesthetic instances derived from the existing dataset. The LLM was prompted using our ontology file (in Turtle format) combined with descriptions of the six initial aesthetics. The model was then instructed to generate new aesthetics that adhered to the established ontological framework. The generated instances were then reviewed and refined to ensure they aligned with our ontology's structure and concepts.</p>
-
-    <h4>CSV and spreadsheet</h4>
-    <p>The dataset is visualized in a google spreadsheet here below. The original CSV file can be found in our Github repository <a href="https://github.com/digitalctrlv/ontologycore/blob/main/datasets/aesthetics_dataset_merged.csv">here</a>.</p>
-
-    <div class="spreadsheet-container">
-      <iframe
-        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSK7GbiWK3eGE_TDbM5_6Nec3-gOreJhIZgre0LEolnCqSqQtHVjvVJ0YgswHGxUWf5VLIcFgtTqzHV/pubhtml?widget=true&amp;headers=false"
-        style="border: 0;"
-        width="100%"
-        height="600"
-        allowfullscreen=""
-        title="Aesthetics Dataset Spreadsheet">
-      </iframe>
-    </div>
-    <!-- test -->
-
-    <section id="dataset-analysis">
-      <h3 id="dataset-statistics">5.1.1 Dataset analysis</h3>
-      <p class="lead">
-        An analysis of the 26 aesthetic instances in our dataset reveals several key patterns regarding their emotional drivers, user adoption, creative processes, and core components.
-      </p>
+    <link rel="icon" href="./img/spark.png" type="image/x-icon">
     
-      <h4>> Key demographics & emotional drivers</h4>
-      <p>
-        The dataset confirms that these aesthetics are primarily driven by contemporary online communities. 
-        <strong>GenZ</strong> was cited in 22 aesthetics and <strong>Millennials</strong> in 16, with GenX appearing only 3 times.
-      </p>
-      <p>
-        The emotional drivers are highly consistent. The top 3 most-cited emotions across the dataset are 
-        <strong>Nostalgia</strong> (13 instances), <strong>Escapism</strong> (11), and <strong>Melancholy</strong> (8). 
-        This strongly suggests that aesthetics are often adopted as a way to find comfort by longing for an idealized past or escaping the pressures of the present.
-      </p>
-      <hr>
-    
-      <h4>> Unique processes of aesthetics</h4>
-      <p>
-        When analyzing the creative processes, we found that aesthetics share abstract mechanisms more often than concrete elements. 
-        <strong>Inspiration</strong> (found in all 26 instances) and <strong>Selection</strong> (22 instances) are nearly universal, forming the core of how aesthetics begin and are refined.
-      </p>
-    
-      <p>
-        While individual processes are shared, the total combination of processes (the "creative signature") is more unique. We found two specific combinations that were shared:
-      </p>
-      
-      <div class="combination-explainer">
-        <div class="combo-box">
-          <strong>Combination 1 (Shared by 3):</strong>
-          <ul>
-            <li><strong>Processes:</strong> Inspiration, Recontextualization, Refinement, Reproduction, Selection</li>
-            <li><strong>Shared by:</strong> Light Academia, Angelcore, Royalcore</li>
-          </ul>
-        </div>
-        <div class="combo-box">
-          <strong>Combination 2 (Shared by 3):</strong>
-          <ul>
-            <li><strong>Processes:</strong> Bricolage, Inspiration, Recontextualization, Selection, Synthesis</li>
-            <li><strong>Shared by:</strong> Goblincore, Health Goth, Maximalism</li>
-          </ul>
-        </div>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/customgallery.css">
+</head>
+
+<body> 
+  <section id="knowledge-extraction">
+      <h2>5. Knowledge Extraction</h2>
+      <p class="lead">Following the model's refinement, we validated the knowledge captured by the ontology using several analysis methods, including Large Language Models (LLMs) and graph visualization tools.</p>
+
+      <p>This section first describes the dataset of aesthetic instances used to populate the ontology. Subsequently, we present knowledge graph visualizations generated from the ontology and its instantiated data to illustrate the model's structure.</p>
+
+      <h3 id="dataset">5.1 Dataset</h3>
+      <p class="lead">This section details the dataset used for instantiation and the methodology for generating new instances via an LLM.</p>
+
+      <p>Reflecting our bottom-up eXtreme Design approach, six initial 'seed' instances were used to shape the model's development. As the model evolved, these instances were iteratively enriched with more detail, reciprocally enhancing the ontology's knowledge base.</p>
+
+      <p>We populated the ontology with six well-known aesthetics: Cottagecore, Dark Academia, Y2K, Grunge, Clean Girl, and Old Money. For each aesthetic, we gathered detailed information about its characteristics, elements, emotions, and associated lifestyles. This information was structured according to the classes and properties defined in our ontology.</p>
+
+      <p>To further test the ontology's knowledge representation capabilities, we employed an LLM to generate additional aesthetic instances derived from the existing dataset. The LLM was prompted using our ontology file (in Turtle format) combined with descriptions of the six initial aesthetics. The model was then instructed to generate new aesthetics that adhered to the established ontological framework.</p>
+
+      <p>From the CSV, the data was reformatted into a Turtle file. In Protégè, the generated instances were reviewed and refined to ensure they aligned with our ontology's structure and concepts. We noticed that the LLM had not been able to transfer all variables into the turtle format. It struggled with defining the aesthetic's relations to their creative output. Therefore, unfortunately, the 'Creative Result' colomn is present in the CSV file but does not show in the merged ontology.</p>
+
+      <h4>CSV and spreadsheet</h4>
+      <p>The dataset is visualized in a google spreadsheet here below. The original CSV file can be found in our Github repository <a href="https://github.com/digitalctrlv/ontologycore/blob/main/datasets/aesthetics_dataset_merged.csv">here</a>.</p>
+
+      <div class="spreadsheet-container">
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSK7GbiWK3eGE_TDbM5_6Nec3-gOreJhIZgre0LEolnCqSqQtHVjvVJ0YgswHGxUWf5VLIcFgtTqzHV/pubhtml?widget=true&amp;headers=false"
+          style="border: 0;"
+          width="100%"
+          height="600"
+          allowfullscreen=""
+          title="Aesthetics Dataset Spreadsheet">
+        </iframe>
       </div>
-    
-      <p style="margin-top: 1.5rem;">
-        Interestingly, <strong>none of the newly added aesthetics shared an exact process signature with the original six</strong> (Y2K, Grunge, Cottagecore, etc.). This suggests that while they use the same "building blocks," the new aesthetics assemble them in unique ways.
-      </p>
+      <!-- test -->
+
+      <section id="dataset-analysis">
+        <h3 id="dataset-statistics">5.1.1 Dataset analysis</h3>
+        <p class="lead">
+          An analysis of the 26 aesthetic instances in our dataset reveals several key patterns regarding their emotional drivers, user adoption, creative processes, and core components.
+        </p>
       
-      <p>
-        We also measured "process complexity" by counting the number of unique processes per aesthetic. This showed that <span class="highlight"><strong>older, established aesthetics like Grunge (8 processes), Vaporwave (8), and Dark Academia (7) have a more layered and complex signature.</strong></span> In contrast, newer niche aesthetics like Bloomcore (4), Grandmacore (4), and Solarpunk (4) have a simpler, more focused creative process.
-      </p>
-  
-      <hr>
+        <h4><img style="width: 15px" src="./img/spark.png"> Key demographics & emotional drivers</h4>
+        <p>
+          The dataset confirms that these aesthetics are primarily driven by contemporary online communities. 
+        GenZ was cited in 22 aesthetics and Millennials in 16, with GenX appearing only 3 times.
+        </p>
+        <p>
+          The emotional drivers are highly consistent. The top 3 most-cited emotions across the dataset are 
+          Nostalgia (13 instances), Escapism (11), and Melancholy (8). 
+          This strongly suggests that <span style="color:#0044cc">aesthetics are often adopted as a way to find comfort by longing for an idealized past or escaping the pressures of the present</span>.
+        </p>
+      
+        <h4><img style="width: 15px" src="./img/spark.png"> Unique processes of aesthetics</h4>
+        <p>
+          When analyzing the creative processes, we found that <span style="color:#0044cc">aesthetics share abstract mechanisms more often than concrete elements</span>. 
+          Inspiration (found in all 26 instances) and Selection (22 instances) are nearly universal, forming the core of how aesthetics begin and are refined.
+        </p>
+      
+        <p>
+          While <span style="color:#0044cc">individual processes are shared, the total combination of processes (the "creative signature") is more unique</span>. We found two specific combinations that were shared:
+        </p>
+        
+        <div class="combination-explainer">
+          <div class="combo-box">
+            <strong>Combination 1 (Shared by 3):</strong>
+            <ul>
+              <li><strong>Processes:</strong> Inspiration, Recontextualization, Refinement, Reproduction, Selection</li>
+              <li><strong>Shared by:</strong> Light Academia, Angelcore, Royalcore</li>
+            </ul>
+          </div>
+          <div class="combo-box">
+            <strong>Combination 2 (Shared by 3):</strong>
+            <ul>
+              <li><strong>Processes:</strong> Bricolage, Inspiration, Recontextualization, Selection, Synthesis</li>
+              <li><strong>Shared by:</strong> Goblincore, Health Goth, Maximalism</li>
+            </ul>
+          </div>
+        </div>
+      
+        <p style="margin-top: 1.5rem;">
+          Interestingly, <span style="color:#0044cc">none of the newly added aesthetics shared an exact process signature with the original six</span> (Y2K, Grunge, Cottagecore, etc.). This suggests that while they use the same "building blocks," the new aesthetics assemble them in unique ways.
+        </p>
+        
+        <p>
+          We also measured "process complexity" by counting the number of unique processes per aesthetic. This showed that <span class="highlight">older, established aesthetics</span> like Grunge (8 processes), Vaporwave (8), and Dark Academia (7) <span style="color:#0044cc">have a more layered and complex signature.</span> In contrast, newer niche aesthetics like Bloomcore (4), Grandmacore (4), and Solarpunk (4) have a simpler, more focused creative process.
+        </p>
     
-      <h4>> Interpretation: elements as key classifiers and differentiators</h4>
-      <p>
-        The most significant finding is the distinction between abstract processes and concrete elements. While processes like 'Inspiration' are universal, the <strong>`Aesthetic Element`</strong> column is extremely diverse, with <strong>124 unique elements</strong> across only 26 aesthetics. 
-      </p>
-      <p>
-        The most common elements, like 'Muted' (4 instances) or 'Leather' (3 instances), are still very rare. <span class="highlight"><strong>This analysis shows that aesthetics, amongst themselves, truly distinguish and create their unique identity not through their abstract creation process (which is largely shared), but through their specific, concrete, and highly unique combination of visual and material elements.</strong></span>
-      </p>
+      
+        <h4><img style="width: 15px" src="./img/spark.png"> Interpretation: elements as key classifiers and differentiators</h4>
+        <p>
+          The most significant finding is the distinction between abstract processes and concrete elements. While processes like 'Inspiration' are universal, the <span style="color:#0044cc">`Aesthetic Element`</span> column is extremely diverse, with <span style="color:#0044cc">124 unique elements</span> across only 26 aesthetics. 
+        </p>
+        <p>
+          The most common elements, like 'Muted' (4 instances) or 'Leather' (3 instances), are still very rare. <span class="highlight">This analysis shows that aesthetics, amongst themselves, truly distinguish and create their unique identity not through their abstract creation process (which is largely shared), but through their specific, concrete, and highly unique combination of visual and material elements.</span>
+        </p>
     </section>
 
-     
+      
     <h3 id="knowledge-graph">5.2 Knowledge Graph</h3>
-    <style>
-    /* Minimal responsive image styling */
-    .kg-figure {
-      text-align: center;
-      margin: 1.5rem 0.5rem;
-    }
-    .kg-figure-vertical {
-      text-align: center;
-      margin: 1.5rem 1.5rem;
-    }
-    .kg-figure img {
-      display: block;
-      margin: 0 auto;
-      width: 50vw;
-      max-width: 100vw;
-      height: auto;
-    }
-      .kg-figure-vertical img {
-      display: block;
-      margin: 0 auto;
-      max-width: 80vw;
-      height: auto;
-      max-height:500px;
-    }
+     
+    <p>
+      To represent the ontology visually and to provide an intuitive understanding of the structure, we visualized the OWL model exported from Protégé as RDF triples and explored several graph representations. Because the entire ontology contains a large amount of information, a single static diagram is often too dense to read. We therefore produced multiple visualizations using different tools and perspectives to highlight specific parts of the model.
+    </p>
 
-    /* On larger screens, limit to 80% of the viewport width */
-    @media (max-width: 768px) {
-      .kg-figure {text-align:center; margin: 0.1rem 0;}
-      .kg-figure img { width: 90vw; max-width: 90vw; margin:0.1rem 0;  }
-      .kg-figure-vertical {text-align:center; margin: 0.1rem 0;}
-      .kg-figure-vertical img { width: 70vw; max-width: 70vw; margin:0.1rem 0;}
-    }
-    .kg-caption {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      color: #333;
-    }
-    p { margin: 0.75rem 0; line-height: 1.5; color: #111; }
+    <div class="kg-figure">
+      <img src="img/aes_classses.png" alt="OntoGraph focused on Aesthetic" />
+      <p class="kg-caption">Figure 1 : OntoGraph view focused on the core entity <em>Aesthetic</em>. The view shows classes directly connected to Aesthetic and related subclasses (Community, Context, Emotion, AestheticElement, etc.), giving a quick overview of the main building blocks that form an aesthetic.</p>
+    </div>
 
-    /* Styles for the combination explainer boxes */
-    .combination-explainer {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* Two columns */
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
+    <p>
+      OntoGraph could give a useful overview, but it cannot display the names of object properties directly on each link. To show concrete property names and relationships, we exported OntoGraph to a directed-graph (.dot) format. The result shows labeled arrows that indicate which object properties connect the main classes to <em>Aesthetic</em>.
+    </p>
 
-    .combo-box {
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 16px;
-    }
+    <div class="kg-figure">
+      <img src="img/aes_digraph.png" alt="Graph with object property labels" />
+      <p class="kg-caption">Figure 2 : Core classes rendered with object-property labels on the edges. This view clarifies, for example, how <em>Context</em> and <em>ConceptualIdea</em> shape an aesthetic, and how <em>AestheticElement</em> and <em>LifeStyle</em> concretely embody it.</p>
+    </div>
 
-    .combo-box strong {
-      font-size: 1.1rem;
-      color: #333;
-    }
+    <p>
+      Next is a focus on the creative process perspective. We modelled aesthetic diffusion as a three-stage creative process; <em>Divergence</em>, <em>Convergence</em>, and <em>Metaconvergence</em>, and used graph links (e.g., <code>resultsIn</code>) to show how these stages produce or stabilize an aesthetic. The cycle representation also suggests how one aesthetic can give rise to or influence another.
+    </p>
 
-    .combo-box ul {
-      padding-left: 20px; /* Indent list */
-      margin-top: 10px;
-    }
+    <div class="kg-figure-vertical">
+      <img src="img/aes_creativeprocess_digraph.png" alt="Creative process cycle: Divergence, Convergence, Metaconvergence" />
+      <p class="kg-caption">Figure 3 : Visualization of the creative-process cycle. Nodes represent process classes and edges show relations that link stages to aesthetic outcomes and to other aesthetics.</p>
+    </div>
 
-    .combo-box li {
-      margin-bottom: 5px; /* Spacing between list items */
-    }
+    <p>
+      We then loaded our dataset of instantiated aesthetics and attempted instance level visualizations. The example below shows elements related to <em>Dark Academia</em>. Although this instance graph is somewhat dense, it helps reveal which aesthetic elements, emotions, and behaviours concretely characterize <em>Dark Academia</em>.
+    </p>
 
-    /* Media query for smaller screens (mobile) */
-    @media (max-width: 768px) {
-      /* Stack grid items in a single column */
-      .stats-figure-grid,
-      .combination-explainer {
-        grid-template-columns: 1fr; /* Single column */
-        gap: 1rem;
-      }
-    }
-  </style>
+    <div class="kg-figure">
+      <img src="img/DarkAcademia_relations.png" alt="Dark Academia instance-level graph" />
+      <p class="kg-caption">Figure 4 : Instance level graph for <em>Dark Academia</em>. Instance nodes (purple diamonds) connect to category nodes (ochre dots), showing concrete examples of elements, emotions, and behaviours associated with the aesthetic.</p>
+    </div>
 
+    <p>
+      The image below demonstrates the creative process phases (Divergence, Convergence, Metaconvergence) at the instance level. We can understand that <em>Dark Academia</em> maps to specific phase activities  e.g., <em>Inspiration, Bricolage, Ideation</em> in Divergence; <em>Synthesis, Selection</em> in Convergence; and <em>Recontextualization, Reproduction</em> in Metaconvergence.
+    </p>
 
-  <p>
-    To represent the ontology visually and to provide an intuitive understanding of the structure, we visualized the OWL model exported from Protégé as RDF triples and explored several graph representations. Because the entire ontology contains a large amount of information, a single static diagram is often too dense to read. We therefore produced multiple visualizations using different tools and perspectives to highlight specific parts of the model.
-  </p>
+    <div class="kg-figure">
+      <img src="img/DarkAcademia_process.png" alt="Dark Academia process-phase mapping" />
+      <p class="kg-caption">Figure 5 : Process-phase mapping for <em>Dark Academia</em>. Instances are grouped by Divergence / Convergence / Metaconvergence, showing how concrete activities and elements realise each phase.</p>
+    </div>
 
-  <div class="kg-figure">
-    <img src="img/aes_classses.png" alt="OntoGraph focused on Aesthetic" />
-    <p class="kg-caption">Figure 1 : OntoGraph view focused on the core entity <em>Aesthetic</em>. The view shows classes directly connected to Aesthetic and related subclasses (Community, Context, Emotion, AestheticElement, etc.), giving a quick overview of the main building blocks that form an aesthetic.</p>
-  </div>
+    <p>
+      Finally, we provide an interactive visualization of the full ontology to explore concepts, classes, properties dynamically.
+    </p>
 
-  <p>
-    OntoGraph could give a useful overview, but it cannot display the names of object properties directly on each link. To show concrete property names and relationships, we exported OntoGraph to a directed-graph (.dot) format. The result shows labeled arrows that indicate which object properties connect the main classes to <em>Aesthetic</em>.
-  </p>
+    <div class="kg-figure">
+      <iframe src="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/digitalctrlv/ontologycore/refs/heads/main/ontologycore-251102.ttl" title="WebVOWL visualization" width="90%" height="600"></iframe>
 
-  <div class="kg-figure">
-    <img src="img/aes_digraph.png" alt="Graph with object property labels" />
-    <p class="kg-caption">Figure 2 : Core classes rendered with object-property labels on the edges. This view clarifies, for example, how <em>Context</em> and <em>ConceptualIdea</em> shape an aesthetic, and how <em>AestheticElement</em> and <em>LifeStyle</em> concretely embody it.</p>
-  </div>
+    </div>
+  </section>
 
-  <p>
-    Next is a focus on the creative process perspective. We modelled aesthetic diffusion as a three-stage creative process; <em>Divergence</em>, <em>Convergence</em>, and <em>Metaconvergence</em>, and used graph links (e.g., <code>resultsIn</code>) to show how these stages produce or stabilize an aesthetic. The cycle representation also suggests how one aesthetic can give rise to or influence another.
-  </p>
+  <button id="scrollToTopBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+</button>
 
-  <div class="kg-figure-vertical">
-    <img src="img/aes_creativeprocess_digraph.png" alt="Creative process cycle: Divergence, Convergence, Metaconvergence" />
-    <p class="kg-caption">Figure 3 : Visualization of the creative-process cycle. Nodes represent process classes and edges show relations that link stages to aesthetic outcomes and to other aesthetics.</p>
-  </div>
+<script src="./js/main.js"></script>
 
-  <p>
-    We then loaded our dataset of instantiated aesthetics and attempted instance level visualizations. The example below shows elements related to <em>Dark Academia</em>. Although this instance graph is somewhat dense, it helps reveal which aesthetic elements, emotions, and behaviours concretely characterize <em>Dark Academia</em>.
-  </p>
-
-  <div class="kg-figure">
-    <img src="img/DarkAcademia_relations.png" alt="Dark Academia instance-level graph" />
-    <p class="kg-caption">Figure 4 : Instance level graph for <em>Dark Academia</em>. Instance nodes (purple diamonds) connect to category nodes (ochre dots), showing concrete examples of elements, emotions, and behaviours associated with the aesthetic.</p>
-  </div>
-
-  <p>
-    The image below demonstrates the creative process phases (Divergence, Convergence, Metaconvergence) at the instance level. We can understand that <em>Dark Academia</em> maps to specific phase activities  e.g., <em>Inspiration, Bricolage, Ideation</em> in Divergence; <em>Synthesis, Selection</em> in Convergence; and <em>Recontextualization, Reproduction</em> in Metaconvergence.
-  </p>
-
-  <div class="kg-figure">
-    <img src="img/DarkAcademia_process.png" alt="Dark Academia process-phase mapping" />
-    <p class="kg-caption">Figure 5 : Process-phase mapping for <em>Dark Academia</em>. Instances are grouped by Divergence / Convergence / Metaconvergence, showing how concrete activities and elements realise each phase.</p>
-  </div>
-
-  <p>
-    Finally, we provide an interactive visualization of the full ontology to explore concepts, classes, properties dynamically.
-  </p>
-
-  <div class="kg-figure">
-    <iframe src="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/digitalctrlv/ontologycore/refs/heads/main/ontologycore-251102.ttl" title="WebVOWL visualization" width="90%" height="600"></iframe>
-
-  </div>
-</section>
+</body>
+</html>

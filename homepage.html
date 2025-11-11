@@ -1,45 +1,50 @@
-<section id="homepage" style="text-align: center;">
+<!DOCTYPE html>
+<html lang="en" encoding="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontologycore: Web Aesthetics Ontology</title>
     
-    <h1>Ontology Core: <br> Mapping Aesthetic Creativity in the Digital Age</h1>
-    <p style="font-size: 1.1rem; max-width: 800px; margin: 20px auto;">
-        Welcome! Ontology Core is a collaborative project exploring the intersection between aesthetics and creativity through ontological modeling. 
-        Built by three masters students as part of the University of Bologna’s Digital Humanities program, it maps how web aesthetics from Y2K to Dark Academia emerge, evolve, and influence creative production. <br><br>
-        This website serves as both a documentation of our research journey and a platform to share our findings, methodologies, and the ontology we developed.
-    </p>
-    
-    <!-- <div style="margin: 30px 0; padding: 10px; border: 1px solid #e0e0e0; background: #f9f9f9;">
-        [Image of web aesthetics collage]
-        <p style="font-size: 0.9rem; color: #555; margin-top: 10px;">
-            A moodboard of various web aesthetics discussed in this project.
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/customgallery.css">
+</head>
+
+<body>
+    <section id="homepage" style="text-align: center;">
+        
+        <h1><img style="width: 8vw" src="./img/spark.png">Ontology Core</h1>
+        <p class="subtitle" style="font-family: 'Pixelify Sans', sans-serif">Mapping Aesthetic <span style="color:#0044cc">Creativity</span> in the Digital Age</h2>
+        <p style="font-size: 1.1rem; max-width: 800px; margin: 20px auto;">
+            Ontology Core is a collaborative project exploring the intersection between aesthetics and creativity through ontological modeling. 
+            Built by three masters students as part of the University of Bologna’s Digital Humanities program, it maps how web aesthetics from Y2K to Dark Academia emerge, evolve, and influence creative production. <br><br>
+            This website serves as both a documentation of our research journey and a platform to share our findings, methodologies, and the ontology we developed.
+            <br>
+            <br>
+            Browse through our moodboard below to get a visual sense of the aesthetics we studied, and learn more about our project in the chapters linked in the sidebar.
         </p>
-    </div>
-     -->
-    <p>Ready to begin? Start with the first chapter.</p>
-    <a href="overview.html" class="nav-link" id="start-exploring-link" style="
-        display: inline-block;
-        padding: 12px 25px;
-        font-size: 1rem;
-        font-weight: 600;
-        color: #fff;
-        background-color: #0044cc; /* Stijl van de actieve link */
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.2s ease;
-    ">
-        Get Started
-    </a>
 
-    <p><br></p>
+        <p><br></p>
 
-
-    <div class="pinterest-grid" id="pinterest-grid">
-    </div>
-
-    <div id="media-modal" class="modal-overlay">
-        <span class="modal-close-btn" id="modal-close">&times;</span>
-        <div class="modal-content-wrapper">
-            <div id="modal-content-container"></div>
+        <div class="pinterest-grid" id="pinterest-grid">
         </div>
-    </div>
-    
-</section>
+
+        <div id="media-modal" class="modal-overlay">
+            <span class="modal-close-btn" id="modal-close">&times;</span>
+            <div class="modal-content-wrapper">
+                <div id="modal-content-container"></div>
+            </div>
+        </div>
+        
+    </section>
+
+    <button id="scrollToTopBtn" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

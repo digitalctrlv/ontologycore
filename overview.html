@@ -1,107 +1,29 @@
-<style>
 
-.flip-card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for wider view */
-  gap: 1.2rem;
-  padding: 1rem;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 100%;
-  perspective: 1000px;
-}
-
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.flip-card-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.flip-card-back {
-  background-color: rgb(168, 167, 167);
-  color: white;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-  box-sizing: border-box;
-  font-size: 0.85rem;
-  overflow-y: auto;
-  height: 100%;
-  max-height: 100%;
-  overflow-y: auto;
-  box-sizing: border-box;
-  padding: 1rem;
-
-}
-
-.flip-card-back ul {
-  list-style-position: inside;
-  padding-left: 0;
-  margin: 0 auto;
-  text-align: center;
-}
-
-
-/* スマホサイズ：2列×3行に変更 */
-@media (max-width: 768px) {
-  .flip-card-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .flip-card-back {
-    font-size: 0.7rem;
-    padding: 0.5rem;
-  }
-  .flip-card-back h3 {
-    font-size: 0.7rem;
-  }
-}
-</style>
-<section id="overview">
-    <h2>1. Overview</h2>
-    <!-- <p>Place your introductory text here... This is the default page that loads.</p> -->
+<!DOCTYPE html>
+<html lang="en" encoding="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontologycore: Web Aesthetics Ontology</title>
     
-    <p>"OntologyCore", an ontology of aesthetics and creativity was developed within the course Knowledge Representation and Extraction, taught by Professor Aldo Gangemi during a.y. 2024/2025 of the Master’s Degree in Digital Humanities and Digital Knowledge at the University of Bologna. The project’s aim is to apply ontology methodologies to uncover the dynamics of aesthetics and creativity.</p>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/customgallery.css">
+</head>
 
-    <h3 id="kre-project">1.1 The Project</h3>
+<body>    
+    <section id="overview">
+        <h2>1. Overview</h2>
+        <!-- <p>Place your introductory text here... This is the default page that loads.</p> -->
+        
+        <p><span style="color:#0044cc"><i>OntologyCore</i></span>, an ontology of aesthetics and creativity was developed within the course Knowledge Representation and Extraction, taught by Professor Aldo Gangemi during a.y. 2024/2025 of the Master’s Degree in Digital Humanities and Digital Knowledge at the University of Bologna. The project’s aim is to apply ontology methodologies to uncover the dynamics of aesthetics and creativity.</p>
+
+        <h3 id="kre-project">1.1 The Project</h3>
 
         <p>In recent years, aesthetics such as Y2K, Cottagecore, and Grunge have emerged, declined, and been reborn in constant cycles of reinterpretation and reconstruction. These aesthetics are not merely visual trends but complex cultural phenomena that weave emotion, symbolism, and lifestyle dimensions. They represent both a revival of past concepts and their transformation within new social and technological contexts.</p>
 
         <p>The rise of digital media, especially social media platforms, has accelerated the creation and diffusion of these aesthetics. Among younger generations such as Gen Z, they are not only consumed but also actively performed and redefined. The boundary between creator and consumer has become increasingly blurred: any user can participate in shaping and expanding an aesthetic through creative engagement.</p>
 
-        <p>This accelerated rhythm of aesthetic formation, driven by digital circulation and nostalgia for the past, raises key questions: <i>Can these aesthetic practices be understood as creative acts? If so, what forms of creativity do they embody?</i> Through the construction of our ontology, this project aims to explore the intersection where aesthetics and creativity meet, evolve, and mutually define each other in the digital age.</p>
-
-    <h3 id="aesthetics">1.2 Aesthetics</h3>
-    <p>The word "aesthetic" originated as the philosophical discussion about what beauty is, how we should approach it, and why it exists. Later, the academic field of art history used aesthetic to refer to a set of principles motivating artists and certain periods of art history. In contemporary digital culture, Millennials and Generation Z started using that term as an adjective that describes what they personally consider beautiful.</p>
-    <p>Aesthetics have now come to mean as coherent sets of visual, cultural, and stylistic principles that define particular approaches to beauty, design, and lifestyle. All aesthetics have a background and history that has a variety of origins. There is currently no dictionary definition that captures the complexity of this phenomenon, which arose in the Internet youth.</p>
+        <p>This accelerated rhythm of aesthetic formation, driven by digital circulation and nostalgia for the past, raises key questions: <span style="color:#0044cc"><i>Can these aesthetic practices be understood as creative acts? If so, what forms of creativity do they embody?</i></span> Through the construction of our ontology, this project aims to explore the intersection where aesthetics and creativity meet, evolve, and mutually define each other in the digital age.</p>
 
     <p>In our ontology, aesthetics is treated as a conceptual entities that are:</p>
     <ul>
@@ -230,3 +152,31 @@
     <figure><img src="img\cottagecore.jpg" alt="cottage aesthetic" style="max-width: 80%; height: auto; margin-left: auto; margin-right: auto; display: block;"/><figcaption style="text-align: center;">Image of Cottagecore</figcaption></figure>
 
 </section> -->
+        <h3 id="aesthetics">1.2 Aesthetics</h3>
+        <p>The word "aesthetic" originated as the philosophical discussion about what beauty is, how we should approach it, and why it exists. Later, the academic field of art history used aesthetic to refer to a set of principles motivating artists and certain periods of art history. In contemporary digital culture, Millennials and Generation Z started using that term as an adjective that describes what they personally consider beautiful.</p>
+        <p>Aesthetics have now come to mean as <span style="color:#0044cc">coherent sets of visual, cultural, and stylistic principles that define particular approaches to beauty, design, and lifestyle</span>. All aesthetics have a background and history that has a variety of origins. There is currently no dictionary definition that captures the complexity of this phenomenon, which arose in the Internet youth.</p>
+
+        <p>In our ontology, aesthetics is treated as a conceptual entities that are:</p>
+        <ul>
+            <li>Influenced by cultural or historical contexts, and evoked by emotions or certain values</li>
+            <li>Connected to elements (products, fashion, music, color palettes, digital art etc.) and lifestyles (behaviours, values and practices that constitute living the aesthetic).</li>
+            <li>Expressed and spread through platforms, media, and communities.</li>
+            <li>Are dynamic and evolve over time through reinterpretation and adaptation.</li>
+        </ul>
+        <p>As an example of an aesthetic, the Aesthetic Wiki describes "Cottagecore" as follows:</p>
+        <blockquote>"Cottagecore is an internet aesthetic that romanticizes a simple, self-sufficient life in harmony with nature, drawing inspiration from an idealized vision of Western rural and farm life. Gaining widespread popularity in the late 2010s and early 2020s on platforms like Tumblr and TikTok, it serves as a form of gentle escapism from the pressures of modern, capitalist society. The aesthetic is defined by a visual language of pastoral nostalgia, featuring imagery of baking bread, gardening, foraging, and caring for farm animals. The fashion consists of soft, comfortable clothing made from natural fibers, such as flowy prairie dresses, aprons, and hand-knitted items." (Aesthetics Wiki, n.d.)
+        </blockquote>
+        <figure><img src="img\cottagecore.jpg" alt="cottage aesthetic" style="max-width: 80%; height: auto; margin-left: auto; margin-right: auto; display: block;"/><figcaption style="text-align: center;">Image of Cottagecore</figcaption></figure>
+    </section>
+
+    <button id="scrollToTopBtn" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

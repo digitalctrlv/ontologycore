@@ -1,1991 +1,1622 @@
-<section id="knowledge-representation">
-    <h2>4. Knowledge representation</h2>
+<!DOCTYPE html>
+<html lang="en" encoding="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontologycore: Web Aesthetics Ontology</title>
 
-    <h3 id="ontology-intro">4.1 The Ontology</h3>
-    <p class="lead">Our ontology formalizes aesthetics as complex cultural entities that emerge through community-driven
-        creative processes on digital platforms. By modeling their characteristic elements and behavioral patterns, we
-        can better understand how contemporary aesthetics differ from traditional subcultures in their formation and
-        dissemination, and how they offer new popular ways of being creative through the reuse and recontextualization
-        of past creative products.</p>
-    <p>Aesthetics are abstract, dynamic, and modern concepts. With our ontology, we aim to map their characteristic
-        elements, relevant behaviors, and the creative processes involved in their creation and dissemination. The
-        previous chapters introduced three theoretical frameworks that helped us create these focus points and position
-        these intangible cultural commodities within creative theory.</p>
+    <link rel="icon" href="./img/spark.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/customgallery.css">
+</head>
 
-    <p>There have been numerous resources classifying what belongs to an aesthetic and what does not. For example, we
-        made deliberate use of the independent, crowd-sourced <a href="http://aesthetics.fandom.com/wiki/"
-            target="_blank">Aesthetics Wiki</a> for identifying features of our selected aesthetics.
-        Essentially, this classification task represents the genesis of aesthetics themselves. Aesthetics inherit from
-        their 'parent class' of Subcultures the practice of inclusion and exclusion. This practice operates through
-        various cultural forms such as art, music, and clothing, often based on ethnicity, interests, and social
-        background.</p>
+<body>    
+    <section id="knowledge-representation">
+        <h2>4. Knowledge Representation</h2>
+        <p>To find the Turtle file of our ontology, navigate to the <a href="https://github.com/digitalctrlv/ontologycore/blob/main/ontology_final_all_instances.ttl">Github repository</a>.</p>
 
-    <p>Undeniably, these types of social groupings are extremely similar. Yet recent aesthetics such as Clean Girl, Y2K,
-        and Dark Academia demonstrate distinctive characteristics through <i>Metaconvergence</i>. This term is coined in
-        the earlier mentioned <a href="https://github.com/aldogangemi/CreOn/blob/main/creon.ttl" target="_blank">CreOn
-            ontology</a> and has become an increasingly popular method of expressing creativity on digital platforms. To
-        clarify this concept within our framework, we interpret the term in our ontology core as follows:</p>
+        <h3 id="ontology-intro">4.1 The Ontology</h3>
+        <p class="lead">Our ontology formalizes aesthetics as complex cultural entities that emerge through community-driven
+            creative processes on digital platforms. By modeling their characteristic elements and behavioral patterns, we
+            can better understand how contemporary aesthetics differ from traditional subcultures in their formation and
+            dissemination, and how they offer new popular ways of being creative through the reuse and recontextualization
+            of past creative products.</p>
+        <p>Aesthetics are abstract, dynamic, and modern concepts. With our ontology, we aim to map their characteristic
+            elements, relevant behaviors, and the creative processes involved in their creation and dissemination. The
+            previous chapters introduced three theoretical frameworks that helped us create these focus points and position
+            these intangible cultural commodities within creative theory.</p>
 
-    <blockquote>
-        <p><i>"Metaconvergence is the process by which individuals or groups combine elements from multiple subcultures
-                or aesthetics to create new, hybrid forms of expression. This phenomenon is particularly prevalent in
-                digital spaces, where the rapid exchange of ideas and cultural artifacts facilitates the blending of
-                diverse influences. Metaconvergence allows for greater creativity and innovation, as individuals draw
-                upon a wider range of sources to inform their aesthetic choices. It also reflects the fluid and dynamic
-                nature of contemporary culture, where traditional boundaries between subcultures are increasingly
-                blurred."</i></p>
-    </blockquote>
+        <p>There have been numerous resources classifying what belongs to an aesthetic and what does not. For example, we
+            made deliberate use of the independent, crowd-sourced <a href="http://aesthetics.fandom.com/wiki/"
+                target="_blank">Aesthetics Wiki</a> for identifying features of our selected aesthetics.
+            Essentially, this classification task represents the genesis of aesthetics themselves. Aesthetics inherit from
+            their 'parent class' of Subcultures the practice of inclusion and exclusion. This practice operates through
+            various cultural forms such as art, music, and clothing, often based on ethnicity, interests, and social
+            background.</p>
 
-    <p><i>Bricolage</i>, a creative technique within our Metaconvergence class, appears similar to the Montage and
-        Collage art techniques that gained significant popularity during the Dada art movement in the first half of the
-        twentieth century. Reusing existing visual elements is not an uncommon phenomenon in art and creativity.
-        However, contemporary aesthetics like Y2K operate differently. Y2K's reproduction of a 2000s 'aesthetic' evokes
-        particular emotions such as nostalgia or a sense of belonging to a period that users may have never even
-        experienced. Creative products from the past are recontextualized at rapid speed, not just by one dominant
-        artist but by an anonymous web community. Often, the motive is not protest against dominant culture but rather a
-        means to gain acknowledgment for stylistic efforts and to shape identity.</p>
+        <p>Undeniably, these types of social groupings are extremely similar. Yet recent aesthetics such as Clean Girl, Y2K,
+            and Dark Academia demonstrate distinctive characteristics through <i>Metaconvergence</i>. This term is coined in
+            the earlier mentioned <a href="https://github.com/aldogangemi/CreOn/blob/main/creon.ttl" target="_blank">CreOn
+                ontology</a> and has become an increasingly popular method of expressing creativity on digital platforms. To
+            clarify this concept within our framework, we interpret the term in our ontology core as follows:</p>
 
-    <p>From here, with our ontology, we aim not only bring aesthetics into existence but also formalize the specific
-        creative processes present in their emergence. It is valuable to move beyond understanding aesthetics as
-        predominantly formalistic subcultures. Instead, we can observe how they facilitate a modern, grassroots,
-        community-driven approach to identity formation and art making.</p>
+        <blockquote>
+            <p><i>"Metaconvergence is the process by which individuals or groups combine elements from multiple subcultures
+                    or aesthetics to create new, hybrid forms of expression. This phenomenon is particularly prevalent in
+                    digital spaces, where the rapid exchange of ideas and cultural artifacts facilitates the blending of
+                    diverse influences. Metaconvergence allows for greater creativity and innovation, as individuals draw
+                    upon a wider range of sources to inform their aesthetic choices. It also reflects the fluid and dynamic
+                    nature of contemporary culture, where traditional boundaries between subcultures are increasingly
+                    blurred."</i></p>
+        </blockquote>
 
-    <p>We initially selected six aesthetics and adapted our model to their characteristics: <b>Y2K</b>,
-        <b>Cottagecore</b>, <b>Dark Academia</b>, <b>Grunge</b>, <b>Old Money</b> and <b>Clean Girl</b>. Our selection
-        aimed to cover a variety of aesthetics that address different temporal contexts and demonstrate distinct
-        creative phases. Notwithstanding, we recognize that there is considerable overlap since their usage and
-        emergence occur around the same time period. Therefore, our analysis will show that most of them use the same
-        types of media channels to disseminate the aesthetic. This shared infrastructure highlights the interconnected
-        nature of contemporary aesthetic movements and their collective reliance on digital platforms for expression and
-        growth.
-    </p>
+        <p><i>Bricolage</i>, a creative technique within our Metaconvergence class, appears similar to the Montage and
+            Collage art techniques that gained significant popularity during the Dada art movement in the first half of the
+            twentieth century. Reusing existing visual elements is not an uncommon phenomenon in art and creativity.
+            However, contemporary aesthetics like Y2K operate differently. Y2K's reproduction of a 2000s 'aesthetic' evokes
+            particular emotions such as nostalgia or a sense of belonging to a period that users may have never even
+            experienced. Creative products from the past are recontextualized at rapid speed, not just by one dominant
+            artist but by an anonymous web community. Often, the motive is not protest against dominant culture but rather a
+            means to gain acknowledgment for stylistic efforts and to shape identity.</p>
 
-    <h3 id="modeling">4.2 Modeling</h3>
-    <p class="lead">In this section we will describe how we used LLMs to model our ontology using a bottom-up extreme
-        design methodolgy and CLOWN. During this phase, we systematically generated definitions, descriptions, and user
-        scenarios for each aesthetic. This generated content informed the development of competency questions, which
-        provided the structural foundation for constructing the ontology.</p>
+        <p>From here, with our ontology, we aim not only bring aesthetics into existence but also formalize the specific
+            creative processes present in their emergence. It is valuable to move beyond understanding aesthetics as
+            predominantly formalistic subcultures. Instead, we can observe how they facilitate a modern, grassroots,
+            community-driven approach to identity formation and art making.</p>
 
-    <h4 id="user-story">4.2.1 User story & LLMs</h4>
-    <p class="lead">First stop: <b>C</b>ontext and Literature State of the Art (<b>C</b>LOWN).</p>
+        <p><span style="color:#0044cc">We initially selected six aesthetics and adapted our model to their characteristics: <b>Y2K</b>,
+            <b>Cottagecore</b>, <b>Dark Academia</b>, <b>Grunge</b>, <b>Old Money</b> and <b>Clean Girl</b></span>. Our selection
+            aimed to cover a variety of aesthetics that address different temporal contexts and demonstrate distinct
+            creative phases. Notwithstanding, we recognize that there is considerable overlap since their usage and
+            emergence occur around the same time period. Therefore, our analysis will show that most of them use the same
+            types of media channels to disseminate the aesthetic. This shared infrastructure highlights the interconnected
+            nature of contemporary aesthetic movements and their collective reliance on digital platforms for expression and
+            growth.
+        </p>
 
-    <p>Our search for a model started by searching for interesting concepts that should be defined in the model. Here
-        are some examples of the prompts we fed to the LLM and the output it provided us.</p>
+        <h3 id="modeling">4.2 Modeling</h3>
+        <p class="lead">In this section we will describe how we used LLMs to model our ontology using a bottom-up extreme
+            design methodolgy and CLOWN. During this phase, we systematically generated definitions, descriptions, and user
+            scenarios for each aesthetic. This generated content informed the development of competency questions, which
+            provided the structural foundation for constructing the ontology.</p>
 
-    <p class="prompt">💁‍♀️Please give a definition of an "aesthetic."</p>
-    <div class="chatbot">🤖 An "aesthetic" refers to a set of principles or philosophy concerning beauty, art, and
-        taste. It encompasses the study of what makes something beautiful, pleasing, or artistically valuable. The term
-        can be used in several ways:
+        <h4 id="user-story">4.2.1 User story & LLMs</h4>
+        <p class="lead">First stop: <b>C</b>ontext and Literature State of the Art (<b>C</b>LOWN).</p>
 
-        <li><b>As a noun: An aesthetic is a particular style, approach, or set of principles that defines what is
-                considered beautiful or artistically appealing within a specific context. For example, "the minimalist
-                aesthetic" emphasizes simplicity and clean lines, while "the vintage aesthetic" draws on nostalgic
-                elements from past eras.</b></li>
+        <p>Our search for a model started by searching for interesting concepts that should be defined in the model. Here
+            are some examples of the prompts we fed to the LLM and the output it provided us.</p>
 
-        <li>In philosophy: Aesthetics is the branch of philosophy that examines the nature of beauty, art, and artistic
-            judgment. It explores questions like what makes something beautiful, how we experience and evaluate art, and
-            what constitutes good taste.</li>
+        <p class="prompt">💁‍♀️Please give a definition of an "aesthetic."</p>
+        <div class="chatbot">🤖 An "aesthetic" refers to a set of principles or philosophy concerning beauty, art, and
+            taste. It encompasses the study of what makes something beautiful, pleasing, or artistically valuable. The term
+            can be used in several ways:
 
-        <li><b>In everyday usage: People often use "aesthetic" to describe the overall visual style or mood of something
-                - whether it's fashion, interior design, social media posts, or any curated visual presentation. In this
-                context, it's become somewhat synonymous with "style" or "vibe."</b></li>
-    </div>
+            <li><b>As a noun: An aesthetic is a particular style, approach, or set of principles that defines what is
+                    considered beautiful or artistically appealing within a specific context. For example, "the minimalist
+                    aesthetic" emphasizes simplicity and clean lines, while "the vintage aesthetic" draws on nostalgic
+                    elements from past eras.</b></li>
 
-    <p class="prompt">💁‍♀️Please give me 10 examples of aesthetics.</p>
-    <div class="chatbot">🤖 Here are 10 examples of aesthetics:
+            <li>In philosophy: Aesthetics is the branch of philosophy that examines the nature of beauty, art, and artistic
+                judgment. It explores questions like what makes something beautiful, how we experience and evaluate art, and
+                what constitutes good taste.</li>
 
-        <ol>1. Cottagecore</ol>
-        <ol>2. Fairycore</ol>
-        <ol>3. Dark Academia</ol>
-        <ol>4. Goblincore</ol>
-        <ol>5. Vaporwave</ol>
-        <ol>6. Y2K/Cyber Y2K</ol>
-        <ol>7. Heroin Chic (90s)</ol>
-        <ol>8. Minimalism</ol>
-        <ol>9. Cyberpunk</ol>
-        <ol>10. Weirdcore</ol>
+            <li><b>In everyday usage: People often use "aesthetic" to describe the overall visual style or mood of something
+                    - whether it's fashion, interior design, social media posts, or any curated visual presentation. In this
+                    context, it's become somewhat synonymous with "style" or "vibe."</b></li>
+        </div>
 
-    </div>
+        <p class="prompt">💁‍♀️Please give me 10 examples of aesthetics.</p>
+        <div class="chatbot">🤖 Here are 10 examples of aesthetics:
 
-    <p>When we arrived at our selection of six aesthetics (<b>Y2K</b>, <b>Cottagecore</b>, <b>Dark Academia</b>,
-        <b>Grunge</b>, <b>Old Money</b> and <b>Clean Girl</b>), we aimed to explore its interpretation of these
-        phenomena further.
-    </p>
+            <ol>1. Cottagecore</ol>
+            <ol>2. Fairycore</ol>
+            <ol>3. Dark Academia</ol>
+            <ol>4. Goblincore</ol>
+            <ol>5. Vaporwave</ol>
+            <ol>6. Y2K/Cyber Y2K</ol>
+            <ol>7. Heroin Chic (90s)</ol>
+            <ol>8. Minimalism</ol>
+            <ol>9. Cyberpunk</ol>
+            <ol>10. Weirdcore</ol>
 
-    <p class="prompt">💁‍♀️Please give me a description and user scenario for our selection of aesthetics.</p>
-    <div class="chatbot">🤖 An "aesthetic" refers to a set of principles or philosophy concerning beauty, art, and
-        taste. It encompasses the study of what makes something beautiful, pleasing, or artistically valuable. The term
-        can be used in several ways:
+        </div>
 
-        <ol>1. Y2K (/Cyber Y2K)</ol>
-        Metallic silver textures, holographic materials, frosted plastics, bright blues and pinks, bubble shapes,
-        futuristic fonts, digital camera aesthetics, low-resolution graphics, and late 90s/early 2000s technology
-        references. Think iMacs, flip phones, and optimistic digital future vibes.<br>
+        <p>When we arrived at our selection of six aesthetics (<b>Y2K</b>, <b>Cottagecore</b>, <b>Dark Academia</b>,
+            <b>Grunge</b>, <b>Old Money</b> and <b>Clean Girl</b>), we aimed to explore its interpretation of these
+            phenomena further.
+        </p>
 
-        <i>User scenario:</i> Jamie, a fashion content creator, embraces Y2K revival as both personal style and career
-        strategy. She document their thrift shopping for vintage tech accessories, create
-        makeup tutorials using holographic eyeshadows, and attend events in futuristic outfits. This lifestyle positions
-        them at the forefront of
-        nostalgic fashion trends, appeals to their Gen Z audience's desire for optimistic futurism, and creates endless
-        content opportunities around Y2K nostalgia.<br>
+        <p class="prompt">💁‍♀️Please give me a description and user scenario for our selection of aesthetics.</p>
+        <div class="chatbot">🤖 An "aesthetic" refers to a set of principles or philosophy concerning beauty, art, and
+            taste. It encompasses the study of what makes something beautiful, pleasing, or artistically valuable. The term
+            can be used in several ways:
 
-        <ol>2. Dark Academia</ol>
-        Characterized by gothic architecture, vintage books, candlelit libraries, classical art, and muted colors like
-        deep browns, forest greens, and burgundy. Think old university halls,
-        typewriters, and scholarly pursuits with a moody, intellectual atmosphere.<br>
+            <ol>1. Y2K (/Cyber Y2K)</ol>
+            Metallic silver textures, holographic materials, frosted plastics, bright blues and pinks, bubble shapes,
+            futuristic fonts, digital camera aesthetics, low-resolution graphics, and late 90s/early 2000s technology
+            references. Think iMacs, flip phones, and optimistic digital future vibes.<br>
 
-        <i>User scenario:</i> Graduate Student's Daily Routine Sarah, a philosophy PhD candidate, structures her
-        lifestyle around Dark Academia principles. She wakes early to write in leather-bound journals by candlelight,
-        wears vintage blazers and wool sweaters to campus and spends evenings in dimly lit libraries or coffee shops
-        reading classical literature. This lifestyle helps her feel connected to intellectual traditions, provides
-        motivation for her rigorous studies, and
-        creates a romantic narrative around academic pursuits that might otherwise feel isolating.<br>
+            <i>User scenario:</i> Jamie, a fashion content creator, embraces Y2K revival as both personal style and career
+            strategy. She document their thrift shopping for vintage tech accessories, create
+            makeup tutorials using holographic eyeshadows, and attend events in futuristic outfits. This lifestyle positions
+            them at the forefront of
+            nostalgic fashion trends, appeals to their Gen Z audience's desire for optimistic futurism, and creates endless
+            content opportunities around Y2K nostalgia.<br>
 
-        <ol>3. Cottagecore</ol>
-        Emphasizes rural, pastoral life with floral patterns, vintage dresses, wildflower bouquets, cozy
-        cabins and soft, natural lighting. Colors include cream, sage green, dusty pink, and earth
-        tones that evoke a romanticized countryside lifestyle.<br>
+            <ol>2. Dark Academia</ol>
+            Characterized by gothic architecture, vintage books, candlelit libraries, classical art, and muted colors like
+            deep browns, forest greens, and burgundy. Think old university halls,
+            typewriters, and scholarly pursuits with a moody, intellectual atmosphere.<br>
 
-        <i>User scenario:</i>Remote Worker's Life Shift Marcus, burned out from corporate life, adopts cottagecore
-        living while working remotely as a freelance graphic designer. He moves to a small town, starts each day by
-        tending his vegetable garden, bakes his own bread, and takes work breaks to forage for mushrooms. He wears linen
-        shirts, shops at farmers markets and hosts dinner parties featuring homegrown ingredients. This lifestyle
-        provides stress relief, reconnects him with natural cycles, and gives him a sense of self-sufficiency that
-        balances his digital work life.<br>
+            <i>User scenario:</i> Graduate Student's Daily Routine Sarah, a philosophy PhD candidate, structures her
+            lifestyle around Dark Academia principles. She wakes early to write in leather-bound journals by candlelight,
+            wears vintage blazers and wool sweaters to campus and spends evenings in dimly lit libraries or coffee shops
+            reading classical literature. This lifestyle helps her feel connected to intellectual traditions, provides
+            motivation for her rigorous studies, and
+            creates a romantic narrative around academic pursuits that might otherwise feel isolating.<br>
 
-        <ol>4. Clean girl</ol>
-        Lifestyle aesthetic, including heavy consumerism. It is a recent fashion and lifestyle microtrend characterized
-        by a minimalist and refined approach to beauty and style. It originated as a popular trend on TikTok and
-        Instagram around 2023. The "Clean Girl" trend has been adopted
-        and popularized by influencers and celebrities like Hailey Bieber, who frequently show
-        minimalist outfits and polished, "effortless" appearances. It largely overlaps with That Girl and Vanilla
-        Girl.<br>
+            <ol>3. Cottagecore</ol>
+            Emphasizes rural, pastoral life with floral patterns, vintage dresses, wildflower bouquets, cozy
+            cabins and soft, natural lighting. Colors include cream, sage green, dusty pink, and earth
+            tones that evoke a romanticized countryside lifestyle.<br>
 
-        <i>User scenario:</i> Emma, a 22-year-old marketing professional, adopts the Clean Girl aesthetic to cultivate a
-        polished, effortless image for her new city life. She browses TikTok and Instagram for inspiration, purchasing
-        minimalist staples like gold hoops and neutral loungewear. Emma films her simplified morning routine showcasing
-        dewy skin and slicked-back hair, sharing it with trending audio. Through consistent posting, she gains social
-        validation and refines her personal brand.
+            <i>User scenario:</i>Remote Worker's Life Shift Marcus, burned out from corporate life, adopts cottagecore
+            living while working remotely as a freelance graphic designer. He moves to a small town, starts each day by
+            tending his vegetable garden, bakes his own bread, and takes work breaks to forage for mushrooms. He wears linen
+            shirts, shops at farmers markets and hosts dinner parties featuring homegrown ingredients. This lifestyle
+            provides stress relief, reconnects him with natural cycles, and gives him a sense of self-sufficiency that
+            balances his digital work life.<br>
 
-        <ol>5. Old Money</ol>
-        Emulates understated elegance of generational wealth through tailored blazers, polo shirts,
-        penny loafers, silk scarves, and pearl jewelry in neutral palettes. Emphasizes "quiet luxury" with timeless
-        pieces and minimal logos. Associated with tennis, golf, yachting, and horseback riding. Often functions as
-        performative facade—curating an image of inherited wealth through thrifted designer pieces and "elevated"
-        hobbies regardless of actual economic status.<br>
+            <ol>4. Clean girl</ol>
+            Lifestyle aesthetic, including heavy consumerism. It is a recent fashion and lifestyle microtrend characterized
+            by a minimalist and refined approach to beauty and style. It originated as a popular trend on TikTok and
+            Instagram around 2023. The "Clean Girl" trend has been adopted
+            and popularized by influencers and celebrities like Hailey Bieber, who frequently show
+            minimalist outfits and polished, "effortless" appearances. It largely overlaps with That Girl and Vanilla
+            Girl.<br>
 
-        <i>User Scenario:</i> Sofia, a 22-year-old marketing coordinator, curates an "old money" persona on social
-        media. She thrifts vintage Ralph Lauren, learns tennis at public courts, and photographs herself at free museum
-        days. For Sofia, this aesthetic signals refinement and social capital through styling alone, offering comfort of
-        appearing "established" while teaching her about quality and timeless taste.
+            <i>User scenario:</i> Emma, a 22-year-old marketing professional, adopts the Clean Girl aesthetic to cultivate a
+            polished, effortless image for her new city life. She browses TikTok and Instagram for inspiration, purchasing
+            minimalist staples like gold hoops and neutral loungewear. Emma films her simplified morning routine showcasing
+            dewy skin and slicked-back hair, sharing it with trending audio. Through consistent posting, she gains social
+            validation and refines her personal brand.
 
-        <ol>6. Grunge</ol>
-        Grunge is an aesthetic rooted in the early 1990s alternative music scene, particularly from Seattle. It rejects
-        mainstream polish and consumerism, embracing imperfection, rebellion, and authenticity. The style features
-        flannel shirts, ripped jeans and layered thrifted clothing in muted or dark tones. Its
-        visual language is raw and unkempt.<br>
+            <ol>5. Old Money</ol>
+            Emulates understated elegance of generational wealth through tailored blazers, polo shirts,
+            penny loafers, silk scarves, and pearl jewelry in neutral palettes. Emphasizes "quiet luxury" with timeless
+            pieces and minimal logos. Associated with tennis, golf, yachting, and horseback riding. Often functions as
+            performative facade—curating an image of inherited wealth through thrifted designer pieces and "elevated"
+            hobbies regardless of actual economic status.<br>
 
-        <i>User Scenario:</i>
-        Eli, a 20-year-old art student, expresses his grunge aesthetic through worn-out denim, oversized plaid shirts,
-        and secondhand band tees. He frequents local record stores, sketches in cafés, and documents the city’s
-        forgotten corners on film. For Eli, grunge isn’t just a fashion choice—it’s a way to resist conformity and find
-        beauty in imperfection, using art and style as an outlet for frustration and self-discovery.
+            <i>User Scenario:</i> Sofia, a 22-year-old marketing coordinator, curates an "old money" persona on social
+            media. She thrifts vintage Ralph Lauren, learns tennis at public courts, and photographs herself at free museum
+            days. For Sofia, this aesthetic signals refinement and social capital through styling alone, offering comfort of
+            appearing "established" while teaching her about quality and timeless taste.
 
-    </div>
+            <ol>6. Grunge</ol>
+            Grunge is an aesthetic rooted in the early 1990s alternative music scene, particularly from Seattle. It rejects
+            mainstream polish and consumerism, embracing imperfection, rebellion, and authenticity. The style features
+            flannel shirts, ripped jeans and layered thrifted clothing in muted or dark tones. Its
+            visual language is raw and unkempt.<br>
 
-    <h4 id="classes-properties">4.2.2 Classes and properties</h4>
-    <p class="lead"> During the development of our ontology, we repeatedly refined classes and properties to create an
-        organic
-        structure while maximizing the ontology's informativeness. We began by identifying all possible properties that
-        could connect aesthetics with their elements, resources,
-        influencers, and other related concepts. In the initial "draft" phase, we created over 100 properties. Step by
-        step, we systematically refined them, removing or replacing properties with the most relevant ones. For
-        instance, properties like <code>hasVisualElement</code>/<code>hasAudioElement</code> and similar were replaced
-        with the more concise <code>characterizedBy</code>. Below you can explore the complete list of classes,
-        subclasses, properties and their descriptions.</p>
-    </p>
+            <i>User Scenario:</i>
+            Eli, a 20-year-old art student, expresses his grunge aesthetic through worn-out denim, oversized plaid shirts,
+            and secondhand band tees. He frequents local record stores, sketches in cafés, and documents the city’s
+            forgotten corners on film. For Eli, grunge isn’t just a fashion choice—it’s a way to resist conformity and find
+            beauty in imperfection, using art and style as an outlet for frustration and self-discovery.
 
-    <div class="ontology-structure">
-        <h5>Core Classes Analysis:</h5>
+        </div>
 
-        <div class="class-category">
-            <div class="category-header">
-                <h6>🎯 Main Classes Describing Aesthetic</h6>
-            </div>
-            <div class="category-content">
-                <!-- Core Aesthetic Classes -->
-                <div class="class-group">
-                    <h7>Core Aesthetic Elements</h7>
-                    <div class="class-item"><code>Aesthetic</code> - the main class representing internet aesthetics
-                    </div>
-                    <div class="class-item"><code>AestheticElement</code> - components which characterize aesthetic
-                    </div>
-                    <div class="subclasses">
-                        <div class="subclass-item"><code>AudioElement</code></div>
-                        <div class="subclass-item"><code>VisualElement</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>Color</code></div>
-                            <div class="subclass-item"><code>Material</code></div>
-                            <div class="subclass-item"><code>Pattern</code></div>
+        <h4 id="classes-properties">4.2.2 Classes and properties</h4>
+        <p class="lead"> During the development of our ontology, we repeatedly refined classes and properties to create an
+            organic
+            structure while maximizing the ontology's informativeness. We began by identifying all possible properties that
+            could connect aesthetics with their elements, resources,
+            influencers, and other related concepts. In the initial "draft" phase, we created over 100 properties. Step by
+            step, we systematically refined them, removing or replacing properties with the most relevant ones. For
+            instance, properties like <code>hasVisualElement</code>/<code>hasAudioElement</code> and similar were replaced
+            with the more concise <code>characterizedBy</code>. Below you can explore the complete list of classes,
+            subclasses, properties and their descriptions.</p>
+        </p>
+
+        <div class="ontology-structure">
+            <h5>Core Classes Analysis:</h5>
+
+            <div class="class-category">
+                <div class="category-header">
+                    <h6>🎯 Main Classes Describing Aesthetic</h6>
+                </div>
+                <div class="category-content">
+                    <!-- Core Aesthetic Classes -->
+                    <div class="class-group">
+                        <h7>Core Aesthetic Elements</h7>
+                        <div class="class-item"><code>Aesthetic</code> - the main class representing internet aesthetics
                         </div>
-                    </div>
-                </div>
-
-                <!-- Social Structure -->
-                <div class="class-group">
-                    <h7>Social Structure</h7>
-                    <div class="class-item"><code>Community</code> - groups experiencing aesthetics</div>
-                    <div class="subclasses">
-                        <div class="subclass-item"><code>AgeCommunity</code></div>
-                        <div class="subclass-item"><code>OnlineCommunity</code></div>
-                        <div class="subclass-item"><code>SocialCommunity</code></div>
-                    </div>
-                </div>
-
-                <!-- Contextual Framework -->
-                <div class="class-group">
-                    <h7>Contextual Framework</h7>
-                    <div class="class-item"><code>Context</code> - environmental factors shaping aesthetics</div>
-                    <div class="subclasses">
-                        <div class="subclass-item"><code>CulturalContext</code></div>
-                        <div class="subclass-item"><code>TechnologicalContext</code></div>
-                        <div class="subclass-item"><code>SpatialContext</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>DigitalSpace</code></div>
-                            <div class="subclass-item"><code>PhysicalSpace</code></div>
-                            <div class="deep-nested">
-                                <div class="subclass-item"><code>City</code></div>
-                                <div class="subclass-item"><code>Country</code></div>
+                        <div class="class-item"><code>AestheticElement</code> - components which characterize aesthetic
+                        </div>
+                        <div class="subclasses">
+                            <div class="subclass-item"><code>AudioElement</code></div>
+                            <div class="subclass-item"><code>VisualElement</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>Color</code></div>
+                                <div class="subclass-item"><code>Material</code></div>
+                                <div class="subclass-item"><code>Pattern</code></div>
                             </div>
                         </div>
-                        <div class="subclass-item"><code>TemporalContext</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>Decade</code></div>
-                            <div class="subclass-item"><code>HistoricalEra</code></div>
+                    </div>
+
+                    <!-- Social Structure -->
+                    <div class="class-group">
+                        <h7>Social Structure</h7>
+                        <div class="class-item"><code>Community</code> - groups experiencing aesthetics</div>
+                        <div class="subclasses">
+                            <div class="subclass-item"><code>AgeCommunity</code></div>
+                            <div class="subclass-item"><code>OnlineCommunity</code></div>
+                            <div class="subclass-item"><code>SocialCommunity</code></div>
                         </div>
                     </div>
-                    <div class="class-item"><code>ConceptualIdea</code> - abstract concepts that characterize aesthetics
-                    </div>
-                </div>
 
-                <!-- Supporting Elements -->
-                <div class="class-group">
-                    <h7>Supporting Elements</h7>
-                    <div class="class-item"><code>LifeStyle</code></div>
-                    <div class="subclasses">
-                        <div class="subclass-item"><code>BehaviourPattern</code></div>
-                    </div>
-                    <div class="class-item"><code>Emotion</code></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4Ps of Creativity - оставляем как было -->
-        <div class="class-category">
-            <div class="category-header">
-                <h6>🎭 4Ps of Creativity (Rhodes Model)</h6>
-            </div>
-            <div class="category-content">
-                <p class="category-description">Based on Mel Rhodes' "4 Ps of Creativity" framework: Person, Process,
-                    Product, Press - representing the fundamental components of creative systems.</p>
-
-                <div class="class-group">
-                    <h7>Person</h7>
-                    <div class="subclasses">
-                        <div class="subclass-item"><code>Consumer</code></div>
-                        <div class="subclass-item"><code>Creator</code></div>
-                        <div class="subclass-item"><code>Influencer</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>Blogger</code></div>
-                            <div class="subclass-item"><code>Celebrity</code></div>
-                            <div class="subclass-item"><code>SocialMediaInfluencer</code></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="class-group">
-                    <h7>Process</h7>
-                    <div class="class-item"><code>Process</code> - Developmental phases of aesthetics</div>
-                    <div class="subclasses">
-                        <div class="subclass-item"><code>CreativeProcess</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>Convergence</code> - a process within the creative domain
-                                that seeks coherence and unity of meaning or form. </div>
-                            <div class="subclass-item"><code>Divergence</code> - a creative and cultural process
-                                oriented toward differentiation, experimentation, and the expansion of aesthetic or
-                                social boundaries</div>
-                            <div class="subclass-item"><code>Metaconvergence</code> - an elaboration process that
-                                refines divergent aesthetic expressions into culturally recognizable and functionally
-                                effective creative products. </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="class-group">
-                    <h7>Product</h7>
-                    <div class="class-item"><code>Product</code> - Creative outputs resulting from aesthetic processes
-                    </div>
-                    <div class="subclasses">
-                        <div class="subclass-item"><code>CreativeProduct</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>AuditoryProduct</code></div>
-                            <div class="deep-nested">
-                                <div class="subclass-item"><code>AudioElement</code></div>
+                    <!-- Contextual Framework -->
+                    <div class="class-group">
+                        <h7>Contextual Framework</h7>
+                        <div class="class-item"><code>Context</code> - environmental factors shaping aesthetics</div>
+                        <div class="subclasses">
+                            <div class="subclass-item"><code>CulturalContext</code></div>
+                            <div class="subclass-item"><code>TechnologicalContext</code></div>
+                            <div class="subclass-item"><code>SpatialContext</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>DigitalSpace</code></div>
+                                <div class="subclass-item"><code>PhysicalSpace</code></div>
+                                <div class="deep-nested">
+                                    <div class="subclass-item"><code>City</code></div>
+                                    <div class="subclass-item"><code>Country</code></div>
+                                </div>
                             </div>
-                            <div class="subclass-item"><code>DigitalProduct</code></div>
-                            <div class="deep-nested">
-                                <div class="subclass-item"><code>InteractiveProduct</code></div>
-                            </div>
-                            <div class="subclass-item"><code>FashionProduct</code></div>
-                            <div class="subclass-item"><code>TextualProduct</code></div>
-                            <div class="subclass-item"><code>VisualProduct</code></div>
-                            <div class="deep-nested">
-                                <div class="subclass-item"><code>ImageProduct</code></div>
-                                <div class="subclass-item"><code>VideoProduct</code></div>
-                                <div class="subclass-item"><code>VisualElement</code></div>
+                            <div class="subclass-item"><code>TemporalContext</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>Decade</code></div>
+                                <div class="subclass-item"><code>HistoricalEra</code></div>
                             </div>
                         </div>
-                        <div class="subclass-item"><code>Tool</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>PhysicalTool</code></div>
-                            <div class="subclass-item"><code>SoftwareTool</code></div>
+                        <div class="class-item"><code>ConceptualIdea</code> - abstract concepts that characterize aesthetics
                         </div>
                     </div>
-                </div>
 
-                <div class="class-group">
-                    <h7>Press</h7>
-                    <div class="subclasses">
-                        <div class="subclass-item"><code>Media</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>Blog</code></div>
-                            <div class="subclass-item"><code>Book</code></div>
-                            <div class="subclass-item"><code>Games</code></div>
-                            <div class="subclass-item"><code>Magazine</code></div>
-                            <div class="subclass-item"><code>Movie</code></div>
-                            <div class="subclass-item"><code>Music</code></div>
-                            <div class="subclass-item"><code>Print</code></div>
-                            <div class="subclass-item"><code>SocialMedia</code></div>
-                            <div class="subclass-item"><code>TvShow</code></div>
+                    <!-- Supporting Elements -->
+                    <div class="class-group">
+                        <h7>Supporting Elements</h7>
+                        <div class="class-item"><code>LifeStyle</code></div>
+                        <div class="subclasses">
+                            <div class="subclass-item"><code>BehaviourPattern</code></div>
                         </div>
-                        <div class="subclass-item"><code>Technology</code></div>
-                        <div class="nested-subclasses">
-                            <div class="subclass-item"><code>Camera</code></div>
-                            <div class="subclass-item"><code>Phone</code></div>
-                            <div class="subclass-item"><code>Radio</code></div>
-                            <div class="subclass-item"><code>Television</code></div>
-                        </div>
+                        <div class="class-item"><code>Emotion</code></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="properties-section">
-        <h5>Property Definitions:</h5>
-        <div class="properties-detailed">
-            <div class="property-item">
-                <code>characterizedBy</code>
-                <div class="property-description">Links aesthetics to their defining visual and sensory elements,
-                    establishing the core visual vocabulary of each aesthetic movement.</div>
-            </div>
 
-            <div class="property-item">
-                <code>involvesProcess</code>
-                <div class="property-description">Connects aesthetics or processes with other processes essential
-                    for
-                    the aesthetic's development and creation, mapping the creative workflow.</div>
-            </div>
+            <!-- 4Ps of Creativity - оставляем как было -->
+            <div class="class-category">
+                <div class="category-header">
+                    <h6>🎭 4Ps of Creativity (Rhodes Model)</h6>
+                </div>
+                <div class="category-content">
+                    <p class="category-description">Based on Mel Rhodes' "4 Ps of Creativity" framework: Person, Process,
+                        Product, Press - representing the fundamental components of creative systems.</p>
 
-            <div class="property-item">
-                <code>involvesEmotion / involvesBehaviour</code>
-                <div class="property-description">Establishes connections between aesthetics and specific
-                    social/emotional profiles of both creators and consumers, defining the psychological dimensions
-                    of
-                    aesthetic engagement.</div>
-            </div>
+                    <div class="class-group">
+                        <h7>Person</h7>
+                        <div class="subclasses">
+                            <div class="subclass-item"><code>Consumer</code></div>
+                            <div class="subclass-item"><code>Creator</code></div>
+                            <div class="subclass-item"><code>Influencer</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>Blogger</code></div>
+                                <div class="subclass-item"><code>Celebrity</code></div>
+                                <div class="subclass-item"><code>SocialMediaInfluencer</code></div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="property-item">
-                <code>hasCulturalContext / hasSpatialContext / hasTemporalContext</code>
-                <div class="property-description">Links aesthetics or objects to their contextual environments
-                    (culture/space/time), documenting the conditions under which specific individuals were created
-                    or
-                    emerged.</div>
-            </div>
+                    <div class="class-group">
+                        <h7>Process</h7>
+                        <div class="class-item"><code>Process</code> - Developmental phases of aesthetics</div>
+                        <div class="subclasses">
+                            <div class="subclass-item"><code>CreativeProcess</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>Convergence</code> - a process within the creative domain
+                                    that seeks coherence and unity of meaning or form. </div>
+                                <div class="subclass-item"><code>Divergence</code> - a creative and cultural process
+                                    oriented toward differentiation, experimentation, and the expansion of aesthetic or
+                                    social boundaries</div>
+                                <div class="subclass-item"><code>Metaconvergence</code> - an elaboration process that
+                                    refines divergent aesthetic expressions into culturally recognizable and functionally
+                                    effective creative products. </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="property-item">
-                <code>experiencedBy</code>
-                <div class="property-description">Specifies which demographic or social groups actively practice and
-                    engage with the aesthetic, mapping audience participation.</div>
-            </div>
+                    <div class="class-group">
+                        <h7>Product</h7>
+                        <div class="class-item"><code>Product</code> - Creative outputs resulting from aesthetic processes
+                        </div>
+                        <div class="subclasses">
+                            <div class="subclass-item"><code>CreativeProduct</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>AuditoryProduct</code></div>
+                                <div class="deep-nested">
+                                    <div class="subclass-item"><code>AudioElement</code></div>
+                                </div>
+                                <div class="subclass-item"><code>DigitalProduct</code></div>
+                                <div class="deep-nested">
+                                    <div class="subclass-item"><code>InteractiveProduct</code></div>
+                                </div>
+                                <div class="subclass-item"><code>FashionProduct</code></div>
+                                <div class="subclass-item"><code>TextualProduct</code></div>
+                                <div class="subclass-item"><code>VisualProduct</code></div>
+                                <div class="deep-nested">
+                                    <div class="subclass-item"><code>ImageProduct</code></div>
+                                    <div class="subclass-item"><code>VideoProduct</code></div>
+                                    <div class="subclass-item"><code>VisualElement</code></div>
+                                </div>
+                            </div>
+                            <div class="subclass-item"><code>Tool</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>PhysicalTool</code></div>
+                                <div class="subclass-item"><code>SoftwareTool</code></div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="property-item">
-                <code>hasMedium</code>
-                <div class="property-description">Defines the channels and platforms through which creative products
-                    are
-                    expressed and distributed, mapping dissemination pathways.</div>
-            </div>
-
-            <div class="property-item">
-                <code>spreadThrough</code>
-                <div class="property-description">Identifies the media platforms and channels responsible for
-                    propagating and popularizing aesthetic movements across digital ecosystems.</div>
-            </div>
-
-            <div class="property-item">
-                <code>resultsIn</code>
-                <div class="property-description">Documents the creative outputs and tangible products generated
-                    through
-                    aesthetic processes, connecting creative activities to their material outcomes.</div>
-            </div>
-
-            <div class="property-item">
-                <code>inspiredBy</code>
-                <div class="property-description">Traces genealogical influences and inspirational sources between
-                    aesthetic movements, mapping the evolution and cross-pollination of visual styles.</div>
-            </div>
-
-            <div class="property-item">
-                <code>influencedBy</code>
-                <div class="property-description">Records the impact of specific influencers, creators, or media
-                    entities on the development and popularization of aesthetic movements.</div>
-            </div>
-
-            <div class="property-item">
-                <code>createdBy</code>
-                <div class="property-description">Attributes the origin and authorship of aesthetics to specific
-                    communities, individuals, or collective creative forces.</div>
-            </div>
-
-            <div class="property-item">
-                <code>opposesTo</code>
-                <div class="property-description">Maps ideological and stylistic oppositions between aesthetic
-                    movements, highlighting contrasting values and visual approaches.</div>
-            </div>
-
-            <div class="property-item">
-                <code>precedesProcess</code>
-                <div class="property-description">Defines temporal sequences in creative workflows, establishing the
-                    order of process phases from initial ideation to final refinement.</div>
-            </div>
-
-            <div class="property-item">
-                <code>revivedIn / revivesElement</code>
-                <div class="property-description">Documents temporal recycling and nostalgic revivals, tracking how
-                    historical aesthetic elements are reintroduced in contemporary contexts.</div>
-            </div>
-
-            <div class="property-item">
-                <code>expressesAesthetic</code>
-                <div class="property-description">Indicates how specific elements, products, or media directly
-                    manifest
-                    and represent particular aesthetic qualities and principles.</div>
-            </div>
-
-            <div class="property-item">
-                <code>uses</code>
-                <div class="property-description">Specifies the tools, technologies, and resources employed in the
-                    creation and production of aesthetic content and products.</div>
-            </div>
-
-            <div class="property-item">
-                <code>shapesAesthetic</code>
-                <div class="property-description">Describes how contextual factors, conceptual ideas, or cultural
-                    movements actively form and influence the development of aesthetic characteristics.</div>
-            </div>
-        </div>
-    </div>
-
-    </div>
-    <h4 id="competency-questions">4.2.3 Competency questions</h4>
-    <p class="lead">To compile a list of the most representative questions for our ontology, we also used an LLM to
-        simulate a potential user's perspective.</p>
-    <p class="prompt">💁‍♀️Imagine that you are a social anthropologist doing research about internet aesthetic
-        phenomena, what questions would you like to ask first?</p>
-    <div class="chatbot">🤖Using your ontology, I would employ a mixed-methods approach:
-
-        <ol>1. Quantitative analysis through the SPARQL queries you've developed to identify patterns and correlations
-        </ol>
-        <ol>2. Network analysis of aesthetic genealogies and platform distributions</ol>
-        <ol>3. Comparative case studies of specific aesthetic movements using the rich relational data</ol>
-        <ol>4. Longitudinal tracking of how aesthetics evolve through their process phases</ol>
-    </div>
-    <div class="competency-questions">
-        <p class="lead">In this way, we tried to form our queries based on multifaceted approach.</p>
-        <div class="question-item">
-            <h5>Temporal Analysis:</h5>
-            <p><em>"What are the temporal contexts associated with each aesthetic?"</em></p>
-            <div class="finding">
-                <strong>Finding:</strong> Aesthetics show clear generational patterns - Grunge (1990s), Y2K (2000s),
-                Cottagecore (2010s), Clean Girl (2020s). Some span multiple eras like Dark Academia (19th-20th century).
-            </div>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query retrieves temporal contexts for each aesthetic.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-
-SELECT ?aestheticName ?timePeriodName
-WHERE {
-  ?aesthetic a :Aesthetic ;
-             rdfs:label ?aestheticName ;
-             :hasTemporalContext/rdfs:label ?timePeriodName .
-}</pre>
+                    <div class="class-group">
+                        <h7>Press</h7>
+                        <div class="subclasses">
+                            <div class="subclass-item"><code>Media</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>Blog</code></div>
+                                <div class="subclass-item"><code>Book</code></div>
+                                <div class="subclass-item"><code>Games</code></div>
+                                <div class="subclass-item"><code>Magazine</code></div>
+                                <div class="subclass-item"><code>Movie</code></div>
+                                <div class="subclass-item"><code>Music</code></div>
+                                <div class="subclass-item"><code>Print</code></div>
+                                <div class="subclass-item"><code>SocialMedia</code></div>
+                                <div class="subclass-item"><code>TvShow</code></div>
+                            </div>
+                            <div class="subclass-item"><code>Technology</code></div>
+                            <div class="nested-subclasses">
+                                <div class="subclass-item"><code>Camera</code></div>
+                                <div class="subclass-item"><code>Phone</code></div>
+                                <div class="subclass-item"><code>Radio</code></div>
+                                <div class="subclass-item"><code>Television</code></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="results-table">
-            <h6>📊 Query Results: Temporal Contexts of Aesthetics</h6>
-            <div class="table-container">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Aesthetic</th>
-                            <th>Time Period</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>20th century</td>
-                        </tr>
-                        <tr>
-                            <td>Fairycore</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Goblincore</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Witchcore</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Maximalism</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Y2K</td>
-                            <td>2000s</td>
-                        </tr>
-                        <tr>
-                            <td>Cyberpunk</td>
-                            <td>1990s, 2010s</td>
-                        </tr>
-                        <tr>
-                            <td>VSCOGirl</td>
-                            <td>2010s</td>
-                        </tr>
-                        <tr>
-                            <td>Light academia</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Kidcore</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Vaporwave</td>
-                            <td>2010s</td>
-                        </tr>
-                        <tr>
-                            <td>EGirl</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Angelcore</td>
-                            <td>2010s</td>
-                        </tr>
-                        <tr>
-                            <td>Health goth</td>
-                            <td>2010s</td>
-                        </tr>
-                        <tr>
-                            <td>Steampunk</td>
-                            <td>2000s</td>
-                        </tr>
-                        <tr>
-                            <td>Normcore</td>
-                            <td>2010s</td>
-                        </tr>
-                        <tr>
-                            <td>Weirdcore</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Clean Girl</td>
-                            <td>2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Grandmacore</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Cottagecore</td>
-                            <td>2010s</td>
-                        </tr>
-                        <tr>
-                            <td>Bloomcore</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>1990s</td>
-                        </tr>
-                        <tr>
-                            <td>Solarpunk</td>
-                            <td>2010s, 2020s</td>
-                        </tr>
-                        <tr>
-                            <td>Dark Academia</td>
-                            <td>19th century, 20th century</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <div class="properties-section">
+            <h5>Property Definitions:</h5>
+            <div class="properties-detailed">
+                <div class="property-item">
+                    <code>characterizedBy</code>
+                    <div class="property-description">Links aesthetics to their defining visual and sensory elements,
+                        establishing the core visual vocabulary of each aesthetic movement.</div>
+                </div>
 
-        <div class="question-item">
-            <h5>Element Characterization:</h5>
-            <p><em>"Which aesthetic elements characterize particular aesthetics?"</em></p>
-            <div class="finding">
-                <strong>Finding:</strong> Each aesthetic has distinct visual signatures - Dark Academia features
-                candles, classical literature, tweed jackets; Goblincore embraces mushrooms, moss, and natural elements.
-            </div>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query retrieves all elements characterizing the Dark Academia
-                    aesthetic with their types and labels.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+                <div class="property-item">
+                    <code>involvesProcess</code>
+                    <div class="property-description">Connects aesthetics or processes with other processes essential
+                        for
+                        the aesthetic's development and creation, mapping the creative workflow.</div>
+                </div>
 
-SELECT ?aesthetic ?element ?elementLabel ?elementType ?typeLabel
-WHERE {
-  ?aesthetic a wp:Aesthetic ;
-             rdfs:label "DarkAcademia"@en ;
-             wp:characterizedBy ?element .
-  
-  OPTIONAL { ?element rdfs:label ?elementLabel }
-  
-  ?element rdf:type ?elementType .
-  OPTIONAL { ?elementType rdfs:label ?typeLabel }
-  
-  FILTER (?elementType != owl:NamedIndividual)
-}</pre>
+                <div class="property-item">
+                    <code>involvesEmotion / involvesBehaviour</code>
+                    <div class="property-description">Establishes connections between aesthetics and specific
+                        social/emotional profiles of both creators and consumers, defining the psychological dimensions
+                        of
+                        aesthetic engagement.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>hasCulturalContext / hasSpatialContext / hasTemporalContext</code>
+                    <div class="property-description">Links aesthetics or objects to their contextual environments
+                        (culture/space/time), documenting the conditions under which specific individuals were created
+                        or
+                        emerged.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>experiencedBy</code>
+                    <div class="property-description">Specifies which demographic or social groups actively practice and
+                        engage with the aesthetic, mapping audience participation.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>hasMedium</code>
+                    <div class="property-description">Defines the channels and platforms through which creative products
+                        are
+                        expressed and distributed, mapping dissemination pathways.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>spreadThrough</code>
+                    <div class="property-description">Identifies the media platforms and channels responsible for
+                        propagating and popularizing aesthetic movements across digital ecosystems.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>resultsIn</code>
+                    <div class="property-description">Documents the creative outputs and tangible products generated
+                        through
+                        aesthetic processes, connecting creative activities to their material outcomes.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>inspiredBy</code>
+                    <div class="property-description">Traces genealogical influences and inspirational sources between
+                        aesthetic movements, mapping the evolution and cross-pollination of visual styles.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>influencedBy</code>
+                    <div class="property-description">Records the impact of specific influencers, creators, or media
+                        entities on the development and popularization of aesthetic movements.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>createdBy</code>
+                    <div class="property-description">Attributes the origin and authorship of aesthetics to specific
+                        communities, individuals, or collective creative forces.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>opposesTo</code>
+                    <div class="property-description">Maps ideological and stylistic oppositions between aesthetic
+                        movements, highlighting contrasting values and visual approaches.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>precedesProcess</code>
+                    <div class="property-description">Defines temporal sequences in creative workflows, establishing the
+                        order of process phases from initial ideation to final refinement.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>revivedIn / revivesElement</code>
+                    <div class="property-description">Documents temporal recycling and nostalgic revivals, tracking how
+                        historical aesthetic elements are reintroduced in contemporary contexts.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>expressesAesthetic</code>
+                    <div class="property-description">Indicates how specific elements, products, or media directly
+                        manifest
+                        and represent particular aesthetic qualities and principles.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>uses</code>
+                    <div class="property-description">Specifies the tools, technologies, and resources employed in the
+                        creation and production of aesthetic content and products.</div>
+                </div>
+
+                <div class="property-item">
+                    <code>shapesAesthetic</code>
+                    <div class="property-description">Describes how contextual factors, conceptual ideas, or cultural
+                        movements actively form and influence the development of aesthetic characteristics.</div>
                 </div>
             </div>
         </div>
-        <div class="results-table">
-            <h6>📊 Query Results: Dark Academia Elements</h6>
-            <div class="table-container">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Element</th>
-                            <th>Element Label</th>
-                            <th>Element Type</th>
-                            <th>Type Label</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>DarkColors</td>
-                            <td>Dark Colors</td>
-                            <td>Color</td>
-                            <td>Color</td>
-                        </tr>
-                        <tr>
-                            <td>TweedJackets</td>
-                            <td>TweedJackets</td>
-                            <td>AestheticElement</td>
-                            <td>AestheticElement</td>
-                        </tr>
-                        <tr>
-                            <td>TweedJackets</td>
-                            <td>TweedJackets</td>
-                            <td>FashionProduct</td>
-                            <td>FashionProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Candles</td>
-                            <td>Candles</td>
-                            <td>AestheticElement</td>
-                            <td>AestheticElement</td>
-                        </tr>
-                        <tr>
-                            <td>Candles</td>
-                            <td>Candles</td>
-                            <td>Product</td>
-                            <td>Product</td>
-                        </tr>
-                        <tr>
-                            <td>VintageBooks</td>
-                            <td>Vintage books</td>
-                            <td>AestheticElement</td>
-                            <td>AestheticElement</td>
-                        </tr>
-                        <tr>
-                            <td>VintageBooks</td>
-                            <td>Vintage books</td>
-                            <td>TextualProduct</td>
-                            <td>TextualProduct</td>
-                        </tr>
-                        <tr>
-                            <td>ClassicalArt</td>
-                            <td>European Classical Art</td>
-                            <td>AestheticElement</td>
-                            <td>AestheticElement</td>
-                        </tr>
-                        <tr>
-                            <td>Leather</td>
-                            <td>Leather</td>
-                            <td>Material</td>
-                            <td>Material</td>
-                        </tr>
-                        <tr>
-                            <td>Leather</td>
-                            <td>Leather</td>
-                            <td>AestheticElement</td>
-                            <td>AestheticElement</td>
-                        </tr>
-                        <tr>
-                            <td>Intellectualism</td>
-                            <td>Intellectualism</td>
-                            <td>ConceptualIdeas</td>
-                            <td>ConceptualIdea</td>
-                        </tr>
-                        <tr>
-                            <td>ClassicalLiterature</td>
-                            <td>Classical Literature</td>
-                            <td>AestheticElement</td>
-                            <td>AestheticElement</td>
-                        </tr>
-                        <tr>
-                            <td>ClassicalLiterature</td>
-                            <td>Classical Literature</td>
-                            <td>TextualProduct</td>
-                            <td>TextualProduct</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+
         </div>
+        <h4 id="competency-questions">4.2.3 Competency questions</h4>
+        <p class="lead">To compile a list of the most representative questions for our ontology, we also used an LLM to
+            simulate a potential user's perspective.</p>
+        <p class="prompt">💁‍♀️Imagine that you are a social anthropologist doing research about internet aesthetic
+            phenomena, what questions would you like to ask first?</p>
+        <div class="chatbot">🤖Using your ontology, I would employ a mixed-methods approach:
 
-        <div class="question-item">
-            <h5>Creative Process Mapping:</h5>
-            <p><em>"What processes are part of an aesthetic's development?"</em></p>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query shows the development processes of Y2K aesthetic.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+            <ol>1. Quantitative analysis through the SPARQL queries you've developed to identify patterns and correlations
+            </ol>
+            <ol>2. Network analysis of aesthetic genealogies and platform distributions</ol>
+            <ol>3. Comparative case studies of specific aesthetic movements using the rich relational data</ol>
+            <ol>4. Longitudinal tracking of how aesthetics evolve through their process phases</ol>
+        </div>
+        <div class="competency-questions">
+            <p class="lead">In this way, we tried to form our queries based on multifaceted approach.</p>
+            <div class="question-item">
+                <h5>Temporal Analysis:</h5>
+                <p><em>"What are the temporal contexts associated with each aesthetic?"</em></p>
+                <div class="finding">
+                    <strong>Finding:</strong> Aesthetics show clear generational patterns - Grunge (1990s), Y2K (2000s),
+                    Cottagecore (2010s), Clean Girl (2020s). Some span multiple eras like Dark Academia (19th-20th century).
+                </div>
+                <div class="query-example">
+                    <h5>📋SPARQL-example</h5>
+                    <p class="query-description">This query retrieves temporal contexts for each aesthetic.</p>
+                    <div class="sparql-block">
+                        <pre class="sparql-content">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+    PREFIX : &lt;http://webprotege.stanford.edu/&gt;
 
-SELECT ?phase ?phaseLabel 
-       (GROUP_CONCAT(DISTINCT ?processLabel; SEPARATOR=", ") AS ?processes)
-       (GROUP_CONCAT(DISTINCT ?processType; SEPARATOR=", ") AS ?processTypes)
-WHERE {
-  ?phase rdfs:label ?phaseLabel .
-  ?phase wp:involvesProcess ?process .
-  
-  OPTIONAL { ?process rdfs:label ?processLabel }
-  OPTIONAL { ?process a ?processType }
-  
-  FILTER regex(?phaseLabel, "Y2K", "i")
-}
-GROUP BY ?phase ?phaseLabel</pre>
+    SELECT ?aestheticName ?timePeriodName
+    WHERE {
+    ?aesthetic a :Aesthetic ;
+                rdfs:label ?aestheticName ;
+                :hasTemporalContext/rdfs:label ?timePeriodName .
+    }</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="results-table">
+                <h6>📊 Query Results: Temporal Contexts of Aesthetics</h6>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Aesthetic</th>
+                                <th>Time Period</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>20th century</td>
+                            </tr>
+                            <tr>
+                                <td>Fairycore</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Goblincore</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Witchcore</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Maximalism</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Y2K</td>
+                                <td>2000s</td>
+                            </tr>
+                            <tr>
+                                <td>Cyberpunk</td>
+                                <td>1990s, 2010s</td>
+                            </tr>
+                            <tr>
+                                <td>VSCOGirl</td>
+                                <td>2010s</td>
+                            </tr>
+                            <tr>
+                                <td>Light academia</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Kidcore</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Vaporwave</td>
+                                <td>2010s</td>
+                            </tr>
+                            <tr>
+                                <td>EGirl</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Angelcore</td>
+                                <td>2010s</td>
+                            </tr>
+                            <tr>
+                                <td>Health goth</td>
+                                <td>2010s</td>
+                            </tr>
+                            <tr>
+                                <td>Steampunk</td>
+                                <td>2000s</td>
+                            </tr>
+                            <tr>
+                                <td>Normcore</td>
+                                <td>2010s</td>
+                            </tr>
+                            <tr>
+                                <td>Weirdcore</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Clean Girl</td>
+                                <td>2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Grandmacore</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Cottagecore</td>
+                                <td>2010s</td>
+                            </tr>
+                            <tr>
+                                <td>Bloomcore</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>1990s</td>
+                            </tr>
+                            <tr>
+                                <td>Solarpunk</td>
+                                <td>2010s, 2020s</td>
+                            </tr>
+                            <tr>
+                                <td>Dark Academia</td>
+                                <td>19th century, 20th century</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question-item">
+                <h5>Element Characterization:</h5>
+                <p><em>"Which aesthetic elements characterize particular aesthetics?"</em></p>
+                <div class="finding">
+                    <strong>Finding:</strong> Each aesthetic has distinct visual signatures - Dark Academia features
+                    candles, classical literature, tweed jackets; Goblincore embraces mushrooms, moss, and natural elements.
+                </div>
+                <div class="query-example">
+                    <h5>📋SPARQL-example</h5>
+                    <p class="query-description">This query retrieves all elements characterizing the Dark Academia
+                        aesthetic with their types and labels.</p>
+                    <div class="sparql-block">
+                        <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
+    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+    PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+
+    SELECT ?aesthetic ?element ?elementLabel ?elementType ?typeLabel
+    WHERE {
+    ?aesthetic a wp:Aesthetic ;
+                rdfs:label "DarkAcademia"@en ;
+                wp:characterizedBy ?element .
+    
+    OPTIONAL { ?element rdfs:label ?elementLabel }
+    
+    ?element rdf:type ?elementType .
+    OPTIONAL { ?elementType rdfs:label ?typeLabel }
+    
+    FILTER (?elementType != owl:NamedIndividual)
+    }</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="results-table">
+                <h6>📊 Query Results: Dark Academia Elements</h6>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Element Label</th>
+                                <th>Element Type</th>
+                                <th>Type Label</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DarkColors</td>
+                                <td>Dark Colors</td>
+                                <td>Color</td>
+                                <td>Color</td>
+                            </tr>
+                            <tr>
+                                <td>TweedJackets</td>
+                                <td>TweedJackets</td>
+                                <td>AestheticElement</td>
+                                <td>AestheticElement</td>
+                            </tr>
+                            <tr>
+                                <td>TweedJackets</td>
+                                <td>TweedJackets</td>
+                                <td>FashionProduct</td>
+                                <td>FashionProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Candles</td>
+                                <td>Candles</td>
+                                <td>AestheticElement</td>
+                                <td>AestheticElement</td>
+                            </tr>
+                            <tr>
+                                <td>Candles</td>
+                                <td>Candles</td>
+                                <td>Product</td>
+                                <td>Product</td>
+                            </tr>
+                            <tr>
+                                <td>VintageBooks</td>
+                                <td>Vintage books</td>
+                                <td>AestheticElement</td>
+                                <td>AestheticElement</td>
+                            </tr>
+                            <tr>
+                                <td>VintageBooks</td>
+                                <td>Vintage books</td>
+                                <td>TextualProduct</td>
+                                <td>TextualProduct</td>
+                            </tr>
+                            <tr>
+                                <td>ClassicalArt</td>
+                                <td>European Classical Art</td>
+                                <td>AestheticElement</td>
+                                <td>AestheticElement</td>
+                            </tr>
+                            <tr>
+                                <td>Leather</td>
+                                <td>Leather</td>
+                                <td>Material</td>
+                                <td>Material</td>
+                            </tr>
+                            <tr>
+                                <td>Leather</td>
+                                <td>Leather</td>
+                                <td>AestheticElement</td>
+                                <td>AestheticElement</td>
+                            </tr>
+                            <tr>
+                                <td>Intellectualism</td>
+                                <td>Intellectualism</td>
+                                <td>ConceptualIdeas</td>
+                                <td>ConceptualIdea</td>
+                            </tr>
+                            <tr>
+                                <td>ClassicalLiterature</td>
+                                <td>Classical Literature</td>
+                                <td>AestheticElement</td>
+                                <td>AestheticElement</td>
+                            </tr>
+                            <tr>
+                                <td>ClassicalLiterature</td>
+                                <td>Classical Literature</td>
+                                <td>TextualProduct</td>
+                                <td>TextualProduct</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question-item">
+                <h5>Creative Process Mapping:</h5>
+                <p><em>"What processes are part of an aesthetic's development?"</em></p>
+                <div class="query-example">
+                    <h5>📋SPARQL-example</h5>
+                    <p class="query-description">This query shows the development processes of Y2K aesthetic.</p>
+                    <div class="sparql-block">
+                        <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
+    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+    SELECT ?phase ?phaseLabel 
+        (GROUP_CONCAT(DISTINCT ?processLabel; SEPARATOR=", ") AS ?processes)
+        (GROUP_CONCAT(DISTINCT ?processType; SEPARATOR=", ") AS ?processTypes)
+    WHERE {
+    ?phase rdfs:label ?phaseLabel .
+    ?phase wp:involvesProcess ?process .
+    
+    OPTIONAL { ?process rdfs:label ?processLabel }
+    OPTIONAL { ?process a ?processType }
+    
+    FILTER regex(?phaseLabel, "Y2K", "i")
+    }
+    GROUP BY ?phase ?phaseLabel</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="results-table">
+                <h6>📊 Query Results: Y2K Development Processes</h6>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Phase</th>
+                                <th>Processes</th>
+                                <th>Process Types</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Y2K</strong></td>
+                                <td>Y2K Divergence Phase, Y2K Convergence Phase, Y2K Metaconvergence Phase</td>
+                                <td>Divergence, Convergence, Metaconvergence</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Y2K Divergence Phase</strong></td>
+                                <td>Serendipity, Thrifting, Inspiration</td>
+                                <td>Divergence, BehaviourPattern</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Y2K Convergence Phase</strong></td>
+                                <td>Synthesis, Selection</td>
+                                <td>Convergence</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Y2K Metaconvergence Phase</strong></td>
+                                <td>Reproduction, Recontextualization</td>
+                                <td>Metaconvergence</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question-item">
+                <h5>Emotional Profiling:</h5>
+                <p><em>"Which emotions are involved in different aesthetics?"</em></p>
+                <div class="finding">
+                    <strong>Finding:</strong> Distinct emotional landscapes emerge - Dark Academia evokes nostalgia and
+                    melancholy, Grunge involves rebellion etc. Thus, we see that aesthetics is determined not only by the
+                    external facade, but also by the emotional content.
+                </div>
+                <div class="query-example">
+                    <h5>📋SPARQL-example</h5>
+                    <p class="query-description">This query shows emotional profiles of different aesthetics.</p>
+                    <div class="sparql-block">
+                        <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
+    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+    SELECT ?aesthetic ?aestheticLabel 
+        (GROUP_CONCAT(DISTINCT ?emotionLabel; SEPARATOR=", ") AS ?emotions)
+    WHERE {
+    ?aesthetic a wp:Aesthetic ;
+                rdfs:label ?aestheticLabel ;
+                wp:involvesEmotion ?emotion .
+    ?emotion rdfs:label ?emotionLabel .
+    }
+    GROUP BY ?aesthetic ?aestheticLabel</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="results-table">
+                <h6>📊 Query Results: Emotional Profiles of Aesthetics</h6>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Aesthetic</th>
+                                <th>Emotions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Seapunk</td>
+                                <td>Irony, Nostalgia</td>
+                            </tr>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>Pride, Aspiration</td>
+                            </tr>
+                            <tr>
+                                <td>Fairycore</td>
+                                <td>Escapism, Wonder, Nostalgia</td>
+                            </tr>
+                            <tr>
+                                <td>Goblincore</td>
+                                <td>Curiosity, Escapism, Comfort</td>
+                            </tr>
+                            <tr>
+                                <td>Witchcore</td>
+                                <td>Empowerment, Melancholy, Escapism</td>
+                            </tr>
+                            <tr>
+                                <td>Maximalism</td>
+                                <td>Joy</td>
+                            </tr>
+                            <tr>
+                                <td>Y2K</td>
+                                <td>Nostalgia, Irony, Belonging</td>
+                            </tr>
+                            <tr>
+                                <td>Cyberpunk</td>
+                                <td>Melancholy, Dystopian Angst, Rebellion</td>
+                            </tr>
+                            <tr>
+                                <td>VSCOGirl</td>
+                                <td>Relaxed, Belonging, Happiness</td>
+                            </tr>
+                            <tr>
+                                <td>Light academia</td>
+                                <td>Nostalgia, Comfort, Joy of Learning, Aspiration</td>
+                            </tr>
+                            <tr>
+                                <td>Kidcore</td>
+                                <td>Nostalgia, Playfulness, Happiness, Escapism</td>
+                            </tr>
+                            <tr>
+                                <td>Vaporwave</td>
+                                <td>Irony, Nostalgia, Melancholy</td>
+                            </tr>
+                            <tr>
+                                <td>EGirl</td>
+                                <td>Playfulness, Melancholy</td>
+                            </tr>
+                            <tr>
+                                <td>Angelcore</td>
+                                <td>Serenity, Escapism, Nostalgia</td>
+                            </tr>
+                            <tr>
+                                <td>Health goth</td>
+                                <td>Discipline, Melancholy</td>
+                            </tr>
+                            <tr>
+                                <td>Steampunk</td>
+                                <td>Adventure, Nostalgia</td>
+                            </tr>
+                            <tr>
+                                <td>Normcore</td>
+                                <td>Belonging, Comfort, Irony</td>
+                            </tr>
+                            <tr>
+                                <td>Weirdcore</td>
+                                <td>Nostalgia, Confusion, Melancholy, Escapism</td>
+                            </tr>
+                            <tr>
+                                <td>Clean Girl</td>
+                                <td>Aspiration</td>
+                            </tr>
+                            <tr>
+                                <td>Grandmacore</td>
+                                <td>Escapism, Comfort, Nostalgia</td>
+                            </tr>
+                            <tr>
+                                <td>Cottagecore</td>
+                                <td>Escapism</td>
+                            </tr>
+                            <tr>
+                                <td>Bloomcore</td>
+                                <td>Peace, Joy, Escapism</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>Nostalgia, Melancholy, Rebellion</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="question-item">
+                <h5>Platform Ecology:</h5>
+                <p><em>"What are the primary dissemination platforms for each aesthetic?"</em></p>
+                <div class="finding">
+                    <strong>Finding:</strong> Platform specialization exists - Tumblr hosts niche communities (Goblincore,
+                    Vaporwave), TikTok drives mainstream trends (Clean Girl, VSCOGirl), Pinterest serves visual-centric
+                    aesthetics (Cottagecore, Dark Academia).
+                </div>
+                <div class="query-example">
+                    <h5>📋SPARQL-example</h5>
+                    <p class="query-description">This query shows dissemination platforms for each aesthetic.</p>
+                    <div class="sparql-block">
+                        <pre class="sparql-content">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+    PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+    SELECT ?aestheticName (GROUP_CONCAT(?mediumName; SEPARATOR=", ") AS ?platforms)
+    WHERE {
+    ?aesthetic a :Aesthetic ;
+                rdfs:label ?aestheticName ;
+                :spreadThrough ?medium .
+    ?medium rdfs:label ?mediumName .
+    }
+    GROUP BY ?aestheticName
+    ORDER BY ?aestheticName</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="results-table">
+                <h6>📊 Query Results: Platform Distribution of Aesthetics</h6>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Aesthetic</th>
+                                <th>Platforms</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Angelcore</td>
+                                <td>Pinterest, Tumblr</td>
+                            </tr>
+                            <tr>
+                                <td>Bloomcore</td>
+                                <td>Pinterest, Tumblr, TikTok</td>
+                            </tr>
+                            <tr>
+                                <td>Clean Girl</td>
+                                <td>Pinterest, Instagram, TikTok</td>
+                            </tr>
+                            <tr>
+                                <td>Cottagecore</td>
+                                <td>Instagram, Pinterest</td>
+                            </tr>
+                            <tr>
+                                <td>Cyberpunk</td>
+                                <td>Reddit, Games</td>
+                            </tr>
+                            <tr>
+                                <td>Dark Academia</td>
+                                <td>Instagram, TikTok, Pinterest</td>
+                            </tr>
+                            <tr>
+                                <td>EGirl</td>
+                                <td>Instagram, TikTok</td>
+                            </tr>
+                            <tr>
+                                <td>Fairycore</td>
+                                <td>TikTok, Pinterest</td>
+                            </tr>
+                            <tr>
+                                <td>Goblincore</td>
+                                <td>Tumblr, TikTok, Pinterest</td>
+                            </tr>
+                            <tr>
+                                <td>Grandmacore</td>
+                                <td>TikTok, Pinterest</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>Tumblr, Instagram, MTV, TikTok</td>
+                            </tr>
+                            <tr>
+                                <td>Health goth</td>
+                                <td>Tumblr, Instagram</td>
+                            </tr>
+                            <tr>
+                                <td>Kidcore</td>
+                                <td>Tumblr, TikTok, Pinterest</td>
+                            </tr>
+                            <tr>
+                                <td>Light academia</td>
+                                <td>Tumblr, Pinterest, TikTok</td>
+                            </tr>
+                            <tr>
+                                <td>Maximalism</td>
+                                <td>Instagram, Pinterest</td>
+                            </tr>
+                            <tr>
+                                <td>Normcore</td>
+                                <td>Magazine, Blog</td>
+                            </tr>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>TikTok, Instagram</td>
+                            </tr>
+                            <tr>
+                                <td>Seapunk</td>
+                                <td>Tumblr</td>
+                            </tr>
+                            <tr>
+                                <td>Solarpunk</td>
+                                <td>Tumblr, Pinterest, TikTok</td>
+                            </tr>
+                            <tr>
+                                <td>Steampunk</td>
+                                <td>Tumblr, Pinterest</td>
+                            </tr>
+                            <tr>
+                                <td>VSCOGirl</td>
+                                <td>Instagram, TikTok</td>
+                            </tr>
+                            <tr>
+                                <td>Vaporwave</td>
+                                <td>Reddit, Tumblr</td>
+                            </tr>
+                            <tr>
+                                <td>Weirdcore</td>
+                                <td>Tumblr, TikTok, Reddit</td>
+                            </tr>
+                            <tr>
+                                <td>Witchcore</td>
+                                <td>Tumblr, Pinterest, TikTok</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="question-item">
+                <h5>Demographic Engagement:</h5>
+                <p><em>"Which age groups are engaged with different aesthetic movements?"</em></p>
+                <div class="finding">
+                    <strong>Finding:</strong> GenZ (13-28) dominates most internet aesthetics, while Millennials (29-44)
+                    show stronger presence in Normcore, Steampunk, and Cottagecore.
+                </div>
+                <div class="query-example">
+                    <h5>📋SPARQL-example</h5>
+                    <p class="query-description">This query shows age groups engaged with different aesthetics.</p>
+                    <div class="sparql-block">
+                        <pre class="sparql-content">PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+    PREFIX base: &lt;urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#&gt;
+
+    SELECT ?aestheticName ?communityName (STR(?ageRange) AS ?age)
+    WHERE {
+    ?aesthetic a :Aesthetic ;
+                rdfs:label ?aestheticName ;
+                :experiencedBy ?community .
+    ?community rdfs:label ?communityName .
+    OPTIONAL { ?community base:ageRange ?ageRange }
+    }</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="results-table">
+                <h6>📊 Query Results: Demographic Engagement with Aesthetics</h6>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Aesthetic</th>
+                                <th>Community</th>
+                                <th>Age Range</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Seapunk</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Fairycore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Goblincore</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Goblincore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Witchcore</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Witchcore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Maximalism</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Maximalism</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Y2K</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Cyberpunk</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Cyberpunk</td>
+                                <td>GenX</td>
+                                <td>45-60</td>
+                            </tr>
+                            <tr>
+                                <td>Cyberpunk</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>VSCOGirl</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Light academia</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Kidcore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Kidcore</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Vaporwave</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Vaporwave</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>EGirl</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Angelcore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Health goth</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Steampunk</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Steampunk</td>
+                                <td>GenX</td>
+                                <td>45-60</td>
+                            </tr>
+                            <tr>
+                                <td>Normcore</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Weirdcore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Clean Girl</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Clean Girl</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Grandmacore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Grandmacore</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Cottagecore</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Cottagecore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Bloomcore</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>Millennials</td>
+                                <td>29-44</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>GenX</td>
+                                <td>45-60</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>GenZ</td>
+                                <td>13-28</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question-item">
+                <h5>Creative Outputs:</h5>
+                <p><em>"What types of creative products are generated by different aesthetic movements?"</em></p>
+                <div class="finding">
+                    <strong>Finding:</strong> Consistent output patterns emerge across aesthetics - mood boards
+                    (Image/Digital Products), short videos (Video Products), and Instagram posts (Digital Products).
+                </div>
+                <div class="query-example">
+                    <h5>📋SPARQL-example</h5>
+                    <p class="query-description">This query shows creative products generated by aesthetic movements.</p>
+                    <div class="sparql-block">
+                        <pre class="sparql-content">PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+    SELECT ?aestheticName (STR(?productName) AS ?product) 
+        (GROUP_CONCAT(DISTINCT ?productTypeLabel; SEPARATOR=", ") AS ?productTypes)
+    WHERE {
+    ?aesthetic a :Aesthetic ;
+                rdfs:label ?aestheticName ;
+                :resultsIn ?product .
+    ?product rdfs:label ?productName .
+    
+    ?product a ?productType .
+    FILTER (?productType != &lt;http://www.w3.org/2002/07/owl#NamedIndividual&gt;)
+    
+    OPTIONAL { ?productType rdfs:label ?productTypeLabel }
+    }
+    GROUP BY ?aestheticName ?productName
+    ORDER BY ?aestheticName ?productName</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="results-table">
+                <h6>📊 Query Results: Creative Products by Aesthetic</h6>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Aesthetic</th>
+                                <th>Product</th>
+                                <th>Product Types</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Clean Girl</td>
+                                <td>Instagram post</td>
+                                <td>DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Clean Girl</td>
+                                <td>Short videos</td>
+                                <td>VideoProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Cottagecore</td>
+                                <td>Short videos</td>
+                                <td>VideoProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Cottagecore</td>
+                                <td>MoodBoard</td>
+                                <td>ImageProduct, DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Dark Academia</td>
+                                <td>MoodBoard</td>
+                                <td>ImageProduct, DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>Instagram post</td>
+                                <td>DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>MoodBoard</td>
+                                <td>ImageProduct, DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Maximalism</td>
+                                <td>TheStudioJob homepage</td>
+                                <td>DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>Instagram post</td>
+                                <td>DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>Short videos</td>
+                                <td>VideoProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>MoodBoard</td>
+                                <td>ImageProduct, DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Y2K</td>
+                                <td>Instagram post</td>
+                                <td>DigitalProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Y2K</td>
+                                <td>Short videos</td>
+                                <td>VideoProduct</td>
+                            </tr>
+                            <tr>
+                                <td>Y2K</td>
+                                <td>MoodBoard</td>
+                                <td>ImageProduct, DigitalProduct</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question-item">
+                <h5>Genealogical Analysis:</h5>
+                <p><em>"What are the primary sources of inspiration for different aesthetic movements?"</em></p>
+                <div class="finding">
+                    <strong>Finding:</strong> Based on the results, many niche aesthetics drew inspiration from other,
+                    larger internet aesthetics. Conversely, the major aesthetic movements themselves frequently found their
+                    creative sources in historical imagery and past eras (Dark Academia, Steampunk), with several movements
+                    explicitly attempting to "revive" and reinterpret historical elements (Y2K, Old Money).
+                </div>
+                <div class="query-example">
+                    <h5>📋SPARQL-example</h5>
+                    <p class="query-description">This query shows inspiration sources for aesthetic movements.</p>
+                    <div class="sparql-block">
+                        <pre class="sparql-content">PREFIX webprotege: &lt;http://webprotege.stanford.edu/&gt;
+    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+    SELECT ?inspiredAesthetic 
+        (GROUP_CONCAT(DISTINCT ?inspirationSource; SEPARATOR=", ") AS ?inspirationSources)
+    WHERE {
+    ?aesthetic a webprotege:Aesthetic ;
+                rdfs:label ?inspiredAesthetic ;
+                webprotege:inspiredBy ?source .
+    OPTIONAL { ?source rdfs:label ?inspirationSource }
+    FILTER (isIRI(?source))
+    }
+    GROUP BY ?inspiredAesthetic
+    ORDER BY ?inspiredAesthetic</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="results-table">
+                <h6>📊 Query Results: Inspiration Sources for Aesthetic Movements</h6>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Aesthetic</th>
+                                <th>Inspiration Sources</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Angelcore</td>
+                                <td>Unearthliness, European Classical Art</td>
+                            </tr>
+                            <tr>
+                                <td>Bloomcore</td>
+                                <td>Cottagecore</td>
+                            </tr>
+                            <tr>
+                                <td>Clean Girl</td>
+                                <td>Minimalism</td>
+                            </tr>
+                            <tr>
+                                <td>Cottagecore</td>
+                                <td>Little House On The Prairie, Tradition, Marie Antoinette, Country Side</td>
+                            </tr>
+                            <tr>
+                                <td>Cyberpunk</td>
+                                <td>HighTech, Akira</td>
+                            </tr>
+                            <tr>
+                                <td>Dark Academia</td>
+                                <td>Harry Potter, Romanticism</td>
+                            </tr>
+                            <tr>
+                                <td>EGirl</td>
+                                <td>Grunge, Emo</td>
+                            </tr>
+                            <tr>
+                                <td>Fairycore</td>
+                                <td>Cottagecore</td>
+                            </tr>
+                            <tr>
+                                <td>Goblincore</td>
+                                <td>Cottagecore</td>
+                            </tr>
+                            <tr>
+                                <td>Grandmacore</td>
+                                <td>Cottagecore, Nostalgia</td>
+                            </tr>
+                            <tr>
+                                <td>Grunge</td>
+                                <td>Nirvana, Black Sabbath, The Pixies, Punk</td>
+                            </tr>
+                            <tr>
+                                <td>Health goth</td>
+                                <td>Cyberpunk</td>
+                            </tr>
+                            <tr>
+                                <td>Kidcore</td>
+                                <td>2000s, 1990s</td>
+                            </tr>
+                            <tr>
+                                <td>Light academia</td>
+                                <td>Dark Academia, Classical Literature</td>
+                            </tr>
+                            <tr>
+                                <td>Maximalism</td>
+                                <td>Art Nouveau, Eclecticism</td>
+                            </tr>
+                            <tr>
+                                <td>Normcore</td>
+                                <td>1990s</td>
+                            </tr>
+                            <tr>
+                                <td>Old Money</td>
+                                <td>Gossip Girl, QuietLuxury, Classical</td>
+                            </tr>
+                            <tr>
+                                <td>Seapunk</td>
+                                <td>1990s, Y2K</td>
+                            </tr>
+                            <tr>
+                                <td>Solarpunk</td>
+                                <td>Art Nouveau</td>
+                            </tr>
+                            <tr>
+                                <td>Steampunk</td>
+                                <td>VictorianEra, BioShock</td>
+                            </tr>
+                            <tr>
+                                <td>Vaporwave</td>
+                                <td>Glitch Art, Japanese City Pop</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        <div class="results-table">
-            <h6>📊 Query Results: Y2K Development Processes</h6>
-            <div class="table-container">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Phase</th>
-                            <th>Processes</th>
-                            <th>Process Types</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Y2K</strong></td>
-                            <td>Y2K Divergence Phase, Y2K Convergence Phase, Y2K Metaconvergence Phase</td>
-                            <td>Divergence, Convergence, Metaconvergence</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Y2K Divergence Phase</strong></td>
-                            <td>Serendipity, Thrifting, Inspiration</td>
-                            <td>Divergence, BehaviourPattern</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Y2K Convergence Phase</strong></td>
-                            <td>Synthesis, Selection</td>
-                            <td>Convergence</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Y2K Metaconvergence Phase</strong></td>
-                            <td>Reproduction, Recontextualization</td>
-                            <td>Metaconvergence</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="question-item">
-            <h5>Emotional Profiling:</h5>
-            <p><em>"Which emotions are involved in different aesthetics?"</em></p>
-            <div class="finding">
-                <strong>Finding:</strong> Distinct emotional landscapes emerge - Dark Academia evokes nostalgia and
-                melancholy, Grunge involves rebellion etc. Thus, we see that aesthetics is determined not only by the
-                external facade, but also by the emotional content.
-            </div>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query shows emotional profiles of different aesthetics.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX wp: &lt;http://webprotege.stanford.edu/&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-
-SELECT ?aesthetic ?aestheticLabel 
-       (GROUP_CONCAT(DISTINCT ?emotionLabel; SEPARATOR=", ") AS ?emotions)
-WHERE {
-  ?aesthetic a wp:Aesthetic ;
-             rdfs:label ?aestheticLabel ;
-             wp:involvesEmotion ?emotion .
-  ?emotion rdfs:label ?emotionLabel .
-}
-GROUP BY ?aesthetic ?aestheticLabel</pre>
-                </div>
-            </div>
-        </div>
-        <div class="results-table">
-            <h6>📊 Query Results: Emotional Profiles of Aesthetics</h6>
-            <div class="table-container">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Aesthetic</th>
-                            <th>Emotions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Seapunk</td>
-                            <td>Irony, Nostalgia</td>
-                        </tr>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>Pride, Aspiration</td>
-                        </tr>
-                        <tr>
-                            <td>Fairycore</td>
-                            <td>Escapism, Wonder, Nostalgia</td>
-                        </tr>
-                        <tr>
-                            <td>Goblincore</td>
-                            <td>Curiosity, Escapism, Comfort</td>
-                        </tr>
-                        <tr>
-                            <td>Witchcore</td>
-                            <td>Empowerment, Melancholy, Escapism</td>
-                        </tr>
-                        <tr>
-                            <td>Maximalism</td>
-                            <td>Joy</td>
-                        </tr>
-                        <tr>
-                            <td>Y2K</td>
-                            <td>Nostalgia, Irony, Belonging</td>
-                        </tr>
-                        <tr>
-                            <td>Cyberpunk</td>
-                            <td>Melancholy, Dystopian Angst, Rebellion</td>
-                        </tr>
-                        <tr>
-                            <td>VSCOGirl</td>
-                            <td>Relaxed, Belonging, Happiness</td>
-                        </tr>
-                        <tr>
-                            <td>Light academia</td>
-                            <td>Nostalgia, Comfort, Joy of Learning, Aspiration</td>
-                        </tr>
-                        <tr>
-                            <td>Kidcore</td>
-                            <td>Nostalgia, Playfulness, Happiness, Escapism</td>
-                        </tr>
-                        <tr>
-                            <td>Vaporwave</td>
-                            <td>Irony, Nostalgia, Melancholy</td>
-                        </tr>
-                        <tr>
-                            <td>EGirl</td>
-                            <td>Playfulness, Melancholy</td>
-                        </tr>
-                        <tr>
-                            <td>Angelcore</td>
-                            <td>Serenity, Escapism, Nostalgia</td>
-                        </tr>
-                        <tr>
-                            <td>Health goth</td>
-                            <td>Discipline, Melancholy</td>
-                        </tr>
-                        <tr>
-                            <td>Steampunk</td>
-                            <td>Adventure, Nostalgia</td>
-                        </tr>
-                        <tr>
-                            <td>Normcore</td>
-                            <td>Belonging, Comfort, Irony</td>
-                        </tr>
-                        <tr>
-                            <td>Weirdcore</td>
-                            <td>Nostalgia, Confusion, Melancholy, Escapism</td>
-                        </tr>
-                        <tr>
-                            <td>Clean Girl</td>
-                            <td>Aspiration</td>
-                        </tr>
-                        <tr>
-                            <td>Grandmacore</td>
-                            <td>Escapism, Comfort, Nostalgia</td>
-                        </tr>
-                        <tr>
-                            <td>Cottagecore</td>
-                            <td>Escapism</td>
-                        </tr>
-                        <tr>
-                            <td>Bloomcore</td>
-                            <td>Peace, Joy, Escapism</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>Nostalgia, Melancholy, Rebellion</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        <div class="question-item">
-            <h5>Platform Ecology:</h5>
-            <p><em>"What are the primary dissemination platforms for each aesthetic?"</em></p>
-            <div class="finding">
-                <strong>Finding:</strong> Platform specialization exists - Tumblr hosts niche communities (Goblincore,
-                Vaporwave), TikTok drives mainstream trends (Clean Girl, VSCOGirl), Pinterest serves visual-centric
-                aesthetics (Cottagecore, Dark Academia).
-            </div>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query shows dissemination platforms for each aesthetic.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-
-SELECT ?aestheticName (GROUP_CONCAT(?mediumName; SEPARATOR=", ") AS ?platforms)
-WHERE {
-  ?aesthetic a :Aesthetic ;
-             rdfs:label ?aestheticName ;
-             :spreadThrough ?medium .
-  ?medium rdfs:label ?mediumName .
-}
-GROUP BY ?aestheticName
-ORDER BY ?aestheticName</pre>
-                </div>
-            </div>
-        </div>
-        <div class="results-table">
-            <h6>📊 Query Results: Platform Distribution of Aesthetics</h6>
-            <div class="table-container">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Aesthetic</th>
-                            <th>Platforms</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Angelcore</td>
-                            <td>Pinterest, Tumblr</td>
-                        </tr>
-                        <tr>
-                            <td>Bloomcore</td>
-                            <td>Pinterest, Tumblr, TikTok</td>
-                        </tr>
-                        <tr>
-                            <td>Clean Girl</td>
-                            <td>Pinterest, Instagram, TikTok</td>
-                        </tr>
-                        <tr>
-                            <td>Cottagecore</td>
-                            <td>Instagram, Pinterest</td>
-                        </tr>
-                        <tr>
-                            <td>Cyberpunk</td>
-                            <td>Reddit, Games</td>
-                        </tr>
-                        <tr>
-                            <td>Dark Academia</td>
-                            <td>Instagram, TikTok, Pinterest</td>
-                        </tr>
-                        <tr>
-                            <td>EGirl</td>
-                            <td>Instagram, TikTok</td>
-                        </tr>
-                        <tr>
-                            <td>Fairycore</td>
-                            <td>TikTok, Pinterest</td>
-                        </tr>
-                        <tr>
-                            <td>Goblincore</td>
-                            <td>Tumblr, TikTok, Pinterest</td>
-                        </tr>
-                        <tr>
-                            <td>Grandmacore</td>
-                            <td>TikTok, Pinterest</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>Tumblr, Instagram, MTV, TikTok</td>
-                        </tr>
-                        <tr>
-                            <td>Health goth</td>
-                            <td>Tumblr, Instagram</td>
-                        </tr>
-                        <tr>
-                            <td>Kidcore</td>
-                            <td>Tumblr, TikTok, Pinterest</td>
-                        </tr>
-                        <tr>
-                            <td>Light academia</td>
-                            <td>Tumblr, Pinterest, TikTok</td>
-                        </tr>
-                        <tr>
-                            <td>Maximalism</td>
-                            <td>Instagram, Pinterest</td>
-                        </tr>
-                        <tr>
-                            <td>Normcore</td>
-                            <td>Magazine, Blog</td>
-                        </tr>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>TikTok, Instagram</td>
-                        </tr>
-                        <tr>
-                            <td>Seapunk</td>
-                            <td>Tumblr</td>
-                        </tr>
-                        <tr>
-                            <td>Solarpunk</td>
-                            <td>Tumblr, Pinterest, TikTok</td>
-                        </tr>
-                        <tr>
-                            <td>Steampunk</td>
-                            <td>Tumblr, Pinterest</td>
-                        </tr>
-                        <tr>
-                            <td>VSCOGirl</td>
-                            <td>Instagram, TikTok</td>
-                        </tr>
-                        <tr>
-                            <td>Vaporwave</td>
-                            <td>Reddit, Tumblr</td>
-                        </tr>
-                        <tr>
-                            <td>Weirdcore</td>
-                            <td>Tumblr, TikTok, Reddit</td>
-                        </tr>
-                        <tr>
-                            <td>Witchcore</td>
-                            <td>Tumblr, Pinterest, TikTok</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        <div class="question-item">
-            <h5>Demographic Engagement:</h5>
-            <p><em>"Which age groups are engaged with different aesthetic movements?"</em></p>
-            <div class="finding">
-                <strong>Finding:</strong> GenZ (13-28) dominates most internet aesthetics, while Millennials (29-44)
-                show stronger presence in Normcore, Steampunk, and Cottagecore.
-            </div>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query shows age groups engaged with different aesthetics.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-PREFIX base: &lt;urn:webprotege:ontology:04d732ad-5fda-4ee8-89b2-5643bf6d86da#&gt;
-
-SELECT ?aestheticName ?communityName (STR(?ageRange) AS ?age)
-WHERE {
-  ?aesthetic a :Aesthetic ;
-             rdfs:label ?aestheticName ;
-             :experiencedBy ?community .
-  ?community rdfs:label ?communityName .
-  OPTIONAL { ?community base:ageRange ?ageRange }
-}</pre>
-                </div>
-            </div>
-        </div>
-        <div class="results-table">
-            <h6>📊 Query Results: Demographic Engagement with Aesthetics</h6>
-            <div class="table-container">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Aesthetic</th>
-                            <th>Community</th>
-                            <th>Age Range</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Seapunk</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Fairycore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Goblincore</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Goblincore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Witchcore</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Witchcore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Maximalism</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Maximalism</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Y2K</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Cyberpunk</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Cyberpunk</td>
-                            <td>GenX</td>
-                            <td>45-60</td>
-                        </tr>
-                        <tr>
-                            <td>Cyberpunk</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>VSCOGirl</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Light academia</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Kidcore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Kidcore</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Vaporwave</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Vaporwave</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>EGirl</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Angelcore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Health goth</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Steampunk</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Steampunk</td>
-                            <td>GenX</td>
-                            <td>45-60</td>
-                        </tr>
-                        <tr>
-                            <td>Normcore</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Weirdcore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Clean Girl</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Clean Girl</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Grandmacore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Grandmacore</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Cottagecore</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Cottagecore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Bloomcore</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>Millennials</td>
-                            <td>29-44</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>GenX</td>
-                            <td>45-60</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>GenZ</td>
-                            <td>13-28</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="question-item">
-            <h5>Creative Outputs:</h5>
-            <p><em>"What types of creative products are generated by different aesthetic movements?"</em></p>
-            <div class="finding">
-                <strong>Finding:</strong> Consistent output patterns emerge across aesthetics - mood boards
-                (Image/Digital Products), short videos (Video Products), and Instagram posts (Digital Products).
-            </div>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query shows creative products generated by aesthetic movements.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-
-SELECT ?aestheticName (STR(?productName) AS ?product) 
-       (GROUP_CONCAT(DISTINCT ?productTypeLabel; SEPARATOR=", ") AS ?productTypes)
-WHERE {
-  ?aesthetic a :Aesthetic ;
-             rdfs:label ?aestheticName ;
-             :resultsIn ?product .
-  ?product rdfs:label ?productName .
-  
-  ?product a ?productType .
-  FILTER (?productType != &lt;http://www.w3.org/2002/07/owl#NamedIndividual&gt;)
-  
-  OPTIONAL { ?productType rdfs:label ?productTypeLabel }
-}
-GROUP BY ?aestheticName ?productName
-ORDER BY ?aestheticName ?productName</pre>
-                </div>
-            </div>
-        </div>
-        <div class="results-table">
-            <h6>📊 Query Results: Creative Products by Aesthetic</h6>
-            <div class="table-container">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Aesthetic</th>
-                            <th>Product</th>
-                            <th>Product Types</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Clean Girl</td>
-                            <td>Instagram post</td>
-                            <td>DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Clean Girl</td>
-                            <td>Short videos</td>
-                            <td>VideoProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Cottagecore</td>
-                            <td>Short videos</td>
-                            <td>VideoProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Cottagecore</td>
-                            <td>MoodBoard</td>
-                            <td>ImageProduct, DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Dark Academia</td>
-                            <td>MoodBoard</td>
-                            <td>ImageProduct, DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>Instagram post</td>
-                            <td>DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>MoodBoard</td>
-                            <td>ImageProduct, DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Maximalism</td>
-                            <td>TheStudioJob homepage</td>
-                            <td>DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>Instagram post</td>
-                            <td>DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>Short videos</td>
-                            <td>VideoProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>MoodBoard</td>
-                            <td>ImageProduct, DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Y2K</td>
-                            <td>Instagram post</td>
-                            <td>DigitalProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Y2K</td>
-                            <td>Short videos</td>
-                            <td>VideoProduct</td>
-                        </tr>
-                        <tr>
-                            <td>Y2K</td>
-                            <td>MoodBoard</td>
-                            <td>ImageProduct, DigitalProduct</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="question-item">
-            <h5>Genealogical Analysis:</h5>
-            <p><em>"What are the primary sources of inspiration for different aesthetic movements?"</em></p>
-            <div class="finding">
-                <strong>Finding:</strong> Based on the results, many niche aesthetics drew inspiration from other,
-                larger internet aesthetics. Conversely, the major aesthetic movements themselves frequently found their
-                creative sources in historical imagery and past eras (Dark Academia, Steampunk), with several movements
-                explicitly attempting to "revive" and reinterpret historical elements (Y2K, Old Money).
-            </div>
-            <div class="query-example">
-                <h5>📋SPARQL-example</h5>
-                <p class="query-description">This query shows inspiration sources for aesthetic movements.</p>
-                <div class="sparql-block">
-                    <pre class="sparql-content">PREFIX webprotege: &lt;http://webprotege.stanford.edu/&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-
-SELECT ?inspiredAesthetic 
-      (GROUP_CONCAT(DISTINCT ?inspirationSource; SEPARATOR=", ") AS ?inspirationSources)
-WHERE {
-  ?aesthetic a webprotege:Aesthetic ;
-             rdfs:label ?inspiredAesthetic ;
-             webprotege:inspiredBy ?source .
-  OPTIONAL { ?source rdfs:label ?inspirationSource }
-  FILTER (isIRI(?source))
-}
-GROUP BY ?inspiredAesthetic
-ORDER BY ?inspiredAesthetic</pre>
-                </div>
-            </div>
-        </div>
-        <div class="results-table">
-            <h6>📊 Query Results: Inspiration Sources for Aesthetic Movements</h6>
-            <div class="table-container">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Aesthetic</th>
-                            <th>Inspiration Sources</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Angelcore</td>
-                            <td>Unearthliness, European Classical Art</td>
-                        </tr>
-                        <tr>
-                            <td>Bloomcore</td>
-                            <td>Cottagecore</td>
-                        </tr>
-                        <tr>
-                            <td>Clean Girl</td>
-                            <td>Minimalism</td>
-                        </tr>
-                        <tr>
-                            <td>Cottagecore</td>
-                            <td>Little House On The Prairie, Tradition, Marie Antoinette, Country Side</td>
-                        </tr>
-                        <tr>
-                            <td>Cyberpunk</td>
-                            <td>HighTech, Akira</td>
-                        </tr>
-                        <tr>
-                            <td>Dark Academia</td>
-                            <td>Harry Potter, Romanticism</td>
-                        </tr>
-                        <tr>
-                            <td>EGirl</td>
-                            <td>Grunge, Emo</td>
-                        </tr>
-                        <tr>
-                            <td>Fairycore</td>
-                            <td>Cottagecore</td>
-                        </tr>
-                        <tr>
-                            <td>Goblincore</td>
-                            <td>Cottagecore</td>
-                        </tr>
-                        <tr>
-                            <td>Grandmacore</td>
-                            <td>Cottagecore, Nostalgia</td>
-                        </tr>
-                        <tr>
-                            <td>Grunge</td>
-                            <td>Nirvana, Black Sabbath, The Pixies, Punk</td>
-                        </tr>
-                        <tr>
-                            <td>Health goth</td>
-                            <td>Cyberpunk</td>
-                        </tr>
-                        <tr>
-                            <td>Kidcore</td>
-                            <td>2000s, 1990s</td>
-                        </tr>
-                        <tr>
-                            <td>Light academia</td>
-                            <td>Dark Academia, Classical Literature</td>
-                        </tr>
-                        <tr>
-                            <td>Maximalism</td>
-                            <td>Art Nouveau, Eclecticism</td>
-                        </tr>
-                        <tr>
-                            <td>Normcore</td>
-                            <td>1990s</td>
-                        </tr>
-                        <tr>
-                            <td>Old Money</td>
-                            <td>Gossip Girl, QuietLuxury, Classical</td>
-                        </tr>
-                        <tr>
-                            <td>Seapunk</td>
-                            <td>1990s, Y2K</td>
-                        </tr>
-                        <tr>
-                            <td>Solarpunk</td>
-                            <td>Art Nouveau</td>
-                        </tr>
-                        <tr>
-                            <td>Steampunk</td>
-                            <td>VictorianEra, BioShock</td>
-                        </tr>
-                        <tr>
-                            <td>Vaporwave</td>
-                            <td>Glitch Art, Japanese City Pop</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        /* STYLE SECTION */
-        /* LLM Chat Styles */
-        .prompt {
-            background: #f8f9fa;
-            border-left: 4px solid #007bff;
-            padding: 18px 20px;
-            margin: 25px 0 0 0;
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-            font-size: 0.95em;
-            line-height: 1.5;
-            color: #2d3748;
-            font-weight: 500;
-            border-radius: 8px 0 0 8px;
-        }
-
-        .chatbot {
-            background: #f7fafc;
-            padding: 25px;
-            border-left: 4px solid #38a169;
-            margin: 0 0 25px 0;
-            border-radius: 0 8px 8px 0;
-            color: #4a5568;
-            line-height: 1.6;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .chatbot ol,
-        .chatbot ul {
-            margin: 15px 0;
-            padding-left: 24px;
-        }
-
-        .chatbot li {
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-
-        .chatbot b {
-            color: #2d3748;
-            font-weight: 600;
-        }
-
-        .chatbot i {
-            color: #718096;
-            font-style: italic;
-        }
-
-        .chatbot ol {
-            list-style-type: decimal;
-            color: #4a5568;
-        }
-
-        .chatbot ol ol {
-            list-style-type: lower-alpha;
-            margin-left: 25px;
-            margin-top: 10px;
-        }
-
-        .chatbot ul {
-            list-style-type: disc;
-        }
-
-        .chatbot ul ul {
-            list-style-type: circle;
-            margin-left: 25px;
-            margin-top: 10px;
-        }
-
-        /* Properties Section */
-        .properties-section {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #e2e8f0;
-        }
-
-        .properties-section h5 {
-            color: #2d3748;
-            margin-bottom: 20px;
-            font-size: 1.3em;
-            font-weight: 600;
-        }
-
-        .properties-detailed {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .property-item {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            border-left: 4px solid #667eea;
-        }
-
-        .property-item:hover {
-            border-color: #667eea;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .property-item code {
-            background: #f7fafc;
-            padding: 6px 10px;
-            border-radius: 6px;
-            font-weight: 600;
-            color: #2d3748;
-            font-size: 0.95em;
-            border: 1px solid #e2e8f0;
-        }
-
-        .property-description {
-            color: #4a5568;
-            margin-top: 12px;
-            line-height: 1.5;
-            font-size: 0.95em;
-        }
-
-        /* Новые стили для статичной структуры онтологии */
-        .ontology-structure {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            margin: 20px 0;
-        }
-
-        .class-category {
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-
-        .category-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .category-header h6 {
-            margin: 0;
-            font-size: 1.1em;
-            font-weight: 600;
-        }
-
-        .category-content {
-            padding: 20px;
-            background: #fafbfc;
-        }
-
-        .class-group {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .class-group:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-
-        .class-group h7 {
-            font-size: 1em;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .class-item {
-            margin: 8px 0;
-            padding: 8px 12px;
-            background: #f7fafc;
-            border-radius: 6px;
-            border-left: 3px solid #667eea;
-        }
-
-        .subclasses {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-
-        .subclass-item {
-            margin: 4px 0;
-            padding: 4px 8px;
-            color: #4a5568;
-        }
-
-        .nested-subclasses {
-            margin-left: 20px;
-            border-left: 2px solid #e2e8f0;
-            padding-left: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .deep-nested {
-            margin-left: 20px;
-            border-left: 1px dashed #cbd5e0;
-            padding-left: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .class-item code,
-        .subclass-item code {
-            background: #edf2f7;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 0.9em;
-        }
-
-        .category-description {
-            color: #4a5568;
-            font-style: italic;
-            margin-bottom: 15px;
-            padding: 10px;
-            background: #f0fff4;
-            border-radius: 6px;
-            border-left: 4px solid #38a169;
-        }
-
-        /* Query Examples */
-        .query-example {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #007bff;
-        }
-
-        .query-example h5 {
-            margin-top: 0;
-            color: #495057;
-            font-size: 1.1em;
-        }
-
-        .query-description {
-            color: #6c757d;
-            font-size: 0.95em;
-            margin-bottom: 15px;
-        }
-
-        .sparql-block {
-            background-color: #2d3748;
-            border-radius: 6px;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .sparql-content {
-            color: #e2e8f0;
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-            font-size: 0.85em;
-            line-height: 1.4;
-            padding: 20px;
-            margin: 0;
-            overflow-x: auto;
-            white-space: pre;
-        }
-
-        /* Стили для competency questions */
-        .competency-questions {
-            margin-top: 30px;
-        }
-
-        .question-item {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        .question-item:last-child {
-            border-bottom: none;
-        }
-
-        .question-item h5 {
-            font-size: 1.2em;
-            font-weight: 700;
-            color: #2d3748;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .question-item h5:before {
-            content: "•";
-            color: #667eea;
-            font-size: 1.5em;
-        }
-
-        .question-item p {
-            font-size: 1.1em;
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .question-item p em {
-            color: #2d3748;
-            font-style: normal;
-            font-weight: 500;
-        }
-
-        .finding {
-            background: #f0fff4;
-            border-left: 4px solid #38a169;
-            padding: 16px 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .finding strong {
-            font-size: 1.1em;
-            color: #2d3748;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .finding {
-            font-size: 1em;
-            color: #4a5568;
-            line-height: 1.5;
-        }
-
-        /* Results Tables */
-        .results-table {
-            margin-top: 20px;
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .results-table h6 {
-            margin: 0 0 15px 0;
-            color: #2d3748;
-            font-size: 1.1em;
-            font-weight: 600;
-        }
-
-        .table-container {
-            overflow-x: auto;
-        }
-
-        .styled-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9em;
-            min-width: 400px;
-        }
-
-        .styled-table thead tr {
-            background-color: #4a5568;
-            color: white;
-            text-align: left;
-        }
-
-        .styled-table th,
-        .styled-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .styled-table tbody tr:nth-of-type(even) {
-            background-color: #f7fafc;
-        }
-
-        .styled-table tbody tr:hover {
-            background-color: #edf2f7;
-        }
-
-        .styled-table tbody tr:last-of-type {
-            border-bottom: 2px solid #4a5568;
-        }
-
-        .styled-table td:first-child {
-            font-weight: 500;
-            color: #2d3748;
-        }
-
-        .styled-table td:last-child {
-            color: #4a5568;
-        }
-    </style>
-    <!-- <h4 id="ontologies-alignment">4.2.4 Ontologies Alignment</h4>
-    <p>Content about the alignment...</p> -->
-</section>
+    </section>
+
+    <button id="scrollToTopBtn" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>
+
+    

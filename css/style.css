@@ -1,3 +1,19 @@
+@font-face {
+    /* This is the name you are creating for your font */
+    font-family: 'Pixelify Sans'; 
+    
+    /* This is the path to the font file (relative to your CSS file) */
+    src: url('../fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('truetype-variations');
+  }
+
+@font-face {
+    /* This is the name you are creating for your font */
+    font-family: 'MS Sans Serif'; 
+    
+    /* This is the path to the font file (relative to your CSS file) */
+    src: url('./fonts/MS Sans Serif.ttf') format('truetype-variations');
+}
+
 /* --- General Styling --- */
 html { scroll-behavior: smooth; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #fdfdfd; }
@@ -83,8 +99,21 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 /* --- Content Area Styling --- */
 .content { margin-left: 300px; padding: 40px 50px; width: 100%; max-width: 1200px; box-sizing: border-box; }
 .content section { margin-bottom: 60px; padding-top: 20px; }
-h1 { font-size: 2.5rem; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
-h2 { font-size: 2rem; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px; position: sticky; top: 0; background: #fdfdfd; z-index: 10; }
+h1 {
+    font-size: 5rem;
+    padding-bottom: 15px;
+    font-family: "Pixelify Sans", "sans-serif";
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.subtitle { 
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+h2 { font-size: 2rem; margin-top: 40px; border-bottom: 1px solid #eee; background-color: #fff; padding-bottom: 10px; position: sticky; top: 0; z-index: 10; }
 h3 { font-size: 1.5rem; margin-top: 30px; }
 h4 { font-size: 1rem; margin-top: 25px; margin-bottom: 5px; }
 blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0; font-style: italic; color: #555; }
@@ -104,6 +133,35 @@ blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.sidebar a.sub-link.sub-nested {
+    padding-left: 35px; /* Extra indent */
+    font-size: 0.9em;   /* Slightly smaller */
+    color: #555;
+}
+
+.sidebar-footer {
+    margin-top: 25px; /* Add space above the link */
+    padding-top: 15px; /* Add padding above the line */
+    border-top: 1px solid #e0e0e0; /* Separator line */
+}
+
+.sidebar-footer a {
+    text-decoration: none;
+    color: #555; /* Muted color */
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex; /* This aligns the icon and text nicely */
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-footer a:hover {
+    background-color: #e9e9e9;
+    color: #111; /* Darken text on hover */
 }
 
 @media (max-width: 900px) {
@@ -226,3 +284,591 @@ blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0;
 .grid-item:hover {
     transform: scale(1.02);
 }
+
+/* --- Scroll to Top Button --- */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 100; /* Keep it on top */
+    border: none;
+    outline: none;
+    background-color: #555; /* A dark gray background */
+    color: white;
+    cursor: pointer;
+    padding: 0; /* Reset padding */
+    border-radius: 50%; /* Circular */
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;
+    
+    /* Use flex to center the SVG icon */
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #333; /* Darker on hover */
+  }
+  
+  /* This class will be added by JavaScript to show the button */
+  #scrollToTopBtn.show {
+    display: flex; /* Show the button */
+  }
+
+  /* LLM Chat Styles */
+  .prompt {
+    background: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 18px 20px;
+    margin: 25px 0 0 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #2d3748;
+    font-weight: 500;
+    border-radius: 8px 0 0 8px;
+}
+
+.chatbot {
+    background: #f7fafc;
+    padding: 25px;
+    border-left: 4px solid #38a169;
+    margin: 0 0 25px 0;
+    border-radius: 0 8px 8px 0;
+    color: #4a5568;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot ol,
+.chatbot ul {
+    margin: 15px 0;
+    padding-left: 24px;
+}
+
+.chatbot li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.chatbot b {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.chatbot i {
+    color: #718096;
+    font-style: italic;
+}
+
+.chatbot ol {
+    list-style-type: decimal;
+    color: #4a5568;
+}
+
+.chatbot ol ol {
+    list-style-type: lower-alpha;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.chatbot ul {
+    list-style-type: disc;
+}
+
+.chatbot ul ul {
+    list-style-type: circle;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+/* Properties Section */
+.properties-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #e2e8f0;
+}
+
+.properties-section h5 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.properties-detailed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.property-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.property-item:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+}
+
+.property-item code {
+    background: #f7fafc;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.95em;
+    border: 1px solid #e2e8f0;
+}
+
+.property-description {
+    color: #4a5568;
+    margin-top: 12px;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+/* Новые стили для статичной структуры онтологии */
+.ontology-structure {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+}
+
+.class-category {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.category-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-header h6 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.category-content {
+    padding: 20px;
+    background: #fafbfc;
+}
+
+.class-group {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.class-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.class-group h7 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.class-item {
+    margin: 8px 0;
+    padding: 8px 12px;
+    background: #f7fafc;
+    border-radius: 6px;
+    border-left: 3px solid #667eea;
+}
+
+.subclasses {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.subclass-item {
+    margin: 4px 0;
+    padding: 4px 8px;
+    color: #4a5568;
+}
+
+.nested-subclasses {
+    margin-left: 20px;
+    border-left: 2px solid #e2e8f0;
+    padding-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.deep-nested {
+    margin-left: 20px;
+    border-left: 1px dashed #cbd5e0;
+    padding-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.class-item code,
+.subclass-item code {
+    background: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.category-description {
+    color: #4a5568;
+    font-style: italic;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f0fff4;
+    border-radius: 6px;
+    border-left: 4px solid #38a169;
+}
+
+/* Query Examples */
+.query-example {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.query-example h5 {
+    margin-top: 0;
+    color: #495057;
+    font-size: 1.1em;
+}
+
+.query-description {
+    color: #6c757d;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.sparql-block {
+    background-color: #2d3748;
+    border-radius: 6px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sparql-content {
+    color: #e2e8f0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.85em;
+    line-height: 1.4;
+    padding: 20px;
+    margin: 0;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+/* Стили для competency questions */
+.competency-questions {
+    margin-top: 30px;
+}
+
+.question-item {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.question-item:last-child {
+    border-bottom: none;
+}
+
+.question-item h5 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.question-item h5:before {
+    content: "•";
+    color: #667eea;
+    font-size: 1.5em;
+}
+
+.question-item p {
+    font-size: 1.1em;
+    color: #4a5568;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.question-item p em {
+    color: #2d3748;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.finding {
+    background: #f0fff4;
+    border-left: 4px solid #38a169;
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.finding strong {
+    font-size: 1.1em;
+    color: #2d3748;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.finding {
+    font-size: 1em;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Results Tables */
+.results-table {
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-table h6 {
+    margin: 0 0 15px 0;
+    color: #2d3748;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+}
+
+.styled-table thead tr {
+    background-color: #4a5568;
+    color: white;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f7fafc;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #edf2f7;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #4a5568;
+}
+
+.styled-table td:first-child {
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.styled-table td:last-child {
+    color: #4a5568;
+}
+
+/* Minimal responsive image styling */
+.kg-figure {
+    text-align: center;
+    margin: 1.5rem 0.5rem;
+  }
+  .kg-figure-vertical {
+    text-align: center;
+    margin: 1.5rem 1.5rem;
+  }
+  .kg-figure img {
+    display: block;
+    margin: 0 auto;
+    width: 50vw;
+    max-width: 100vw;
+    height: auto;
+  }
+    .kg-figure-vertical img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80vw;
+    height: auto;
+    max-height:500px;
+  }
+
+  /* On larger screens, limit to 80% of the viewport width */
+  @media (max-width: 768px) {
+    .kg-figure {text-align:center; margin: 0.1rem 0;}
+    .kg-figure img { width: 90vw; max-width: 90vw; margin:0.1rem 0;  }
+    .kg-figure-vertical {text-align:center; margin: 0.1rem 0;}
+    .kg-figure-vertical img { width: 70vw; max-width: 70vw; margin:0.1rem 0;}
+  }
+  .kg-caption {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  p { margin: 0.75rem 0; line-height: 1.5; color: #111; }
+
+  /* Styles for the combination explainer boxes */
+  .combination-explainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .combo-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .combo-box strong {
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .combo-box ul {
+    padding-left: 20px; /* Indent list */
+    margin-top: 10px;
+  }
+
+  .combo-box li {
+    margin-bottom: 5px; /* Spacing between list items */
+  }
+
+  /* Media query for smaller screens (mobile) */
+  @media (max-width: 768px) {
+    /* Stack grid items in a single column */
+    .stats-figure-grid,
+    .combination-explainer {
+      grid-template-columns: 1fr; /* Single column */
+      gap: 1rem;
+    }
+  }
+
+  .flip-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for wider view */
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    perspective: 1000px;
+  }
+  
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .flip-card-back {
+    background-color: rgb(168, 167, 167);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    overflow-y: auto;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 1rem;
+  
+  }
+  
+  .flip-card-back ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  
+  /* スマホサイズ：2列×3行に変更 */
+  @media (max-width: 768px) {
+    .flip-card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .flip-card-back {
+      font-size: 0.7rem;
+      padding: 0.5rem;
+    }
+    .flip-card-back h3 {
+      font-size: 0.7rem;
+    }
+  }
