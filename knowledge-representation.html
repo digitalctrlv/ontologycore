@@ -212,318 +212,320 @@
         <h5>Core Classes Analysis:</h5>
 
         <div class="class-category">
-            <div class="category-header">
-                <h6>🎨 Aesthetic Core Hierarchy</h6>
-                <span class="category-icon">▶</span>
+    <div class="category-header">
+        <h6>🎨 Core Aesthetic Classes</h6>
+        <span class="category-icon">▶</span>
+    </div>
+    <div class="category-content">
+        <div class="class-item main-class">
+            <div class="class-header" data-target="aesthetic">
+                <code>Aesthetic</code>
+                <span class="class-toggle">+</span>
             </div>
-            <div class="category-content">
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('aesthetic')">
-                        <code>Aesthetic</code>
-                        <span class="class-toggle">+</span>
+            <div id="aesthetic" class="class-details">
+                <p class="class-description">The main class representing internet aesthetics</p>
+            </div>
+        </div>
+
+        <div class="class-item main-class">
+            <div class="class-header" data-target="aestheticElement">
+                <code>AestheticElement</code>
+                <span class="class-toggle">+</span>
+            </div>
+            <div id="aestheticElement" class="class-details">
+                <p class="class-description">Components which characterize aesthetic</p>
+                <div class="subclasses">
+                    <div class="subclass-item">
+                        <code>AudioElement</code>
                     </div>
-                    <div id="aesthetic" class="class-details">
-                        <p class="class-description">The main class representing internet aesthetics</p>
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="visualElement">
+                            <code>VisualElement</code>
+                            <span class="class-toggle">+</span>
+                        </div>
+                        <div id="visualElement" class="subclass-details">
+                            <div class="subclass-item nested"><code>Color</code></div>
+                            <div class="subclass-item nested"><code>Material</code></div>
+                            <div class="subclass-item nested"><code>Pattern</code></div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('aestheticElement')">
-                        <code>AestheticElement</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="aestheticElement" class="class-details">
-                        <p class="class-description">Components which characterize aesthetic</p>
-                        <div class="subclasses">
-                            <div class="subclass-item">
-                                <code>AudioElement</code>
-                            </div>
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('visualElement')">
-                                    <code>VisualElement</code>
+<div class="class-category">
+    <div class="category-header">
+        <h6>👥 Social Structure</h6>
+        <span class="category-icon">▶</span>
+    </div>
+    <div class="category-content">
+        <div class="class-item main-class">
+            <div class="class-header" data-target="community">
+                <code>Community</code>
+                <span class="class-toggle">+</span>
+            </div>
+            <div id="community" class="class-details">
+                <p class="class-description">Groups experiencing aesthetics</p>
+                <div class="subclasses">
+                    <div class="subclass-item"><code>AgeCommunity</code></div>
+                    <div class="subclass-item"><code>OnlineCommunity</code></div>
+                    <div class="subclass-item"><code>SocialCommunity</code></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="class-category">
+    <div class="category-header">
+        <h6>🌍 Contextual Framework</h6>
+        <span class="category-icon">▶</span>
+    </div>
+    <div class="category-content">
+        <div class="class-item main-class">
+            <div class="class-header" data-target="context">
+                <code>Context</code>
+                <span class="class-toggle">+</span>
+            </div>
+            <div id="context" class="class-details">
+                <p class="class-description">Environmental factors shaping aesthetics</p>
+                <div class="subclasses">
+                    <div class="subclass-item"><code>CulturalContext</code></div>
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="spatialContext">
+                            <code>SpatialContext</code>
+                            <span class="class-toggle">+</span>
+                        </div>
+                        <div id="spatialContext" class="subclass-details">
+                            <div class="subclass-item nested"><code>DigitalSpace</code></div>
+                            <div class="subclass-item nested">
+                                <div class="subclass-header" data-target="physicalSpace">
+                                    <code>PhysicalSpace</code>
                                     <span class="class-toggle">+</span>
                                 </div>
-                                <div id="visualElement" class="subclass-details">
-                                    <div class="subclass-item nested"><code>Color</code></div>
-                                    <div class="subclass-item nested"><code>Material</code></div>
-                                    <div class="subclass-item nested"><code>Pattern</code></div>
+                                <div id="physicalSpace" class="subclass-details">
+                                    <div class="subclass-item deep-nested"><code>City</code></div>
+                                    <div class="subclass-item deep-nested"><code>Country</code></div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="subclass-item"><code>TechnologicalContext</code></div>
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="temporalContext">
+                            <code>TemporalContext</code>
+                            <span class="class-toggle">+</span>
+                        </div>
+                        <div id="temporalContext" class="subclass-details">
+                            <div class="subclass-item nested"><code>Decade</code></div>
+                            <div class="subclass-item nested"><code>HistoricalEra</code></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="class-category">
-            <div class="category-header">
-                <h6>👥 Social Structure</h6>
-                <span class="category-icon">▶</span>
+        <div class="class-item main-class">
+            <div class="class-header" data-target="conceptualIdea">
+                <code>ConceptualIdea</code>
+                <span class="class-toggle">+</span>
             </div>
-            <div class="category-content">
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('community')">
-                        <code>Community</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="community" class="class-details">
-                        <p class="class-description">Groups experiencing aesthetics</p>
-                        <div class="subclasses">
-                            <div class="subclass-item"><code>AgeCommunity</code></div>
-                            <div class="subclass-item"><code>OnlineCommunity</code></div>
-                            <div class="subclass-item"><code>SocialCommunity</code></div>
-                        </div>
-                    </div>
-                </div>
+            <div id="conceptualIdea" class="class-details">
+                <!-- No subclasses -->
+            </div>
+        </div>
+    </div>
+</div>
 
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('person')">
-                        <code>Person</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="person" class="class-details">
-                        <div class="subclasses">
-                            <div class="subclass-item"><code>Consumer</code></div>
-                            <div class="subclass-item"><code>Creator</code></div>
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('influencer')">
-                                    <code>Influencer</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="influencer" class="subclass-details">
-                                    <div class="subclass-item nested"><code>Blogger</code></div>
-                                    <div class="subclass-item nested"><code>Celebrity</code></div>
-                                    <div class="subclass-item nested"><code>SocialMediaInfluencer</code></div>
-                                </div>
-                            </div>
+<div class="class-category">
+    <div class="category-header">
+        <h6>🎭 4Ps of Creativity (Rhodes Model)</h6>
+        <span class="category-icon">▶</span>
+    </div>
+    <div class="category-content">
+        <p class="category-description">Based on Mel Rhodes' "4 Ps of Creativity" framework: Person, Process, Product, Press - representing the fundamental components of creative systems.</p>
+        
+        <div class="class-item main-class">
+            <div class="class-header" data-target="person">
+                <code>Person</code>
+                <span class="class-toggle">+</span>
+            </div>
+            <div id="person" class="class-details">
+                <div class="subclasses">
+                    <div class="subclass-item"><code>Consumer</code></div>
+                    <div class="subclass-item"><code>Creator</code></div>
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="influencer">
+                            <code>Influencer</code>
+                            <span class="class-toggle">+</span>
+                        </div>
+                        <div id="influencer" class="subclass-details">
+                            <div class="subclass-item nested"><code>Blogger</code></div>
+                            <div class="subclass-item nested"><code>Celebrity</code></div>
+                            <div class="subclass-item nested"><code>SocialMediaInfluencer</code></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="class-category">
-            <div class="category-header">
-                <h6>🌍 Contextual Framework</h6>
-                <span class="category-icon">▶</span>
+        <div class="class-item main-class">
+            <div class="class-header" data-target="process">
+                <code>Process</code>
+                <span class="class-toggle">+</span>
             </div>
-            <div class="category-content">
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('context')">
-                        <code>Context</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="context" class="class-details">
-                        <p class="class-description">Environmental factors shaping aesthetics</p>
-                        <div class="subclasses">
-                            <div class="subclass-item"><code>CulturalContext</code></div>
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('spatialContext')">
-                                    <code>SpatialContext</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="spatialContext" class="subclass-details">
-                                    <div class="subclass-item nested"><code>DigitalSpace</code></div>
-                                    <div class="subclass-item nested">
-                                        <div class="subclass-header" onclick="toggleClass('physicalSpace')">
-                                            <code>PhysicalSpace</code>
-                                            <span class="class-toggle">+</span>
-                                        </div>
-                                        <div id="physicalSpace" class="subclass-details">
-                                            <div class="subclass-item deep-nested"><code>City</code></div>
-                                            <div class="subclass-item deep-nested"><code>Country</code></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="subclass-item"><code>TechnologicalContext</code></div>
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('temporalContext')">
-                                    <code>TemporalContext</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="temporalContext" class="subclass-details">
-                                    <div class="subclass-item nested"><code>Decade</code></div>
-                                    <div class="subclass-item nested"><code>HistoricalEra</code></div>
-                                </div>
-                            </div>
+            <div id="process" class="class-details">
+                <p class="class-description">Developmental phases of aesthetics</p>
+                <div class="subclasses">
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="creativeProcess">
+                            <code>CreativeProcess</code>
+                            <span class="class-toggle">+</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('conceptualIdea')">
-                        <code>ConceptualIdea</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="conceptualIdea" class="class-details">
-                        <!-- No subclasses -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="class-category">
-            <div class="category-header">
-                <h6>⚡ Creative Process Model</h6>
-                <span class="category-icon">▶</span>
-            </div>
-            <div class="category-content">
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('process')">
-                        <code>Process</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="process" class="class-details">
-                        <p class="class-description">Developmental phases of aesthetics</p>
-                        <div class="subclasses">
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('creativeProcess')">
-                                    <code>CreativeProcess</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="creativeProcess" class="subclass-details">
-                                    <div class="subclass-item nested"><code>Convergence</code></div>
-                                    <div class="subclass-item nested"><code>Divergence</code></div>
-                                    <div class="subclass-item nested"><code>Metaconvergence</code></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('lifeStyle')">
-                        <code>LifeStyle</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="lifeStyle" class="class-details">
-                        <div class="subclasses">
-                            <div class="subclass-item"><code>BehaviourPattern</code></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('emotion')">
-                        <code>Emotion</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="emotion" class="class-details">
-                        <!-- No subclasses -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="class-category">
-            <div class="category-header">
-                <h6>🏭 Production Ecosystem</h6>
-                <span class="category-icon">▶</span>
-            </div>
-            <div class="category-content">
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('product')">
-                        <code>Product</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="product" class="class-details">
-                        <p class="class-description">Creative outputs resulting from aesthetic processes</p>
-                        <div class="subclasses">
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('creativeProduct')">
-                                    <code>CreativeProduct</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="creativeProduct" class="subclass-details">
-                                    <div class="subclass-item nested">
-                                        <div class="subclass-header" onclick="toggleClass('auditoryProduct')">
-                                            <code>AuditoryProduct</code>
-                                            <span class="class-toggle">+</span>
-                                        </div>
-                                        <div id="auditoryProduct" class="subclass-details">
-                                            <div class="subclass-item deep-nested"><code>AudioElement</code></div>
-                                        </div>
-                                    </div>
-                                    <div class="subclass-item nested">
-                                        <div class="subclass-header" onclick="toggleClass('digitalProduct')">
-                                            <code>DigitalProduct</code>
-                                            <span class="class-toggle">+</span>
-                                        </div>
-                                        <div id="digitalProduct" class="subclass-details">
-                                            <div class="subclass-item deep-nested"><code>InteractiveProduct</code></div>
-                                        </div>
-                                    </div>
-                                    <div class="subclass-item nested"><code>FashionProduct</code></div>
-                                    <div class="subclass-item nested"><code>TextualProduct</code></div>
-                                    <div class="subclass-item nested">
-                                        <div class="subclass-header" onclick="toggleClass('visualProduct')">
-                                            <code>VisualProduct</code>
-                                            <span class="class-toggle">+</span>
-                                        </div>
-                                        <div id="visualProduct" class="subclass-details">
-                                            <div class="subclass-item deep-nested"><code>ImageProduct</code></div>
-                                            <div class="subclass-item deep-nested"><code>VideoProduct</code></div>
-                                            <div class="subclass-item deep-nested"><code>VisualElement</code></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('tool')">
-                                    <code>Tool</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="tool" class="subclass-details">
-                                    <div class="subclass-item nested"><code>PhysicalTool</code></div>
-                                    <div class="subclass-item nested"><code>SoftwareTool</code></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="class-item main-class">
-                    <div class="class-header" onclick="toggleClass('press')">
-                        <code>Press</code>
-                        <span class="class-toggle">+</span>
-                    </div>
-                    <div id="press" class="class-details">
-                        <div class="subclasses">
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('media')">
-                                    <code>Media</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="media" class="subclass-details">
-                                    <div class="subclass-item nested"><code>Blog</code></div>
-                                    <div class="subclass-item nested"><code>Book</code></div>
-                                    <div class="subclass-item nested"><code>Games</code></div>
-                                    <div class="subclass-item nested"><code>Magazine</code></div>
-                                    <div class="subclass-item nested"><code>Movie</code></div>
-                                    <div class="subclass-item nested"><code>Music</code></div>
-                                    <div class="subclass-item nested"><code>Print</code></div>
-                                    <div class="subclass-item nested"><code>SocialMedia</code></div>
-                                    <div class="subclass-item nested"><code>TvShow</code></div>
-                                </div>
-                            </div>
-                            <div class="subclass-item">
-                                <div class="subclass-header" onclick="toggleClass('technology')">
-                                    <code>Technology</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="technology" class="subclass-details">
-                                    <div class="subclass-item nested"><code>Camera</code></div>
-                                    <div class="subclass-item nested"><code>Phone</code></div>
-                                    <div class="subclass-item nested"><code>Radio</code></div>
-                                    <div class="subclass-item nested"><code>Television</code></div>
-                                </div>
-                            </div>
+                        <div id="creativeProcess" class="subclass-details">
+                            <div class="subclass-item nested"><code>Convergence</code></div>
+                            <div class="subclass-item nested"><code>Divergence</code></div>
+                            <div class="subclass-item nested"><code>Metaconvergence</code></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="class-item main-class">
+            <div class="class-header" data-target="product">
+                <code>Product</code>
+                <span class="class-toggle">+</span>
+            </div>
+            <div id="product" class="class-details">
+                <p class="class-description">Creative outputs resulting from aesthetic processes</p>
+                <div class="subclasses">
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="creativeProduct">
+                            <code>CreativeProduct</code>
+                            <span class="class-toggle">+</span>
+                        </div>
+                        <div id="creativeProduct" class="subclass-details">
+                            <div class="subclass-item nested">
+                                <div class="subclass-header" data-target="auditoryProduct">
+                                    <code>AuditoryProduct</code>
+                                    <span class="class-toggle">+</span>
+                                </div>
+                                <div id="auditoryProduct" class="subclass-details">
+                                    <div class="subclass-item deep-nested"><code>AudioElement</code></div>
+                                </div>
+                            </div>
+                            <div class="subclass-item nested">
+                                <div class="subclass-header" data-target="digitalProduct">
+                                    <code>DigitalProduct</code>
+                                    <span class="class-toggle">+</span>
+                                </div>
+                                <div id="digitalProduct" class="subclass-details">
+                                    <div class="subclass-item deep-nested"><code>InteractiveProduct</code></div>
+                                </div>
+                            </div>
+                            <div class="subclass-item nested"><code>FashionProduct</code></div>
+                            <div class="subclass-item nested"><code>TextualProduct</code></div>
+                            <div class="subclass-item nested">
+                                <div class="subclass-header" data-target="visualProduct">
+                                    <code>VisualProduct</code>
+                                    <span class="class-toggle">+</span>
+                                </div>
+                                <div id="visualProduct" class="subclass-details">
+                                    <div class="subclass-item deep-nested"><code>ImageProduct</code></div>
+                                    <div class="subclass-item deep-nested"><code>VideoProduct</code></div>
+                                    <div class="subclass-item deep-nested"><code>VisualElement</code></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="tool">
+                            <code>Tool</code>
+                            <span class="class-toggle">+</span>
+                        </div>
+                        <div id="tool" class="subclass-details">
+                            <div class="subclass-item nested"><code>PhysicalTool</code></div>
+                            <div class="subclass-item nested"><code>SoftwareTool</code></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="class-item main-class">
+            <div class="class-header" data-target="press">
+                <code>Press</code>
+                <span class="class-toggle">+</span>
+            </div>
+            <div id="press" class="class-details">
+                <div class="subclasses">
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="media">
+                            <code>Media</code>
+                            <span class="class-toggle">+</span>
+                        </div>
+                        <div id="media" class="subclass-details">
+                            <div class="subclass-item nested"><code>Blog</code></div>
+                            <div class="subclass-item nested"><code>Book</code></div>
+                            <div class="subclass-item nested"><code>Games</code></div>
+                            <div class="subclass-item nested"><code>Magazine</code></div>
+                            <div class="subclass-item nested"><code>Movie</code></div>
+                            <div class="subclass-item nested"><code>Music</code></div>
+                            <div class="subclass-item nested"><code>Print</code></div>
+                            <div class="subclass-item nested"><code>SocialMedia</code></div>
+                            <div class="subclass-item nested"><code>TvShow</code></div>
+                        </div>
+                    </div>
+                    <div class="subclass-item">
+                        <div class="subclass-header" data-target="technology">
+                            <code>Technology</code>
+                            <span class="class-toggle">+</span>
+                        </div>
+                        <div id="technology" class="subclass-details">
+                            <div class="subclass-item nested"><code>Camera</code></div>
+                            <div class="subclass-item nested"><code>Phone</code></div>
+                            <div class="subclass-item nested"><code>Radio</code></div>
+                            <div class="subclass-item nested"><code>Television</code></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="class-category">
+    <div class="category-header">
+        <h6>💫 Supporting Elements</h6>
+        <span class="category-icon">▶</span>
+    </div>
+    <div class="category-content">
+        <div class="class-item main-class">
+            <div class="class-header" data-target="lifeStyle">
+                <code>LifeStyle</code>
+                <span class="class-toggle">+</span>
+            </div>
+            <div id="lifeStyle" class="class-details">
+                <div class="subclasses">
+                    <div class="subclass-item"><code>BehaviourPattern</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="class-item main-class">
+            <div class="class-header" data-target="emotion">
+                <code>Emotion</code>
+                <span class="class-toggle">+</span>
+            </div>
+            <div id="emotion" class="class-details">
+                <!-- No subclasses -->
+            </div>
+        </div>
+    </div>
+</div>
         <div class="properties-section">
             <h5>Property Definitions:</h5>
             <div class="properties-detailed">
