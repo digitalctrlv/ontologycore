@@ -70,11 +70,22 @@
   text-align: center;
 }
 
-
-/* スマホサイズ：2列×3行に変更 */
 @media (max-width: 768px) {
   .flip-card-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .flip-card-back {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .flip-card-back h3 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card-container {
+    grid-template-columns: repeat(1, 1fr);
   }
   .flip-card-back {
     font-size: 0.7rem;
@@ -84,12 +95,14 @@
     font-size: 0.7rem;
   }
 }
+
+
 </style>
 <section id="overview">
     <h2>1. Overview</h2>
     <!-- <p>Place your introductory text here... This is the default page that loads.</p> -->
     
-    <p>"OntologyCore", an ontology of aesthetics and creativity was developed within the course Knowledge Representation and Extraction, taught by Professor Aldo Gangemi during a.y. 2024/2025 of the Master’s Degree in Digital Humanities and Digital Knowledge at the University of Bologna. The project’s aim is to apply ontology methodologies to uncover the dynamics of aesthetics and creativity.</p>
+    <p>Ontology Core was developed as an ontology of aesthetics and creativity within the course Knowledge Representation and Extraction, taught by Professor Aldo Gangemi during a.y. 2024/2025 of the Master’s Degree in Digital Humanities and Digital Knowledge at the University of Bologna. The project’s aim is to apply ontology methodologies to uncover the dynamics of aesthetics and creativity.</p>
 
     <h3 id="kre-project">1.1 The Project</h3>
 
