@@ -163,16 +163,29 @@ blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0;
     position: relative;
 }
 
-.modal-content-container {
+#modal-content-container {
     position: relative;
 }
 
-.modal-content-container img,
-.modal-content-container video,
-.modal-content-container iframe {
+/* This rule is fine for images and videos */
+#modal-content-container img,
+#modal-content-container video {
     max-width: 100%;
     max-height: 80vh;
     object-fit: contain;
+    height: auto;
+}
+
+/* THIS IS THE NEW, HYPER-SPECIFIC RULE. 
+  By adding .modal-content-wrapper, this rule is now
+  more specific than the one in customgallery.css
+  and will win.
+*/
+.modal-content-wrapper #modal-content-container iframe {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    height: auto;
 }
 
 .modal-close-btn {

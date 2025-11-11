@@ -1,18 +1,5 @@
 /* js/gallery-logic.js */
 /* Logic for the gallery: loading media, modal controls, and infinite scroll */
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM Content Loaded');
-    // Check if we are on the page that contains the grid
-    const grid = document.getElementById('pinterest-grid');
-    console.log('Grid element:', grid); // This will help us see if the element is found
-    if (grid) {
-        initGallery();
-    } else {
-        console.error('Pinterest grid element not found');
-    }
-});
-
 function initGallery() {
     const grid = document.getElementById('pinterest-grid');
     const modal = document.getElementById('media-modal');
@@ -38,6 +25,10 @@ function initGallery() {
         { type: 'image', src: 'img/cleangirl2.png' },
         { type: 'image', src: 'img/grunge2.png' },
         { type: 'image', src: 'img/cleangirl.jpg' },
+        { 
+            type: 'iframe', 
+            src: 'https://www.youtube.com/embed/L_Guz7h8r20' 
+        },
         { type: 'image', src: 'img/oldmoney.jpg' },
         { type: 'image', src: 'img/y2k3.jpg' },
         { type: 'image', src: 'img/cottagecore2.png' },
@@ -72,7 +63,7 @@ function initGallery() {
                     <source src="${media.src}" type="video/mp4">
                 </video>`;
         } else if (media.type === 'iframe') {
-            item.innerHTML = `<iframe src="${media.src}"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+            item.innerHTML = `<iframe src="${media.src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
         }
 
         // Add click event to open modal
@@ -93,7 +84,8 @@ function initGallery() {
                     <source src="${media.src}" type="video/mp4">
                 </video>`;
         } else if (media.type === 'iframe') {
-            content = `<iframe src="${media.src}" frameborder="0" allowfullscreen></iframe>`;
+            // ✅ SOLUTION: Use the full iframe code with all permissions
+            content = `<iframe src="${media.src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
         }
         modalContent.innerHTML = `
             ${content}
