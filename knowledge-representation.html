@@ -2200,8 +2200,54 @@ ORDER BY ?inspiredAesthetic</pre>
         }
     </style>
 
-<script src="script.js"></script>
     <!-- <h4 id="ontologies-alignment">4.2.4 Ontologies Alignment</h4>
     <p>Content about the alignment...</p> -->
-
+<script>
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎯 Starting accordions...');
+    
+    // Category headers
+    document.querySelectorAll('.category-header').forEach(header => {
+        header.style.cursor = 'pointer';
+        
+        // Показываем контент изначально
+        const content = header.nextElementSibling;
+        if (content && content.classList.contains('category-content')) {
+            content.style.display = 'block';
+        }
+        
+        header.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('.category-icon');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.textContent = '▼';
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▶';
+            }
+        });
+    });
+    
+    // Class headers with data-target
+    document.querySelectorAll('[data-target]').forEach(header => {
+        header.style.cursor = 'pointer';
+        
+        header.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const target = document.getElementById(targetId);
+            const toggle = this.querySelector('.class-toggle');
+            
+            if (target && toggle) {
+                target.classList.toggle('active');
+                toggle.textContent = target.classList.contains('active') ? '−' : '+';
+            }
+        });
+    });
+    
+    console.log('🎉 Accordions ready! Click on category headers!');
+});
+</script>
 </section>
