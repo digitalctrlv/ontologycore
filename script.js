@@ -1,14 +1,16 @@
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Initializing accordions...');
+    console.log('🎯 Starting accordions...');
     
-    // Category headers (for main sections like "4Ps of Creativity")
+    // Category headers - НЕ скрываем изначально!
     document.querySelectorAll('.category-header').forEach(header => {
+        header.style.cursor = 'pointer';
+        
         header.addEventListener('click', function() {
             const content = this.nextElementSibling;
             const icon = this.querySelector('.category-icon');
             
-            if (content.style.display === 'none') {
+            if (content.style.display === 'none' || !content.style.display) {
                 content.style.display = 'block';
                 icon.textContent = '▼';
             } else {
@@ -17,26 +19,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Initially hide category content
-        const content = header.nextElementSibling;
-        if (content) {
-            content.style.display = 'none';
-        }
+        // УБЕРИ эту строку - не скрываем категории изначально!
+        // header.nextElementSibling.style.display = 'none';
     });
     
-    // Class headers with data-target (for individual classes like Person, Process, etc.)
+    // Class headers with data-target
     document.querySelectorAll('[data-target]').forEach(header => {
+        header.style.cursor = 'pointer';
+        
         header.addEventListener('click', function() {
             const targetId = this.getAttribute('data-target');
-            const element = document.getElementById(targetId);
+            const target = document.getElementById(targetId);
             const toggle = this.querySelector('.class-toggle');
             
-            if (element && toggle) {
-                element.classList.toggle('active');
-                toggle.textContent = element.classList.contains('active') ? '−' : '+';
+            if (target && toggle) {
+                target.classList.toggle('active');
+                toggle.textContent = target.classList.contains('active') ? '−' : '+';
             }
         });
     });
     
-    console.log('✅ Accordions initialized successfully!');
+    console.log('🎉 Accordions ready! Try clicking now!');
 });
