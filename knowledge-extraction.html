@@ -98,27 +98,33 @@
     /* Minimal responsive image styling */
     .kg-figure {
       text-align: center;
-      margin: 1.5rem 0;
+      margin: 1.5rem 0.5rem;
+    }
+    .kg-figure-vertical {
+      text-align: center;
+      margin: 1.5rem 1.5rem;
     }
     .kg-figure img {
       display: block;
       margin: 0 auto;
-      width: 80vh;
-      max-width: 80vhpx; /* prevents overly large images on very large screens */
+      width: 50vw;
+      max-width: 100vw;
       height: auto;
     }
       .kg-figure-vertical img {
       display: block;
       margin: 0 auto;
-      width: auto;
-      height: 500px;
+      max-width: 80vw;
+      height: auto;
       max-height:500px;
     }
 
     /* On larger screens, limit to 80% of the viewport width */
-    @media (min-width: 768px) {
-      .kg-figure img
-      .kg-figure-vertical { width: 80%; }
+    @media (max-width: 768px) {
+      .kg-figure {text-align:center; margin: 0.1rem 0;}
+      .kg-figure img { width: 90vw; max-width: 90vw; margin:0.1rem 0;  }
+      .kg-figure-vertical {text-align:center; margin: 0.1rem 0;}
+      .kg-figure-vertical img { width: 70vw; max-width: 70vw; margin:0.1rem 0;}
     }
     .kg-caption {
       margin-top: 0.5rem;
