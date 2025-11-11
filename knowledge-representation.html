@@ -208,438 +208,296 @@
         with the more concise <code>characterizedBy</code>. Below you can explore the complete list of classes,
         subclasses, properties and their descriptions.</p>
     </p>
+
     <div class="ontology-structure">
         <h5>Core Classes Analysis:</h5>
 
         <div class="class-category">
-    <div class="category-header">
-        <h6>🎨 Core Aesthetic Classes</h6>
-        <span class="category-icon">▶</span>
-    </div>
-    <div class="category-content">
-        <div class="class-item main-class">
-            <div class="class-header" data-target="aesthetic">
-                <code>Aesthetic</code>
-                <span class="class-toggle">+</span>
+            <div class="category-header">
+                <h6>🎯 Main Classes Describing Aesthetic</h6>
             </div>
-            <div id="aesthetic" class="class-details">
-                <p class="class-description">The main class representing internet aesthetics</p>
-            </div>
-        </div>
-
-        <div class="class-item main-class">
-            <div class="class-header" data-target="aestheticElement">
-                <code>AestheticElement</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="aestheticElement" class="class-details">
-                <p class="class-description">Components which characterize aesthetic</p>
-                <div class="subclasses">
-                    <div class="subclass-item">
-                        <code>AudioElement</code>
+            <div class="category-content">
+                <!-- Core Aesthetic Classes -->
+                <div class="class-group">
+                    <h7>Core Aesthetic Elements</h7>
+                    <div class="class-item"><code>Aesthetic</code> - the main class representing internet aesthetics
                     </div>
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="visualElement">
-                            <code>VisualElement</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div id="visualElement" class="subclass-details">
-                            <div class="subclass-item nested"><code>Color</code></div>
-                            <div class="subclass-item nested"><code>Material</code></div>
-                            <div class="subclass-item nested"><code>Pattern</code></div>
+                    <div class="class-item"><code>AestheticElement</code> - components which characterize aesthetic
+                    </div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>AudioElement</code></div>
+                        <div class="subclass-item"><code>VisualElement</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Color</code></div>
+                            <div class="subclass-item"><code>Material</code></div>
+                            <div class="subclass-item"><code>Pattern</code></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="class-category">
-    <div class="category-header">
-        <h6>👥 Social Structure</h6>
-        <span class="category-icon">▶</span>
-    </div>
-    <div class="category-content">
-        <div class="class-item main-class">
-            <div class="class-header" data-target="community">
-                <code>Community</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="community" class="class-details">
-                <p class="class-description">Groups experiencing aesthetics</p>
-                <div class="subclasses">
-                    <div class="subclass-item"><code>AgeCommunity</code></div>
-                    <div class="subclass-item"><code>OnlineCommunity</code></div>
-                    <div class="subclass-item"><code>SocialCommunity</code></div>
+                <!-- Social Structure -->
+                <div class="class-group">
+                    <h7>Social Structure</h7>
+                    <div class="class-item"><code>Community</code> - groups experiencing aesthetics</div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>AgeCommunity</code></div>
+                        <div class="subclass-item"><code>OnlineCommunity</code></div>
+                        <div class="subclass-item"><code>SocialCommunity</code></div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="class-category">
-    <div class="category-header">
-        <h6>🌍 Contextual Framework</h6>
-        <span class="category-icon">▶</span>
-    </div>
-    <div class="category-content">
-        <div class="class-item main-class">
-            <div class="class-header" data-target="context">
-                <code>Context</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="context" class="class-details">
-                <p class="class-description">Environmental factors shaping aesthetics</p>
-                <div class="subclasses">
-                    <div class="subclass-item"><code>CulturalContext</code></div>
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="spatialContext">
-                            <code>SpatialContext</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div id="spatialContext" class="subclass-details">
-                            <div class="subclass-item nested"><code>DigitalSpace</code></div>
-                            <div class="subclass-item nested">
-                                <div class="subclass-header" data-target="physicalSpace">
-                                    <code>PhysicalSpace</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="physicalSpace" class="subclass-details">
-                                    <div class="subclass-item deep-nested"><code>City</code></div>
-                                    <div class="subclass-item deep-nested"><code>Country</code></div>
-                                </div>
+                <!-- Contextual Framework -->
+                <div class="class-group">
+                    <h7>Contextual Framework</h7>
+                    <div class="class-item"><code>Context</code> - environmental factors shaping aesthetics</div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>CulturalContext</code></div>
+                        <div class="subclass-item"><code>TechnologicalContext</code></div>
+                        <div class="subclass-item"><code>SpatialContext</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>DigitalSpace</code></div>
+                            <div class="subclass-item"><code>PhysicalSpace</code></div>
+                            <div class="deep-nested">
+                                <div class="subclass-item"><code>City</code></div>
+                                <div class="subclass-item"><code>Country</code></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="subclass-item"><code>TechnologicalContext</code></div>
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="temporalContext">
-                            <code>TemporalContext</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div id="temporalContext" class="subclass-details">
-                            <div class="subclass-item nested"><code>Decade</code></div>
-                            <div class="subclass-item nested"><code>HistoricalEra</code></div>
+                        <div class="subclass-item"><code>TemporalContext</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Decade</code></div>
+                            <div class="subclass-item"><code>HistoricalEra</code></div>
                         </div>
                     </div>
+                    <div class="class-item"><code>ConceptualIdea</code> - abstract concepts that characterize aesthetics
+                    </div>
+                </div>
+
+                <!-- Supporting Elements -->
+                <div class="class-group">
+                    <h7>Supporting Elements</h7>
+                    <div class="class-item"><code>LifeStyle</code></div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>BehaviourPattern</code></div>
+                    </div>
+                    <div class="class-item"><code>Emotion</code></div>
                 </div>
             </div>
         </div>
 
-        <div class="class-item main-class">
-            <div class="class-header" data-target="conceptualIdea">
-                <code>ConceptualIdea</code>
-                <span class="class-toggle">+</span>
+        <!-- 4Ps of Creativity - оставляем как было -->
+        <div class="class-category">
+            <div class="category-header">
+                <h6>🎭 4Ps of Creativity (Rhodes Model)</h6>
             </div>
-            <div id="conceptualIdea" class="class-details">
-                <!-- No subclasses -->
-            </div>
-        </div>
-    </div>
-</div>
+            <div class="category-content">
+                <p class="category-description">Based on Mel Rhodes' "4 Ps of Creativity" framework: Person, Process,
+                    Product, Press - representing the fundamental components of creative systems.</p>
 
-<div class="class-category">
-    <div class="category-header">
-        <h6>🎭 4Ps of Creativity (Rhodes Model)</h6>
-        <span class="category-icon">▶</span>
-    </div>
-    <div class="category-content">
-        <p class="category-description">Based on Mel Rhodes' "4 Ps of Creativity" framework: Person, Process, Product, Press - representing the fundamental components of creative systems.</p>
-        
-        <div class="class-item main-class">
-            <div class="class-header" data-target="person">
-                <code>Person</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="person" class="class-details">
-                <div class="subclasses">
-                    <div class="subclass-item"><code>Consumer</code></div>
-                    <div class="subclass-item"><code>Creator</code></div>
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="influencer">
-                            <code>Influencer</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div id="influencer" class="subclass-details">
-                            <div class="subclass-item nested"><code>Blogger</code></div>
-                            <div class="subclass-item nested"><code>Celebrity</code></div>
-                            <div class="subclass-item nested"><code>SocialMediaInfluencer</code></div>
+                <div class="class-group">
+                    <h7>Person</h7>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>Consumer</code></div>
+                        <div class="subclass-item"><code>Creator</code></div>
+                        <div class="subclass-item"><code>Influencer</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Blogger</code></div>
+                            <div class="subclass-item"><code>Celebrity</code></div>
+                            <div class="subclass-item"><code>SocialMediaInfluencer</code></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="class-item main-class">
-            <div class="class-header" data-target="process">
-                <code>Process</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="process" class="class-details">
-                <p class="class-description">Developmental phases of aesthetics</p>
-                <div class="subclasses">
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="creativeProcess">
-                            <code>CreativeProcess</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div id="creativeProcess" class="subclass-details">
-                            <div class="subclass-item nested"><code>Convergence</code></div>
-                            <div class="subclass-item nested"><code>Divergence</code></div>
-                            <div class="subclass-item nested"><code>Metaconvergence</code></div>
+                <div class="class-group">
+                    <h7>Process</h7>
+                    <div class="class-item"><code>Process</code> - Developmental phases of aesthetics</div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>CreativeProcess</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Convergence</code> - a process within the creative domain
+                                that seeks coherence and unity of meaning or form. </div>
+                            <div class="subclass-item"><code>Divergence</code> - a creative and cultural process
+                                oriented toward differentiation, experimentation, and the expansion of aesthetic or
+                                social boundaries</div>
+                            <div class="subclass-item"><code>Metaconvergence</code> - an elaboration process that
+                                refines divergent aesthetic expressions into culturally recognizable and functionally
+                                effective creative products. </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="class-item main-class">
-            <div class="class-header" data-target="product">
-                <code>Product</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="product" class="class-details">
-                <p class="class-description">Creative outputs resulting from aesthetic processes</p>
-                <div class="subclasses">
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="creativeProduct">
-                            <code>CreativeProduct</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div id="creativeProduct" class="subclass-details">
-                            <div class="subclass-item nested">
-                                <div class="subclass-header" data-target="auditoryProduct">
-                                    <code>AuditoryProduct</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="auditoryProduct" class="subclass-details">
-                                    <div class="subclass-item deep-nested"><code>AudioElement</code></div>
-                                </div>
+                <div class="class-group">
+                    <h7>Product</h7>
+                    <div class="class-item"><code>Product</code> - Creative outputs resulting from aesthetic processes
+                    </div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>CreativeProduct</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>AuditoryProduct</code></div>
+                            <div class="deep-nested">
+                                <div class="subclass-item"><code>AudioElement</code></div>
                             </div>
-                            <div class="subclass-item nested">
-                                <div class="subclass-header" data-target="digitalProduct">
-                                    <code>DigitalProduct</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="digitalProduct" class="subclass-details">
-                                    <div class="subclass-item deep-nested"><code>InteractiveProduct</code></div>
-                                </div>
+                            <div class="subclass-item"><code>DigitalProduct</code></div>
+                            <div class="deep-nested">
+                                <div class="subclass-item"><code>InteractiveProduct</code></div>
                             </div>
-                            <div class="subclass-item nested"><code>FashionProduct</code></div>
-                            <div class="subclass-item nested"><code>TextualProduct</code></div>
-                            <div class="subclass-item nested">
-                                <div class="subclass-header" data-target="visualProduct">
-                                    <code>VisualProduct</code>
-                                    <span class="class-toggle">+</span>
-                                </div>
-                                <div id="visualProduct" class="subclass-details">
-                                    <div class="subclass-item deep-nested"><code>ImageProduct</code></div>
-                                    <div class="subclass-item deep-nested"><code>VideoProduct</code></div>
-                                    <div class="subclass-item deep-nested"><code>VisualElement</code></div>
-                                </div>
+                            <div class="subclass-item"><code>FashionProduct</code></div>
+                            <div class="subclass-item"><code>TextualProduct</code></div>
+                            <div class="subclass-item"><code>VisualProduct</code></div>
+                            <div class="deep-nested">
+                                <div class="subclass-item"><code>ImageProduct</code></div>
+                                <div class="subclass-item"><code>VideoProduct</code></div>
+                                <div class="subclass-item"><code>VisualElement</code></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="tool">
-                            <code>Tool</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div id="tool" class="subclass-details">
-                            <div class="subclass-item nested"><code>PhysicalTool</code></div>
-                            <div class="subclass-item nested"><code>SoftwareTool</code></div>
+                        <div class="subclass-item"><code>Tool</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>PhysicalTool</code></div>
+                            <div class="subclass-item"><code>SoftwareTool</code></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="class-item main-class">
-            <div class="class-header" data-target="press">
-                <code>Press</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="press" class="class-details">
-                <div class="subclasses">
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="media">
-                            <code>Media</code>
-                            <span class="class-toggle">+</span>
+                <div class="class-group">
+                    <h7>Press</h7>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>Media</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Blog</code></div>
+                            <div class="subclass-item"><code>Book</code></div>
+                            <div class="subclass-item"><code>Games</code></div>
+                            <div class="subclass-item"><code>Magazine</code></div>
+                            <div class="subclass-item"><code>Movie</code></div>
+                            <div class="subclass-item"><code>Music</code></div>
+                            <div class="subclass-item"><code>Print</code></div>
+                            <div class="subclass-item"><code>SocialMedia</code></div>
+                            <div class="subclass-item"><code>TvShow</code></div>
                         </div>
-                        <div id="media" class="subclass-details">
-                            <div class="subclass-item nested"><code>Blog</code></div>
-                            <div class="subclass-item nested"><code>Book</code></div>
-                            <div class="subclass-item nested"><code>Games</code></div>
-                            <div class="subclass-item nested"><code>Magazine</code></div>
-                            <div class="subclass-item nested"><code>Movie</code></div>
-                            <div class="subclass-item nested"><code>Music</code></div>
-                            <div class="subclass-item nested"><code>Print</code></div>
-                            <div class="subclass-item nested"><code>SocialMedia</code></div>
-                            <div class="subclass-item nested"><code>TvShow</code></div>
-                        </div>
-                    </div>
-                    <div class="subclass-item">
-                        <div class="subclass-header" data-target="technology">
-                            <code>Technology</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div id="technology" class="subclass-details">
-                            <div class="subclass-item nested"><code>Camera</code></div>
-                            <div class="subclass-item nested"><code>Phone</code></div>
-                            <div class="subclass-item nested"><code>Radio</code></div>
-                            <div class="subclass-item nested"><code>Television</code></div>
+                        <div class="subclass-item"><code>Technology</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Camera</code></div>
+                            <div class="subclass-item"><code>Phone</code></div>
+                            <div class="subclass-item"><code>Radio</code></div>
+                            <div class="subclass-item"><code>Television</code></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="properties-section">
+        <h5>Property Definitions:</h5>
+        <div class="properties-detailed">
+            <div class="property-item">
+                <code>characterizedBy</code>
+                <div class="property-description">Links aesthetics to their defining visual and sensory elements,
+                    establishing the core visual vocabulary of each aesthetic movement.</div>
+            </div>
 
-<div class="class-category">
-    <div class="category-header">
-        <h6>💫 Supporting Elements</h6>
-        <span class="category-icon">▶</span>
+            <div class="property-item">
+                <code>involvesProcess</code>
+                <div class="property-description">Connects aesthetics or processes with other processes essential
+                    for
+                    the aesthetic's development and creation, mapping the creative workflow.</div>
+            </div>
+
+            <div class="property-item">
+                <code>involvesEmotion / involvesBehaviour</code>
+                <div class="property-description">Establishes connections between aesthetics and specific
+                    social/emotional profiles of both creators and consumers, defining the psychological dimensions
+                    of
+                    aesthetic engagement.</div>
+            </div>
+
+            <div class="property-item">
+                <code>hasCulturalContext / hasSpatialContext / hasTemporalContext</code>
+                <div class="property-description">Links aesthetics or objects to their contextual environments
+                    (culture/space/time), documenting the conditions under which specific individuals were created
+                    or
+                    emerged.</div>
+            </div>
+
+            <div class="property-item">
+                <code>experiencedBy</code>
+                <div class="property-description">Specifies which demographic or social groups actively practice and
+                    engage with the aesthetic, mapping audience participation.</div>
+            </div>
+
+            <div class="property-item">
+                <code>hasMedium</code>
+                <div class="property-description">Defines the channels and platforms through which creative products
+                    are
+                    expressed and distributed, mapping dissemination pathways.</div>
+            </div>
+
+            <div class="property-item">
+                <code>spreadThrough</code>
+                <div class="property-description">Identifies the media platforms and channels responsible for
+                    propagating and popularizing aesthetic movements across digital ecosystems.</div>
+            </div>
+
+            <div class="property-item">
+                <code>resultsIn</code>
+                <div class="property-description">Documents the creative outputs and tangible products generated
+                    through
+                    aesthetic processes, connecting creative activities to their material outcomes.</div>
+            </div>
+
+            <div class="property-item">
+                <code>inspiredBy</code>
+                <div class="property-description">Traces genealogical influences and inspirational sources between
+                    aesthetic movements, mapping the evolution and cross-pollination of visual styles.</div>
+            </div>
+
+            <div class="property-item">
+                <code>influencedBy</code>
+                <div class="property-description">Records the impact of specific influencers, creators, or media
+                    entities on the development and popularization of aesthetic movements.</div>
+            </div>
+
+            <div class="property-item">
+                <code>createdBy</code>
+                <div class="property-description">Attributes the origin and authorship of aesthetics to specific
+                    communities, individuals, or collective creative forces.</div>
+            </div>
+
+            <div class="property-item">
+                <code>opposesTo</code>
+                <div class="property-description">Maps ideological and stylistic oppositions between aesthetic
+                    movements, highlighting contrasting values and visual approaches.</div>
+            </div>
+
+            <div class="property-item">
+                <code>precedesProcess</code>
+                <div class="property-description">Defines temporal sequences in creative workflows, establishing the
+                    order of process phases from initial ideation to final refinement.</div>
+            </div>
+
+            <div class="property-item">
+                <code>revivedIn / revivesElement</code>
+                <div class="property-description">Documents temporal recycling and nostalgic revivals, tracking how
+                    historical aesthetic elements are reintroduced in contemporary contexts.</div>
+            </div>
+
+            <div class="property-item">
+                <code>expressesAesthetic</code>
+                <div class="property-description">Indicates how specific elements, products, or media directly
+                    manifest
+                    and represent particular aesthetic qualities and principles.</div>
+            </div>
+
+            <div class="property-item">
+                <code>uses</code>
+                <div class="property-description">Specifies the tools, technologies, and resources employed in the
+                    creation and production of aesthetic content and products.</div>
+            </div>
+
+            <div class="property-item">
+                <code>shapesAesthetic</code>
+                <div class="property-description">Describes how contextual factors, conceptual ideas, or cultural
+                    movements actively form and influence the development of aesthetic characteristics.</div>
+            </div>
+        </div>
     </div>
-    <div class="category-content">
-        <div class="class-item main-class">
-            <div class="class-header" data-target="lifeStyle">
-                <code>LifeStyle</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="lifeStyle" class="class-details">
-                <div class="subclasses">
-                    <div class="subclass-item"><code>BehaviourPattern</code></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="class-item main-class">
-            <div class="class-header" data-target="emotion">
-                <code>Emotion</code>
-                <span class="class-toggle">+</span>
-            </div>
-            <div id="emotion" class="class-details">
-                <!-- No subclasses -->
-            </div>
-        </div>
-    </div>
-</div>
-        <div class="properties-section">
-            <h5>Property Definitions:</h5>
-            <div class="properties-detailed">
-                <div class="property-item">
-                    <code>characterizedBy</code>
-                    <div class="property-description">Links aesthetics to their defining visual and sensory elements,
-                        establishing the core visual vocabulary of each aesthetic movement.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>involvesProcess</code>
-                    <div class="property-description">Connects aesthetics or processes with other processes essential
-                        for
-                        the aesthetic's development and creation, mapping the creative workflow.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>involvesEmotion / involvesBehaviour</code>
-                    <div class="property-description">Establishes connections between aesthetics and specific
-                        social/emotional profiles of both creators and consumers, defining the psychological dimensions
-                        of
-                        aesthetic engagement.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>hasCulturalContext / hasSpatialContext / hasTemporalContext</code>
-                    <div class="property-description">Links aesthetics or objects to their contextual environments
-                        (culture/space/time), documenting the conditions under which specific individuals were created
-                        or
-                        emerged.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>experiencedBy</code>
-                    <div class="property-description">Specifies which demographic or social groups actively practice and
-                        engage with the aesthetic, mapping audience participation.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>hasMedium</code>
-                    <div class="property-description">Defines the channels and platforms through which creative products
-                        are
-                        expressed and distributed, mapping dissemination pathways.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>spreadThrough</code>
-                    <div class="property-description">Identifies the media platforms and channels responsible for
-                        propagating and popularizing aesthetic movements across digital ecosystems.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>resultsIn</code>
-                    <div class="property-description">Documents the creative outputs and tangible products generated
-                        through
-                        aesthetic processes, connecting creative activities to their material outcomes.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>inspiredBy</code>
-                    <div class="property-description">Traces genealogical influences and inspirational sources between
-                        aesthetic movements, mapping the evolution and cross-pollination of visual styles.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>influencedBy</code>
-                    <div class="property-description">Records the impact of specific influencers, creators, or media
-                        entities on the development and popularization of aesthetic movements.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>createdBy</code>
-                    <div class="property-description">Attributes the origin and authorship of aesthetics to specific
-                        communities, individuals, or collective creative forces.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>opposesTo</code>
-                    <div class="property-description">Maps ideological and stylistic oppositions between aesthetic
-                        movements, highlighting contrasting values and visual approaches.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>precedesProcess</code>
-                    <div class="property-description">Defines temporal sequences in creative workflows, establishing the
-                        order of process phases from initial ideation to final refinement.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>revivedIn / revivesElement</code>
-                    <div class="property-description">Documents temporal recycling and nostalgic revivals, tracking how
-                        historical aesthetic elements are reintroduced in contemporary contexts.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>expressesAesthetic</code>
-                    <div class="property-description">Indicates how specific elements, products, or media directly
-                        manifest
-                        and represent particular aesthetic qualities and principles.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>uses</code>
-                    <div class="property-description">Specifies the tools, technologies, and resources employed in the
-                        creation and production of aesthetic content and products.</div>
-                </div>
-
-                <div class="property-item">
-                    <code>shapesAesthetic</code>
-                    <div class="property-description">Describes how contextual factors, conceptual ideas, or cultural
-                        movements actively form and influence the development of aesthetic characteristics.</div>
-                </div>
-            </div>
-        </div>
 
     </div>
     <h4 id="competency-questions">4.2.3 Competency questions</h4>
@@ -1723,9 +1581,9 @@ ORDER BY ?inspiredAesthetic</pre>
             </div>
         </div>
     </div>
- 
-   
-    <style> /* STYLE SECTION */ 
+
+    <style>
+        /* STYLE SECTION */
         /* LLM Chat Styles */
         .prompt {
             background: #f8f9fa;
@@ -1792,8 +1650,8 @@ ORDER BY ?inspiredAesthetic</pre>
             margin-left: 25px;
             margin-top: 10px;
         }
-    </style>
-    <style сlass>
+
+        /* Properties Section */
         .properties-section {
             margin-top: 40px;
             padding-top: 30px;
@@ -1811,6 +1669,7 @@ ORDER BY ?inspiredAesthetic</pre>
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 15px;
+            margin-top: 25px;
         }
 
         .property-item {
@@ -1844,8 +1703,8 @@ ORDER BY ?inspiredAesthetic</pre>
             line-height: 1.5;
             font-size: 0.95em;
         }
-    </style>
-    <style>
+
+        /* Новые стили для статичной структуры онтологии */
         .ontology-structure {
             background: white;
             border-radius: 12px;
@@ -1865,15 +1724,9 @@ ORDER BY ?inspiredAesthetic</pre>
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 15px 20px;
-            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.3s ease;
-        }
-
-        .category-header:hover {
-            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
         }
 
         .category-header h6 {
@@ -1887,204 +1740,80 @@ ORDER BY ?inspiredAesthetic</pre>
             background: #fafbfc;
         }
 
-        .class-item {
-            margin-bottom: 15px;
+        .class-group {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .class-header {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 12px 15px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
+        .class-group:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
         }
 
-        .class-header:hover {
-            border-color: #667eea;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
-        }
-
-        .class-header code {
+        .class-group h7 {
             font-size: 1em;
             font-weight: 600;
             color: #2d3748;
+            margin-bottom: 10px;
+            display: block;
         }
 
-        .class-toggle {
-            color: #667eea;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-        }
-
-        .class-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background: white;
-            border-radius: 0 0 8px 8px;
-        }
-
-        .class-details.active {
-            max-height: 1000px;
-            padding: 15px;
-            border: 1px solid #e2e8f0;
-            border-top: none;
-        }
-
-        .class-description {
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .subclasses {
-            margin-top: 10px;
-        }
-
-        .subclass-item {
-            margin-bottom: 8px;
-        }
-
-        .subclass-header {
+        .class-item {
+            margin: 8px 0;
             padding: 8px 12px;
             background: #f7fafc;
             border-radius: 6px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s ease;
+            border-left: 3px solid #667eea;
         }
 
-        .subclass-header:hover {
-            background: #edf2f7;
-        }
-
-        .subclass-header code {
-            font-size: 0.95em;
-            color: #4a5568;
-        }
-
-        .subclass-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
+        .subclasses {
             margin-left: 20px;
-        }
-
-        .subclass-details.active {
-            max-height: 1000px;
-            padding: 10px 0;
-        }
-
-        .subclass-item.nested {
-            margin-left: 20px;
-            padding: 6px 0;
-        }
-
-        .subclass-item.deep-nested {
-            margin-left: 40px;
-            padding: 4px 0;
-            color: #718096;
-        }
-
-        .subclass-item.nested code,
-        .subclass-item.deep-nested code {
-            font-size: 0.9em;
-            color: #718096;
-        }
-
-        /* Property styles remain the same as before */
-        .properties-detailed {
-            margin-top: 25px;
-        }
-
-        .property-item {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .property-item:hover {
-            border-color: #667eea;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
-        }
-
-        .property-item code {
-            background: #f7fafc;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-            color: #2d3748;
-        }
-
-        .property-description {
-            color: #4a5568;
             margin-top: 8px;
-            line-height: 1.5;
-        }
-    </style>
-
-    <style>
-        .properties-section {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #e2e8f0;
         }
 
-        .properties-section h5 {
-            color: #2d3748;
-            margin-bottom: 20px;
-            font-size: 1.3em;
-            font-weight: 600;
-        }
-
-        .properties-detailed {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 15px;
-        }
-
-        .property-item {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            border-left: 4px solid #667eea;
-        }
-
-        .property-item:hover {
-            border-color: #667eea;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .property-item code {
-            background: #f7fafc;
-            padding: 6px 10px;
-            border-radius: 6px;
-            font-weight: 600;
-            color: #2d3748;
-            font-size: 0.95em;
-            border: 1px solid #e2e8f0;
-        }
-
-        .property-description {
+        .subclass-item {
+            margin: 4px 0;
+            padding: 4px 8px;
             color: #4a5568;
-            margin-top: 12px;
-            line-height: 1.5;
-            font-size: 0.95em;
         }
-    </style>
-    <style>
+
+        .nested-subclasses {
+            margin-left: 20px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .deep-nested {
+            margin-left: 20px;
+            border-left: 1px dashed #cbd5e0;
+            padding-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .class-item code,
+        .subclass-item code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .category-description {
+            color: #4a5568;
+            font-style: italic;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f0fff4;
+            border-radius: 6px;
+            border-left: 4px solid #38a169;
+        }
+
+        /* Query Examples */
         .query-example {
             margin-top: 20px;
             padding: 15px;
@@ -2123,23 +1852,7 @@ ORDER BY ?inspiredAesthetic</pre>
             white-space: pre;
         }
 
-        .sparql-content .prefix {
-            color: #feb2b2;
-        }
-
-        .sparql-content .keyword {
-            color: #90cdf4;
-        }
-
-        .sparql-content .variable {
-            color: #faf089;
-        }
-
-        .sparql-content .comment {
-            color: #a0aec0;
-        }
-    </style>
-    <style>
+        /* Results Tables */
         .results-table {
             margin-top: 20px;
             background: white;
@@ -2199,55 +1912,6 @@ ORDER BY ?inspiredAesthetic</pre>
             color: #4a5568;
         }
     </style>
-
     <!-- <h4 id="ontologies-alignment">4.2.4 Ontologies Alignment</h4>
     <p>Content about the alignment...</p> -->
-<script>
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎯 Starting accordions...');
-    
-    // Category headers
-    document.querySelectorAll('.category-header').forEach(header => {
-        header.style.cursor = 'pointer';
-        
-        // Показываем контент изначально
-        const content = header.nextElementSibling;
-        if (content && content.classList.contains('category-content')) {
-            content.style.display = 'block';
-        }
-        
-        header.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            const icon = this.querySelector('.category-icon');
-            
-            if (content.style.display === 'none') {
-                content.style.display = 'block';
-                icon.textContent = '▼';
-            } else {
-                content.style.display = 'none';
-                icon.textContent = '▶';
-            }
-        });
-    });
-    
-    // Class headers with data-target
-    document.querySelectorAll('[data-target]').forEach(header => {
-        header.style.cursor = 'pointer';
-        
-        header.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            const target = document.getElementById(targetId);
-            const toggle = this.querySelector('.class-toggle');
-            
-            if (target && toggle) {
-                target.classList.toggle('active');
-                toggle.textContent = target.classList.contains('active') ? '−' : '+';
-            }
-        });
-    });
-    
-    console.log('🎉 Accordions ready! Click on category headers!');
-});
-</script>
 </section>
