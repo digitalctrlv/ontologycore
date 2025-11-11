@@ -209,46 +209,24 @@
         <h5>Core Classes Analysis:</h5>
 
         <div class="class-category">
-            <div class="category-header" onclick="toggleCategory(this)">
+            <div class="category-header">
                 <h6>🎯 Main Classes Describing Aesthetic</h6>
-                <span class="toggle-icon">▼</span>
             </div>
             <div class="category-content">
                 <!-- Core Aesthetic Classes -->
                 <div class="class-group">
                     <h7>Core Aesthetic Elements</h7>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>Aesthetic</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div class="class-details">
-                            <p class="class-description">the main class representing internet aesthetics</p>
-                        </div>
+                    <div class="class-item"><code>Aesthetic</code> - the main class representing internet aesthetics
                     </div>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>AestheticElement</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div class="class-details">
-                            <p class="class-description">components which characterize aesthetic</p>
-                            <div class="subclasses">
-                                <div class="subclass-item">
-                                    <code>AudioElement</code>
-                                </div>
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>VisualElement</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested"><code>Color</code></div>
-                                        <div class="subclass-item nested"><code>Material</code></div>
-                                        <div class="subclass-item nested"><code>Pattern</code></div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="class-item"><code>AestheticElement</code> - components which characterize aesthetic
+                    </div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>AudioElement</code></div>
+                        <div class="subclass-item"><code>VisualElement</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Color</code></div>
+                            <div class="subclass-item"><code>Material</code></div>
+                            <div class="subclass-item"><code>Pattern</code></div>
                         </div>
                     </div>
                 </div>
@@ -256,105 +234,56 @@
                 <!-- Social Structure -->
                 <div class="class-group">
                     <h7>Social Structure</h7>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>Community</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div class="class-details">
-                            <p class="class-description">groups experiencing aesthetics</p>
-                            <div class="subclasses">
-                                <div class="subclass-item"><code>AgeCommunity</code></div>
-                                <div class="subclass-item"><code>OnlineCommunity</code></div>
-                                <div class="subclass-item"><code>SocialCommunity</code></div>
-                            </div>
-                        </div>
+                    <div class="class-item"><code>Community</code> - groups experiencing aesthetics</div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>AgeCommunity</code></div>
+                        <div class="subclass-item"><code>OnlineCommunity</code></div>
+                        <div class="subclass-item"><code>SocialCommunity</code></div>
                     </div>
                 </div>
 
                 <!-- Contextual Framework -->
                 <div class="class-group">
                     <h7>Contextual Framework</h7>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>Context</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div class="class-details">
-                            <p class="class-description">environmental factors shaping aesthetics</p>
-                            <div class="subclasses">
-                                <div class="subclass-item"><code>CulturalContext</code></div>
-                                <div class="subclass-item"><code>TechnologicalContext</code></div>
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>SpatialContext</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested"><code>DigitalSpace</code></div>
-                                        <div class="subclass-item nested">
-                                            <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                                <code>PhysicalSpace</code>
-                                                <span class="class-toggle">+</span>
-                                            </div>
-                                            <div class="subclass-details">
-                                                <div class="subclass-item deep-nested"><code>City</code></div>
-                                                <div class="subclass-item deep-nested"><code>Country</code></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>TemporalContext</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested"><code>Decade</code></div>
-                                        <div class="subclass-item nested"><code>HistoricalEra</code></div>
-                                    </div>
-                                </div>
+                    <div class="class-item"><code>Context</code> - environmental factors shaping aesthetics</div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>CulturalContext</code></div>
+                        <div class="subclass-item"><code>TechnologicalContext</code></div>
+                        <div class="subclass-item"><code>SpatialContext</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>DigitalSpace</code></div>
+                            <div class="subclass-item"><code>PhysicalSpace</code></div>
+                            <div class="deep-nested">
+                                <div class="subclass-item"><code>City</code></div>
+                                <div class="subclass-item"><code>Country</code></div>
                             </div>
                         </div>
+                        <div class="subclass-item"><code>TemporalContext</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Decade</code></div>
+                            <div class="subclass-item"><code>HistoricalEra</code></div>
+                        </div>
                     </div>
-                    <div class="class-item">
-                        <div class="class-header">
-                            <code>ConceptualIdea</code>
-                        </div>
-                        <div class="class-details">
-                            <p class="class-description">abstract concepts that characterize aesthetics</p>
-                        </div>
+                    <div class="class-item"><code>ConceptualIdea</code> - abstract concepts that characterize aesthetics
                     </div>
                 </div>
 
                 <!-- Supporting Elements -->
                 <div class="class-group">
                     <h7>Supporting Elements</h7>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>LifeStyle</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div class="class-details">
-                            <div class="subclasses">
-                                <div class="subclass-item"><code>BehaviourPattern</code></div>
-                            </div>
-                        </div>
+                    <div class="class-item"><code>LifeStyle</code></div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>BehaviourPattern</code></div>
                     </div>
-                    <div class="class-item">
-                        <div class="class-header">
-                            <code>Emotion</code>
-                        </div>
-                    </div>
+                    <div class="class-item"><code>Emotion</code></div>
                 </div>
             </div>
         </div>
 
-        <!-- 4Ps of Creativity -->
+        <!-- 4Ps of Creativity - оставляем как было -->
         <div class="class-category">
-            <div class="category-header" onclick="toggleCategory(this)">
+            <div class="category-header">
                 <h6>🎭 4Ps of Creativity (Rhodes Model)</h6>
-                <span class="toggle-icon">▼</span>
             </div>
             <div class="category-content">
                 <p class="category-description">Based on Mel Rhodes' "4 Ps of Creativity" framework: Person, Process,
@@ -362,178 +291,95 @@
 
                 <div class="class-group">
                     <h7>Person</h7>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>Person</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div class="class-details">
-                            <div class="subclasses">
-                                <div class="subclass-item"><code>Consumer</code></div>
-                                <div class="subclass-item"><code>Creator</code></div>
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>Influencer</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested"><code>Blogger</code></div>
-                                        <div class="subclass-item nested"><code>Celebrity</code></div>
-                                        <div class="subclass-item nested"><code>SocialMediaInfluencer</code></div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>Consumer</code></div>
+                        <div class="subclass-item"><code>Creator</code></div>
+                        <div class="subclass-item"><code>Influencer</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Blogger</code></div>
+                            <div class="subclass-item"><code>Celebrity</code></div>
+                            <div class="subclass-item"><code>SocialMediaInfluencer</code></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="class-group">
                     <h7>Process</h7>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>Process</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div class="class-details">
-                            <p class="class-description">Developmental phases of aesthetics</p>
-                            <div class="subclasses">
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>CreativeProcess</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested"><code>Convergence</code> - a process within
-                                            the creative domain
-                                            that seeks coherence and unity of meaning or form. </div>
-                                        <div class="subclass-item nested"><code>Divergence</code> - a creative and
-                                            cultural process
-                                            oriented toward differentiation, experimentation, and the expansion of
-                                            aesthetic or
-                                            social boundaries</div>
-                                        <div class="subclass-item nested"><code>Metaconvergence</code> - an elaboration
-                                            process that
-                                            refines divergent aesthetic expressions into culturally recognizable and
-                                            functionally
-                                            effective creative products. </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="class-item"><code>Process</code> - Developmental phases of aesthetics</div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>CreativeProcess</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Convergence</code> - a process within the creative domain
+                                that seeks coherence and unity of meaning or form. </div>
+                            <div class="subclass-item"><code>Divergence</code> - a creative and cultural process
+                                oriented toward differentiation, experimentation, and the expansion of aesthetic or
+                                social boundaries</div>
+                            <div class="subclass-item"><code>Metaconvergence</code> - an elaboration process that
+                                refines divergent aesthetic expressions into culturally recognizable and functionally
+                                effective creative products. </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="class-group">
                     <h7>Product</h7>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>Product</code>
-                            <span class="class-toggle">+</span>
-                        </div>
-                        <div class="class-details">
-                            <p class="class-description">Creative outputs resulting from aesthetic processes</p>
-                            <div class="subclasses">
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>CreativeProduct</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested">
-                                            <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                                <code>AuditoryProduct</code>
-                                                <span class="class-toggle">+</span>
-                                            </div>
-                                            <div class="subclass-details">
-                                                <div class="subclass-item deep-nested"><code>AudioElement</code></div>
-                                            </div>
-                                        </div>
-                                        <div class="subclass-item nested">
-                                            <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                                <code>DigitalProduct</code>
-                                                <span class="class-toggle">+</span>
-                                            </div>
-                                            <div class="subclass-details">
-                                                <div class="subclass-item deep-nested"><code>InteractiveProduct</code>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="subclass-item nested"><code>FashionProduct</code></div>
-                                        <div class="subclass-item nested"><code>TextualProduct</code></div>
-                                        <div class="subclass-item nested">
-                                            <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                                <code>VisualProduct</code>
-                                                <span class="class-toggle">+</span>
-                                            </div>
-                                            <div class="subclass-details">
-                                                <div class="subclass-item deep-nested"><code>ImageProduct</code></div>
-                                                <div class="subclass-item deep-nested"><code>VideoProduct</code></div>
-                                                <div class="subclass-item deep-nested"><code>VisualElement</code></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>Tool</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested"><code>PhysicalTool</code></div>
-                                        <div class="subclass-item nested"><code>SoftwareTool</code></div>
-                                    </div>
-                                </div>
+                    <div class="class-item"><code>Product</code> - Creative outputs resulting from aesthetic processes
+                    </div>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>CreativeProduct</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>AuditoryProduct</code></div>
+                            <div class="deep-nested">
+                                <div class="subclass-item"><code>AudioElement</code></div>
                             </div>
+                            <div class="subclass-item"><code>DigitalProduct</code></div>
+                            <div class="deep-nested">
+                                <div class="subclass-item"><code>InteractiveProduct</code></div>
+                            </div>
+                            <div class="subclass-item"><code>FashionProduct</code></div>
+                            <div class="subclass-item"><code>TextualProduct</code></div>
+                            <div class="subclass-item"><code>VisualProduct</code></div>
+                            <div class="deep-nested">
+                                <div class="subclass-item"><code>ImageProduct</code></div>
+                                <div class="subclass-item"><code>VideoProduct</code></div>
+                                <div class="subclass-item"><code>VisualElement</code></div>
+                            </div>
+                        </div>
+                        <div class="subclass-item"><code>Tool</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>PhysicalTool</code></div>
+                            <div class="subclass-item"><code>SoftwareTool</code></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="class-group">
                     <h7>Press</h7>
-                    <div class="class-item">
-                        <div class="class-header" onclick="toggleSubclasses(this)">
-                            <code>Press</code>
-                            <span class="class-toggle">+</span>
+                    <div class="subclasses">
+                        <div class="subclass-item"><code>Media</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Blog</code></div>
+                            <div class="subclass-item"><code>Book</code></div>
+                            <div class="subclass-item"><code>Games</code></div>
+                            <div class="subclass-item"><code>Magazine</code></div>
+                            <div class="subclass-item"><code>Movie</code></div>
+                            <div class="subclass-item"><code>Music</code></div>
+                            <div class="subclass-item"><code>Print</code></div>
+                            <div class="subclass-item"><code>SocialMedia</code></div>
+                            <div class="subclass-item"><code>TvShow</code></div>
                         </div>
-                        <div class="class-details">
-                            <div class="subclasses">
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>Media</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested"><code>Blog</code></div>
-                                        <div class="subclass-item nested"><code>Book</code></div>
-                                        <div class="subclass-item nested"><code>Games</code></div>
-                                        <div class="subclass-item nested"><code>Magazine</code></div>
-                                        <div class="subclass-item nested"><code>Movie</code></div>
-                                        <div class="subclass-item nested"><code>Music</code></div>
-                                        <div class="subclass-item nested"><code>Print</code></div>
-                                        <div class="subclass-item nested"><code>SocialMedia</code></div>
-                                        <div class="subclass-item nested"><code>TvShow</code></div>
-                                    </div>
-                                </div>
-                                <div class="subclass-item">
-                                    <div class="subclass-header" onclick="toggleSubclasses(this)">
-                                        <code>Technology</code>
-                                        <span class="class-toggle">+</span>
-                                    </div>
-                                    <div class="subclass-details">
-                                        <div class="subclass-item nested"><code>Camera</code></div>
-                                        <div class="subclass-item nested"><code>Phone</code></div>
-                                        <div class="subclass-item nested"><code>Radio</code></div>
-                                        <div class="subclass-item nested"><code>Television</code></div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="subclass-item"><code>Technology</code></div>
+                        <div class="nested-subclasses">
+                            <div class="subclass-item"><code>Camera</code></div>
+                            <div class="subclass-item"><code>Phone</code></div>
+                            <div class="subclass-item"><code>Radio</code></div>
+                            <div class="subclass-item"><code>Television</code></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="properties-section">
         <h5>Property Definitions:</h5>
         <div class="properties-detailed">
@@ -651,7 +497,7 @@
 
     </div>
     <h4 id="competency-questions">4.2.3 Competency questions</h4>
-    <p>To compile a list of the most representative questions for our ontology, we also used an LLM to
+    <p class="lead">To compile a list of the most representative questions for our ontology, we also used an LLM to
         simulate a potential user's perspective.</p>
     <p class="prompt">💁‍♀️Imagine that you are a social anthropologist doing research about internet aesthetic
         phenomena, what questions would you like to ask first?</p>
@@ -664,7 +510,7 @@
         <ol>4. Longitudinal tracking of how aesthetics evolve through their process phases</ol>
     </div>
     <div class="competency-questions">
-        <p>In this way, we tried to form our queries based on multifaceted approach.</p>
+        <p class="lead">In this way, we tried to form our queries based on multifaceted approach.</p>
         <div class="question-item">
             <h5>Temporal Analysis:</h5>
             <p><em>"What are the temporal contexts associated with each aesthetic?"</em></p>
@@ -1867,7 +1713,7 @@ ORDER BY ?inspiredAesthetic</pre>
             font-size: 0.95em;
         }
 
-        /* Новые стили для аккордеона онтологии */
+        /* Новые стили для статичной структуры онтологии */
         .ontology-structure {
             background: white;
             border-radius: 12px;
@@ -1887,18 +1733,9 @@ ORDER BY ?inspiredAesthetic</pre>
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 15px 20px;
-            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.3s ease;
-            user-select: none;
-            position: relative;
-            padding-right: 40px;
-        }
-
-        .category-header:hover {
-            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
         }
 
         .category-header h6 {
@@ -1907,23 +1744,9 @@ ORDER BY ?inspiredAesthetic</pre>
             font-weight: 600;
         }
 
-        .toggle-icon {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 14px;
-            transition: transform 0.3s ease;
-        }
-
-        .category-header.active .toggle-icon {
-            transform: translateY(-50%) rotate(180deg);
-        }
-
         .category-content {
             padding: 20px;
             background: #fafbfc;
-            display: none;
         }
 
         .class-group {
@@ -1946,142 +1769,47 @@ ORDER BY ?inspiredAesthetic</pre>
         }
 
         .class-item {
-            margin-bottom: 10px;
-        }
-
-        .class-header {
-            background: white;
-            border: 1px solid #e2e8f0;
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f7fafc;
             border-radius: 6px;
-            padding: 12px 15px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .class-header:hover {
-            border-color: #667eea;
-            background: #f8fafc;
-        }
-
-        .class-header code {
-            font-size: 0.95em;
-            font-weight: 600;
-        }
-
-        .class-toggle {
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: transform 0.3s ease;
-        }
-
-        .class-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background: white;
-        }
-
-        .class-details.active {
-            max-height: 1000px;
-            padding: 15px;
-            border: 1px solid #e2e8f0;
-            border-top: none;
-            border-radius: 0 0 6px 6px;
-            margin-bottom: 10px;
-        }
-
-        .class-description {
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-style: italic;
-            font-size: 0.9em;
+            border-left: 3px solid #667eea;
         }
 
         .subclasses {
-            margin-top: 10px;
-        }
-
-        .subclass-header {
-            padding: 8px 12px;
-            background: #f7fafc;
-            border-radius: 4px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s ease;
-            margin-bottom: 5px;
-        }
-
-        .subclass-header:hover {
-            background: #edf2f7;
-        }
-
-        .subclass-header code {
-            font-size: 0.9em;
-            color: #4a5568;
-        }
-
-        .subclass-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            margin-left: 15px;
-        }
-
-        .subclass-details.active {
-            max-height: 1000px;
-            padding: 10px 0;
+            margin-left: 20px;
+            margin-top: 8px;
         }
 
         .subclass-item {
+            margin: 4px 0;
+            padding: 4px 8px;
+            color: #4a5568;
+        }
+
+        .nested-subclasses {
+            margin-left: 20px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 15px;
+            margin-top: 5px;
             margin-bottom: 5px;
         }
 
-        .subclass-item.nested {
-            margin-left: 15px;
-            padding: 4px 0;
+        .deep-nested {
+            margin-left: 20px;
+            border-left: 1px dashed #cbd5e0;
+            padding-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
-        .subclass-item.deep-nested {
-            margin-left: 30px;
-            padding: 3px 0;
-            color: #718096;
-        }
-
-        .class-header code,
-        .subclass-header code,
+        .class-item code,
         .subclass-item code {
             background: #edf2f7;
             padding: 2px 6px;
             border-radius: 4px;
             font-weight: 500;
             font-size: 0.9em;
-        }
-
-        .subclass-item.nested code,
-        .subclass-item.deep-nested code {
-            font-size: 0.85em;
-            color: #718096;
-        }
-
-        /* Элементы без подклассов */
-        .class-header:not([onclick]) {
-            cursor: default;
-            background: #f7fafc;
-        }
-
-        .class-header:not([onclick]):hover {
-            border-color: #e2e8f0;
-            background: #f7fafc;
-        }
-
-        .class-header:not([onclick]) .class-toggle {
-            display: none;
         }
 
         .category-description {
@@ -2193,42 +1921,6 @@ ORDER BY ?inspiredAesthetic</pre>
             color: #4a5568;
         }
     </style>
-
-    <script>
-        function toggleCategory(element) {
-            const content = element.nextElementSibling;
-            const icon = element.querySelector('.toggle-icon');
-
-            element.classList.toggle('active');
-
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                icon.textContent = '▼';
-            } else {
-                content.style.display = 'block';
-                icon.textContent = '▲';
-            }
-        }
-
-        function toggleSubclasses(element) {
-            const details = element.nextElementSibling;
-            const toggle = element.querySelector('.class-toggle');
-
-            if (details.classList.contains('active')) {
-                details.classList.remove('active');
-                toggle.textContent = '+';
-            } else {
-                details.classList.add('active');
-                toggle.textContent = '−';
-            }
-        }
-
-        // Инициализация - скрываем все детали при загрузке
-        document.addEventListener('DOMContentLoaded', function () {
-            const allDetails = document.querySelectorAll('.class-details, .subclass-details');
-            allDetails.forEach(detail => {
-                detail.classList.remove('active');
-            });
-        });
-    </script>
+    <!-- <h4 id="ontologies-alignment">4.2.4 Ontologies Alignment</h4>
+    <p>Content about the alignment...</p> -->
 </section>
