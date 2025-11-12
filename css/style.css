@@ -711,7 +711,7 @@ blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0;
     color: #4a5568;
 }
 
-/* Minimal responsive image styling */
+/* Knowledge Graph images styling */
 .kg-figure {
     text-align: center;
     margin: 1.5rem 0.5rem;
@@ -788,6 +788,8 @@ blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0;
     }
   }
 
+/* Overview page flip-cards */
+
   .flip-card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns for wider view */
@@ -859,16 +861,28 @@ blockquote { border-left: 4px solid #e0e0e0; padding-left: 20px; margin-left: 0;
   }
   
   
-  /* スマホサイズ：2列×3行に変更 */
-  @media (max-width: 768px) {
-    .flip-card-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .flip-card-back {
-      font-size: 0.7rem;
-      padding: 0.5rem;
-    }
-    .flip-card-back h3 {
-      font-size: 0.7rem;
-    }
+@media (max-width: 768px) {
+  .flip-card-container {
+    grid-template-columns: repeat(2, 1fr);
   }
+  .flip-card-back {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .flip-card-back h3 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .flip-card-back {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .flip-card-back h3 {
+    font-size: 0.75rem;
+  }
+}
