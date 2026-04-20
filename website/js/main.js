@@ -24,7 +24,7 @@ function loadContent(url) {
             // Initialize gallery if we're on the homepage
             if (url === 'website/homepage.html') {
                 const script = document.createElement('script');
-                script.src = './js/gallery-logic.js';
+                script.src = './website/js/gallery-logic.js';
                 script.onload = () => {
                     // After script loads, initialize the gallery
                     if (typeof initGallery === 'function') {
