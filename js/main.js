@@ -22,7 +22,7 @@ function loadContent(url) {
         .then(html => {
             document.getElementById('content-area').innerHTML = html;
             // Initialize gallery if we're on the homepage
-            if (url === 'homepage.html') {
+            if (url === 'website/homepage.html') {
                 const script = document.createElement('script');
                 script.src = './js/gallery-logic.js';
                 script.onload = () => {
@@ -154,9 +154,9 @@ function loadContent(url) {
     }
 
     // --- Load the default page (homepage) on opening ---
-    loadContent('homepage.html');
+    loadContent('website/homepage.html');
     // Set the 'Home' link as active manually on first load
-    setActiveLink(sidebar.querySelector('a[href="homepage.html"]'));
+    setActiveLink(sidebar.querySelector('a[href="website/homepage.html"]'));
 });
 
 // Wait for the DOM to be fully loaded
